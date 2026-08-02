@@ -49,6 +49,10 @@ def is_electrolyte_candidate(
     without changing their family. Used to produce an honest "electrolyte-candidate
     fraction" for the bulk DFT records, which otherwise reads as 68% oxide when most
     of that is LiCoO2-type cathodes.
+
+    Garnet, perovskite, NASICON, sulfide, argyrodite, halide, hydride, borohydride,
+    antiperovskite, and polymer_composite families are *always* candidates — the
+    cathode-TM exclusion only applies to oxide and unknown buckets.
     """
     if struct is not None:
         comp = struct.composition
@@ -72,12 +76,27 @@ def is_electrolyte_candidate(
     if not has_li:
         return False
 
+    # Electrolyte-specific families are always candidates — even if doped with
+    # Co/Mn/Ni (real Li-garnet and NASICON dopants in the literature). Only apply
+    # the cathode exclusion to the oxide/unknown buckets.
+    _ELECTROLYTE_FAMILIES = {
+        Family.garnet, Family.perovskite, Family.nasicon,
+        Family.sulfide, Family.argyrodite, Family.halide,
+        Family.hydride, Family.borohydride, Family.antiperovskite,
+        Family.polymer_composite,
+    }
+    if classify_family(composition=composition, elements=set(elements), struct=struct) in _ELECTROLYTE_FAMILIES:
+        return True
+
+    # Below: only oxide / unknown compounds reach this point.
     # Known intercalation cathode oxides → NOT an electrolyte candidate.
     if upper & CATHODE_TM:
         return False
     # Fe-olivine (LiFePO4): Fe + P as the ONLY framework pair.
+    # Fixed typo: "SCR" was not a real element symbol; split into "SC" (scandium)
+    # and "CR" (chromium) so that Sc/Cr-containing phospho-olivines are excluded.
     if upper & CATHODE_TRANSITIONAL and (
-        ({"FE"} <= upper and "P" in upper and not (upper & {"TI", "ZR", "GE", "AL", "SN", "SCR", "V"}) )
+        ({"FE"} <= upper and "P" in upper and not (upper & {"TI", "ZR", "GE", "AL", "SN", "SC", "CR", "V"}))
         or ({"FE"} == upper & CATHODE_TRANSITIONAL and "CO" not in upper and "NI" not in upper and "MN" not in upper)
     ):
         return False

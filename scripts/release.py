@@ -203,13 +203,13 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
 # ── Release report (D3) ───────────────────────────────────────────────────────
 
 
-def build_release_report(gates: dict) -> dict:
+def build_release_report(gates: dict, version: str = "v0.3.2") -> dict:
     health = _load_json(ROOT / "literature_output" / "health_report.json")
     consensus = _load_json(ROOT / "literature_output" / "consensus_db.json")
     quality = _load_json(ROOT / "quality_output" / "quality_report.json")
 
     report: dict = {
-        "version": "v0.2.0",
+        "version": version,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_records": health.get("total_records", 0),
         "verified_records": health.get("verified_records", 0),
@@ -371,6 +371,7 @@ def main() -> int:
                         help="run the deterministic build chain (quality, consensus, cards, health, validation) first")
     parser.add_argument("--config", default=str(CONFIG_PATH), help="path to release_config.toml")
     parser.add_argument("--signoff", action="store_true", help="Confirm human sign-off for release")
+    parser.add_argument("--targets", default="hf,zenodo,github", help="comma-separated targets to publish to (hf, zenodo, github)")
     args = parser.parse_args()
 
     CONFIG_PATH = Path(args.config)
@@ -389,7 +390,7 @@ def main() -> int:
     if args.skip_tests:
         gates["tests_passing"] = {"ok": True, "detail": "skipped via --skip-tests", "requirement": "-"}
 
-    report = build_release_report(gates)
+    report = build_release_report(gates, version=args.version)
     (ROOT / "release_report.json").write_text(json.dumps(report, indent=2, default=str))
     (ROOT / "release_report.md").write_text(render_release_report_md(report))
 
@@ -418,7 +419,8 @@ def main() -> int:
             print("\nPUBLISH BLOCKED — release checklist not ready:")
             print(checklist.summary())
             return 1
-        mgr.publish_all(args.version, ROOT, targets=("hf", "zenodo", "github"))
+        targets = tuple(t.strip() for t in args.targets.split(","))
+        mgr.publish_all(args.version, ROOT, targets=targets)
 
     print("\n" + "=" * 64)
     print("RELEASE READY ✓")

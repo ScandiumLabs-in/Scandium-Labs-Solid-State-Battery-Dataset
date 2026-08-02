@@ -33,11 +33,13 @@ class TestElectrolyteCandidateFlag:
             ("LiNiO2", False),
             ("Li3NiMnO5", False),
             ("LiFePO4", False),
-            ("Li7La3Zr2O12", True),   # LLZO garnet
+            ("Li7La3Zr2O12", True),              # LLZO garnet — undoped
+            ("Li7La3Zr1.5Co0.5O12", True),       # Co-doped garnet — must be True (regression)
             ("Li6.5La3Zr1.5Ta0.5O12", True),
-            ("Li3xLa2/3-xTiO3", True),  # LLTO perovskite
-            ("Li10GeP2S12", True),    # LGPS sulfide
-            ("Li6PS5Cl", True),       # argyrodite
+            ("Li3xLa2/3-xTiO3", True),           # LLTO perovskite
+            ("Li1.3Al0.3Ti1.7(PO4)3", True),     # Co-free NASICON — candidate
+            ("Li10GeP2S12", True),               # LGPS sulfide
+            ("Li6PS5Cl", True),                  # argyrodite
             ("LiO2", True),
             ("Li3PO4", True),
             ("Li2O", True),
@@ -50,6 +52,11 @@ class TestElectrolyteCandidateFlag:
         """relabeling a composition family: LLZO stays garnet AND candidate."""
         assert classify_family(composition="Li7La3Zr2O12") == Family.garnet
         assert is_electrolyte_candidate(composition="Li7La3Zr2O12") is True
+
+    def test_co_doped_garnet_is_candidate(self) -> None:
+        """Regression: Co-doped LLZO is a real electrolyte dopant, must stay True."""
+        assert classify_family(composition="Li7La3Zr1.5Co0.5O12") == Family.garnet
+        assert is_electrolyte_candidate(composition="Li7La3Zr1.5Co0.5O12") is True
 
     def test_cathode_stays_oxide_but_not_candidate(self) -> None:
         """LiCoO2 is an oxide by composition but not an electrolyte candidate."""

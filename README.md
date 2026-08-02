@@ -40,7 +40,7 @@ The dataset is three things of differing maturity, stated honestly:
 |---|---|---|
 | **Bulk structural records** | ~30,071 | DFT-native pulls (Materials Project / JARVIS / NOMAD), Li-containing full catalog. **Not screened for SSE relevance** — e.g. `oxide` is ~68% of the dump and includes cathode chemistries (`LiCoO2`-type) that share the Li+O+metal formula pattern. Pending an electrolyte-candidate filter. |
 | **Verified experimental labels** | 116 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
-| **Consensus database** | 387 materials / 942 measurements | Cross-paper consensus: only **20 materials** have n≥3 independent papers (real consensus); 28/387 are `verified` tier, 30 `high`, 276 `needs-verification`. |
+| **Consensus database** | 405 materials / 942 measurements | Cross-paper consensus: only **24 materials** have n≥3 independent papers (real consensus); 28/405 are `verified` tier, 30 `high`, 276 `needs-verification`. |
 
 > Framing: the current verified labels (116–150 across 8 families) are at the
 > realistic ceiling for OA literature mining, and match the low-hundreds range of

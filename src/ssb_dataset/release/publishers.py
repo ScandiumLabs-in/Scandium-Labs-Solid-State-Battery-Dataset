@@ -327,6 +327,21 @@ class ZenodoPublisher:
 class GitHubReleaser:
     def __init__(self, token: str | None = None, repo: str = "scandium-labs/ssb-dataset"):
         self.token = token or os.environ.get("GITHUB_TOKEN", "")
+        if repo == "scandium-labs/ssb-dataset":
+            try:
+                res = subprocess.run(
+                    ["git", "remote", "get-url", "origin"],
+                    capture_output=True, text=True, timeout=5
+                )
+                if res.returncode == 0:
+                    url = res.stdout.strip()
+                    if "github.com" in url:
+                        path = url.split("github.com")[-1].lstrip(":/")
+                        if path.endswith(".git"):
+                            path = path[:-4]
+                        repo = path
+            except Exception:
+                pass
         self.repo = repo
 
     def validate(self, root: Path = Path(".")) -> list[str]:
@@ -438,12 +453,16 @@ class ReleaseManager:
         unexpected_failed = [c for c in bench_failed if c != "Li3xLa2/3-xTiO3"]
         family_flags = validation_report.get("family_distribution_flags", [])
         num_flags = len(family_flags) if isinstance(family_flags, list) else int(family_flags)
-        checklist.validation_passed = bool(validation_report.get("passed")) or (
-            num_flags == 0
-            and not unexpected_failed
+        # Pass if the report itself says passed=True, OR if the only reason it's
+        # False is the one known-benign compound (general formula, can't be matched).
+        # All other sub-checks must also be clean to avoid masking real failures.
+        only_benign_failure = (
+            bench_failed == ["Li3xLa2/3-xTiO3"]  # exactly the one known-unmatchable formula
+            and num_flags == 0
             and validation_report.get("cross_source_failed", 0) == 0
             and (validation_report.get("extraction_audit") or {}).get("passed", True)
         )
+        checklist.validation_passed = bool(validation_report.get("passed")) or only_benign_failure
         if not checklist.validation_passed:
             checklist.notes.append(
                 f"Validation report: passed={validation_report.get('passed', 'unknown')}, "
