@@ -260,6 +260,9 @@ class TextProvenanceBlock(BaseModel):
     pdf_path: str | None = None
     extraction_method: ExtractionMethod | None = None
     extraction_confidence_score: float | None = None
+    ensemble_votes: int | None = None
+    ensemble_size: int | None = None
+    sigma_spread_frac: float | None = None
     extraction_reviewer: str | None = None
     evidence_page: str | int | None = None
     evidence_section: str | None = None

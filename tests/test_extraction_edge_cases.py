@@ -12,6 +12,7 @@ import pytest
 from ssb_dataset.literature.extraction import (
     CONDUCTIVITY_RE,
     ExtractedConductivityRecord,
+    _aggregate_ensemble,
     _fix_units,
     _is_review,
     _regex_prepass,
@@ -194,6 +195,29 @@ class TestDualPassExtraction:
         assert rec.ion_transport.temperature_range_measured is not None
         assert rec.ion_transport.temperature_range_measured.min_K == 298
         assert rec.ion_transport.temperature_range_measured.max_K == 373
+
+    def test_extraction_record_ensemble_provenance(self) -> None:
+        """Ensemble vote/size/spread must ride through to the provenance block —
+        the raw material for a future calibrated confidence score."""
+        extracted = ExtractedConductivityRecord(
+            composition="Li6PS5Cl", sigma_S_per_cm=1e-3,
+            ensemble_votes=3, ensemble_size=3, sigma_spread_frac=0.0,
+        )
+        rec = extraction_record_to_material_record(extracted, doi="10.1000/test", title="Test")
+        assert rec.text_provenance.ensemble_votes == 3
+        assert rec.text_provenance.ensemble_size == 3
+        assert rec.text_provenance.sigma_spread_frac == 0.0
+
+    def test_aggregate_ensemble_carries_votes_and_spread(self) -> None:
+        recs = [ExtractedConductivityRecord(composition="Li6PS5Cl", sigma_S_per_cm=1e-3)
+                for _ in range(3)]
+        agg = _aggregate_ensemble([recs] * 3, min_consensus=2)
+        assert len(agg) == 1
+        # Perfect agreement (all 3 runs identical sigma) -> spread 0, votes 3.
+        assert agg[0].ensemble_votes == 3
+        assert agg[0].ensemble_size == 3
+        assert agg[0].sigma_spread_frac == 0.0
+        assert agg[0].confidence_score == round(min(0.85, 0.5 + 0.1 * 3), 2)
 
     def test_extraction_record_conductivity_type_mapping(self) -> None:
         for ct, expected in [("bulk", "bulk"), ("grain_boundary", "grain_boundary"), ("total", "total")]:

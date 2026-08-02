@@ -58,6 +58,10 @@ class ExtractedConductivityRecord:
     equivalent_circuit: str = ""
     dc_bias_V: float | None = None
     raw_extraction: dict[str, Any] = field(default_factory=dict)
+    # Ensemble provenance — the signal a calibrated confidence is built from.
+    ensemble_votes: int | None = None
+    ensemble_size: int | None = None
+    sigma_spread_frac: float | None = None  # max relative dev from median across runs, 0=perfect agree
 
 
 EXTRACTION_PROMPT = """You are extracting solid-state battery electrolyte data from a scientific paper.
@@ -446,6 +450,9 @@ def extraction_record_to_material_record(
             source_paper_title=title or None,
             extraction_method=ExtractionMethod.llm_extraction,
             extraction_confidence_score=extracted.confidence_score,
+            ensemble_votes=extracted.ensemble_votes,
+            ensemble_size=extracted.ensemble_size,
+            sigma_spread_frac=extracted.sigma_spread_frac,
         ),
     )
 
@@ -583,6 +590,10 @@ def _aggregate_ensemble(
         eas = [r.activation_energy_eV for r in records if r.activation_energy_eV is not None]
         median_ea = sorted(eas)[len(eas) // 2] if eas else None
         conf = min(0.85, 0.5 + 0.1 * len(records))
+        # Sigma spread across the agreeing runs: 0 = perfect agreement, near/below
+        # the 0.1 keep-threshold = tight. This is the raw material for a calibrated
+        # confidence (tight agreement + many votes = high confidence).
+        max_dev = max(abs(s - median_sigma) / median_sigma for s in sigmas)
         # Use the first record as template, updating values to consensus
         record = records[0]
         kept.append(ExtractedConductivityRecord(
@@ -592,6 +603,9 @@ def _aggregate_ensemble(
             activation_energy_eV=median_ea,
             confidence_score=round(conf, 2),
             raw_extraction=record.raw_extraction,
+            ensemble_votes=len(records),
+            ensemble_size=n,
+            sigma_spread_frac=round(max_dev, 4),
         ))
 
     print(f"  [ensemble] {len(votes)} candidates, {len(kept)} survived {n}-run consensus (min={min_consensus})")

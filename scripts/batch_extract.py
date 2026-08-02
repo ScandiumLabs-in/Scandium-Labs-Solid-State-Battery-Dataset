@@ -54,6 +54,10 @@ def record_to_dict(r) -> dict:
         if it.temperature_range_measured else None,
         "doi": r.text_provenance.source_doi,
         "title": r.text_provenance.source_paper_title,
+        "extraction_confidence": r.text_provenance.extraction_confidence_score,
+        "ensemble_votes": r.text_provenance.ensemble_votes,
+        "ensemble_size": r.text_provenance.ensemble_size,
+        "sigma_spread_frac": r.text_provenance.sigma_spread_frac,
         "experiment": {
             "sample_form": ex.sample_form if ex else None,
             "relative_density_pct": ex.relative_density_pct if ex else None,
