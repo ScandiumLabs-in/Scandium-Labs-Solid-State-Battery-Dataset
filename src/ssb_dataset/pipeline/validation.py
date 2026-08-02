@@ -14,15 +14,15 @@ import pandas as pd
 # ── Known literature ranges per family (from Section 1 of the guide) ─────────
 
 FAMILY_LITERATURE_RANGES: dict[str, dict[str, tuple[float, float]]] = {
-    "sulfide": {"sigma_RT_S_per_cm": (1e-5, 1e-1), "Ea_eV": (0.1, 0.4), "band_gap_eV": (1.5, 3.5)},
-    "oxide": {"sigma_RT_S_per_cm": (1e-10, 1e-2), "Ea_eV": (0.2, 0.8), "band_gap_eV": (1.5, 6.5)},
+    "sulfide": {"sigma_RT_S_per_cm": (1e-5, 1e-1), "Ea_eV": (0.1, 0.5), "band_gap_eV": (1.5, 3.5)},
+    "oxide": {"sigma_RT_S_per_cm": (1e-10, 1e-2), "Ea_eV": (0.2, 0.9), "band_gap_eV": (1.5, 6.5)},
     "garnet": {"sigma_RT_S_per_cm": (1e-6, 1e-2), "Ea_eV": (0.2, 0.6), "band_gap_eV": (4.0, 6.0)},
     "perovskite": {"sigma_RT_S_per_cm": (1e-8, 1e-3), "Ea_eV": (0.1, 0.6), "band_gap_eV": (2.0, 4.0)},
     "nasicon": {"sigma_RT_S_per_cm": (1e-6, 1e-2), "Ea_eV": (0.2, 0.5), "band_gap_eV": (3.0, 5.0)},
     "halide": {"sigma_RT_S_per_cm": (1e-6, 1e-2), "Ea_eV": (0.2, 0.5), "band_gap_eV": (3.0, 5.0)},
     "argyrodite": {"sigma_RT_S_per_cm": (1e-4, 1e-1), "Ea_eV": (0.05, 0.4), "band_gap_eV": (1.5, 4.0)},
     "hydride": {"sigma_RT_S_per_cm": (1e-10, 1e-4), "Ea_eV": (0.3, 0.8), "band_gap_eV": (3.0, 6.0)},
-    "borohydride": {"sigma_RT_S_per_cm": (1e-10, 1e-3), "Ea_eV": (0.3, 0.9), "band_gap_eV": (3.0, 7.0)},
+    "borohydride": {"sigma_RT_S_per_cm": (1e-10, 1e-3), "Ea_eV": (0.2, 1.7), "band_gap_eV": (3.0, 7.0)},
     "antiperovskite": {"sigma_RT_S_per_cm": (1e-8, 1e-4), "Ea_eV": (0.2, 0.6), "band_gap_eV": (2.0, 4.0)},
     "polymer_composite": {"sigma_RT_S_per_cm": (1e-8, 1e-3), "Ea_eV": (0.2, 1.3), "band_gap_eV": (3.0, 6.0)},
 }

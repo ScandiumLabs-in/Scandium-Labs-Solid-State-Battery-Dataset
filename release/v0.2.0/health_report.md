@@ -4,8 +4,8 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 **verified experimental subset** (`ion_transport.label_available`).
 
 - Verified experimental records: **116**
-- Queue: 285 items (0 pending / 143 approved / 142 rejected)
-- Queue items carrying experiment block: **37**
+- Queue: 362 items (0 pending / 191 approved / 171 rejected)
+- Queue items carrying experiment block: **114**
 
 ## Field coverage (verified records)
 
@@ -14,15 +14,15 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 | temperature_celsius |  94.0% ███████████████████░ |
 | measurement_method |  99.1% ████████████████████ |
 | conductivity_type |  92.2% ██████████████████░░ |
-| pelletizing_pressure_MPa |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| relative_density_pct |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
+| pelletizing_pressure_MPa |  29.3% ██████░░░░░░░░░░░░░░ |
+| relative_density_pct |  11.2% ██░░░░░░░░░░░░░░░░░░ |
 | theoretical_density_g_per_cm3 |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| electrode_material |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| atmosphere |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| sample_form |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| frequency_max_Hz |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| sinter_temperature_C |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
-| sinter_time_h |   0.0% ░░░░░░░░░░░░░░░░░░░░ |
+| electrode_material |  85.3% █████████████████░░░ |
+| atmosphere |  85.3% █████████████████░░░ |
+| sample_form |  85.3% █████████████████░░░ |
+| frequency_max_Hz |   5.2% █░░░░░░░░░░░░░░░░░░░ |
+| sinter_temperature_C |  29.3% ██████░░░░░░░░░░░░░░ |
+| sinter_time_h |  12.9% ███░░░░░░░░░░░░░░░░░ |
 | page |  87.1% █████████████████░░░ |
 | evidence_sentence |  87.1% █████████████████░░░ |
 
@@ -30,15 +30,15 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 
 | Field | Missing |
 |---|---|
-| pelletizing_pressure_MPa | 100.0% |
-| relative_density_pct | 100.0% |
 | theoretical_density_g_per_cm3 | 100.0% |
-| electrode_material | 100.0% |
-| atmosphere | 100.0% |
-| sample_form | 100.0% |
-| frequency_max_Hz | 100.0% |
-| sinter_temperature_C | 100.0% |
-| sinter_time_h | 100.0% |
+| frequency_max_Hz |  94.8% |
+| relative_density_pct |  88.8% |
+| sinter_time_h |  87.1% |
+| pelletizing_pressure_MPa |  70.7% |
+| sinter_temperature_C |  70.7% |
+| electrode_material |  14.7% |
+| atmosphere |  14.7% |
+| sample_form |  14.7% |
 | page |  12.9% |
 | evidence_sentence |  12.9% |
 | conductivity_type |   7.8% |
@@ -73,48 +73,48 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 
 ## Consensus health
 
-- Materials: **387** (387 with σ, 387 with Ea)
-- Materials with real consensus (n≥3): **20**
-- Materials from ≥2 papers: 32
-- σ records: 481; Ea records: 461
+- Materials: **405** (400 with σ, 397 with Ea)
+- Materials with real consensus (n≥3): **24**
+- Materials from ≥2 papers: 37
+- σ records: 511; Ea records: 479
 - Outlier records: 4
 - Materials with σ-by-temperature bins: 385
-- Publication-year coverage: 26.9% (104/387)
-- Agreement grade distribution: {'C': 330, 'B': 38, 'A+': 7, 'D': 5, 'A': 5, '': 2}
+- Publication-year coverage: 31.4% (127/405)
+- Agreement grade distribution: {'C': 343, 'B': 34, 'A+': 9, 'A': 7, '': 7, 'D': 5}
 
 ## Quality scores
 
-- Average: **35.8/100** (min 16, max 86)
-- Grade distribution: {'D': 194, 'C': 11, 'B': 1, 'A': 1}
+- Average: **30.5/100** (min 14, max 86)
+- Grade distribution: {'D': 387, 'C': 15, 'B': 2, 'A': 1}
 
 ## Record quality (A3/A4)
 
-- Scored records: **143** (avg score 47.3/100)
-- Tiers: Gold **0** (0.0%), Silver 138, Bronze 0, Rejected 5
-- Grade distribution: {'C': 90, 'D': 51, 'B': 2}
+- Scored records: **191** (avg score 46.9/100)
+- Tiers: Gold **0** (0.0%), Silver 186, Bronze 0, Rejected 5
+- Grade distribution: {'C': 103, 'D': 83, 'B': 5}
 
 ## Missing-data recommendations (curation queue)
 
 | Field | Missing count | Missing % |
 |---|---|---|
-| pelletizing_pressure_MPa | 143 | 100.0% |
-| relative_density_pct | 143 | 100.0% |
-| theoretical_density_g_per_cm3 | 143 | 100.0% |
-| pellet_diameter_mm | 143 | 100.0% |
-| thickness_mm | 143 | 100.0% |
-| electrode_material | 143 | 100.0% |
-| atmosphere | 143 | 100.0% |
-| humidity | 143 | 100.0% |
-| sample_form | 143 | 100.0% |
-| frequency_max_Hz | 143 | 100.0% |
-| sinter_temperature_C | 143 | 100.0% |
-| sinter_time_h | 143 | 100.0% |
-| annealing_temperature_C | 143 | 100.0% |
-| instrument | 143 | 100.0% |
-| equivalent_circuit | 143 | 100.0% |
-| dc_bias_V | 143 | 100.0% |
+| pelletizing_pressure_MPa | 191 | 100.0% |
+| relative_density_pct | 191 | 100.0% |
+| theoretical_density_g_per_cm3 | 191 | 100.0% |
+| pellet_diameter_mm | 191 | 100.0% |
+| thickness_mm | 191 | 100.0% |
+| electrode_material | 191 | 100.0% |
+| atmosphere | 191 | 100.0% |
+| humidity | 191 | 100.0% |
+| sample_form | 191 | 100.0% |
+| frequency_max_Hz | 191 | 100.0% |
+| sinter_temperature_C | 191 | 100.0% |
+| sinter_time_h | 191 | 100.0% |
+| annealing_temperature_C | 191 | 100.0% |
+| instrument | 191 | 100.0% |
+| equivalent_circuit | 191 | 100.0% |
+| dc_bias_V | 191 | 100.0% |
 
-Highest priority: `pelletizing_pressure_MPa` missing on 143 records — 
+Highest priority: `pelletizing_pressure_MPa` missing on 191 records — 
 backfill from review_0b5b52b6ae4db541, review_c5f8fc98e7a3c012, review_213a4e2d1acad996, review_64c1367c8744270c, review_99de06259baa…
 
 ## Drift vs previous health snapshot (C2)

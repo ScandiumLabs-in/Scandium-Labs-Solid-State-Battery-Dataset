@@ -471,6 +471,60 @@
       "is_stable": null
     }
   },
+  "80(3LiBH4LiCl)20P2S5": {
+    "material": "80(3LiBH4LiCl)20P2S5",
+    "family": "argyrodite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 1e-05,
+    "sigma_ci95": null,
+    "min_sigma": 1e-05,
+    "max_sigma": 1e-05,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1039_d0cp01334j"
+    ],
+    "papers": [
+      {
+        "doi": "10.1039_d0cp01334j",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1039_d0cp01334j.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
+  },
   "BaLi2O4": {
     "material": "BaLi2O4",
     "family": "oxide",
@@ -4363,6 +4417,75 @@
       "is_stable": null
     }
   },
+  "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP": {
+    "material": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 1,
+    "n_measurements": 2,
+    "median_sigma": 0.0001,
+    "sigma_ci95": null,
+    "min_sigma": 0.0001,
+    "max_sigma": 0.0001,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": 0.2,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 14,
+    "consensus_verdict": "no consensus",
+    "quality_score": 28,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1016_j.heliyon.2024.e28097"
+    ],
+    "papers": [
+      {
+        "doi": "10.1016_j.heliyon.2024.e28097",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "5",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.2,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.2,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
   "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE": {
     "material": "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE",
     "family": "polymer_composite",
@@ -4468,20 +4591,20 @@
   "Li1.3Ti1.7Al0.3P3O12": {
     "material": "Li1.3Ti1.7Al0.3P3O12",
     "family": "nasicon",
-    "n_papers": 5,
-    "n_sigma": 7,
-    "n_ea": 6,
-    "n_measurements": 13,
-    "median_sigma": 0.0001,
+    "n_papers": 8,
+    "n_sigma": 9,
+    "n_ea": 7,
+    "n_measurements": 16,
+    "median_sigma": 0.00018999999999999996,
     "sigma_ci95": [
-      4.488187253298029e-06,
+      5.133192358364696e-06,
       0.00030000000000000014
     ],
     "min_sigma": 3.0000000000000013e-06,
     "max_sigma": 0.00030000000000000014,
-    "sigma_mad_log10": 0.4771212547196626,
-    "sigma_std_log10": 0.6711139080706947,
-    "sigma_iqr_log10": 0.8216684400315923,
+    "sigma_mad_log10": 0.19836765376683374,
+    "sigma_std_log10": 0.6255080855037881,
+    "sigma_iqr_log10": 0.8096683018297091,
     "agreement_grade": "D",
     "sigma_by_temp": [
       {
@@ -4492,7 +4615,7 @@
         "max_sigma": 0.00030000000000000014
       }
     ],
-    "median_ea": 0.375,
+    "median_ea": 0.4,
     "temperature_range_c": [
       24.850000000000023,
       200.0
@@ -4500,22 +4623,25 @@
     "temperature_counts": 8,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 55,
+    "quality_score": 53,
     "quality_grade": "C",
-    "metadata_completeness": 0.571,
+    "metadata_completeness": 0.444,
     "outliers": [
       {
         "sigma": 3e-06,
-        "median_sigma": 0.0001,
-        "delta_log10": 1.52,
-        "note": "3.00e-06 is 33x from group median"
+        "median_sigma": 0.00018999999999999996,
+        "delta_log10": 1.8,
+        "note": "3.00e-06 is 63x from group median"
       }
     ],
     "dois": [
       "10.1016/S0167-2738(03)00260-7",
       "10.1016/j.jallcom.2019.153072",
+      "10.1039_d5ra09944g",
       "10.3390/ma14164737",
       "10.3390/nano15010042",
+      "10.3390_membranes13020201",
+      "10.3390_nano15010042",
       "10.37614/2949-1215.2025.16.2.020"
     ],
     "papers": [
@@ -4748,6 +4874,72 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.3390_nano15010042",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.5,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.5,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "15",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1039_d5ra09944g",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00019,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00019,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1039_d5ra09944g.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      },
+      {
+        "doi": "10.3390_membranes13020201",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000283,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000283,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_membranes13020201.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -4759,20 +4951,212 @@
       "is_stable": null
     }
   },
-  "Li1.3Y0.1Ti1.7Al0.2P3O12": {
-    "material": "Li1.3Y0.1Ti1.7Al0.2P3O12",
+  "Li1.3Y0.01Ti1.7Al0.29P3O12": {
+    "material": "Li1.3Y0.01Ti1.7Al0.29P3O12",
     "family": "nasicon",
     "n_papers": 1,
     "n_sigma": 1,
     "n_ea": 1,
     "n_measurements": 2,
-    "median_sigma": 0.0008399999999999998,
+    "median_sigma": 8.400000000000008e-06,
     "sigma_ci95": null,
-    "min_sigma": 0.0008399999999999998,
-    "max_sigma": 0.0008399999999999998,
+    "min_sigma": 8.400000000000008e-06,
+    "max_sigma": 8.400000000000008e-06,
     "sigma_mad_log10": null,
     "sigma_std_log10": null,
     "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": 0.4,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 14,
+    "consensus_verdict": "no consensus",
+    "quality_score": 28,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.3390_nano15010042"
+    ],
+    "papers": [
+      {
+        "doi": "10.3390_nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 8.4e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 8.4e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "12",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.4,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.4,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li1.3Y0.05Ti1.7Al0.25P3O12": {
+    "material": "Li1.3Y0.05Ti1.7Al0.25P3O12",
+    "family": "nasicon",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 1,
+    "n_measurements": 2,
+    "median_sigma": 1.2000000000000007e-05,
+    "sigma_ci95": null,
+    "min_sigma": 1.2000000000000007e-05,
+    "max_sigma": 1.2000000000000007e-05,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": 0.3,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 14,
+    "consensus_verdict": "no consensus",
+    "quality_score": 28,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.3390_nano15010042"
+    ],
+    "papers": [
+      {
+        "doi": "10.3390_nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "12",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.3,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.3,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li1.3Y0.15Ti1.7Al0.15P3O12": {
+    "material": "Li1.3Y0.15Ti1.7Al0.15P3O12",
+    "family": "nasicon",
+    "n_papers": 1,
+    "n_sigma": 0,
+    "n_ea": 1,
+    "n_measurements": 1,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.1,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 4,
+    "consensus_verdict": "no consensus",
+    "quality_score": 14,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.3390_nano15010042"
+    ],
+    "papers": [
+      {
+        "doi": "10.3390_nano15010042",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li1.3Y0.1Ti1.7Al0.2P3O12": {
+    "material": "Li1.3Y0.1Ti1.7Al0.2P3O12",
+    "family": "nasicon",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
+    "median_sigma": 0.0001419859147943909,
+    "sigma_ci95": null,
+    "min_sigma": 2.4000000000000018e-05,
+    "max_sigma": 0.0008399999999999998,
+    "sigma_mad_log10": 0.7720340221751376,
+    "sigma_std_log10": 0.7720340221751376,
+    "sigma_iqr_log10": 0.7720340221751374,
     "agreement_grade": "C",
     "sigma_by_temp": [
       {
@@ -4789,14 +5173,15 @@
       25.0
     ],
     "temperature_counts": 2,
-    "consensus_score": 19,
-    "consensus_verdict": "no consensus",
-    "quality_score": 44,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 42,
     "quality_grade": "D",
-    "metadata_completeness": 1.0,
+    "metadata_completeness": 0.5,
     "outliers": [],
     "dois": [
-      "10.3390/nano15010042"
+      "10.3390/nano15010042",
+      "10.3390_nano15010042"
     ],
     "papers": [
       {
@@ -4831,6 +5216,43 @@
             "evidence_sentence": "",
             "measurement_method": "EIS",
             "conductivity_type": "total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.3390_nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.4e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.4e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "12",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.2,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.2,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_nano15010042.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
@@ -6138,18 +6560,21 @@
   "Li10Ge(PS6)2": {
     "material": "Li10Ge(PS6)2",
     "family": "sulfide",
-    "n_papers": 1,
-    "n_sigma": 2,
+    "n_papers": 2,
+    "n_sigma": 3,
     "n_ea": 2,
-    "n_measurements": 4,
+    "n_measurements": 5,
     "median_sigma": 0.012000000000000002,
-    "sigma_ci95": null,
-    "min_sigma": 0.012000000000000002,
+    "sigma_ci95": [
+      0.010091577558276131,
+      0.012000000000000002
+    ],
+    "min_sigma": 0.01,
     "max_sigma": 0.012000000000000002,
     "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.0,
-    "sigma_iqr_log10": 0.0,
-    "agreement_grade": "B",
+    "sigma_std_log10": 0.037326397348717386,
+    "sigma_iqr_log10": 0.03959062302381233,
+    "agreement_grade": "A+",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -6165,13 +6590,14 @@
       25.0
     ],
     "temperature_counts": 3,
-    "consensus_score": 40,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 44,
-    "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "consensus_score": 70,
+    "consensus_verdict": "moderate consensus",
+    "quality_score": 60,
+    "quality_grade": "C",
+    "metadata_completeness": 0.333,
     "outliers": [],
     "dois": [
+      "10.1002_smll.202509918",
       "10.1038/nmat3066"
     ],
     "papers": [
@@ -6241,6 +6667,28 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1002_smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.01,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.01,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_smll.202509918.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -7568,18 +8016,21 @@
   "Li2HClO": {
     "material": "Li2HClO",
     "family": "antiperovskite",
-    "n_papers": 1,
-    "n_sigma": 2,
+    "n_papers": 2,
+    "n_sigma": 3,
     "n_ea": 2,
-    "n_measurements": 4,
-    "median_sigma": 1.3849187701811237e-07,
-    "sigma_ci95": null,
+    "n_measurements": 5,
+    "median_sigma": 1.4000000000000004e-07,
+    "sigma_ci95": [
+      1.371484616359696e-07,
+      1.2477513133872447e-06
+    ],
     "min_sigma": 1.3699999999999997e-07,
-    "max_sigma": 1.4000000000000004e-07,
-    "sigma_mad_log10": 0.004703734260915748,
-    "sigma_std_log10": 0.004703734260915748,
-    "sigma_iqr_log10": 0.004703734260915304,
-    "agreement_grade": "B",
+    "max_sigma": 1.4000000000000006e-06,
+    "sigma_mad_log10": 0.009407468521831497,
+    "sigma_std_log10": 0.47363745370526245,
+    "sigma_iqr_log10": 0.5047037342609162,
+    "agreement_grade": "C",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -7595,13 +8046,14 @@
       25.0
     ],
     "temperature_counts": 3,
-    "consensus_score": 30,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 44,
+    "consensus_score": 60,
+    "consensus_verdict": "moderate consensus",
+    "quality_score": 42,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.333,
     "outliers": [],
     "dois": [
+      "10.1021_acs.chemmater.0c02602",
       "10.1038/s41467-023-42385-1"
     ],
     "papers": [
@@ -7671,6 +8123,28 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1021_acs.chemmater.0c02602",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.4e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.4e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.chemmater.0c02602.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -8646,6 +9120,60 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li2O-TaCl5": {
+    "material": "Li2O-TaCl5",
+    "family": "oxide",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 0.008299999999999997,
+    "sigma_ci95": null,
+    "min_sigma": 0.008299999999999997,
+    "max_sigma": 0.008299999999999997,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.20517_energymater.2024.277"
+    ],
+    "papers": [
+      {
+        "doi": "10.20517_energymater.2024.277",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0083,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0083,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.20517_energymater.2024.277.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": null
@@ -14395,18 +14923,21 @@
   "Li3InCl6": {
     "material": "Li3InCl6",
     "family": "halide",
-    "n_papers": 1,
-    "n_sigma": 2,
-    "n_ea": 2,
-    "n_measurements": 4,
-    "median_sigma": 0.0020000000000000005,
-    "sigma_ci95": null,
-    "min_sigma": 0.0020000000000000005,
-    "max_sigma": 0.0020000000000000005,
-    "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.0,
-    "sigma_iqr_log10": 0.0,
-    "agreement_grade": "B",
+    "n_papers": 3,
+    "n_sigma": 7,
+    "n_ea": 7,
+    "n_measurements": 14,
+    "median_sigma": 0.0027199999999999998,
+    "sigma_ci95": [
+      0.0011095694720678455,
+      0.003973829220006909
+    ],
+    "min_sigma": 0.001,
+    "max_sigma": 0.0040300000000000015,
+    "sigma_mad_log10": 0.13353890837021742,
+    "sigma_std_log10": 0.1912478675379131,
+    "sigma_iqr_log10": 0.22487222420065667,
+    "agreement_grade": "A",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -14416,22 +14947,151 @@
         "max_sigma": 0.0020000000000000005
       }
     ],
-    "median_ea": 0.33,
+    "median_ea": 0.25,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
     "temperature_counts": 3,
-    "consensus_score": 40,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 44,
-    "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "consensus_score": 100,
+    "consensus_verdict": "strong consensus",
+    "quality_score": 63,
+    "quality_grade": "C",
+    "metadata_completeness": 0.143,
     "outliers": [],
     "dois": [
+      "10.1002_adma.202513255",
+      "10.1002_advs.202403208",
       "10.1038/s41467-019-09619-5"
     ],
     "papers": [
+      {
+        "doi": "10.1002_advs.202403208",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.004030000000000001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.004030000000000001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.22,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.22,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "conductivity",
+            "value": 0.00367,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00367,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.23,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.23,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "conductivity",
+            "value": 0.00307,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00307,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.25,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.25,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "conductivity",
+            "value": 0.00272,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00272,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.27,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.27,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202403208.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 4,
+        "n_ea": 4
+      },
       {
         "doi": "10.1038/s41467-019-09619-5",
         "measurements": [
@@ -14498,6 +15158,43 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1002_adma.202513255",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "7",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_adma.202513255.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "7",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_adma.202513255.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
     "structure": {
@@ -17220,6 +17917,75 @@
     ],
     "structure": null
   },
+  "Li4-xGe1-xPxO4": {
+    "material": "Li4-xGe1-xPxO4",
+    "family": "oxide",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 1,
+    "n_measurements": 2,
+    "median_sigma": 1e-05,
+    "sigma_ci95": null,
+    "min_sigma": 1e-05,
+    "max_sigma": 1e-05,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": 0.47,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 14,
+    "consensus_verdict": "no consensus",
+    "quality_score": 28,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1039_d5ta07144e"
+    ],
+    "papers": [
+      {
+        "doi": "10.1039_d5ta07144e",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1039_d5ta07144e.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.47,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.47,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1039_d5ta07144e.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
   "Li4.8Si1.2P1.2S12": {
     "material": "Li4.8Si1.2P1.2S12",
     "family": "sulfide",
@@ -19585,18 +20351,18 @@
   "Li6.4La3Zr2Ga0.2O12": {
     "material": "Li6.4La3Zr2Ga0.2O12",
     "family": "garnet",
-    "n_papers": 0,
-    "n_sigma": 1,
+    "n_papers": 1,
+    "n_sigma": 2,
     "n_ea": 1,
-    "n_measurements": 2,
-    "median_sigma": 0.0013000000000000006,
+    "n_measurements": 3,
+    "median_sigma": 0.00036769552621700494,
     "sigma_ci95": null,
-    "min_sigma": 0.0013000000000000006,
+    "min_sigma": 0.00010399999999999998,
     "max_sigma": 0.0013000000000000006,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
+    "sigma_mad_log10": 0.5484550065040283,
+    "sigma_std_log10": 0.5484550065040283,
+    "sigma_iqr_log10": 0.5484550065040286,
+    "agreement_grade": "B",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -19612,13 +20378,15 @@
       25.0
     ],
     "temperature_counts": 1,
-    "consensus_score": 19,
-    "consensus_verdict": "no consensus",
-    "quality_score": 24,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 37,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
-    "dois": [],
+    "dois": [
+      "10.16984_saufenbilder.1590407"
+    ],
     "papers": [
       {
         "doi": "unknown",
@@ -19656,6 +20424,28 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.16984_saufenbilder.1590407",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000104,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000104,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.16984_saufenbilder.1590407.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": null
@@ -20096,19 +20886,19 @@
   "Li6.5La3Zr1.5Ta0.5O12": {
     "material": "Li6.5La3Zr1.5Ta0.5O12",
     "family": "garnet",
-    "n_papers": 3,
-    "n_sigma": 4,
-    "n_ea": 4,
-    "n_measurements": 8,
-    "median_sigma": 0.0004242640687119287,
+    "n_papers": 4,
+    "n_sigma": 5,
+    "n_ea": 5,
+    "n_measurements": 10,
+    "median_sigma": 0.00040000000000000013,
     "sigma_ci95": [
       0.00017999999999999998,
       0.001
     ],
     "min_sigma": 0.00017999999999999998,
     "max_sigma": 0.001,
-    "sigma_mad_log10": 0.372363747448347,
-    "sigma_std_log10": 0.372363747448347,
+    "sigma_mad_log10": 0.3467874862246565,
+    "sigma_std_log10": 0.33320935093891085,
     "sigma_iqr_log10": 0.744727494896694,
     "agreement_grade": "A",
     "sigma_by_temp": [
@@ -20120,20 +20910,21 @@
         "max_sigma": 0.001
       }
     ],
-    "median_ea": 0.33399999999999996,
+    "median_ea": 0.36,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
     "temperature_counts": 5,
-    "consensus_score": 85,
+    "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 64,
+    "quality_score": 68,
     "quality_grade": "C",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.4,
     "outliers": [],
     "dois": [
       "10.1038/s41467-025-58108-7",
+      "10.1038_s41467-020-17493-x",
       "10.1038_s41467-025-58108-7",
       "10.1039/C6EE00556K"
     ],
@@ -20235,6 +21026,43 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "LLM ensemble extraction from 10.1038_s41467-025-58108-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1038_s41467-020-17493-x",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0004,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0004,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "2",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1038_s41467-020-17493-x.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.36,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.36,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1038_s41467-020-17493-x.pdf",
             "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
@@ -21237,6 +22065,129 @@
             "evidence_sentence": "",
             "measurement_method": "",
             "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li6.7Si0.105Ge0.595P0.3S5I1": {
+    "material": "Li6.7Si0.105Ge0.595P0.3S5I1",
+    "family": "argyrodite",
+    "n_papers": 1,
+    "n_sigma": 0,
+    "n_ea": 1,
+    "n_measurements": 1,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.2,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 4,
+    "consensus_verdict": "no consensus",
+    "quality_score": 14,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1002_smll.202509918"
+    ],
+    "papers": [
+      {
+        "doi": "10.1002_smll.202509918",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.2,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.2,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_smll.202509918.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12": {
+    "material": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
+    "family": "garnet",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 1,
+    "n_measurements": 2,
+    "median_sigma": 0.0006609999999999999,
+    "sigma_ci95": null,
+    "min_sigma": 0.0006609999999999999,
+    "max_sigma": 0.0006609999999999999,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": 0.25,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 14,
+    "consensus_verdict": "no consensus",
+    "quality_score": 28,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1016_j.ceramint.2023.09.330"
+    ],
+    "papers": [
+      {
+        "doi": "10.1016_j.ceramint.2023.09.330",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000661,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000661,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "11",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.25,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.25,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "8",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
@@ -22473,6 +23424,60 @@
     ],
     "structure": null
   },
+  "Li6PS4Cl0.75-OF0.25": {
+    "material": "Li6PS4Cl0.75-OF0.25",
+    "family": "argyrodite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 2.4700000000000005e-06,
+    "sigma_ci95": null,
+    "min_sigma": 2.4700000000000005e-06,
+    "max_sigma": 2.4700000000000005e-06,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1002_advs.202304117"
+    ],
+    "papers": [
+      {
+        "doi": "10.1002_advs.202304117",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.47e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.47e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202304117.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
+  },
   "Li6PS5Br": {
     "material": "Li6PS5Br",
     "family": "argyrodite",
@@ -23000,17 +24005,17 @@
   "Li6PS5I": {
     "material": "Li6PS5I",
     "family": "argyrodite",
-    "n_papers": 1,
-    "n_sigma": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
     "n_ea": 1,
-    "n_measurements": 2,
-    "median_sigma": 4.600000000000003e-05,
+    "n_measurements": 3,
+    "median_sigma": 6.78232998312527e-06,
     "sigma_ci95": null,
-    "min_sigma": 4.600000000000003e-05,
+    "min_sigma": 1e-06,
     "max_sigma": 4.600000000000003e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
+    "sigma_mad_log10": 0.8313789158407872,
+    "sigma_std_log10": 0.8313789158407872,
+    "sigma_iqr_log10": 0.8313789158407872,
     "agreement_grade": "C",
     "sigma_by_temp": [
       {
@@ -23027,13 +24032,14 @@
       25.0
     ],
     "temperature_counts": 1,
-    "consensus_score": 19,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 35,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002_smll.202509918",
       "10.1039/C5EE02930D"
     ],
     "papers": [
@@ -23073,6 +24079,28 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1002_smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_smll.202509918.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -23509,21 +24537,21 @@
   "Li7La3Zr2O12": {
     "material": "Li7La3Zr2O12",
     "family": "LLZO",
-    "n_papers": 4,
-    "n_sigma": 6,
+    "n_papers": 7,
+    "n_sigma": 9,
     "n_ea": 6,
-    "n_measurements": 12,
-    "median_sigma": 0.00030000000000000014,
+    "n_measurements": 15,
+    "median_sigma": 0.00042918527467749907,
     "sigma_ci95": [
       0.00030000000000000014,
-      0.0008865681505652134
+      0.001032886271116008
     ],
     "min_sigma": 0.00030000000000000014,
-    "max_sigma": 0.001,
-    "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.20915149811213496,
-    "sigma_iqr_log10": 0.0,
-    "agreement_grade": "B",
+    "max_sigma": 0.0010399999999999997,
+    "sigma_mad_log10": 0.1555235582107528,
+    "sigma_std_log10": 0.23634658207076387,
+    "sigma_iqr_log10": 0.4657002159018626,
+    "agreement_grade": "A",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -23541,15 +24569,18 @@
     "temperature_counts": 7,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 66,
-    "quality_grade": "C",
-    "metadata_completeness": 0.5,
+    "quality_score": 74,
+    "quality_grade": "B",
+    "metadata_completeness": 0.333,
     "outliers": [],
     "dois": [
       "10.1002/anie.200701144",
+      "10.1016_j.heliyon.2024.e36206",
       "10.1021/acs.chemmater.3c01831",
       "10.1021_acs.chemmater.3c01831",
-      "10.1038/s41467-022-35287-1"
+      "10.1038/s41467-022-35287-1",
+      "10.1038_srep18053",
+      "10.20517_energymater.2023.87"
     ],
     "papers": [
       {
@@ -23759,6 +24790,72 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1016_j.heliyon.2024.e36206",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00104,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00104,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1016_j.heliyon.2024.e36206.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      },
+      {
+        "doi": "10.1038_srep18053",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000614,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000614,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1038_srep18053.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      },
+      {
+        "doi": "10.20517_energymater.2023.87",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000839,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000839,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.20517_energymater.2023.87.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -24017,21 +25114,78 @@
       "is_stable": false
     }
   },
+  "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6": {
+    "material": "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6",
+    "family": "argyrodite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 0.03200000000000001,
+    "sigma_ci95": null,
+    "min_sigma": 0.03200000000000001,
+    "max_sigma": 0.03200000000000001,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1002_smll.202509918"
+    ],
+    "papers": [
+      {
+        "doi": "10.1002_smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.032,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.032,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "6",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_smll.202509918.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
+  },
   "Li9.54Si1.74P1.44S11.7Cl0.3": {
     "material": "Li9.54Si1.74P1.44S11.7Cl0.3",
-    "family": "sulfide",
-    "n_papers": 2,
-    "n_sigma": 2,
+    "family": "argyrodite",
+    "n_papers": 3,
+    "n_sigma": 3,
     "n_ea": 2,
-    "n_measurements": 4,
+    "n_measurements": 5,
     "median_sigma": 0.025000000000000005,
-    "sigma_ci95": null,
+    "sigma_ci95": [
+      0.025000000000000005,
+      0.025000000000000005
+    ],
     "min_sigma": 0.025000000000000005,
     "max_sigma": 0.025000000000000005,
     "sigma_mad_log10": 0.0,
     "sigma_std_log10": 0.0,
     "sigma_iqr_log10": 0.0,
-    "agreement_grade": "B",
+    "agreement_grade": "A+",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -24047,13 +25201,14 @@
       25.0
     ],
     "temperature_counts": 2,
-    "consensus_score": 40,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 41,
-    "quality_grade": "D",
+    "consensus_score": 70,
+    "consensus_verdict": "moderate consensus",
+    "quality_score": 60,
+    "quality_grade": "C",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002_smll.202509918",
       "10.1016/j.matlet.2020.127508",
       "10.1038/s41563-023-01522-1"
     ],
@@ -24131,6 +25286,28 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1002_smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.025,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.025,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "5",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_smll.202509918.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": null
@@ -26073,7 +27250,7 @@
   },
   "LiBH4-MgO(CE26)": {
     "material": "LiBH4-MgO(CE26)",
-    "family": "unknown",
+    "family": "polymer_composite",
     "n_papers": 1,
     "n_sigma": 1,
     "n_ea": 1,
@@ -26160,7 +27337,7 @@
   },
   "LiBH4-MgO(CE74)": {
     "material": "LiBH4-MgO(CE74)",
-    "family": "unknown",
+    "family": "polymer_composite",
     "n_papers": 1,
     "n_sigma": 1,
     "n_ea": 1,
@@ -28313,6 +29490,168 @@
       "is_stable": false
     }
   },
+  "LiTFSI-PC(quasi-solid)": {
+    "material": "LiTFSI-PC(quasi-solid)",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 0,
+    "n_ea": 1,
+    "n_measurements": 1,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.3,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 4,
+    "consensus_verdict": "no consensus",
+    "quality_score": 14,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1038_s41467-022-29118-6"
+    ],
+    "papers": [
+      {
+        "doi": "10.1038_s41467-022-29118-6",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.3,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.3,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1038_s41467-022-29118-6.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "LiTFSI-SN": {
+    "material": "LiTFSI-SN",
+    "family": "hydride",
+    "n_papers": 1,
+    "n_sigma": 0,
+    "n_ea": 1,
+    "n_measurements": 1,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.23,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 4,
+    "consensus_verdict": "no consensus",
+    "quality_score": 14,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007_s40820-024-01592-1"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007_s40820-024-01592-1",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.23,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.23,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "LiTFSI-SN-FEC": {
+    "material": "LiTFSI-SN-FEC",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 0,
+    "n_ea": 1,
+    "n_measurements": 1,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.18,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 4,
+    "consensus_verdict": "no consensus",
+    "quality_score": 14,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007_s40820-024-01592-1"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007_s40820-024-01592-1",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.18,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.18,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": "4",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
   "LiTaCl6": {
     "material": "LiTaCl6",
     "family": "halide",
@@ -29396,7 +30735,7 @@
   },
   "Mg1B21.47H88.88N1": {
     "material": "Mg1B21.47H88.88N1",
-    "family": "unknown",
+    "family": "borohydride",
     "n_papers": 2,
     "n_sigma": 3,
     "n_ea": 2,
@@ -29539,7 +30878,7 @@
   },
   "Na2.9H1Se0.9I0.1": {
     "material": "Na2.9H1Se0.9I0.1",
-    "family": "unknown",
+    "family": "halide",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 2,
@@ -30310,7 +31649,7 @@
   },
   "Na3HSe": {
     "material": "Na3HSe",
-    "family": "unknown",
+    "family": "hydride",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 2,
@@ -30513,7 +31852,7 @@
   },
   "Na3HfScSi(PO6)2": {
     "material": "Na3HfScSi(PO6)2",
-    "family": "unknown",
+    "family": "nasicon",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 1,
@@ -33366,6 +34705,60 @@
     ],
     "structure": null
   },
+  "PEO-LiTFSI-LLZTO-SN-ETPTA": {
+    "material": "PEO-LiTFSI-LLZTO-SN-ETPTA",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 0.0002120000000000001,
+    "sigma_ci95": null,
+    "min_sigma": 0.0002120000000000001,
+    "max_sigma": 0.0002120000000000001,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007_s11581-024-05451-2"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007_s11581-024-05451-2",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000212,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000212,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "2",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11581-024-05451-2.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
+  },
   "PEO-LiTFSI-Li6.4La3Zr1.4Ta0.6O12(30%)": {
     "material": "PEO-LiTFSI-Li6.4La3Zr1.4Ta0.6O12(30%)",
     "family": "polymer_composite",
@@ -34019,6 +35412,60 @@
     ],
     "structure": null
   },
+  "PVDF-HFP": {
+    "material": "PVDF-HFP",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 4.200000000000003e-05,
+    "sigma_ci95": null,
+    "min_sigma": 4.200000000000003e-05,
+    "max_sigma": 4.200000000000003e-05,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.3390_gels12060534"
+    ],
+    "papers": [
+      {
+        "doi": "10.3390_gels12060534",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 4.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 4.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "3",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_gels12060534.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
+  },
   "PVDF-HFP-EMITFSI": {
     "material": "PVDF-HFP-EMITFSI",
     "family": "polymer_composite",
@@ -34093,6 +35540,60 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      }
+    ],
+    "structure": null
+  },
+  "PVDF-HFP-LLZTO(10wt%)": {
+    "material": "PVDF-HFP-LLZTO(10wt%)",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 0.0003400000000000002,
+    "sigma_ci95": null,
+    "min_sigma": 0.0003400000000000002,
+    "max_sigma": 0.0003400000000000002,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.3390_gels12060534"
+    ],
+    "papers": [
+      {
+        "doi": "10.3390_gels12060534",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00034,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00034,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "1",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.3390_gels12060534.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": null
@@ -34568,6 +36069,60 @@
       "formation_energy_per_atom": NaN,
       "is_stable": null
     }
+  },
+  "UiO-66/PEO": {
+    "material": "UiO-66/PEO",
+    "family": "polymer_composite",
+    "n_papers": 1,
+    "n_sigma": 1,
+    "n_ea": 0,
+    "n_measurements": 1,
+    "median_sigma": 3.000000000000001e-05,
+    "sigma_ci95": null,
+    "min_sigma": 3.000000000000001e-05,
+    "max_sigma": 3.000000000000001e-05,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "C",
+    "sigma_by_temp": [],
+    "median_ea": null,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 10,
+    "consensus_verdict": "no consensus",
+    "quality_score": 18,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.15541_jim20200206"
+    ],
+    "papers": [
+      {
+        "doi": "10.15541_jim20200206",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 3e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 3e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": "2",
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.15541_jim20200206.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": null
   },
   "V-LATP/PVDF-HFP-LiTFSICSE": {
     "material": "V-LATP/PVDF-HFP-LiTFSICSE",

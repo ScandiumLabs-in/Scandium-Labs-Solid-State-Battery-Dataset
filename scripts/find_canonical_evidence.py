@@ -65,6 +65,29 @@ def _is_junk(v) -> bool:
     return bool(_JUNK_RE.search(s))
 
 
+def _stamp_evidence(df, idx, res, preserve_sentence=False):
+    """Write evidence sentence/page/paragraph onto a row (flat or nested schema).
+
+    When `preserve_sentence` is True the existing sentence is kept and only the
+    page/paragraph fields are filled, so a page backfill never clobbers a real
+    quote with a shorter/empty re-located one.
+    """
+    updates = [("text_provenance.evidence_page", res["page"]),
+               ("text_provenance.evidence_paragraph", res["paragraph"])]
+    if not preserve_sentence:
+        updates.insert(0, ("text_provenance.evidence_sentence", res["sentence"]))
+    for flat_key, value in updates:
+        if flat_key in df.columns:
+            df.at[idx, flat_key] = value
+        elif "text_provenance" in df.columns:
+            cur = df.at[idx, "text_provenance"]
+            field = flat_key.split(".", 1)[1]
+            if isinstance(cur, dict):
+                cur[field] = value
+            else:
+                df.at[idx, "text_provenance"] = {field: value}
+
+
 def _sentence_around(text: str, center: int) -> str:
     """Extract the sentence containing character offset `center`."""
     start = 0
@@ -242,11 +265,11 @@ def main() -> None:
     labelled_idx = []
     for idx in df.index:
         row = df.loc[idx]
-        if _nested(row, "ion_transport", "label_available") is True:
+        if _nested(row, "ion_transport", "label_available") in (True, 1):
             labelled_idx.append(idx)
     print(f"  labelled: {len(labelled_idx)}")
 
-    n_fixed = n_new = n_no_pdf = n_not_found = n_kept = 0
+    n_fixed = n_new = n_no_pdf = n_not_found = n_kept = n_page_backfilled = 0
     rows: list[tuple] = []
 
     for idx in labelled_idx:
@@ -264,38 +287,27 @@ def main() -> None:
             n_not_found += 1
             rows.append((mat, doi, "NOT_FOUND", ""))
             continue
-        had = not _is_junk(_nested(row, "text_provenance", "evidence_sentence"))
-        if had and not args.force:
+        had_sent = not _is_junk(_nested(row, "text_provenance", "evidence_sentence"))
+        had_page = not _is_junk(_nested(row, "text_provenance", "evidence_page"))
+        needs_apply = (args.apply and (not had_sent or not had_page or args.force))
+        if needs_apply:
+            _stamp_evidence(df, idx, res, preserve_sentence=had_sent)
+        if had_sent and not had_page:
+            n_page_backfilled += 1
+            rows.append((mat, doi, "PAGE_BACKFILL", res["sentence"][:60]))
+            continue
+        if had_sent and not args.force:
             n_kept += 1
             rows.append((mat, doi, "KEPT", res["sentence"][:60]))
             continue
-        if args.apply:
-            for flat_key, value in (
-                ("text_provenance.evidence_sentence", res["sentence"]),
-                ("text_provenance.evidence_page", res["page"]),
-                ("text_provenance.evidence_paragraph", res["paragraph"]),
-            ):
-                if flat_key in df.columns:
-                    df.at[idx, flat_key] = value
-                elif "text_provenance" in df.columns:
-                    cur = df.at[idx, "text_provenance"]
-                    field = flat_key.split(".", 1)[1]
-                    if isinstance(cur, dict):
-                        cur[field] = value
-                    else:
-                        df.at[idx, "text_provenance"] = {field: value}
-        if had:
-            n_fixed += 1
-            rows.append((mat, doi, "FIXED", res["sentence"][:60]))
-        else:
-            n_new += 1
-            rows.append((mat, doi, "NEW", res["sentence"][:60]))
+        n_new += 1
+        rows.append((mat, doi, "NEW", res["sentence"][:60]))
 
     print(f"  have PDF: {len(labelled_idx) - n_no_pdf}/{len(labelled_idx)}")
     print(f"  no PDF on disk: {n_no_pdf}")
     print(f"  evidence not found in PDF: {n_not_found}")
     print(f"  already had real evidence (kept): {n_kept}")
-    print(f"  new evidence attached: {n_new} | junk replaced: {n_fixed}")
+    print(f"  new evidence attached: {n_new} | junk replaced: {n_fixed} | page backfilled: {n_page_backfilled}")
 
     if args.report:
         print("\n--- per-record ---")

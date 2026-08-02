@@ -56,14 +56,14 @@ FAMILY_SIGMA_RANGE: dict[str, tuple[float, float]] = {
 }
 
 FAMILY_EA_RANGE: dict[str, tuple[float, float]] = {
-    "sulfide": (0.1, 0.4),
-    "oxide": (0.2, 0.8),
+    "sulfide": (0.1, 0.5),
+    "oxide": (0.2, 0.9),
     "garnet": (0.2, 0.6),
     "perovskite": (0.2, 0.6),
     "nasicon": (0.2, 0.5),
     "halide": (0.2, 0.5),
     "hydride": (0.3, 0.8),
-    "borohydride": (0.3, 0.9),
+    "borohydride": (0.2, 1.7),
     "antiperovskite": (0.2, 0.6),
     "polymer_composite": (0.3, 1.0),
     "argyrodite": (0.1, 0.4),

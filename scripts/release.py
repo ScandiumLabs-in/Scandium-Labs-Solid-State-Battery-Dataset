@@ -223,6 +223,11 @@ def build_release_report(gates: dict) -> dict:
         "family_distribution": health.get("family_balance", {}),
         "agreement_grade_distribution": health.get("agreement_grade_distribution", {}),
         "metadata_coverage": health.get("coverage", {}),
+        "evidence_threshold": load_config().get("evidence_threshold", 85.0),
+        "evidence_threshold_rationale": (
+            "Set to 85% because 15 legacy benchmark seeds are human-verified but their source papers "
+            "are paywalled and have no reachable open-access PDF route."
+        ),
         "quality_distribution": quality if quality else health.get("quality", {}),
         "review_stats": {
             "approved": health.get("queue_approved", 0),
@@ -365,6 +370,7 @@ def main() -> int:
     parser.add_argument("--build", action="store_true",
                         help="run the deterministic build chain (quality, consensus, cards, health, validation) first")
     parser.add_argument("--config", default=str(CONFIG_PATH), help="path to release_config.toml")
+    parser.add_argument("--signoff", action="store_true", help="Confirm human sign-off for release")
     args = parser.parse_args()
 
     CONFIG_PATH = Path(args.config)
@@ -407,7 +413,7 @@ def main() -> int:
     if args.publish:
         from ssb_dataset.release.publishers import ReleaseManager
         mgr = ReleaseManager()
-        checklist = mgr.build_checklist(ROOT)
+        checklist = mgr.build_checklist(ROOT, human_signoff=args.signoff)
         if not checklist.ready:
             print("\nPUBLISH BLOCKED — release checklist not ready:")
             print(checklist.summary())

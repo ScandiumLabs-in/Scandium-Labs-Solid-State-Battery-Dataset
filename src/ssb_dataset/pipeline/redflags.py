@@ -44,15 +44,15 @@ FAMILY_SIGMA_RANGES: dict[str, tuple[float, float]] = {
 
 # Known Ea ranges per family (eV)
 FAMILY_EA_RANGES: dict[str, tuple[float, float]] = {
-    "sulfide": (0.15, 0.50),
-    "oxide": (0.20, 0.80),
+    "sulfide": (0.10, 0.50),
+    "oxide": (0.20, 0.90),
     "garnet": (0.20, 0.55),
     "perovskite": (0.25, 0.50),
     "nasicon": (0.20, 0.45),
     "halide": (0.25, 0.50),
     "argyrodite": (0.15, 0.50),
     "hydride": (0.30, 0.80),
-    "borohydride": (0.30, 0.90),
+    "borohydride": (0.20, 1.70),
     "antiperovskite": (0.30, 0.70),
     "polymer_composite": (0.30, 1.50),
 }

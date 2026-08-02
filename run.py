@@ -670,14 +670,14 @@ def phase9_release(
     manager = ReleaseManager(hf_publisher=hf, zenodo_publisher=zenodo, github_releaser=gh)
 
     if subcommand == "check":
-        checklist = manager.build_checklist()
+        checklist = manager.build_checklist(human_signoff=args.signoff)
         manager.print_summary(checklist)
         if not checklist.ready:
             print("\nSome checks failed. Fix issues above, then run with --release-cmd publish.")
             print("Use --release-cmd check --dry-run to see what would be published.")
 
     elif subcommand == "publish":
-        checklist = manager.build_checklist()
+        checklist = manager.build_checklist(human_signoff=args.signoff)
         if not checklist.human_signoff:
             print("WARNING: Human sign-off not confirmed. Set --signoff to confirm you have reviewed the release.")
             print("Running in dry-run mode. Pass --signoff to actually publish.")
