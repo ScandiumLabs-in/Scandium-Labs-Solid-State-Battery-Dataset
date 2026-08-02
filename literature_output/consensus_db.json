@@ -268,13 +268,13 @@
       2019
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 153.6,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -332,7 +332,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -352,7 +352,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -797,12 +797,7 @@
       2020
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -841,7 +836,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -861,7 +856,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -1005,7 +1000,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 510.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -1461,13 +1461,14 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 1
-      },
-      {
-        "value": "EIS",
-        "n": 1
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 480.0,
+        "n": 2
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -1525,7 +1526,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -2486,13 +2487,13 @@
       2026
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
-        "n": 4
+        "value": 200.0,
+        "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -2530,7 +2531,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -2550,7 +2551,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -2570,7 +2571,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -2590,7 +2591,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -2978,7 +2979,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 200.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -3069,7 +3075,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 200.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -3327,7 +3338,12 @@
       }
     ],
     "pressure_distribution": [],
-    "density_distribution": [],
+    "density_distribution": [
+      {
+        "value": 95.4,
+        "n": 1
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -4422,8 +4438,18 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 300.0,
+        "n": 1
+      }
+    ],
+    "density_distribution": [
+      {
+        "value": 95.42,
+        "n": 1
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -4590,12 +4616,7 @@
       2025
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -4634,7 +4655,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -4654,7 +4675,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -4824,8 +4845,7 @@
       }
     ],
     "families": [
-      "nasicon",
-      "unknown"
+      "nasicon"
     ],
     "publication_years": [
       2020,
@@ -8089,7 +8109,12 @@
         "n": 1
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 480.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -10435,12 +10460,7 @@
       2026
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -10499,7 +10519,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -10519,7 +10539,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -11397,13 +11417,14 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 2
-      },
+      }
+    ],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 380.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -11521,7 +11542,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -11541,7 +11562,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -12284,10 +12305,6 @@
     "journals": [],
     "method_distribution": [
       {
-        "value": "EIS",
-        "n": 1
-      },
-      {
         "value": "PEIS",
         "n": 1
       }
@@ -12330,7 +12347,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -12399,10 +12416,6 @@
     "journals": [],
     "method_distribution": [
       {
-        "value": "EIS",
-        "n": 1
-      },
-      {
         "value": "PEIS",
         "n": 1
       }
@@ -12445,7 +12458,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -12521,10 +12534,6 @@
     "journals": [],
     "method_distribution": [
       {
-        "value": "EIS",
-        "n": 1
-      },
-      {
         "value": "PEIS",
         "n": 1
       }
@@ -12567,7 +12576,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -13644,10 +13653,6 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 2
-      },
-      {
-        "value": "EIS",
-        "n": 2
       }
     ],
     "pressure_distribution": [],
@@ -13728,7 +13733,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -13748,7 +13753,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -17941,8 +17946,18 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 70.0,
+        "n": 1
+      }
+    ],
+    "density_distribution": [
+      {
+        "value": 83.0,
+        "n": 1
+      }
+    ],
     "measurements": [
       {
         "property": "activation_energy",
@@ -18922,13 +18937,13 @@
       2022
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 15.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -18986,7 +19001,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -19006,7 +19021,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -19058,13 +19073,13 @@
       2022
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 15.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -19122,7 +19137,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -19142,7 +19157,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -19569,8 +19584,18 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 70.0,
+        "n": 1
+      }
+    ],
+    "density_distribution": [
+      {
+        "value": 88.52,
+        "n": 1
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -19655,12 +19680,7 @@
       2025
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -19699,7 +19719,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -19719,7 +19739,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -20188,14 +20208,14 @@
       2026
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [],
+    "density_distribution": [
       {
-        "value": "EIS",
+        "value": 94.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
     "measurements": [
       {
         "property": "conductivity",
@@ -20252,7 +20272,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -20272,7 +20292,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -20825,13 +20845,13 @@
       2016
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 300.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -20869,7 +20889,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -20889,7 +20909,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21109,14 +21129,20 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 2
-      },
+      }
+    ],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 359.8,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "density_distribution": [
+      {
+        "value": 64.9,
+        "n": 2
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -21213,7 +21239,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21233,7 +21259,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21403,14 +21429,14 @@
       2025
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [],
+    "density_distribution": [
       {
-        "value": "EIS",
+        "value": 95.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
     "measurements": [
       {
         "property": "conductivity",
@@ -21447,7 +21473,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21467,7 +21493,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21688,14 +21714,19 @@
       2020
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 200.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "density_distribution": [
+      {
+        "value": 87.3,
+        "n": 2
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -21752,7 +21783,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -21772,7 +21803,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -22664,8 +22695,18 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
-    "density_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 200.0,
+        "n": 1
+      }
+    ],
+    "density_distribution": [
+      {
+        "value": 97.8,
+        "n": 1
+      }
+    ],
     "measurements": [
       {
         "property": "conductivity",
@@ -23775,10 +23816,23 @@
       },
       {
         "value": "EIS",
-        "n": 4
+        "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 15.0,
+        "n": 2
+      },
+      {
+        "value": 25.0,
+        "n": 1
+      },
+      {
+        "value": 348.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -23936,7 +23990,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -23956,7 +24010,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -24090,7 +24144,12 @@
         "n": 3
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 348.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -24385,7 +24444,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 250.0,
+        "n": 2
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -24474,7 +24538,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 250.0,
+        "n": 2
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -24735,13 +24804,14 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 4
-      },
+      }
+    ],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 250.0,
         "n": 3
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -24899,7 +24969,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -24919,7 +24989,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -24939,7 +25009,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -25988,7 +26058,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 153.6,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -26916,12 +26991,7 @@
       2020
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -26980,7 +27050,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -27000,7 +27070,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -27304,10 +27374,15 @@
     "method_distribution": [
       {
         "value": "EIS",
-        "n": 2
+        "n": 1
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 60.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -27365,7 +27440,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -27425,7 +27500,9 @@
         "count": 2
       }
     ],
-    "families": [],
+    "families": [
+      "polymer_composite"
+    ],
     "publication_years": [
       2021
     ],
@@ -27436,7 +27513,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 60.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -27514,7 +27596,9 @@
         "count": 2
       }
     ],
-    "families": [],
+    "families": [
+      "polymer_composite"
+    ],
     "publication_years": [
       2021
     ],
@@ -27525,7 +27609,12 @@
         "n": 2
       }
     ],
-    "pressure_distribution": [],
+    "pressure_distribution": [
+      {
+        "value": 60.0,
+        "n": 1
+      }
+    ],
     "density_distribution": [],
     "measurements": [
       {
@@ -28289,12 +28378,7 @@
       2023
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -28353,7 +28437,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "total",
         "confidence_tier": "",
         "confidence": null
@@ -28373,7 +28457,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "total",
         "confidence_tier": "",
         "confidence": null
@@ -30809,18 +30893,13 @@
       }
     ],
     "families": [
-      "unknown"
+      "borohydride"
     ],
     "publication_years": [
       2024
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -30899,7 +30978,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -30919,7 +30998,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -30961,18 +31040,13 @@
       }
     ],
     "families": [
-      "unknown"
+      "halide"
     ],
     "publication_years": [
       2021
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -31031,7 +31105,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -31051,7 +31125,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -31767,18 +31841,13 @@
       }
     ],
     "families": [
-      "unknown"
+      "hydride"
     ],
     "publication_years": [
       2021
     ],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -31837,7 +31906,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -31857,7 +31926,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -31981,16 +32050,11 @@
       }
     ],
     "families": [
-      "unknown"
+      "nasicon"
     ],
     "publication_years": [],
     "journals": [],
-    "method_distribution": [
-      {
-        "value": "EIS",
-        "n": 2
-      }
-    ],
+    "method_distribution": [],
     "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
@@ -32029,7 +32093,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -32049,7 +32113,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -32094,8 +32158,7 @@
       }
     ],
     "families": [
-      "nasicon",
-      "unknown"
+      "nasicon"
     ],
     "publication_years": [],
     "journals": [],
@@ -34338,10 +34401,6 @@
       {
         "value": "AC impedance spectroscopy",
         "n": 1
-      },
-      {
-        "value": "EIS",
-        "n": 3
       }
     ],
     "pressure_distribution": [],
@@ -34422,7 +34481,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -34442,7 +34501,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "ConductivityType.total",
         "confidence_tier": "",
         "confidence": null
@@ -34462,7 +34521,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "",
         "confidence_tier": "",
         "confidence": null
@@ -36156,13 +36215,13 @@
       2023
     ],
     "journals": [],
-    "method_distribution": [
+    "method_distribution": [],
+    "pressure_distribution": [
       {
-        "value": "EIS",
+        "value": 200.0,
         "n": 2
       }
     ],
-    "pressure_distribution": [],
     "density_distribution": [],
     "measurements": [
       {
@@ -36220,7 +36279,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "bulk",
         "confidence_tier": "",
         "confidence": null
@@ -36240,7 +36299,7 @@
         "section": "",
         "table_number": "",
         "evidence_sentence": "",
-        "measurement_method": "EIS",
+        "measurement_method": "",
         "conductivity_type": "bulk",
         "confidence_tier": "",
         "confidence": null

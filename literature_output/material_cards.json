@@ -246,9 +246,9 @@
     "temperature_counts": 3,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-019-09061-9",
@@ -270,7 +270,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -285,7 +285,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -737,9 +737,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1002/aenm.202000049",
@@ -761,7 +761,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -776,7 +776,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -1405,7 +1405,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -2294,9 +2294,9 @@
     "temperature_counts": 3,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 58,
+    "quality_score": 54,
     "quality_grade": "C",
-    "metadata_completeness": 0.25,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41598-018-23824-y",
@@ -2320,7 +2320,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -2335,7 +2335,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -2357,7 +2357,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -2372,7 +2372,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           }
         ],
@@ -4285,9 +4285,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.35378/gujs.1589340",
@@ -4309,7 +4309,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -4324,7 +4324,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -9861,9 +9861,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-026-69737-x",
@@ -9922,7 +9922,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -9937,7 +9937,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -10813,9 +10813,9 @@
     "temperature_counts": 5,
     "consensus_score": 85,
     "consensus_verdict": "strong consensus",
-    "quality_score": 70,
-    "quality_grade": "B",
-    "metadata_completeness": 0.5,
+    "quality_score": 66,
+    "quality_grade": "C",
+    "metadata_completeness": 0.25,
     "outliers": [],
     "dois": [
       "10.1021/jacs.1c07481",
@@ -10957,7 +10957,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -10972,7 +10972,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -11697,7 +11697,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -11799,7 +11799,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -11905,7 +11905,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -12944,9 +12944,9 @@
     "temperature_counts": 5,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 40,
+    "quality_score": 37,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.25,
     "outliers": [
       {
         "sigma": 1e-07,
@@ -12976,7 +12976,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -12991,7 +12991,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -18032,9 +18032,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/nano12244355",
@@ -18093,7 +18093,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -18108,7 +18108,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -18160,9 +18160,9 @@
     "temperature_counts": 3,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 58,
+    "quality_score": 54,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1039/C7CC05980K",
@@ -18222,7 +18222,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -18237,7 +18237,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -18742,9 +18742,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsaem.5c01010",
@@ -18766,7 +18766,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -18781,7 +18781,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -19253,9 +19253,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1007/s11664-026-12871-5",
@@ -19314,7 +19314,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -19329,7 +19329,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -19859,9 +19859,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3389/fenrg.2016.00028",
@@ -19883,7 +19883,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -19898,7 +19898,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20128,9 +20128,9 @@
     "temperature_counts": 5,
     "consensus_score": 85,
     "consensus_verdict": "strong consensus",
-    "quality_score": 64,
+    "quality_score": 60,
     "quality_grade": "C",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.25,
     "outliers": [],
     "dois": [
       "10.1038/s41467-025-58108-7",
@@ -20257,7 +20257,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -20272,7 +20272,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20399,9 +20399,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/molecules30092028",
@@ -20423,7 +20423,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -20438,7 +20438,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20674,9 +20674,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/ma13030560",
@@ -20735,7 +20735,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -20750,7 +20750,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -22625,9 +22625,9 @@
     "temperature_counts": 10,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 86,
-    "quality_grade": "A",
-    "metadata_completeness": 0.714,
+    "quality_score": 84,
+    "quality_grade": "B",
+    "metadata_completeness": 0.571,
     "outliers": [],
     "dois": [
       "10.1021/acsaem.3c02858",
@@ -22845,7 +22845,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -22860,7 +22860,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -23541,9 +23541,9 @@
     "temperature_counts": 7,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 66,
+    "quality_score": 64,
     "quality_grade": "C",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.333,
     "outliers": [],
     "dois": [
       "10.1002/anie.200701144",
@@ -23612,7 +23612,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           }
         ],
@@ -23738,7 +23738,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -23753,7 +23753,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -25612,9 +25612,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsami.0c10361",
@@ -25673,7 +25673,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -25688,7 +25688,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -25978,9 +25978,9 @@
     "temperature_counts": 2,
     "consensus_score": 64,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsaem.0c02525",
@@ -26017,7 +26017,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -26073,7 +26073,7 @@
   },
   "LiBH4-MgO(CE26)": {
     "material": "LiBH4-MgO(CE26)",
-    "family": "unknown",
+    "family": "polymer_composite",
     "n_papers": 1,
     "n_sigma": 1,
     "n_ea": 1,
@@ -26160,7 +26160,7 @@
   },
   "LiBH4-MgO(CE74)": {
     "material": "LiBH4-MgO(CE74)",
-    "family": "unknown",
+    "family": "polymer_composite",
     "n_papers": 1,
     "n_sigma": 1,
     "n_ea": 1,
@@ -26933,9 +26933,9 @@
     "temperature_counts": 4,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-35857-x",
@@ -26957,7 +26957,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "total"
           },
           {
@@ -26972,7 +26972,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "total"
           },
           {
@@ -29396,7 +29396,7 @@
   },
   "Mg1B21.47H88.88N1": {
     "material": "Mg1B21.47H88.88N1",
-    "family": "unknown",
+    "family": "borohydride",
     "n_papers": 2,
     "n_sigma": 3,
     "n_ea": 2,
@@ -29429,9 +29429,9 @@
     "temperature_counts": 2,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 54,
+    "quality_score": 50,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s43246-024-00601-5",
@@ -29505,7 +29505,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -29520,7 +29520,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -29539,7 +29539,7 @@
   },
   "Na2.9H1Se0.9I0.1": {
     "material": "Na2.9H1Se0.9I0.1",
-    "family": "unknown",
+    "family": "halide",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 2,
@@ -29569,9 +29569,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-020-20370-2",
@@ -29630,7 +29630,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -29645,7 +29645,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -30310,7 +30310,7 @@
   },
   "Na3HSe": {
     "material": "Na3HSe",
-    "family": "unknown",
+    "family": "hydride",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 2,
@@ -30340,9 +30340,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-020-20370-2",
@@ -30401,7 +30401,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -30416,7 +30416,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -30513,7 +30513,7 @@
   },
   "Na3HfScSi(PO6)2": {
     "material": "Na3HfScSi(PO6)2",
-    "family": "unknown",
+    "family": "nasicon",
     "n_papers": 2,
     "n_sigma": 2,
     "n_ea": 1,
@@ -30543,9 +30543,9 @@
     "temperature_counts": 3,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-40669-0",
@@ -30567,7 +30567,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -30582,7 +30582,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -32763,9 +32763,9 @@
     "temperature_counts": 4,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 42,
+    "quality_score": 38,
     "quality_grade": "D",
-    "metadata_completeness": 0.4,
+    "metadata_completeness": 0.2,
     "outliers": [
       {
         "sigma": 0.00018,
@@ -32825,7 +32825,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -32877,7 +32877,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -32892,7 +32892,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -34476,9 +34476,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-37115-6",
@@ -34537,7 +34537,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "bulk"
           },
           {
@@ -34552,7 +34552,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "bulk"
           }
         ],
