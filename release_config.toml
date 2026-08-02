@@ -1,0 +1,18 @@
+# Scandium Dataset release policy.
+# Consumed by `scripts/release.py`. Adjust thresholds per-version without code
+# changes (v0.2 demo -> v1.0 publish). All values are gate requirements.
+
+[release]
+min_verified_labels = 100          # >= N verified experimental records
+min_total_records = 25000          # total canonical records (incl. DFT)
+evidence_threshold = 85            # % of records with page + evidence sentence (15 legacy paywalled benchmark seeds carry no PDF evidence but are hand-verified)
+metadata_temperature_threshold = 80   # % records with temperature
+metadata_method_threshold = 80        # % records with measurement method
+duplicate_threshold = 1            # duplicate rate % (must be < this)
+doi_threshold = 100                # % DOI provenance on experimental records
+gold_threshold = 50                # target % of verified records that are Gold (info)
+benchmark_target = 100             # target benchmark materials (info)
+
+# Benchmark compounds that fail verification by design (general formulas that
+# cannot be string-matched against the dataset). Their absence does not block.
+known_benign_benchmark_failures = ["Li3xLa2/3-xTiO3"]

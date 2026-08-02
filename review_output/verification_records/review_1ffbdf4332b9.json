@@ -1,0 +1,23 @@
+{
+  "review_id": "review_1ffbdf4332b9",
+  "paper_id": "10.3390_polym12091889",
+  "composition": "PEO-LiTFSI",
+  "family": "polymer_composite",
+  "property": "conductivity",
+  "value": 0.00018,
+  "sigma_S_per_cm": 0.00018,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": "hanical mixing, and improves the interface bond of phases [18,19]. Madhusudan Bera et al. [20] found that the ultrasound promoted the formation of covalent bonds, thereby producing macromolecular stru",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "conflict",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 56.8,
+  "auto_decision": "reject",
+  "notes": [
+    "literature conflict"
+  ]
+}

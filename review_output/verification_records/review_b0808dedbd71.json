@@ -1,0 +1,28 @@
+{
+  "review_id": "review_b0808dedbd71",
+  "paper_id": "10.3390_molecules30092028",
+  "composition": "Li6.4Fe0.2La3Zr2O12",
+  "family": "garnet",
+  "property": "activation_energy",
+  "value": 0.25,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.25,
+  "evidence_page": 2,
+  "evidence_window": "s it tends to have a more pronounced effect on improving both the ionic conductivity and sintering activity compared with single-element doping. Zhou et al. co-doped Sr2+ and Mo6+ into LLZO to obtain ",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": true,
+  "model_agreement": "1/1",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "0.25"
+    }
+  ],
+  "review_score": 89.5,
+  "auto_decision": "needs_review",
+  "notes": []
+}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row g-3 mb-4">
+  <div class="col-md-3"><div class="card"><div class="card-body">
+    <div class="text-muted small">Total</div>
+    <div class="fs-3 fw-bold">{{ total }}</div>
+  </div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body">
+    <div class="text-muted small">Pending</div>
+    <div class="fs-3 fw-bold text-warning">{{ status_counts.get('pending', 0) }}</div>
+  </div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body">
+    <div class="text-muted small">Approved</div>
+    <div class="fs-3 fw-bold text-success">{{ status_counts.get('approved', 0) }}</div>
+  </div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body">
+    <div class="text-muted small">Rejected</div>
+    <div class="fs-3 fw-bold text-danger">{{ status_counts.get('rejected', 0) }}</div>
+  </div></div></div>
+</div>
+
+<form class="row g-2 mb-3" method="get" action="/">
+  <div class="col-auto">
+    <select name="family" class="form-select form-select-sm">
+      <option value="">All families</option>
+      {% for f in families %}<option value="{{ f }}" {% if f == family %}selected{% endif %}>{{ f }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="col-auto">
+    <select name="status" class="form-select form-select-sm">
+      <option value="">All statuses</option>
+      {% for s in ['pending', 'approved', 'rejected'] %}
+      <option value="{{ s }}" {% if s == status %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-auto"><button class="btn btn-sm btn-outline-secondary">Filter</button></div>
+</form>
+
+<table class="table table-hover align-middle bg-white">
+  <thead>
+    <tr>
+      <th>AI decision</th>
+      <th>Composition</th>
+      <th>Property</th>
+      <th>Value</th>
+      <th>T</th>
+      <th>Family</th>
+      <th>Score</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for it in items %}
+    <tr>
+      <td><span class="decision-{{ it['_ai'].decision }}">{{ it['_ai'].decision }}</span></td>
+      <td class="mono">{{ it.composition }}</td>
+      <td>{{ it.property }}</td>
+      <td class="mono">{{ it.value | fmt(it.unit) }}</td>
+      <td class="mono">{{ it.temperature_celsius if it.temperature_celsius is not none else '—' }}</td>
+      <td>{{ it.family or '—' }}</td>
+      <td class="mono">{{ "%.1f" | format(it['_ai'].overall) if it['_ai'].overall else '—' }}</td>
+      <td><span class="status-{{ it.status }}">{{ it.status }}</span></td>
+      <td><a class="btn btn-sm btn-outline-primary" href="/record/{{ it.review_id }}">Review</a></td>
+    </tr>
+    {% else %}
+    <tr><td colspan="9" class="text-center text-muted py-4">No records match the filter.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{
+  "version": "v0.2.0",
+  "generated_at": "2026-08-02T10:36:41.518760+00:00",
+  "total_records": 30071,
+  "verified_records": 116,
+  "materials_total": 387,
+  "papers_total": 154,
+  "consensus_materials": 387,
+  "consensus_n3": 20,
+  "benchmark_materials": 0,
+  "family_distribution": {
+    "polymer_composite": 24,
+    "garnet": 18,
+    "nasicon": 13,
+    "perovskite": 10,
+    "sulfide": 9,
+    "halide": 9,
+    "antiperovskite": 8,
+    "unknown": 7,
+    "argyrodite": 6,
+    "borohydride": 5,
+    "oxide": 5,
+    "hydride": 2
+  },
+  "agreement_grade_distribution": {
+    "C": 330,
+    "B": 38,
+    "A+": 7,
+    "D": 5,
+    "A": 5,
+    "": 2
+  },
+  "metadata_coverage": {
+    "temperature_celsius": 94.0,
+    "measurement_method": 99.1,
+    "conductivity_type": 92.2,
+    "pelletizing_pressure_MPa": 0.0,
+    "relative_density_pct": 0.0,
+    "theoretical_density_g_per_cm3": 0.0,
+    "electrode_material": 0.0,
+    "atmosphere": 0.0,
+    "sample_form": 0.0,
+    "frequency_max_Hz": 0.0,
+    "sinter_temperature_C": 0.0,
+    "sinter_time_h": 0.0,
+    "page": 87.1,
+    "evidence_sentence": 87.1
+  },
+  "quality_distribution": {
+    "records": 143,
+    "score_avg": 47.3,
+    "score_min": 35,
+    "score_max": 65,
+    "grade_distribution": {
+      "C": 90,
+      "D": 51,
+      "B": 2
+    },
+    "tier_distribution": {
+      "silver": 138,
+      "rejected": 5
+    },
+    "tier_pct": {
+      "gold": 0.0,
+      "silver": 96.5,
+      "bronze": 0.0,
+      "rejected": 3.5
+    },
+    "gold_records": 0,
+    "silver_records": 138,
+    "bronze_records": 0,
+    "rejected_records": 5,
+    "family_scores": {
+      "": {
+        "n": 6,
+        "avg_score": 45.2,
+        "tiers": {
+          "rejected": 5,
+          "silver": 1
+        }
+      },
+      "LLZO": {
+        "n": 1,
+        "avg_score": 47.0,
+        "tiers": {
+          "silver": 1
+        }
+      },
+      "antiperovskite": {
+        "n": 5,
+        "avg_score": 45.4,
+        "tiers": {
+          "silver": 5
+        }
+      },
+      "argyrodite": {
+        "n": 10,
+        "avg_score": 50.0,
+        "tiers": {
+          "silver": 10
+        }
+      },
+      "borohydride": {
+        "n": 8,
+        "avg_score": 47.0,
+        "tiers": {
+          "silver": 8
+        }
+      },
+      "garnet": {
+        "n": 20,
+        "avg_score": 45.3,
+        "tiers": {
+          "silver": 20
+        }
+      },
+      "halide": {
+        "n": 10,
+        "avg_score": 49.2,
+        "tiers": {
+          "silver": 10
+        }
+      },
+      "nasicon": {
+        "n": 15,
+        "avg_score": 50.3,
+        "tiers": {
+          "silver": 15
+        }
+      },
+      "oxide": {
+        "n": 9,
+        "avg_score": 43.9,
+        "tiers": {
+          "silver": 9
+        }
+      },
+      "perovskite": {
+        "n": 13,
+        "avg_score": 49.2,
+        "tiers": {
+          "silver": 13
+        }
+      },
+      "polymer_composite": {
+        "n": 26,
+        "avg_score": 48.4,
+        "tiers": {
+          "silver": 26
+        }
+      },
+      "sulfide": {
+        "n": 7,
+        "avg_score": 49.6,
+        "tiers": {
+          "silver": 7
+        }
+      },
+      "unknown": {
+        "n": 13,
+        "avg_score": 42.2,
+        "tiers": {
+          "silver": 13
+        }
+      }
+    }
+  },
+  "review_stats": {
+    "approved": 143,
+    "pending": 0,
+    "rejected": 142
+  },
+  "gates": {
+    "tests_passing": true,
+    "validation_passed": true,
+    "no_pending_review_flags": true,
+    "evidence_coverage": true,
+    "duplicate_rate": true,
+    "metadata_completeness": true,
+    "doi_provenance": true,
+    "min_verified_labels": true,
+    "min_total_records": true,
+    "health_report_generated": true
+  },
+  "gate_failures": []
+}

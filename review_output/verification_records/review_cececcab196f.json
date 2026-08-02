@@ -1,0 +1,30 @@
+{
+  "review_id": "review_cececcab196f",
+  "paper_id": "10.1038_s41467-025-58108-7",
+  "composition": "Li6.5La3Zr1.5Ta0.5O12",
+  "family": "garnet",
+  "property": "conductivity",
+  "value": 0.00018,
+  "sigma_S_per_cm": 0.00018,
+  "Ea_eV": null,
+  "evidence_page": 5,
+  "evidence_window": "within the temperature range of 25\u20131000 \u00b0C. As depicted in Fig. 2c, the cubic-phase formation starts at 400 \u00b0C, indicated by the emergence of the two distinctive diffraction peaks at ~16\u00b0 and ~19\u00b0, co",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "conflict",
+  "consensus_agree": true,
+  "model_agreement": "1/1",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 84.8,
+  "auto_decision": "needs_review",
+  "notes": [
+    "literature conflict"
+  ]
+}

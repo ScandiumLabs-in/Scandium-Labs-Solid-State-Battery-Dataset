@@ -1,0 +1,34 @@
+{
+  "review_id": "review_d89adc183f6f",
+  "paper_id": "10.1021_acsami.0c10361",
+  "composition": "LiBH4-LiI/Al2O3",
+  "family": "borohydride",
+  "property": "conductivity",
+  "value": 0.001,
+  "sigma_S_per_cm": 0.001,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "tained that revealed promising properties as a solid electrolyte. The underlying principles of Li+ conduction in such a nanocomposite are, however, far from being understood completely. Here, we used ",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": true,
+  "model_agreement": "2/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 87.0,
+  "auto_decision": "needs_review",
+  "notes": []
+}

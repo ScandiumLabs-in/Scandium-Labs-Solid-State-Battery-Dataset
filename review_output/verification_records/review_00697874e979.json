@@ -1,0 +1,40 @@
+{
+  "review_id": "review_00697874e979",
+  "paper_id": "10.1002_aenm.202000049",
+  "composition": "Ca-CeO2/LiTFSI/PEO",
+  "family": "polymer_composite",
+  "property": "conductivity",
+  "value": 0.00013,
+  "sigma_S_per_cm": 0.00013,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": " flexible polymer solid electrolyte. In this work, a  flexible all-solid-state composite electrolyte is synthesized based on oxygen-vacancy-rich Ca-doped  CeO2 (Ca-CeO2) nanotube, LiTFSI, and poly(eth",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/3",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "different",
+      "ea_found": "not_reported",
+      "quote": "1.3x10-4 S cm- 1"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "different",
+      "ea_found": "not_reported",
+      "quote": "1.3x10-4 S cm- 1"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 67.5,
+  "auto_decision": "reject",
+  "notes": []
+}

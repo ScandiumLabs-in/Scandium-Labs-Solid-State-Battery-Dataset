@@ -1,0 +1,353 @@
+{
+  "total_records": 30071,
+  "verified_records": 116,
+  "coverage": {
+    "temperature_celsius": 94.0,
+    "measurement_method": 99.1,
+    "conductivity_type": 92.2,
+    "pelletizing_pressure_MPa": 0.0,
+    "relative_density_pct": 0.0,
+    "theoretical_density_g_per_cm3": 0.0,
+    "electrode_material": 0.0,
+    "atmosphere": 0.0,
+    "sample_form": 0.0,
+    "frequency_max_Hz": 0.0,
+    "sinter_temperature_C": 0.0,
+    "sinter_time_h": 0.0,
+    "page": 87.1,
+    "evidence_sentence": 87.1
+  },
+  "family_balance": {
+    "polymer_composite": 24,
+    "garnet": 18,
+    "nasicon": 13,
+    "perovskite": 10,
+    "sulfide": 9,
+    "halide": 9,
+    "antiperovskite": 8,
+    "unknown": 7,
+    "argyrodite": 6,
+    "borohydride": 5,
+    "oxide": 5,
+    "hydride": 2
+  },
+  "conductivity_type_split": {
+    "total": 74,
+    "ConductivityType.total": 24,
+    "bulk": 9,
+    "unknown": 9
+  },
+  "materials_total": 387,
+  "materials_with_consensus_n3": 20,
+  "materials_with_sigma": 387,
+  "materials_with_ea": 387,
+  "materials_with_multipaper": 32,
+  "total_sigma_records": 481,
+  "total_ea_records": 461,
+  "outlier_records": 4,
+  "agreement_grade_distribution": {
+    "C": 330,
+    "B": 38,
+    "A+": 7,
+    "D": 5,
+    "A": 5,
+    "": 2
+  },
+  "materials_with_pub_years": 104,
+  "pub_years_coverage_pct": 26.9,
+  "materials_with_sigma_by_temp": 385,
+  "quality_score_avg": 35.8,
+  "quality_score_min": 16,
+  "quality_score_max": 86,
+  "quality_grade_distribution": {
+    "D": 194,
+    "C": 11,
+    "B": 1,
+    "A": 1
+  },
+  "queue_items": 285,
+  "queue_pending": 0,
+  "queue_approved": 143,
+  "queue_rejected": 142,
+  "queue_with_experiment_block": 37,
+  "quality": {
+    "records": 143,
+    "avg_score": 47.3,
+    "grade_distribution": {
+      "C": 90,
+      "D": 51,
+      "B": 2
+    },
+    "tier_distribution": {
+      "silver": 138,
+      "rejected": 5
+    },
+    "gold_records": 0,
+    "silver_records": 138,
+    "bronze_records": 0,
+    "rejected_records": 5,
+    "gold_pct": 0.0
+  },
+  "missing_data_recommendations": {
+    "pelletizing_pressure_MPa": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "relative_density_pct": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "theoretical_density_g_per_cm3": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "pellet_diameter_mm": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "thickness_mm": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "electrode_material": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "atmosphere": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "humidity": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "sample_form": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "frequency_max_Hz": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "sinter_temperature_C": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "sinter_time_h": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "annealing_temperature_C": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "instrument": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "equivalent_circuit": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    },
+    "dc_bias_V": {
+      "missing_count": 143,
+      "missing_pct": 100.0,
+      "top_records": [
+        "review_0b5b52b6ae4db541",
+        "review_c5f8fc98e7a3c012",
+        "review_213a4e2d1acad996",
+        "review_64c1367c8744270c",
+        "review_99de06259baa",
+        "review_95edcc698731b35a",
+        "review_manual_44",
+        "review_manual_45",
+        "review_manual_46",
+        "review_manual_47"
+      ]
+    }
+  },
+  "drift": {
+    "record_count_change": 0,
+    "baseline_records": 116
+  }
+}

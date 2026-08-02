@@ -1,0 +1,23 @@
+{
+  "review_id": "review_b0dc79716258",
+  "paper_id": "10.3389_fchem.2020.562549",
+  "composition": "Li3OCl",
+  "family": "antiperovskite",
+  "property": "conductivity",
+  "value": 3.21e-05,
+  "sigma_S_per_cm": 3.21e-05,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "ORIGINAL RESEARCH published: 29 September 2020 doi: 10.3389/fchem.2020.562549 Frontiers in Chemistry | www.frontiersin.org 1 September 2020 | Volume 8 | Article 562549 Edited by: Yong-Mook Kang, Dongg",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "agree",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 65.8,
+  "auto_decision": "reject",
+  "notes": [
+    "literature agree"
+  ]
+}

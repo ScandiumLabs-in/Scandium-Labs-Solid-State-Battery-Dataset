@@ -1,0 +1,36 @@
+{
+  "review_id": "review_db95eaff62b6",
+  "paper_id": "10.1021_acsaem.5c01010",
+  "composition": "Li6.4La3Zr1.4Ta0.6O12",
+  "family": "garnet",
+  "property": "conductivity",
+  "value": 0.0005,
+  "sigma_S_per_cm": 0.0005,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": "-containing TT layer with an LLZO-containing precursor layer will lead to immediate solidification of the composite film upon UV illumination, without adding any exogenous photoinitiator. The solidifi",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "agree",
+  "consensus_agree": false,
+  "model_agreement": "1/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 78.2,
+  "auto_decision": "reject",
+  "notes": [
+    "literature agree"
+  ]
+}

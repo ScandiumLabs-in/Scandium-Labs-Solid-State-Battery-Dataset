@@ -1,0 +1,21 @@
+{
+  "review_id": "review_341a99b62c97",
+  "paper_id": "10.1038_s43246-024-00601-5",
+  "composition": "Mg(BH4)21.47NH3",
+  "family": "unknown",
+  "property": "conductivity",
+  "value": 0.00027,
+  "sigma_S_per_cm": 0.00027,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "g(BH4)2\u00b72NH3)1\u2212x composite. The synthesis of nanocon\ufb01ned Mg(BH4)2\u00b71.47NH3 in a mesoporous silica scaffold (SBA-15, pore size 5.8 nm) is achieved through melt in\ufb01ltration. Various degrees of pore \ufb01llin",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

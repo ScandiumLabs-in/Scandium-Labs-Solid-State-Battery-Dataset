@@ -1,0 +1,25 @@
+{
+  "paper_id": "antiperovskite_pmc",
+  "doi": null,
+  "primary_composition": "",
+  "compositions": [],
+  "conductivities": {
+    "high_confidence": [],
+    "flagged": []
+  },
+  "activation_energies": {
+    "high_confidence": [],
+    "flagged": []
+  },
+  "evidence_graph": {
+    "total_nodes": 0,
+    "primary_nodes": 0
+  },
+  "evidence": [],
+  "dataset_record": {
+    "n_evidence": 0,
+    "n_high_confidence": 0,
+    "n_flagged": 0
+  },
+  "note": "insufficient text content"
+}

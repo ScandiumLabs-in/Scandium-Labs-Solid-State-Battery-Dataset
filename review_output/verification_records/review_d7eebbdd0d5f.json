@@ -1,0 +1,34 @@
+{
+  "review_id": "review_d7eebbdd0d5f",
+  "paper_id": "10.1021_acsami.0c10361",
+  "composition": "LiBH4-LiI/Al2O3",
+  "family": "borohydride",
+  "property": "activation_energy",
+  "value": 0.43,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.43,
+  "evidence_page": 1,
+  "evidence_window": "ic di\ufb00usion coe\ufb03cients from PFG NMR agree with those estimated from measurements of ionic conductivity and nuclear spin relaxation. The resulting 3D ionic transport in nanocon\ufb01ned LiBH4-LiI/Al2O3 is c",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": true,
+  "model_agreement": "2/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "an activation energy of 0.43 eV"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "an activation energy of 0.43 eV"
+    }
+  ],
+  "review_score": 89.5,
+  "auto_decision": "needs_review",
+  "notes": []
+}

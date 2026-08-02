@@ -1,0 +1,21 @@
+{
+  "review_id": "review_eca9786c16c9",
+  "paper_id": "10.1038_s43246-024-00601-5",
+  "composition": "Mg(BH4)21.47NH3",
+  "family": "unknown",
+  "property": "activation_energy",
+  "value": 0.69,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.69,
+  "evidence_page": 1,
+  "evidence_window": "e months after synthesis, upon storing at room temperature. Notably, among the con\ufb01ned samples, 200 % pore \ufb01lling displays promising Mg2+ ionic conductivity within the range of 9.1 \u00d7 10\u22126 to 2.7 \u00d7 10\u2212",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

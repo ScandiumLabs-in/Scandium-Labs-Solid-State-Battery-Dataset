@@ -1,0 +1,21 @@
+{
+  "review_id": "review_de3f203d2024",
+  "paper_id": "10.35378_gujs.1589340",
+  "composition": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+  "family": "polymer_composite",
+  "property": "conductivity",
+  "value": 1.7e-05,
+  "sigma_S_per_cm": 1.7e-05,
+  "Ea_eV": null,
+  "evidence_page": 11,
+  "evidence_window": "1459   Fatih OKSUZOGLU, Osman Murat OZKENDIR, Sule ATES / GU J Sci, 38(3): 1449-1460 (2025)      [25] Wang, Z., Huang, B., Xue, R., Huang, X., Chen, L., \u201cSpectroscopic investigation of interactions  a",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

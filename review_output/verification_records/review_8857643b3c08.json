@@ -1,0 +1,28 @@
+{
+  "review_id": "review_8857643b3c08",
+  "paper_id": "10.3390_nano12244355",
+  "composition": "Li5.4Al0.1PS4.7Cl1.3",
+  "family": "argyrodite",
+  "property": "conductivity",
+  "value": 0.00729,
+  "sigma_S_per_cm": 0.00729,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "Citation: Choi, Y.J.; Kim, S.-I.; Son, M.; Lee, J.W.; Lee, D.H. Cl- and Al-Doped Argyrodite Solid Electrolyte Li6PS5Cl for All-Solid-State Lithium Batteries with Improved Ionic Conductivity. Nanomater",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": true,
+  "model_agreement": "1/1",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 87.0,
+  "auto_decision": "needs_review",
+  "notes": []
+}

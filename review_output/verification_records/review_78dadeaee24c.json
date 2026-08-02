@@ -1,0 +1,38 @@
+{
+  "review_id": "review_78dadeaee24c",
+  "paper_id": "10.1126_sciadv.abj7698",
+  "composition": "Li3Zr2Si2PO12",
+  "family": "nasicon",
+  "property": "conductivity",
+  "value": 3.59e-06,
+  "sigma_S_per_cm": 3.59e-06,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "Zhu et al., Sci. Adv. 8, eabj7698 (2022)     18 March 2022 SCIE N C E A D V A NCES | RESEA R CH A RT ICL E 1 of 12 C HE M ISTRY Enhancing ionic conductivity in\u2006solid electrolyte by  relocating diffusi",
+  "physics_ok": false,
+  "physics_notes": [
+    "sigma 3.59e-06 outside nasicon range [1e-05,1e-02]"
+  ],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "1/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 59.5,
+  "auto_decision": "reject",
+  "notes": [
+    "sigma 3.59e-06 outside nasicon range [1e-05,1e-02]"
+  ]
+}

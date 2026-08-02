@@ -1,0 +1,21 @@
+{
+  "review_id": "review_6a7d99f6ecf7",
+  "paper_id": "10.1126_sciadv.abj7698",
+  "composition": "Li3Zr2Si2PO12",
+  "family": "nasicon",
+  "property": "activation_energy",
+  "value": 0.21,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.21,
+  "evidence_page": 1,
+  "evidence_window": "ithium ions stabilized in under-coordination structures are facilitated to pass through relatively large  conduction bottlenecks inherited from the Na3Zr2Si2PO12 precursor. The synthesized Li3Zr2Si2PO",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

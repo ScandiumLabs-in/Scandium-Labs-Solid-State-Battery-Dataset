@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.so
+
+# Environment
+.venv/
+.conda/
+.env
+*.env
+
+# Data
+staging/
+data/
+*.parquet
+*.cif
+*.poscar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+config/credentials*.json
+config/credentials*.yaml
+config/credentials*.toml
+*.key
+
+# Compute logs
+logs/
+slurm-*.out
+custodian/
+
+# ML artifacts
+*.pth
+*.pt
+checkpoints/
+
+# DVC
+.dvc/
+
+# Harvested PDFs + repro artifacts (keep repo lean; PDFs/large binaries not in VCS)
+literature_output/pdfs/
+review_output/cards/
+*.jsonl.bak
+*.bak_dup
+.coverage
+.pytest_cache/
+.ruff_cache/
+.__pycache__

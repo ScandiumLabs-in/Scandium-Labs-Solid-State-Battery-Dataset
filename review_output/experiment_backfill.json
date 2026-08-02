@@ -1,0 +1,1622 @@
+{
+  "records": [
+    {
+      "material": "Li7La3Zr2O12",
+      "doi": "10.1038/s41467-022-35287-1",
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pelletizing_pressure_MPa": 250.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1000.0,
+        "sinter_time_h": 12.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li7La3Zr0.5Hf0.5Sc0.5Nb0.5O12",
+      "doi": "10.1038/s41467-022-35287-1",
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pelletizing_pressure_MPa": 250.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1000.0,
+        "sinter_time_h": 12.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li7La3Zr0.4Hf0.4Sn0.4Sc0.4Ta0.4O12",
+      "doi": "10.1038/s41467-022-35287-1",
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pelletizing_pressure_MPa": 250.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1000.0,
+        "sinter_time_h": 12.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li2OHCl",
+      "doi": "10.1038/s41467-023-42385-1",
+      "pdf": "10.1038_s41467-023-42385-1.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 480.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "sinter_temperature_C": 120.0,
+        "annealing_temperature_C": 120.0,
+        "instrument": "Autolab"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "(Li2OH)0.99K0.01Cl",
+      "doi": "10.1038/s41467-023-42385-1",
+      "pdf": "10.1038_s41467-023-42385-1.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 480.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "sinter_temperature_C": 120.0,
+        "annealing_temperature_C": 120.0,
+        "instrument": "Autolab"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "PEO-LiTFSI-AlOC",
+      "doi": "10.1038/s41467-024-51191-2",
+      "pdf": "10.1038_s41467-024-51191-2.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 15.6,
+        "thickness_mm": 1.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li10GeP2S12",
+      "doi": "10.1038/nmat3066",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li6PS5Cl",
+      "doi": "10.1039/C5EE02930D",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li6PS5Br",
+      "doi": "10.1039/C5EE02930D",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li3PS4",
+      "doi": "10.1016/j.ssi.2015.09.010",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li7La3Zr2O12",
+      "doi": "10.1002/anie.200701144",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li6.5La3Zr1.5Ta0.5O12",
+      "doi": "10.1039/C6EE00556K",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li0.33La0.56TiO3",
+      "doi": "10.1016/0167-2738(93)90241-4",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3",
+      "doi": "10.1016/S0167-2738(03)00260-7",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li1.5Al0.5Ge1.5(PO4)3",
+      "doi": "10.1016/j.electacta.2012.04.007",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li3InCl6",
+      "doi": "10.1038/s41467-019-09619-5",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li3YCl6",
+      "doi": "10.1016/j.matt.2019.06.004",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li2ZrCl6",
+      "doi": "10.1021/jacs.1c07481",
+      "pdf": "10.1021_jacs.1c07481.pdf",
+      "conditions": {
+        "sample_form": "WAFER",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "HE"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LiBH4",
+      "doi": "10.1038/nmat1912",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li2B12H12",
+      "doi": "10.1039/C6EE02745A",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li3OCl",
+      "doi": "10.1021/ja305709z",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "PEO-LiTFSI",
+      "doi": "10.1038/s41467-024-51191-2",
+      "pdf": "10.1038_s41467-024-51191-2.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 15.6,
+        "thickness_mm": 1.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+      "doi": "10.1038/s41467-019-09061-9",
+      "pdf": "10.1038_s41467-019-09061-9.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pelletizing_pressure_MPa": 153.6,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "VACUUM",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Ca-CeO2/LiTFSI/PEO",
+      "doi": "10.1002/aenm.202000049",
+      "pdf": "10.1002_aenm.202000049.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 11.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 600.0,
+        "sinter_time_h": 6.0,
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "La0.57Li0.29TiO3",
+      "doi": "10.3389/fchem.2022.966274",
+      "pdf": "10.3389_fchem.2022.966274.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 960.0,
+        "sinter_time_h": 12.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+      "doi": "10.35378/gujs.1589340",
+      "pdf": "10.35378_gujs.1589340.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 900.0,
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3",
+      "doi": "10.3390/ma14164737",
+      "pdf": "10.3390_ma14164737.pdf",
+      "conditions": {},
+      "suspicious": []
+    },
+    {
+      "material": "Li2ZrCl6",
+      "doi": "10.1038/s41467-021-24697-2",
+      "pdf": "10.1038_s41467-021-24697-2.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pelletizing_pressure_MPa": 380.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 350.0,
+        "annealing_temperature_C": 350.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li3OCl",
+      "doi": "10.3389/fchem.2020.562549",
+      "pdf": "10.3389_fchem.2020.562549.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 0.3,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "instrument": "Biologic"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=0.3 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li3Zr2Si2PO12",
+      "doi": "10.1126/sciadv.abj7698",
+      "pdf": "10.1126_sciadv.abj7698.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "pellet_diameter_mm": 10.0,
+        "thickness_mm": 2.4,
+        "relative_density_pct": 83.0,
+        "pelletizing_pressure_MPa": 70.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 700.0,
+        "annealing_temperature_C": 700.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li5.4Al0.1PS4.7Cl1.3",
+      "doi": "10.3390/nano12244355",
+      "pdf": "10.3390_nano12244355.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 15.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "atmosphere": "N2",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li5.5PS4.5Cl1.5",
+      "doi": "10.3390/nano12244355",
+      "pdf": "10.3390_nano12244355.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 15.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "atmosphere": "N2",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+      "doi": "10.1021/acsaem.5c01010",
+      "pdf": "10.1021_acsaem.5c01010.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "COATED",
+        "frequency_min_Hz": 1.0,
+        "frequency_max_Hz": 2000000.0,
+        "atmosphere": "VACUUM",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.5Fe0.2La3Zr1.9Bi0.1O12",
+      "doi": "10.3390/molecules30092028",
+      "pdf": "10.3390_molecules30092028.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "relative_density_pct": 95.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "O2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+      "doi": "10.3389/fenrg.2016.00028",
+      "pdf": "10.3389_fenrg.2016.00028.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "pelletizing_pressure_MPa": 300.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "VACUUM",
+        "sinter_temperature_C": 1100.0,
+        "sinter_time_h": 15.0,
+        "annealing_temperature_C": 1100.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.5La3Zr1.5Ta0.5O12",
+      "doi": "10.1038/s41467-025-58108-7",
+      "pdf": "10.1038_s41467-025-58108-7.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 10.0,
+        "relative_density_pct": 64.9,
+        "pelletizing_pressure_MPa": 359.8,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "N2",
+        "sinter_temperature_C": 1100.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.6La3Zr1.6Nb0.4O12",
+      "doi": "10.3390/ma13030560",
+      "pdf": "10.3390_ma13030560.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 1.0,
+        "thickness_mm": 4.0,
+        "relative_density_pct": 87.3,
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR",
+        "instrument": "Gamry"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li6PS5Cl",
+      "doi": "10.3390/nano12244355",
+      "pdf": "10.3390_nano12244355.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 15.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "atmosphere": "N2",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6PS5Cl0.5Br0.5",
+      "doi": "10.3390/en16135100",
+      "pdf": null,
+      "conditions": {}
+    },
+    {
+      "material": "Li7La3Zr2O12",
+      "doi": "10.1021/acs.chemmater.3c01831",
+      "pdf": "10.1021_acs.chemmater.3c01831.pdf",
+      "conditions": {
+        "sample_form": "SINGLE_CRYSTAL",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "GLOVEBOX",
+        "sinter_temperature_C": 600.0,
+        "annealing_temperature_C": 600.0,
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LiBH4-LiI/Al2O3",
+      "doi": "10.1021/acsami.0c10361",
+      "pdf": "10.1021_acsami.0c10361.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 2.5,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "N2",
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=2.5 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "LiBH4-MgO",
+      "doi": "10.1021/acsaem.0c02525",
+      "pdf": "10.1021_acsaem.0c02525.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 60.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LiDFOB-TXE-FDMA-FEC",
+      "doi": "10.1038/s41467-023-35857-x",
+      "pdf": "10.1038_s41467-023-35857-x.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Mg(BH4)21.47NH3",
+      "doi": "10.1038/s43246-024-00601-5",
+      "pdf": "10.1038_s43246-024-00601-5.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.3,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Na3HfZr(SiO4)2(PO4)",
+      "doi": "10.1038/s41467-023-40669-0",
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 3.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=3.0 low (<15 MPa)",
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "PEO-LiTFSI",
+      "doi": "10.3390/polym12091889",
+      "pdf": "10.3390_polym12091889.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "thickness_mm": 0.081,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "N2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "(Li2OH)0.99K0.01Cl",
+      "doi": "10.1038/s41467-023-42385-1",
+      "pdf": "10.1038_s41467-023-42385-1.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 480.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "sinter_temperature_C": 120.0,
+        "annealing_temperature_C": 120.0,
+        "instrument": "Autolab"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li0.29La0.57TiO3",
+      "doi": "10.1038/s43246-026-01164-3",
+      "pdf": "10.1038_s43246-026-01164-3.pdf",
+      "conditions": {
+        "sample_form": "SINGLE_CRYSTAL",
+        "electrode_material": "AL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li2SO4-ZrCl4",
+      "doi": "10.1038/s41467-026-69737-x",
+      "pdf": "10.1038_s41467-026-69737-x.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "thickness_mm": 0.1,
+        "pelletizing_pressure_MPa": 2.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=2.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li7La3Zr2O12",
+      "doi": "10.1038/s41467-022-35287-1",
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pelletizing_pressure_MPa": 250.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1000.0,
+        "sinter_time_h": 12.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO-LiTFSI",
+      "doi": "10.1038/s41467-024-51191-2",
+      "pdf": "10.1038_s41467-024-51191-2.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 15.6,
+        "thickness_mm": 1.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li0.375Sr0.4375Ta0.75Zr0.25O3",
+      "doi": "10.1038/s41467-023-37115-6",
+      "pdf": "10.1038_s41467-023-37115-6.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "thickness_mm": 1.55,
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "AG",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "sinter_temperature_C": 1100.0,
+        "sinter_time_h": 12.0,
+        "instrument": "PARSTAT"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Na2.9H(Se0.9I0.1)",
+      "doi": "10.1038/s41467-020-20370-2",
+      "pdf": "10.1038_s41467-020-20370-2.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 55.0,
+        "electrode_material": "AG",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=55.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Na3HSe",
+      "doi": "10.1038/s41467-020-20370-2",
+      "pdf": "10.1038_s41467-020-20370-2.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 55.0,
+        "electrode_material": "AG",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=55.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Na3HfSc(SiO4)(PO4)2",
+      "doi": "10.1038/s41467-023-40669-0",
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 3.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=3.0 low (<15 MPa)",
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "(Li0.45La0.85)ScO3",
+      "doi": "10.3390/molecules26020299",
+      "pdf": "10.3390_molecules26020299.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PAINTED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 623.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "(Li0.4Ce0.15La0.67)ScO3",
+      "doi": "10.3390/molecules26020299",
+      "pdf": "10.3390_molecules26020299.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PAINTED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 623.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "40wt% Li2OHCl0.5Br0.5/NBR CPE",
+      "doi": "10.3389/fchem.2021.744417",
+      "pdf": "10.3389_fchem.2021.744417.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3BxTi1.7-x(PO4)3 (10% H3BO3)",
+      "doi": "10.3390/ma17153846",
+      "pdf": "10.3390_ma17153846.pdf",
+      "conditions": {
+        "sample_form": "FILM",
+        "relative_density_pct": 95.42,
+        "pelletizing_pressure_MPa": 300.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.98Ga0.072La3Zr1.982Ta0.018O12",
+      "doi": "10.3390/nano12172946",
+      "pdf": "10.3390_nano12172946.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "relative_density_pct": 97.8,
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "frequency_min_Hz": 1.0,
+        "frequency_max_Hz": 10000000.0,
+        "atmosphere": "N2"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "NBR SPE",
+      "doi": "10.3389/fchem.2021.744417",
+      "pdf": "10.3389_fchem.2021.744417.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO",
+      "doi": "10.3390/molecules29081759",
+      "pdf": "10.3390_molecules29081759.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "pellet_diameter_mm": 12.0,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "EVAPORATED",
+        "atmosphere": "AR",
+        "instrument": "Metrohm"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO-5% COF-LZU1",
+      "doi": "10.3390/molecules29081759",
+      "pdf": "10.3390_molecules29081759.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "pellet_diameter_mm": 12.0,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "EVAPORATED",
+        "atmosphere": "AR",
+        "instrument": "Metrohm"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO-PAPI (crosslinked)",
+      "doi": "10.3389/fmats.2022.864478",
+      "pdf": "10.3389_fmats.2022.864478.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Zahner"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO/LiTFSI (electrospun)",
+      "doi": "10.3390/nano13071294",
+      "pdf": "10.3390_nano13071294.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 19.0,
+        "electrode_material": "AL",
+        "electrode_deposition": "EVAPORATED",
+        "atmosphere": "VACUUM"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PEO/LiTFSI/in-situ SiO2 (10wt%)",
+      "doi": "10.3390/nano13071294",
+      "pdf": "10.3390_nano13071294.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pellet_diameter_mm": 19.0,
+        "electrode_material": "AL",
+        "electrode_deposition": "EVAPORATED",
+        "atmosphere": "VACUUM"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3",
+      "doi": "10.37614/2949-1215.2025.16.2.020",
+      "pdf": "10.37614_2949-1215.2025.16.2.020.pdf",
+      "conditions": {
+        "electrode_material": "AL"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.4Ga0.2La3Zr1.9Ce0.1O12",
+      "doi": "10.1007/s11664-026-12871-5",
+      "pdf": "10.1007_s11664-026-12871-5.pdf",
+      "conditions": {
+        "sample_form": "SINGLE_CRYSTAL",
+        "pellet_diameter_mm": 10.0,
+        "thickness_mm": 1.5,
+        "relative_density_pct": 94.0,
+        "pelletizing_pressure_MPa": 4.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "COATED",
+        "frequency_min_Hz": 20.0,
+        "frequency_max_Hz": 20000000.0,
+        "atmosphere": "HE",
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=4.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "CsSn0.9In0.067Cl3",
+      "doi": "10.1002/aenm.202300982",
+      "pdf": "10.1002_aenm.202300982.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "thickness_mm": 7.0,
+        "pelletizing_pressure_MPa": 510.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "INERT",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li0.35La0.55TiO3-F2",
+      "doi": "10.1007/s11664-021-09331-7",
+      "pdf": "10.1007_s11664-021-09331-7.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 15.0,
+        "thickness_mm": 1.0,
+        "relative_density_pct": 95.4,
+        "pelletizing_pressure_MPa": 10.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 800.0,
+        "sinter_time_h": 2.0
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=10.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li1.3Al0.2Y0.1Ti1.7(PO4)3",
+      "doi": "10.3390/nano15010042",
+      "pdf": "10.3390_nano15010042.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "INERT",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3",
+      "doi": "10.3390/nano15010042",
+      "pdf": "10.3390_nano15010042.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "INERT",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.55Ge0.05La3Zr1.75Ta0.25O12",
+      "doi": "10.1016/j.ceramint.2023.09.330",
+      "pdf": "10.1016_j.ceramint.2023.09.330.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "thickness_mm": 10.0,
+        "pelletizing_pressure_MPa": 4.0,
+        "electrode_material": "BLOCKING",
+        "electrode_deposition": "COATED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1050.0,
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=4.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Sn-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "0.5Li2SO4-ZrCl4",
+      "doi": "10.1038/s41467-026-69737-x",
+      "pdf": "10.1038_s41467-026-69737-x.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "thickness_mm": 0.1,
+        "pelletizing_pressure_MPa": 2.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=2.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFP CSE",
+      "doi": "10.3390/membranes13020201",
+      "pdf": "10.3390_membranes13020201.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li3YCl6 (as-prepared)",
+      "doi": "10.1021/jacs.1c11335",
+      "pdf": "10.1021_jacs.1c11335.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "CARBON",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "sinter_temperature_C": 823.0,
+        "annealing_temperature_C": 823.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6.1Ga0.3La3Zr2O12 (LGLZO_5)",
+      "doi": "10.1038/s41427-024-00563-7",
+      "pdf": "10.1038_s41427-024-00563-7.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "relative_density_pct": 88.52,
+        "pelletizing_pressure_MPa": 70.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 1200.0
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Mg(BH4)2\u00b71.47NH3 nanoconfined in SBA-15",
+      "doi": "10.1038/s43246-024-00601-5",
+      "pdf": "10.1038_s43246-024-00601-5.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.3,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li2.61Y1.13Cl6 (MC)",
+      "doi": "10.1021/acsenergylett.4c00317",
+      "pdf": "10.1021_acsenergylett.4c00317.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pelletizing_pressure_MPa": 8.0,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "COATED",
+        "atmosphere": "HE"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=8.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li3.08Ge0.52P0.47O4 (LGPO HTLP thin film)",
+      "doi": "10.1039/d5ta07144e",
+      "pdf": "10.1039_d5ta07144e.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "electrode_material": "BLOCKING",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 900.0,
+        "sinter_time_h": 12.0,
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li3PS4-2LiBH4",
+      "doi": "10.1038/s41467-023-37564-z",
+      "pdf": "10.1038_s41467-023-37564-z.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 0.127,
+        "relative_density_pct": 86.0,
+        "pelletizing_pressure_MPa": 55.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 160.0,
+        "sinter_time_h": 3.0,
+        "annealing_temperature_C": 160.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=0.127 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Mg(en)1(BH4)2",
+      "doi": "10.1038/srep46189",
+      "pdf": "10.1038_srep46189.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 12.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Zahner"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li2.61Y1.13Cl6 (SS)",
+      "doi": "10.1021/acsenergylett.4c00317",
+      "pdf": "10.1021_acsenergylett.4c00317.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pelletizing_pressure_MPa": 8.0,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "COATED",
+        "atmosphere": "HE"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=8.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li2.96Ge0.72P0.32O4 (LGPO ITLP thin film)",
+      "doi": "10.1039/d5ta07144e",
+      "pdf": "10.1039_d5ta07144e.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "electrode_material": "BLOCKING",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 900.0,
+        "sinter_time_h": 12.0,
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "(Li0.45La0.78Ce0.05)ScO3",
+      "doi": "10.3390/molecules26020299",
+      "pdf": "10.3390_molecules26020299.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PAINTED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 623.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li6.65Ge0.05La3Zr1.85Ta0.15O12",
+      "doi": "10.1016/j.ceramint.2023.09.330",
+      "pdf": "10.1016_j.ceramint.2023.09.330.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "thickness_mm": 10.0,
+        "pelletizing_pressure_MPa": 4.0,
+        "electrode_material": "BLOCKING",
+        "electrode_deposition": "COATED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1050.0,
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=4.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li6.8Ge0.05La3Zr2O12",
+      "doi": "10.1016/j.ceramint.2023.09.330",
+      "pdf": "10.1016_j.ceramint.2023.09.330.pdf",
+      "conditions": {
+        "sample_form": "THIN_FILM",
+        "thickness_mm": 10.0,
+        "pelletizing_pressure_MPa": 4.0,
+        "electrode_material": "BLOCKING",
+        "electrode_deposition": "COATED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 1050.0,
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=4.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Na3.2Hf0.8Sc0.2ZrSi2PO12",
+      "doi": "10.1038/s41467-023-40669-0",
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 3.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=3.0 low (<15 MPa)",
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Na3.4Hf0.6Sc0.4ZrSi2PO12",
+      "doi": "10.1038/s41467-023-40669-0",
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "conditions": {
+        "sample_form": "PELLET",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 3.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=3.0 low (<15 MPa)",
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li0.35La0.55TiO3 (LLTO-F0)",
+      "doi": "10.1007/s11664-021-09331-7",
+      "pdf": "10.1007_s11664-021-09331-7.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 15.0,
+        "thickness_mm": 1.0,
+        "relative_density_pct": 95.4,
+        "pelletizing_pressure_MPa": 10.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR",
+        "sinter_temperature_C": 800.0,
+        "sinter_time_h": 2.0
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=10.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li6.4Ga0.2La3Zr2O12 (x=0)",
+      "doi": "10.1007/s11664-026-12871-5",
+      "pdf": "10.1007_s11664-026-12871-5.pdf",
+      "conditions": {
+        "sample_form": "SINGLE_CRYSTAL",
+        "pellet_diameter_mm": 10.0,
+        "thickness_mm": 1.5,
+        "relative_density_pct": 94.0,
+        "pelletizing_pressure_MPa": 4.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "COATED",
+        "frequency_min_Hz": 20.0,
+        "frequency_max_Hz": 20000000.0,
+        "atmosphere": "HE",
+        "instrument": "Novocontrol"
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=4.0 low (<15 MPa)"
+      ]
+    },
+    {
+      "material": "Li3OCl (x=1)",
+      "doi": "10.3389/fchem.2020.562549",
+      "pdf": "10.3389_fchem.2020.562549.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 0.3,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "instrument": "Biologic"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=0.3 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li3OCl (x=1.5)",
+      "doi": "10.3389/fchem.2020.562549",
+      "pdf": "10.3389_fchem.2020.562549.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 0.3,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "instrument": "Biologic"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=0.3 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li0.34La0.56TiO3 (G-LLTO)",
+      "doi": "10.3389/fchem.2022.966274",
+      "pdf": "10.3389_fchem.2022.966274.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 960.0,
+        "sinter_time_h": 12.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li0.34La0.56TiO3 (M-LLTO)",
+      "doi": "10.3389/fchem.2022.966274",
+      "pdf": "10.3389_fchem.2022.966274.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "pelletizing_pressure_MPa": 200.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "AR",
+        "sinter_temperature_C": 960.0,
+        "sinter_time_h": 12.0,
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li2OHCl",
+      "doi": "10.1038/s41467-023-42385-1",
+      "pdf": "10.1038_s41467-023-42385-1.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 1.0,
+        "pelletizing_pressure_MPa": 480.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "INERT",
+        "sinter_temperature_C": 120.0,
+        "annealing_temperature_C": 120.0,
+        "instrument": "Autolab"
+      },
+      "suspicious": [
+        "pellet_diameter_mm=1.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li(CB9H10)",
+      "doi": "10.1038/s41467-019-09061-9",
+      "pdf": "10.1038_s41467-019-09061-9.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pelletizing_pressure_MPa": 153.6,
+        "electrode_material": "CARBON",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "VACUUM",
+        "instrument": "Solartron"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "0-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Co-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Cu-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "V-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Zr-LATP/PVDF-HFP-LiTFSI CSE",
+      "doi": "10.3390/polym16091251",
+      "pdf": "10.3390_polym16091251.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AIR"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6PS5Cl",
+      "doi": "10.3390/ma16072751",
+      "pdf": "10.3390_ma16072751.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 8.0,
+        "pelletizing_pressure_MPa": 25.0,
+        "electrode_material": "LI_METAL",
+        "atmosphere": "VACUUM"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LiBH4-MgO (CE26)",
+      "doi": "10.1021/acsaem.0c02525",
+      "pdf": "10.1021_acsaem.0c02525.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 60.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LiBH4-MgO (CE74)",
+      "doi": "10.1021/acsaem.0c02525",
+      "pdf": "10.1021_acsaem.0c02525.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 10.0,
+        "pelletizing_pressure_MPa": 60.0,
+        "electrode_material": "LI_METAL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "AR",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6PS5Cl",
+      "doi": "10.1021/acsaem.3c02858",
+      "pdf": "10.1021_acsaem.3c02858.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 12.0,
+        "pelletizing_pressure_MPa": 348.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "frequency_min_Hz": 0.1,
+        "frequency_max_Hz": 1000000.0,
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li6PS5Cl/TEGDMA",
+      "doi": "10.1021/acsaem.3c02858",
+      "pdf": "10.1021_acsaem.3c02858.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 12.0,
+        "pelletizing_pressure_MPa": 348.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "frequency_min_Hz": 0.1,
+        "frequency_max_Hz": 1000000.0,
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Biologic"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "LATP-0.1LBSO",
+      "doi": "10.1016/j.jallcom.2019.153072",
+      "pdf": "10.1016_j.jallcom.2019.153072.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 2.0,
+        "pelletizing_pressure_MPa": 10.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 800.0,
+        "annealing_temperature_C": 1100.0
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=10.0 low (<15 MPa)",
+        "pellet_diameter_mm=2.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li0.27La0.58TiO3",
+      "doi": "10.15625/0868-3166/17946",
+      "pdf": "10.15625_0868-3166_17946.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "relative_density_pct": 76.0,
+        "pelletizing_pressure_MPa": 60.0,
+        "electrode_material": "BLOCKING",
+        "atmosphere": "AIR",
+        "instrument": "Autolab"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3",
+      "doi": "10.1016/j.jallcom.2019.153072",
+      "pdf": "10.1016_j.jallcom.2019.153072.pdf",
+      "conditions": {
+        "sample_form": "COMPOSITE",
+        "pellet_diameter_mm": 2.0,
+        "pelletizing_pressure_MPa": 10.0,
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "O2",
+        "sinter_temperature_C": 800.0,
+        "annealing_temperature_C": 1100.0
+      },
+      "suspicious": [
+        "pelletizing_pressure_MPa=10.0 low (<15 MPa)",
+        "pellet_diameter_mm=2.0 outside 4\u201340 mm"
+      ]
+    },
+    {
+      "material": "Li3.7Ge0.7As0.3S4",
+      "doi": "10.1021/acsami.4c22390",
+      "pdf": "10.1021_acsami.4c22390.pdf",
+      "conditions": {
+        "sample_form": "FILM",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li3.7Ge0.7P0.3S4",
+      "doi": "10.1021/acsami.4c22390",
+      "pdf": "10.1021_acsami.4c22390.pdf",
+      "conditions": {
+        "sample_form": "FILM",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li3.7Ge0.7Sb0.3S4",
+      "doi": "10.1021/acsami.4c22390",
+      "pdf": "10.1021_acsami.4c22390.pdf",
+      "conditions": {
+        "sample_form": "FILM",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "Li4GeS4",
+      "doi": "10.1021/acsami.4c22390",
+      "pdf": "10.1021_acsami.4c22390.pdf",
+      "conditions": {
+        "sample_form": "FILM",
+        "electrode_material": "STAINLESS_STEEL",
+        "electrode_deposition": "PRESSED",
+        "atmosphere": "GLOVEBOX",
+        "instrument": "Gamry"
+      },
+      "suspicious": []
+    },
+    {
+      "material": "PVDF-HFP/10%LLZTO",
+      "doi": "10.3390/gels12060534",
+      "pdf": "10.3390_gels12060534.pdf",
+      "conditions": {
+        "sample_form": "MEMBRANE",
+        "electrode_material": "CARBON",
+        "electrode_deposition": "SPUTTERED",
+        "atmosphere": "GLOVEBOX"
+      },
+      "suspicious": []
+    }
+  ]
+}

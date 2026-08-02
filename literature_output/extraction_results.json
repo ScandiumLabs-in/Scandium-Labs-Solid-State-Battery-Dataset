@@ -1,0 +1,2276 @@
+{
+  "10.1038_s41467-022-35287-1.pdf": [
+    {
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "family": "garnet",
+      "composition": "",
+      "sigma_RT": 0.001,
+      "Ea": 0.1,
+      "method": null,
+      "conductivity_type": "ConductivityType.bulk"
+    },
+    {
+      "pdf": "10.1038_s41467-022-35287-1.pdf",
+      "family": "garnet",
+      "composition": "",
+      "sigma_RT": 0.001,
+      "Ea": 0.1,
+      "method": null,
+      "conductivity_type": "ConductivityType.bulk"
+    }
+  ],
+  "10.1038_s41467-023-40669-0.pdf": [
+    {
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "family": "unknown",
+      "composition": "Na3HfZr(SiO4)2(PO4)",
+      "sigma_RT": 0.00044,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1038_s41467-023-40669-0.pdf",
+      "family": "unknown",
+      "composition": "Na3HfSc(SiO4)(PO4)2",
+      "sigma_RT": 0.00012,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s41467-023-42385-1.pdf": [],
+  "10.1038_s41467-024-51191-2.pdf": [],
+  "10.1038_s43246-024-00550-z.pdf": [],
+  "antiperovskite_nature.pdf": [],
+  "garnet_electrochem.pdf": [],
+  "nasicon_mdpi.pdf": [],
+  "sulfide_argyrodite.pdf": [],
+  "sulfide_preprint.pdf": [],
+  "10.1002_aenm.202000049.pdf": [
+    {
+      "pdf": "10.1002_aenm.202000049.pdf",
+      "family": "polymer_composite",
+      "composition": "Ca-CeO2/LiTFSI/PEO",
+      "sigma_RT": 0.00013,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1021_acs.chemmater.3c01831.pdf": [
+    {
+      "pdf": "10.1021_acs.chemmater.3c01831.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 0.0003,
+      "Ea": 0.3,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1021_acsaem.0c02525.pdf": [
+    {
+      "pdf": "10.1021_acsaem.0c02525.pdf",
+      "family": "borohydride",
+      "composition": "LiBH4-MgO",
+      "sigma_RT": 0.000286,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1021_acsaem.5c01010.pdf": [
+    {
+      "pdf": "10.1021_acsaem.5c01010.pdf",
+      "family": "polymer_composite",
+      "composition": "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+      "sigma_RT": 0.00051,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1021_acsaem.5c01010.pdf",
+      "family": "garnet",
+      "composition": "Li6.4La3Zr1.4Ta0.6O12",
+      "sigma_RT": 0.0005,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1021_acsami.0c10361.pdf": [
+    {
+      "pdf": "10.1021_acsami.0c10361.pdf",
+      "family": "borohydride",
+      "composition": "LiBH4-LiI/Al2O3",
+      "sigma_RT": 0.001,
+      "Ea": 0.43,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1021_acsami.4c22390.pdf": [],
+  "10.1038_s41467-019-09061-9.pdf": [
+    {
+      "pdf": "10.1038_s41467-019-09061-9.pdf",
+      "family": "polymer_composite",
+      "composition": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+      "sigma_RT": 0.0067,
+      "Ea": 0.0289,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1038_s41467-021-24697-2.pdf": [
+    {
+      "pdf": "10.1038_s41467-021-24697-2.pdf",
+      "family": "halide",
+      "composition": "Li2ZrCl6",
+      "sigma_RT": 0.00081,
+      "Ea": 0.35,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1038_s41467-021-24697-2.pdf",
+      "family": "halide",
+      "composition": "Li2ZrCl6",
+      "sigma_RT": 5.81e-07,
+      "Ea": 0.5,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1039_d2ra05782d.pdf": [
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "sigma_RT": 0.001,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3+yAl0.3MxTi1.7-x(PO4)3(M=Zr)",
+      "sigma_RT": 0.0012,
+      "Ea": 0.22,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3+yAl0.3MxTi1.7-x(PO4)3(M=Hf)",
+      "sigma_RT": 0.0011,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3+yAl0.3-xMxTi1.7(PO4)3(M=Mg)",
+      "sigma_RT": 0.0008,
+      "Ea": 0.28,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3+yAl0.3-xMxTi1.7(PO4)3(M=Ca)",
+      "sigma_RT": 0.0007,
+      "Ea": 0.29,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1039_d2ra05782d.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3+yAl0.3-xMxTi1.7(PO4)3(M=Sr)",
+      "sigma_RT": 0.0006,
+      "Ea": 0.3,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1126_sciadv.abj7698.pdf": [
+    {
+      "pdf": "10.1126_sciadv.abj7698.pdf",
+      "family": "nasicon",
+      "composition": "Li3Zr2Si2PO12",
+      "sigma_RT": 3.59e-06,
+      "Ea": 0.21,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.15625_0868-3166_17946.pdf": [],
+  "10.3389_fenrg.2016.00028.pdf": [
+    {
+      "pdf": "10.3389_fenrg.2016.00028.pdf",
+      "family": "garnet",
+      "composition": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+      "sigma_RT": 0.000834,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3390_nano12244355.pdf": [
+    {
+      "pdf": "10.3390_nano12244355.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS5Cl",
+      "sigma_RT": 0.001,
+      "Ea": 0.22,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.3390_nano12244355.pdf",
+      "family": "argyrodite",
+      "composition": "Li5.5PS4.5Cl1.5",
+      "sigma_RT": 0.00505,
+      "Ea": 0.17,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.3390_nano12244355.pdf",
+      "family": "argyrodite",
+      "composition": "Li5.4Al0.1PS4.7Cl1.3",
+      "sigma_RT": 0.00729,
+      "Ea": 0.09,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.35378_gujs.1589340.pdf": [
+    {
+      "pdf": "10.35378_gujs.1589340.pdf",
+      "family": "polymer_composite",
+      "composition": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+      "sigma_RT": 1.7e-05,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.37614_2949-1215.2023.14.4.001.pdf": [],
+  "10.5155_eurjchem.17.2.125-137.2759.pdf": [],
+  "10.1038_s41467-025-58108-7.pdf": [
+    {
+      "pdf": "10.1038_s41467-025-58108-7.pdf",
+      "family": "garnet",
+      "composition": "Li6.5La3Zr1.5Ta0.5O12",
+      "sigma_RT": 0.00018,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s43246-024-00601-5.pdf": [
+    {
+      "pdf": "10.1038_s43246-024-00601-5.pdf",
+      "family": "unknown",
+      "composition": "Mg(BH4)21.47NH3",
+      "sigma_RT": 6.3e-06,
+      "Ea": 0.69,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1038_s43246-024-00601-5.pdf",
+      "family": "unknown",
+      "composition": "Mg(BH4)21.47NH3",
+      "sigma_RT": 0.00027,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1038_s43246-024-00601-5.pdf",
+      "family": "unknown",
+      "composition": "Mg(BH4)21.47NH3",
+      "sigma_RT": 0.00074,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3389_fchem.2020.562549.pdf": [
+    {
+      "pdf": "10.3389_fchem.2020.562549.pdf",
+      "family": "antiperovskite",
+      "composition": "Li3OCl",
+      "sigma_RT": 3.21e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3389_fchem.2021.744417.pdf": [],
+  "10.3389_fchem.2022.966274.pdf": [
+    {
+      "pdf": "10.3389_fchem.2022.966274.pdf",
+      "family": "perovskite",
+      "composition": "La0.57Li0.29TiO3",
+      "sigma_RT": 0.00021,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3389_fenrg.2020.606494.pdf": [],
+  "10.3389_fmats.2022.864478.pdf": [],
+  "10.3390_ma13030560.pdf": [
+    {
+      "pdf": "10.3390_ma13030560.pdf",
+      "family": "garnet",
+      "composition": "Li6.6La3Zr1.6Nb0.4O12",
+      "sigma_RT": 0.000509,
+      "Ea": 0.311,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3390_molecules26020299.pdf": [],
+  "10.3390_molecules30092028.pdf": [
+    {
+      "pdf": "10.3390_molecules30092028.pdf",
+      "family": "garnet",
+      "composition": "Li6.4Fe0.2La3Zr2O12",
+      "sigma_RT": 0.0001,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.3390_molecules30092028.pdf",
+      "family": "garnet",
+      "composition": "Li6.5Fe0.2La3Zr1.9Bi0.1O12",
+      "sigma_RT": 0.000757,
+      "Ea": 0.22,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.3390_nano12172946.pdf": [],
+  "10.3390_polym12091889.pdf": [
+    {
+      "pdf": "10.3390_polym12091889.pdf",
+      "family": "polymer_composite",
+      "composition": "PEO-LiTFSI",
+      "sigma_RT": 0.00018,
+      "Ea": 0.15,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1038_s41467-023-35857-x.pdf": [
+    {
+      "pdf": "10.1038_s41467-023-35857-x.pdf",
+      "family": "polymer_composite",
+      "composition": "LiDFOB-TXE-FDMA-FEC",
+      "sigma_RT": 0.00022,
+      "Ea": 0.33,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1038_s41467-023-37564-z.pdf": [],
+  "10.1038_s41467-026-69737-x.pdf": [
+    {
+      "pdf": "10.1038_s41467-026-69737-x.pdf",
+      "family": "oxide",
+      "composition": "Li2SO4-ZrCl4",
+      "sigma_RT": 1.5e-06,
+      "Ea": 0.33,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    },
+    {
+      "pdf": "10.1038_s41467-026-69737-x.pdf",
+      "family": "halide",
+      "composition": "2LiCl-ZrCl4",
+      "sigma_RT": 0.00058,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "doi": null,
+      "title": null
+    }
+  ],
+  "10.1038_s43246-026-01164-3.pdf": [
+    {
+      "pdf": "10.1038_s43246-026-01164-3.pdf",
+      "family": "perovskite",
+      "composition": "Li0.29La0.57TiO3",
+      "sigma_RT": 0.001,
+      "Ea": 0.1,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3390_ma16072751.pdf": [
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS5Cl",
+      "sigma_RT": 0.0001,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6P0.975Sn0.025S5Cl",
+      "sigma_RT": 0.00012,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6P0.95Sn0.05S5Cl",
+      "sigma_RT": 0.00015,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6P0.875Sn0.125S5Cl",
+      "sigma_RT": 0.00018,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6P0.75Sn0.25S5Cl",
+      "sigma_RT": 0.00022,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_ma16072751.pdf",
+      "family": "argyrodite",
+      "composition": "Li6P0.5Sn0.5S5Cl",
+      "sigma_RT": 0.00035,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3390_ma17153846.pdf": [],
+  "10.3390_molecules29081759.pdf": [],
+  "10.3390_nano13071294.pdf": [],
+  "10.1021_jacs.1c07481.pdf": [],
+  "10.1038_s41467-020-20370-2.pdf": [
+    {
+      "pdf": "10.1038_s41467-020-20370-2.pdf",
+      "family": "hydride",
+      "composition": "Li3HS",
+      "sigma_RT": 0.0001,
+      "Ea": 0.18,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1038_s41467-020-20370-2.pdf",
+      "family": "unknown",
+      "composition": "Na3HSe",
+      "sigma_RT": 0.0001,
+      "Ea": 0.16,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1038_s41467-020-20370-2.pdf",
+      "family": "unknown",
+      "composition": "Na2.9H(Se0.9I0.1)",
+      "sigma_RT": 0.0001,
+      "Ea": 0.18,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s41467-022-34855-9.pdf": [
+    {
+      "pdf": "10.1038_s41467-022-34855-9.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS5Cl",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s41467-023-37115-6.pdf": [
+    {
+      "pdf": "10.1038_s41467-023-37115-6.pdf",
+      "family": "oxide",
+      "composition": "Li0.375Sr0.4375Ta0.75Zr0.25O3",
+      "sigma_RT": 0.00035,
+      "Ea": 0.33,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s43246-024-00595-0.pdf": [
+    {
+      "pdf": "10.1038_s43246-024-00595-0.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1007_s11664-026-12871-5.pdf": [
+    {
+      "pdf": "10.1007_s11664-026-12871-5.pdf",
+      "family": "garnet",
+      "composition": "Li6.4Ga0.2La3Zr2O12",
+      "sigma_RT": 0.0004,
+      "Ea": 0.29,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3390_nano15010042.pdf": [
+    {
+      "pdf": "10.3390_nano15010042.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "sigma_RT": 0.001,
+      "Ea": 0.5,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_nano15010042.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.29Y0.01Ti1.7(PO4)3",
+      "sigma_RT": 8.4e-06,
+      "Ea": 0.4,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_nano15010042.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.25Y0.05Ti1.7(PO4)3",
+      "sigma_RT": 1.2e-05,
+      "Ea": 0.3,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_nano15010042.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.2Y0.1Ti1.7(PO4)3",
+      "sigma_RT": 2.4e-05,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_nano15010042.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.15Y0.15Ti1.7(PO4)3",
+      "sigma_RT": 8.400000000000001e-05,
+      "Ea": 0.1,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_aenm.202300982.pdf": [],
+  "10.1016_j.heliyon.2024.e28097.pdf": [
+    {
+      "pdf": "10.1016_j.heliyon.2024.e28097.pdf",
+      "family": "polymer_composite",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
+      "sigma_RT": 0.0001,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_adma.202513255.pdf": [
+    {
+      "pdf": "10.1002_adma.202513255.pdf",
+      "family": "sulfide",
+      "composition": "Li10GeP2S12",
+      "sigma_RT": 1e-05,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_adma.202513255.pdf",
+      "family": "halide",
+      "composition": "Li3InCl6",
+      "sigma_RT": 0.001,
+      "Ea": 0.1,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_adma.202513255.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 1e-05,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_advs.201500359.pdf": [],
+  "10.1002_advs.202207744.pdf": [
+    {
+      "pdf": "10.1002_advs.202207744.pdf",
+      "family": "garnet",
+      "composition": "Li6.4La3Zr1.4Ta0.6O12",
+      "sigma_RT": 0.0008036,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_advs.202303308.pdf": [],
+  "10.1002_advs.202304117.pdf": [
+    {
+      "pdf": "10.1002_advs.202304117.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS4Cl0.75-OF0.25",
+      "sigma_RT": 2.47e-06,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_advs.202400466.pdf": [],
+  "10.1002_advs.202403208.pdf": [
+    {
+      "pdf": "10.1002_advs.202403208.pdf",
+      "family": "halide",
+      "composition": "Li3InCl6",
+      "sigma_RT": 0.004030000000000001,
+      "Ea": 0.22,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_advs.202403208.pdf",
+      "family": "halide",
+      "composition": "Li3InCl6",
+      "sigma_RT": 0.00367,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_advs.202403208.pdf",
+      "family": "halide",
+      "composition": "Li3InCl6",
+      "sigma_RT": 0.00307,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_advs.202403208.pdf",
+      "family": "halide",
+      "composition": "Li3InCl6",
+      "sigma_RT": 0.00272,
+      "Ea": 0.27,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1002_advs.202408805.pdf": [],
+  "10.1002_advs.202521791.pdf": [],
+  "10.1002_aenm.202203440.pdf": [],
+  "10.1002_anie.202213228.pdf": [],
+  "10.1002_anie.202314444.pdf": [],
+  "10.1002_cssc.202402128.pdf": [],
+  "10.1002_smll.202509553.pdf": [],
+  "10.1002_smll.202509918.pdf": [
+    {
+      "pdf": "10.1002_smll.202509918.pdf",
+      "family": "argyrodite",
+      "composition": "Li6.7Ge0.595Si0.105P0.3S5I",
+      "sigma_RT": 0.00072,
+      "Ea": 0.2,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_smll.202509918.pdf",
+      "family": "sulfide",
+      "composition": "Li10GeP2S12",
+      "sigma_RT": 0.01,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_smll.202509918.pdf",
+      "family": "argyrodite",
+      "composition": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "sigma_RT": 0.025,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_smll.202509918.pdf",
+      "family": "argyrodite",
+      "composition": "Li9.54[Si0.6Ge0.4]1.74P1.44S11.1Br0.3O0.6",
+      "sigma_RT": 0.032,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1002_smll.202509918.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS5I",
+      "sigma_RT": 1e-06,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1007_s00339-016-9807-2.pdf": [
+    {
+      "pdf": "10.1007_s00339-016-9807-2.pdf",
+      "family": "borohydride",
+      "composition": "LiBH4",
+      "sigma_RT": 0.0001,
+      "Ea": 0.39,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1007_s00339-016-9807-2.pdf",
+      "family": "borohydride",
+      "composition": "LiBH4/SiO2",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1007_s00339-016-9807-2.pdf",
+      "family": "borohydride",
+      "composition": "Li2(-BH4)(NH2)",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1007_s00339-016-9807-2.pdf",
+      "family": "borohydride",
+      "composition": "Li4(BH-4)(NH2)3",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1007_s00339-016-9807-2.pdf",
+      "family": "unknown",
+      "composition": "Na2(BH4)(NH2)",
+      "sigma_RT": 1e-06,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1007_s11581-024-05451-2.pdf": [
+    {
+      "pdf": "10.1007_s11581-024-05451-2.pdf",
+      "family": "polymer_composite",
+      "composition": "PEO-LiTFSI-LLZTO-SN-ETPTA",
+      "sigma_RT": 0.000212,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1007_s11581-025-06823-y.pdf": [],
+  "10.1007_s11664-021-09331-7.pdf": [],
+  "10.1007_s11666-026-02240-3.pdf": [],
+  "10.1007_s40145-020-0447-9.pdf": [],
+  "10.1007_s40145-021-0489-7.pdf": [],
+  "10.1007_s40820-024-01592-1.pdf": [
+    {
+      "pdf": "10.1007_s40820-024-01592-1.pdf",
+      "family": "hydride",
+      "composition": "LiTFSI-SN",
+      "sigma_RT": 0.0015,
+      "Ea": 0.23,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1007_s40820-024-01592-1.pdf",
+      "family": "polymer_composite",
+      "composition": "LiTFSI-SN-FEC",
+      "sigma_RT": 0.0021,
+      "Ea": 0.18,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1007_s43938-024-00055-8.pdf": [],
+  "10.1007_s43939-024-00089-3.pdf": [],
+  "10.1016_j.ceramint.2023.09.330.pdf": [
+    {
+      "pdf": "10.1016_j.ceramint.2023.09.330.pdf",
+      "family": "garnet",
+      "composition": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
+      "sigma_RT": 0.000661,
+      "Ea": 0.25,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1016_j.ensm.2019.12.031.pdf": [],
+  "10.1016_j.heliyon.2023.e21765.pdf": [],
+  "10.1016_j.heliyon.2024.e36206.pdf": [
+    {
+      "pdf": "10.1016_j.heliyon.2024.e36206.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 0.00104,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1016_j.jallcom.2019.153072.pdf": [
+    {
+      "pdf": "10.1016_j.jallcom.2019.153072.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "sigma_RT": 0.00015,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1016_j.jallcom.2019.153072.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3-0.1Li2.9B0.9S0.1O3.1",
+      "sigma_RT": 0.00015,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1021_acs.chemmater.0c02602.pdf": [
+    {
+      "pdf": "10.1021_acs.chemmater.0c02602.pdf",
+      "family": "unknown",
+      "composition": "Li2OHCl",
+      "sigma_RT": 1.4e-06,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1021_acs.chemmater.4c01947.pdf": [],
+  "10.1021_acs.chemmater.8b00649.pdf": [],
+  "10.1021_acs.inorgchem.3c01222.pdf": [],
+  "10.1021_acs.jpcc.3c04953.pdf": [],
+  "10.1021_acs.jpcc.4c02667.pdf": [],
+  "10.1021_acs.langmuir.5c06765.pdf": [],
+  "10.1021_acsaem.3c01894.pdf": [],
+  "10.1021_acsaem.3c02858.pdf": [],
+  "10.1021_acsami.2c21302.pdf": [],
+  "10.1021_acsami.3c03513.pdf": [],
+  "10.1021_acsami.4c07440.pdf": [],
+  "10.1021_acsapm.4c00473.pdf": [],
+  "10.1021_acsenergylett.3c01363.pdf": [],
+  "10.1021_acsenergylett.4c00317.pdf": [],
+  "10.1021_acsmaterialslett.4c01777.pdf": [],
+  "10.1021_acsnano.3c03901.pdf": [],
+  "10.1021_acsomega.5c13516.pdf": [],
+  "10.1021_jacs.1c11335.pdf": [],
+  "10.1021_jacs.2c11807.pdf": [],
+  "10.1021_jacs.3c03195.pdf": [],
+  "10.1038_s41427-024-00563-7.pdf": [],
+  "10.1038_s41467-020-17493-x.pdf": [
+    {
+      "pdf": "10.1038_s41467-020-17493-x.pdf",
+      "family": "garnet",
+      "composition": "Li6.5La3Zr1.5Ta0.5O12",
+      "sigma_RT": 0.0004,
+      "Ea": 0.36,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s41467-022-29118-6.pdf": [
+    {
+      "pdf": "10.1038_s41467-022-29118-6.pdf",
+      "family": "polymer_composite",
+      "composition": "LiTFSI-PC(quasi-solid)",
+      "sigma_RT": 0.00012,
+      "Ea": 0.3,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_s42004-025-01609-9.pdf": [
+    {
+      "pdf": "10.1038_s42004-025-01609-9.pdf",
+      "family": "argyrodite",
+      "composition": "Li6PS5Cl",
+      "sigma_RT": 0.0015,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_srep18053.pdf": [
+    {
+      "pdf": "10.1038_srep18053.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 0.000614,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1038_srep46189.pdf": [],
+  "10.1039_d0cp01334j.pdf": [
+    {
+      "pdf": "10.1039_d0cp01334j.pdf",
+      "family": "argyrodite",
+      "composition": "80(3LiBH4LiCl)20P2S5",
+      "sigma_RT": 1e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1039_d4ra02621g.pdf": [],
+  "10.1039_d4ra02663b.pdf": [],
+  "10.1039_d4ra08811e.pdf": [],
+  "10.1039_d5ra09944g.pdf": [
+    {
+      "pdf": "10.1039_d5ra09944g.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "sigma_RT": 0.00019,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1039_d5ta07144e.pdf": [
+    {
+      "pdf": "10.1039_d5ta07144e.pdf",
+      "family": "oxide",
+      "composition": "Li4-xGe1-xPxO4",
+      "sigma_RT": 1e-05,
+      "Ea": 0.47,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1098_rsta.2019.0459.pdf": [],
+  "10.1126_science.abq1347.pdf": [
+    {
+      "pdf": "10.1126_science.abq1347.pdf",
+      "family": "sulfide",
+      "composition": "Li1oGeP2S12",
+      "sigma_RT": 0.00052,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1126_science.abq1347.pdf",
+      "family": "unknown",
+      "composition": "PEO/mPEO-TMS/LITFSI",
+      "sigma_RT": 6e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.1126_science.abq1347.pdf",
+      "family": "unknown",
+      "composition": "PEO",
+      "sigma_RT": 3.5e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.1149_ma2024-027918mtgabs.pdf": [],
+  "10.15541_jim20200206.pdf": [
+    {
+      "pdf": "10.15541_jim20200206.pdf",
+      "family": "unknown",
+      "composition": "UiO-66/PEO",
+      "sigma_RT": 3e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.15625_0868-3166_24_3s1_5074.pdf": [],
+  "10.16984_saufenbilder.1590407.pdf": [
+    {
+      "pdf": "10.16984_saufenbilder.1590407.pdf",
+      "family": "garnet",
+      "composition": "Li6.4Ga0.2La3Zr2O12",
+      "sigma_RT": 0.000104,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.17265_2161-6221_2014.04.003.pdf": [],
+  "10.20517_energymater.2023.87.pdf": [
+    {
+      "pdf": "10.20517_energymater.2023.87.pdf",
+      "family": "garnet",
+      "composition": "Li7La3Zr2O12",
+      "sigma_RT": 0.000839,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.20517_energymater.2024.277.pdf": [
+    {
+      "pdf": "10.20517_energymater.2024.277.pdf",
+      "family": "oxide",
+      "composition": "Li2O-TaCl5",
+      "sigma_RT": 0.0083,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.24425_amm.2023.141493.pdf": [],
+  "10.26855_ea.2023.04.001.pdf": [],
+  "10.2991_icmmct-17.2017.46.pdf": [],
+  "10.32508_stdjet.v6i1.1036.pdf": [],
+  "10.33609_0041-6045.85.11.2019.28-40.pdf": [],
+  "10.33609_2708-129x.91.8.2025.13-22.pdf": [],
+  "10.3363_PRB1992.19.0_130.pdf": [
+    {
+      "pdf": "10.3363_PRB1992.19.0_130.pdf",
+      "family": "nasicon",
+      "composition": "Li1+xAlxTi2-x(PO4)3",
+      "sigma_RT": 0.0001,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3389_fenrg.2014.00025.pdf": [],
+  "10.3390_gels12060534.pdf": [
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP",
+      "sigma_RT": 4.2e-05,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LATP(5wt%)",
+      "sigma_RT": 0.000235,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LATP(10wt%)",
+      "sigma_RT": 0.000235,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LATP(15wt%)",
+      "sigma_RT": 0.000235,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LLZTO(5wt%)",
+      "sigma_RT": 0.000235,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LLZTO(10wt%)",
+      "sigma_RT": 0.00034,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "family": "unknown",
+      "composition": "PVDF-HFP-LLZTO(15wt%)",
+      "sigma_RT": 0.000235,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3390_ma14164737.pdf": {
+    "error": "FileDataError: Failed to open file '/home/shamique/Scandium labs SSB dataset/literature_output/pdfs/10.3390_ma14164737.pdf' as type pdf."
+  },
+  "10.3390_membranes13020201.pdf": [
+    {
+      "pdf": "10.3390_membranes13020201.pdf",
+      "family": "nasicon",
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "sigma_RT": 0.000283,
+      "Ea": null,
+      "method": null,
+      "conductivity_type": "ConductivityType.total",
+      "temperature_celsius": null,
+      "doi": null,
+      "title": null,
+      "experiment": {
+        "sample_form": null,
+        "relative_density_pct": null,
+        "pelletizing_pressure_MPa": null,
+        "electrode_material": null,
+        "frequency_min_Hz": null,
+        "frequency_max_Hz": null,
+        "atmosphere": null,
+        "sinter_temperature_C": null,
+        "sinter_time_h": null
+      }
+    }
+  ],
+  "10.3390_polym16091251.pdf": [],
+  "10.33961_jecst.2022.00829.pdf": [],
+  "10.33961_jecst.2025.00990.pdf": [],
+  "10.34133_research.0379.pdf": [],
+  "10.37614_2949-1215.2025.16.2.020.pdf": [],
+  "10.54254_2755-2721_2025.gl23368.pdf": [],
+  "10.5772_9120.pdf": [],
+  "10.5796_ELECTROCHEMISTRY.17-00055.pdf": [],
+  "10.5940_JCRSJ.46.9.pdf": [],
+  "10.69855_science.v3i1.373.pdf": [],
+  "10.70401_tx.2025.0001.pdf": [],
+  "10.7498_aps.71.20221050.pdf": [],
+  "10.7498_aps.74.20250588.pdf": [],
+  "10.7498_aps.75.20251641.pdf": [],
+  "10.7716_AEM.V1I1.16.pdf": []
+}

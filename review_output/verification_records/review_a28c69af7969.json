@@ -1,0 +1,36 @@
+{
+  "review_id": "review_a28c69af7969",
+  "paper_id": "10.3389_fenrg.2016.00028",
+  "composition": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+  "family": "garnet",
+  "property": "conductivity",
+  "value": 0.000834,
+  "sigma_S_per_cm": 0.000834,
+  "Ea_eV": null,
+  "evidence_page": 3,
+  "evidence_window": "www.frontiersin.org July 2016\u2002 |\u2002 Volume 4\u2002 |\u2002 Article 28 Stoichiometric amounts of LiOH\u22c5H2O (Kojundo \u00adchemical  laboratory, 99%, 10% excess was added to account for the  evaporation of lithium at hig",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "agree",
+  "consensus_agree": false,
+  "model_agreement": "0/2",
+  "verdicts": [
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 68.8,
+  "auto_decision": "reject",
+  "notes": [
+    "literature agree"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sulfide": {},
+  "garnet": {
+    "Li6.4Ga0.2La3Zr2O12": {
+      "sigma_S_per_cm": 0.0013,
+      "Ea_eV": 0.3,
+      "doi": "10.1007/s11581-024-05589-z",
+      "title": "Enhanced electrochemical performance of PEO/Li6.4Ga0.2La3Zr2O12 composite polymer electrolytes",
+      "year": 2024,
+      "oa": false,
+      "oa_url": null
+    },
+    "Li6.75La3Zr1.75Nb0.25O12": {
+      "sigma_S_per_cm": 0.0008,
+      "Ea_eV": 0.3,
+      "doi": "10.1016/j.electacta.2020.136955",
+      "title": "LiBO2-modified LiCoO2 as an efficient cathode with garnet framework Li6.75La3Zr1.75Nb0.25O12 electrolyte toward building all-solid-state lithium battery for high-temperature operation",
+      "year": 2020,
+      "oa": false,
+      "oa_url": null
+    }
+  },
+  "oxide": {},
+  "nasicon": {},
+  "halide": {},
+  "antiperovskite": {},
+  "polymer_composite": {}
+}

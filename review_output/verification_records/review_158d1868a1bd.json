@@ -1,0 +1,39 @@
+{
+  "review_id": "review_158d1868a1bd",
+  "paper_id": "10.1038_s41467-021-24697-2",
+  "composition": "Li2ZrCl6",
+  "family": "halide",
+  "property": "conductivity",
+  "value": 5.81e-07,
+  "sigma_S_per_cm": 5.81e-07,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "ARTICLE A cost-effective and humidity-tolerant chloride solid electrolyte for lithium batteries Kai Wang1, Qingyong Ren 2, Zhenqi Gu1, Chaomin Duan1, Jinzhu Wang1, Feng Zhu1, Yuanyuan Fu1, Jipeng Hao1",
+  "physics_ok": false,
+  "physics_notes": [
+    "sigma 5.81e-07 outside halide range [1e-04,1e-02]"
+  ],
+  "literature": "conflict",
+  "consensus_agree": true,
+  "model_agreement": "2/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 66.8,
+  "auto_decision": "reject",
+  "notes": [
+    "sigma 5.81e-07 outside halide range [1e-04,1e-02]",
+    "literature conflict"
+  ]
+}

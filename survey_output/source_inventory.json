@@ -1,0 +1,27 @@
+{
+  "materials_project": {
+    "families": 8,
+    "status": "ready"
+  },
+  "jarvis": {
+    "families": 8,
+    "status": "ready"
+  },
+  "aflow": {
+    "families": 8,
+    "status": "ready"
+  },
+  "oqmd": {
+    "families": 8,
+    "status": "ready (requires oqmd package)"
+  },
+  "nomad": {
+    "families": 8,
+    "status": "ready"
+  },
+  "icsd": {
+    "families": 8,
+    "status": "ready (requires ICSD_API_KEY)"
+  },
+  "timestamp": "2026-07-30T06:20:03.705305+00:00"
+}

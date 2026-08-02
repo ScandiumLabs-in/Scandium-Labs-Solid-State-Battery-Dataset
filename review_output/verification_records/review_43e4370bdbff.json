@@ -1,0 +1,40 @@
+{
+  "review_id": "review_43e4370bdbff",
+  "paper_id": "10.1039_d2ra05782d",
+  "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+  "family": "nasicon",
+  "property": "activation_energy",
+  "value": 0.25,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.25,
+  "evidence_page": 1,
+  "evidence_window": " crystallize in a trigonal crystal symmetry. The structure is distinguished by the presence of a system of cavities, forming a three-dimensional network of channels through which the movement of alkal",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "1/3",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "0.25 eV"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "different",
+      "ea_found": "not_reported",
+      "quote": "a total ionic conductivity of 10\u22126 S cm\u22121"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 72.8,
+  "auto_decision": "reject",
+  "notes": []
+}

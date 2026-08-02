@@ -1,0 +1,21 @@
+{
+  "review_id": "review_aa7e51c8d652",
+  "paper_id": "10.1039_d2ra05782d",
+  "composition": "Li1.3+yAl0.3-xMxTi1.7(PO4)3(M=Ca)",
+  "family": "nasicon",
+  "property": "activation_energy",
+  "value": 0.29,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.29,
+  "evidence_page": 2,
+  "evidence_window": "",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 43.2,
+  "auto_decision": "reject",
+  "notes": []
+}

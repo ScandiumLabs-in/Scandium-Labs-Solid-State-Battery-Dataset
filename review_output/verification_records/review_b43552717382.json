@@ -1,0 +1,34 @@
+{
+  "review_id": "review_b43552717382",
+  "paper_id": "10.1038_s41467-021-24697-2",
+  "composition": "Li2ZrCl6",
+  "family": "halide",
+  "property": "activation_energy",
+  "value": 0.35,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.35,
+  "evidence_page": 3,
+  "evidence_window": "teries. In addition to the room- temperature ionic conductivities, the activation energies were evaluated through the Arrhenius plot (Fig. 2d). Consistent with the measured ionic conductivities, the a",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": true,
+  "model_agreement": "2/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "0.35 eV"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "the activation energy of the as- milled LZC (0.35 eV)"
+    }
+  ],
+  "review_score": 92.5,
+  "auto_decision": "needs_review",
+  "notes": []
+}

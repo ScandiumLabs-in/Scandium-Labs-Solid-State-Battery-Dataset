@@ -1,0 +1,25 @@
+{
+  "review_id": "review_87299c89e224",
+  "paper_id": "10.3390_polym12091889",
+  "composition": "PEO-LiTFSI",
+  "family": "polymer_composite",
+  "property": "activation_energy",
+  "value": 0.15,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.15,
+  "evidence_page": 1,
+  "evidence_window": "polymers Article Promotion of Ionic Conductivity of PEO-Based Solid Electrolyte Using Ultrasonic Vibration Hui Wang 1,2, Xiaodong Cui 1 , Cong Zhang 1,2, Huang Gao 3,*, Wei Du 1 and Yizhe Chen 2 1 Hub",
+  "physics_ok": false,
+  "physics_notes": [
+    "Ea 0.15 outside polymer_composite Ea range [0.30,1.50]"
+  ],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 28.2,
+  "auto_decision": "reject",
+  "notes": [
+    "Ea 0.15 outside polymer_composite Ea range [0.30,1.50]"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "review_id": "review_c2a0c19a2a55",
+  "paper_id": "10.1039_d2ra05782d",
+  "composition": "Li1.3+yAl0.3MxTi1.7-x(PO4)3(M=Zr)",
+  "family": "nasicon",
+  "property": "conductivity",
+  "value": 0.0012,
+  "sigma_S_per_cm": 0.0012,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": "d to the solution. The total mass of the dry components was about 20 g, and the water volume was 25 mL. The prepared solution was mixed using a magnetic stirrer at 70 \u00b0C for 12 h until dry. Then the r",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

@@ -1,0 +1,34 @@
+{
+  "review_id": "review_aedd707b9880",
+  "paper_id": "10.1021_acsaem.5c01010",
+  "composition": "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+  "family": "polymer_composite",
+  "property": "conductivity",
+  "value": 0.00051,
+  "sigma_S_per_cm": 0.00051,
+  "Ea_eV": null,
+  "evidence_page": 11,
+  "evidence_window": " Q.; Zhang, L. Dual-coordination- induced poly (vinylidene fluoride)/Li6. 4Ga0. 2La3Zr2O12/succinoni- trile composite solid electrolytes toward enhanced rate performance in all-solid-state lithium bat",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/2",
+  "verdicts": [
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

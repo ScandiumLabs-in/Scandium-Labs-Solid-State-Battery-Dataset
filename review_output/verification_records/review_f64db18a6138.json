@@ -1,0 +1,36 @@
+{
+  "review_id": "review_f64db18a6138",
+  "paper_id": "10.1039_d2ra05782d",
+  "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+  "family": "nasicon",
+  "property": "conductivity",
+  "value": 0.001,
+  "sigma_S_per_cm": 0.001,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "ning liquid electrolytes do not fully ensure the safety of an electronic device due to a number of disadvantages of liquid electrolytes, including the safety concerns due to possible leakage, \ue104ammabil",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "conflict",
+  "consensus_agree": false,
+  "model_agreement": "1/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 69.2,
+  "auto_decision": "reject",
+  "notes": [
+    "literature conflict"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "review_id": "review_0c150fff4e13",
+  "paper_id": "10.1038_s41467-019-09061-9",
+  "composition": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+  "family": "polymer_composite",
+  "property": "conductivity",
+  "value": 0.0067,
+  "sigma_S_per_cm": 0.0067,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": "bility and air stability. Despite tremendous research advancements in solid electro- lytes, the development of all-solid-state batteries for practical applications, such as electric vehicles and grid-",
+  "physics_ok": false,
+  "physics_notes": [
+    "sigma 6.70e-03 outside polymer_composite range [1e-08,1e-03]"
+  ],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/2",
+  "verdicts": [
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 47.0,
+  "auto_decision": "reject",
+  "notes": [
+    "sigma 6.70e-03 outside polymer_composite range [1e-08,1e-03]"
+  ]
+}

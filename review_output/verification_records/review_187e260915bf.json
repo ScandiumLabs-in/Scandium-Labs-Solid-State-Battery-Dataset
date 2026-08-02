@@ -1,0 +1,28 @@
+{
+  "review_id": "review_187e260915bf",
+  "paper_id": "10.1038_s43246-024-00601-5",
+  "composition": "Mg(BH4)21.47NH3",
+  "family": "unknown",
+  "property": "conductivity",
+  "value": 0.00074,
+  "sigma_S_per_cm": 0.00074,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "communications materials Article https://doi.org/10.1038/s43246-024-00601-5 Nanocon\ufb01nement of an ammine magnesium borohydride composite electrolyte in a mesoporous silica scaffold Check for updates Pa",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": true,
+  "model_agreement": "1/1",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 87.0,
+  "auto_decision": "needs_review",
+  "notes": []
+}

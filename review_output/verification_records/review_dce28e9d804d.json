@@ -1,0 +1,40 @@
+{
+  "review_id": "review_dce28e9d804d",
+  "paper_id": "10.1021_acs.chemmater.3c01831",
+  "composition": "Li7La3Zr2O12",
+  "family": "garnet",
+  "property": "activation_energy",
+  "value": 0.3,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.3,
+  "evidence_page": 3,
+  "evidence_window": "s, sulphides and  nitrides have been explored as solid electrolytes. Li-rich garnets (Li7La3Zr2O12, LLZO) possess  high room temperature (RT) ionic conductivity and relatively wide electrochemical sta",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": true,
+  "model_agreement": "3/3",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "a low activation energy of 0.3 eV"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "different",
+      "ea_found": "yes",
+      "quote": "~ 3\u00b410-4 Scm-1"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 82.0,
+  "auto_decision": "needs_review",
+  "notes": []
+}

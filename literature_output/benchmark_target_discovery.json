@@ -1,0 +1,141 @@
+{
+  "sulfide": {
+    "Li7P3S11": {
+      "sigma_S_per_cm": 0.017,
+      "Ea_eV": 0.18,
+      "q": [
+        "Li7P3S11 glass-ceramic conductivity"
+      ],
+      "doi": "10.1111/jace.19712",
+      "title": "A highly stable and conductive cerium\u2010doped Li7P3S11 glass\u2010ceramic electrolyte for solid\u2010state lithium\u2013sulfur batteries"
+    },
+    "Li10SnP2S12": {
+      "sigma_S_per_cm": 0.014,
+      "Ea_eV": 0.24,
+      "q": [
+        "Li10SnP2S12"
+      ],
+      "doi": "10.1021/acsami.5c20087",
+      "title": "Enhanced Ionic Conductivity and Stability in Li10SnP2S12 Solid Electrolytes via Tellurium Anionic Doping."
+    },
+    "Li9.54Si1.74P1.44S11.7Cl0.3": {
+      "sigma_S_per_cm": 0.025,
+      "Ea_eV": 0.2,
+      "q": [
+        "Li9.54Si1.74P1.44S11.7Cl0.3"
+      ],
+      "doi": "10.1016/j.matlet.2020.127508",
+      "title": "Synthesis and purification of SiS2 and Li2S for Li9.54Si1.74P1.44S11.7Cl0.3 solid electrolyte in Lithium-ion batteries"
+    },
+    "Li6PS5Cl0.5Br0.5": {
+      "sigma_S_per_cm": 0.012,
+      "Ea_eV": 0.27,
+      "q": [
+        "Li6PS5Cl0.5Br0.5"
+      ],
+      "doi": "10.1039/d5qm00394f",
+      "title": "Sn-Doped Mixed-Halide Li6PS5Cl0.5Br0.5 Argyrodite with Enhanced Chemical Stability for All-Solid-State Batteries"
+    }
+  },
+  "oxide": {
+    "Li0.34La0.51TiO2.94": {
+      "sigma_S_per_cm": 0.0014,
+      "Ea_eV": 0.28,
+      "q": [
+        "LLTO Li0.34La0.51TiO2.94"
+      ],
+      "doi": "10.1016/J.MSEB.2013.08.014",
+      "title": "Enhanced electrochemical performance of LiFePO4 coated with Li0.34La0.51TiO2.94 by rheological phase reaction method"
+    },
+    "Li1.5Al0.5Ge1.5(PO4)3": {
+      "sigma_S_per_cm": 0.0004,
+      "Ea_eV": 0.32,
+      "q": [
+        "LAGP Li1.5Al0.5Ge1.5(PO4)3"
+      ],
+      "doi": "10.1039/c7cp03647g",
+      "title": "Long-range Li ion diffusion in NASICON-type Li1.5Al0.5Ge1.5(PO4)3 (LAGP) studied by 7Li pulsed-gradient spin-echo NMR."
+    }
+  },
+  "garnet": {},
+  "halide": {
+    "Li3ErCl6": {
+      "sigma_S_per_cm": 0.0003,
+      "Ea_eV": 0.38,
+      "q": [
+        "Li3ErCl6"
+      ],
+      "doi": "10.1016/j.est.2025.119372",
+      "title": "Relationship between ion transport and entropy in the solid electrolyte Li3ErCl6 based on the thermodynamics and density functional theory calculation"
+    },
+    "Li3HoCl6": {
+      "sigma_S_per_cm": 0.001,
+      "Ea_eV": 0.32,
+      "q": [
+        "Li3HoCl6"
+      ],
+      "doi": "10.1016/j.electacta.2025.145896",
+      "title": "Isovalent Ion Substitution to Improve The Li+ Conduction of The Li3HoCl6 SSEs"
+    },
+    "Li3YCl3Br3": {
+      "sigma_S_per_cm": 0.001,
+      "Ea_eV": 0.33,
+      "q": [
+        "Li3YCl3Br3"
+      ],
+      "doi": "10.1016/s1003-6326(25)66819-1",
+      "title": "High-performance Li3YCl3Br3 halide solid electrolyte synthesized using wet-chemistry route for all-solid-state battery"
+    }
+  },
+  "nasicon": {},
+  "hydride": {
+    "LiBH4-LiCl": {
+      "sigma_S_per_cm": 0.0001,
+      "Ea_eV": 0.55,
+      "q": [
+        "LiBH4-LiCl"
+      ],
+      "doi": "10.3390/CRYST2010144",
+      "title": "Theoretical and Experimental Study of LiBH4-LiCl Solid Solution"
+    },
+    "LiBH4-SiO2": {
+      "sigma_S_per_cm": 0.0001,
+      "Ea_eV": 0.5,
+      "q": [
+        "LiBH4 SiO2"
+      ],
+      "doi": "10.1039/c6cp03563a",
+      "title": "Interface-enhanced Li ion conduction in a LiBH4-SiO2 solid electrolyte."
+    },
+    "Li2B10H10": {
+      "sigma_S_per_cm": 0.001,
+      "Ea_eV": 0.3,
+      "q": [
+        "Li2B10H10"
+      ],
+      "doi": "10.1021/acsaem.3c00411",
+      "title": "Enhanced Electrochemical Performance of the Li2B12H12-Li2B10H10-LiBH4 Electrolyte"
+    }
+  },
+  "polymer_composite": {
+    "PEO-LiClO4": {
+      "sigma_S_per_cm": 1e-06,
+      "Ea_eV": 1.0,
+      "q": [
+        "PEO LiClO4 electrolyte conductivity"
+      ],
+      "doi": "10.1016/J.ELECTACTA.2015.04.178",
+      "title": "Effect of plasticizers on ionic conductivity and dielectric relaxation of PEO-LiClO4 polymer electrolyte"
+    },
+    "PAN-LiClO4": {
+      "sigma_S_per_cm": 0.001,
+      "Ea_eV": 0.3,
+      "q": [
+        "PAN LiClO4 solid polymer electrolyte"
+      ],
+      "doi": "10.1016/J.SSI.2017.11.026",
+      "title": "Graphene oxide as a filler to improve the performance of PAN-LiClO4 flexible solid polymer electrolyte"
+    }
+  },
+  "antiperovskite": {}
+}

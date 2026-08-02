@@ -1,0 +1,22 @@
+{
+  "total_input": 21753,
+  "total_output": 21753,
+  "arrhenius_failures_count": 0,
+  "unit_conversions": {
+    "conductivity": 0,
+    "energy": 0,
+    "temperature": 0
+  },
+  "deduplication": {
+    "cross_source_removed": 0,
+    "composition_groups": 0,
+    "alternate_polymorphs": 0
+  },
+  "missing_data": {
+    "null_sigma": 21728,
+    "null_ea": 21732,
+    "null_structure": 225,
+    "silent_imputations": 0
+  },
+  "passed": true
+}

@@ -1,0 +1,78 @@
+review_id,composition,family,paper,sigma_S_per_cm,normalized_Ea,verdict,digit_match,duplicate_value,trust_score,tier,flag
+review_21f0ff978b30,Li1.3Al0.29Y0.01Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,0.4,FOUND,True,False,100,A,[]
+review_676fc82708d2,Li1.3Al0.25Y0.05Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,,FOUND,True,False,100,A,[]
+review_a926957b7347,Li1.3Al0.25Y0.05Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,0.3,FOUND,True,False,100,A,[]
+review_9392574555b4,Li1.3Al0.2Y0.1Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,,FOUND,True,False,100,A,[]
+review_7b456e7a26b5,Li1.3Al0.2Y0.1Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,0.2,FOUND,True,False,100,A,[]
+review_3a9e12710588,Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP,polymer_composite,10.1016_j.heliyon.2024.e28097,,,FOUND,True,False,100,A,[]
+review_135d95c5cb58,Li3InCl6,halide,10.1002_adma.202513255,,,FOUND,True,False,100,A,[]
+review_72769deff6f5,Li10GeP2S12,sulfide,10.1002_smll.202509918,,,FOUND,True,False,100,A,[]
+review_d039e8d42245,Li9.54Si1.74P1.44S11.7Cl0.3,argyrodite,10.1002_smll.202509918,,,FOUND,True,False,100,A,[]
+review_9b1d55ed99bb,Li9.54[Si0.6Ge0.4]1.74P1.44S11.1Br0.3O0.6,argyrodite,10.1002_smll.202509918,,,FOUND,True,False,100,A,[]
+review_bab68e24303d,PEO-LiTFSI-LLZTO-SN-ETPTA,polymer_composite,10.1007_s11581-024-05451-2,,,FOUND,True,False,100,A,[]
+review_17a3c49bf9de,Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12,garnet,10.1016_j.ceramint.2023.09.330,,,FOUND,True,False,100,A,[]
+review_cdd2ea03180f,Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12,garnet,10.1016_j.ceramint.2023.09.330,,0.25,FOUND,True,False,100,A,[]
+review_41ab4a785e07,Li7La3Zr2O12,garnet,10.1016_j.heliyon.2024.e36206,,,FOUND,True,False,100,A,[]
+review_b1bf027a04a8,Li2OHCl,antiperovskite,10.1021_acs.chemmater.0c02602,,,FOUND,True,False,100,A,[]
+review_cd341280d606,Li6.5La3Zr1.5Ta0.5O12,garnet,10.1038_s41467-020-17493-x,,,FOUND,True,False,100,A,[]
+review_6d2cb9090bbd,Li6.5La3Zr1.5Ta0.5O12,garnet,10.1038_s41467-020-17493-x,,0.36,FOUND,True,False,100,A,[]
+review_4ca7c0c68cb5,Li7La3Zr2O12,garnet,10.1038_srep18053,,,FOUND,True,False,100,A,[]
+review_ba8026492adc,80(3LiBH4LiCl)20P2S5,argyrodite,10.1039_d0cp01334j,,,FOUND,True,False,100,A,[]
+review_08fec76ea384,Li1.3Al0.3Ti1.7(PO4)3,nasicon,10.1039_d5ra09944g,,,FOUND,True,False,100,A,[]
+review_d1818b959394,Li4-xGe1-xPxO4,oxide,10.1039_d5ta07144e,,,FOUND,True,False,100,A,[]
+review_0ad6428e987e,Li4-xGe1-xPxO4,oxide,10.1039_d5ta07144e,,0.47,FOUND,True,False,100,A,[]
+review_196f92a4654d,UiO-66/PEO,polymer_composite,10.15541_jim20200206,,,FOUND,True,False,100,A,[]
+review_6e18baabda92,Li6.4Ga0.2La3Zr2O12,garnet,10.16984_saufenbilder.1590407,,,FOUND,True,False,100,A,[]
+review_6819b59fb86f,Li7La3Zr2O12,garnet,10.20517_energymater.2023.87,,,FOUND,True,False,100,A,[]
+review_a5742cd7132d,Li2O-TaCl5,oxide,10.20517_energymater.2024.277,,,FOUND,True,False,100,A,[]
+review_85de9e0f96f5,PVDF-HFP,polymer_composite,10.3390_gels12060534,,,FOUND,True,False,100,A,[]
+review_0ac4661f0528,PVDF-HFP-LLZTO(10wt%),polymer_composite,10.3390_gels12060534,,,FOUND,True,False,100,A,[]
+review_d24f9d05c79a,Li1.3Al0.3Ti1.7(PO4)3,nasicon,10.3390_membranes13020201,,,FOUND,True,False,100,A,[]
+review_ec3b115c7679,Li1.3Al0.29Y0.01Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,,FOUND,True,False,80,A,"σ=8.4e-06 S/cm outside typical range for nasicon [1.0e-05, 1.0e-02]"
+review_701321cdf3eb,Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP,polymer_composite,10.1016_j.heliyon.2024.e28097,,0.2,FOUND,True,False,80,A,"Ea=0.20 eV outside typical range for polymer_composite [0.30, 1.50]"
+review_9c30d01aacda,Li3InCl6,halide,10.1002_adma.202513255,,0.1,FOUND,True,False,80,A,"Ea=0.10 eV outside typical range for halide [0.25, 0.50]"
+review_7d3e24183041,Li6PS4Cl0.75-OF0.25,argyrodite,10.1002_advs.202304117,,,FOUND,True,False,80,A,"σ=2.5e-06 S/cm outside typical range for sulfide [1.0e-05, 1.0e-01]"
+review_88203c54c36f,Li6PS5I,argyrodite,10.1002_smll.202509918,,,FOUND,True,False,80,A,"σ=1.0e-06 S/cm outside typical range for sulfide [1.0e-05, 1.0e-01]"
+review_d5e15f89c32a,Li1.3Al0.3Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,,FOUND,False,False,65,B,[]
+review_cbe0d92e23ba,Li1.3Al0.15Y0.15Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,,FOUND,False,False,65,B,[]
+review_a5456f7f2481,Li3InCl6,halide,10.1002_advs.202403208,,,FOUND,False,False,65,B,[]
+review_2c3fc841adab,Li3InCl6,halide,10.1002_advs.202403208,,,FOUND,False,False,65,B,[]
+review_21fc2c65ce71,Li3InCl6,halide,10.1002_advs.202403208,,,FOUND,False,False,65,B,[]
+review_4fa2634d2989,Li3InCl6,halide,10.1002_advs.202403208,,0.25,FOUND,False,False,65,B,[]
+review_40ed3d2029c8,Li3InCl6,halide,10.1002_advs.202403208,,,FOUND,False,False,65,B,[]
+review_68da28feee27,Li3InCl6,halide,10.1002_advs.202403208,,0.27,FOUND,False,False,65,B,[]
+review_d9dbed3b05d4,Li6.7Ge0.595Si0.105P0.3S5I,argyrodite,10.1002_smll.202509918,,,FOUND,False,False,65,B,[]
+review_387a344ad613,Li6.7Ge0.595Si0.105P0.3S5I,argyrodite,10.1002_smll.202509918,,0.2,FOUND,False,False,65,B,[]
+review_be5f12984760,LiTFSI-PC(quasi-solid),polymer_composite,10.1038_s41467-022-29118-6,,,FOUND,False,False,65,B,[]
+review_c66f3105599e,LiTFSI-PC(quasi-solid),polymer_composite,10.1038_s41467-022-29118-6,,0.3,FOUND,False,False,65,B,[]
+review_38863c4d19d4,Li6.4La3Zr1.4Ta0.6O12,garnet,10.1002_advs.202207744,,,PARTIAL,False,False,55,B,[]
+review_1b8cc005ba60,Na2(BH4)(NH2),borohydride,10.1007_s00339-016-9807-2,,,PARTIAL,False,False,55,B,[]
+review_561c8e37575f,Li6PS5Cl,argyrodite,10.1038_s42004-025-01609-9,,,PARTIAL,False,False,55,B,[]
+review_b9cbb9f218ab,Li1+xAlxTi2-x(PO4)3,nasicon,10.3363_PRB1992.19.0_130,,,PARTIAL,False,False,55,B,[]
+review_e3f0dedd922f,Li1.3Al0.3Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,0.5,FOUND,False,False,45,C,"Ea=0.50 eV outside typical range for nasicon [0.20, 0.45]"
+review_c431f40f0a39,Li1.3Al0.15Y0.15Ti1.7(PO4)3,nasicon,10.3390_nano15010042,,0.1,FOUND,False,False,45,C,"Ea=0.10 eV outside typical range for nasicon [0.20, 0.45]"
+review_f2646cc56550,Li3InCl6,halide,10.1002_advs.202403208,,0.22,FOUND,False,False,45,C,"Ea=0.22 eV outside typical range for halide [0.25, 0.50]"
+review_e797d5a9bde7,Li3InCl6,halide,10.1002_advs.202403208,,0.23,FOUND,False,False,45,C,"Ea=0.23 eV outside typical range for halide [0.25, 0.50]"
+review_09b680d468ff,LiTFSI-SN,hydride,10.1007_s40820-024-01592-1,,,FOUND,False,False,45,C,"σ=1.5e-03 S/cm outside typical range for hydride [1.0e-08, 1.0e-03]"
+review_30e62f16cdb5,LiTFSI-SN,hydride,10.1007_s40820-024-01592-1,,0.23,FOUND,False,False,45,C,"Ea=0.23 eV outside typical range for hydride [0.30, 0.80]"
+review_28fe080c3dcd,LiTFSI-SN-FEC,polymer_composite,10.1007_s40820-024-01592-1,,,FOUND,False,False,45,C,"σ=2.1e-03 S/cm outside typical range for polymer_composite [1.0e-08, 1.0e-03]"
+review_91176672b603,LiTFSI-SN-FEC,polymer_composite,10.1007_s40820-024-01592-1,,0.18,FOUND,False,False,45,C,"Ea=0.18 eV outside typical range for polymer_composite [0.30, 1.50]"
+review_31bd8d204ef4,Li10GeP2S12,sulfide,10.1002_adma.202513255,,,DUP_VALUE,True,True,25,C,[]
+review_a409f4983914,Li10GeP2S12,sulfide,10.1002_adma.202513255,,0.2,DUP_VALUE,True,True,25,C,[]
+review_b1aa6a45d39c,Li7La3Zr2O12,garnet,10.1002_adma.202513255,,,DUP_VALUE,True,True,25,C,consensus-outlier: sigma 1.00e-05 is 72x from Li7La3Zr2O12 median 7.18e-04 (n=4)
+review_8140ef90021a,Li7La3Zr2O12,garnet,10.1002_adma.202513255,,0.2,DUP_VALUE,True,True,25,C,[]
+review_11f6692d2220,LiBH4,borohydride,10.1007_s00339-016-9807-2,,,DUP_VALUE,False,True,25,C,[]
+review_eb0f44703c01,LiBH4,borohydride,10.1007_s00339-016-9807-2,,0.39,DUP_VALUE,False,True,25,C,[]
+review_37061c1a3535,LiBH4/SiO2,borohydride,10.1007_s00339-016-9807-2,,,DUP_VALUE,False,True,25,C,[]
+review_e0bba71581b8,Li2(-BH4)(NH2),borohydride,10.1007_s00339-016-9807-2,,,DUP_VALUE,False,True,25,C,[]
+review_adee439881db,Li4(BH-4)(NH2)3,borohydride,10.1007_s00339-016-9807-2,,,DUP_VALUE,False,True,25,C,[]
+review_ec9526d0b638,Li1.3Al0.3Ti1.7(PO4)3,nasicon,10.1016_j.jallcom.2019.153072,,,DUP_VALUE,True,True,25,C,[]
+review_5fcf71469252,Li1.3Al0.3Ti1.7(PO4)3-0.1Li2.9B0.9S0.1O3.1,nasicon,10.1016_j.jallcom.2019.153072,,,DUP_VALUE,True,True,25,C,[]
+review_6095cd375f95,PVDF-HFP-LATP(5wt%),polymer_composite,10.3390_gels12060534,,,DUP_VALUE,True,True,25,C,[]
+review_749c71e01213,PVDF-HFP-LATP(10wt%),polymer_composite,10.3390_gels12060534,,,DUP_VALUE,True,True,25,C,[]
+review_e734d8da3e7c,PVDF-HFP-LATP(15wt%),polymer_composite,10.3390_gels12060534,,,DUP_VALUE,True,True,25,C,[]
+review_7aab0c3046ee,PVDF-HFP-LLZTO(5wt%),polymer_composite,10.3390_gels12060534,,,DUP_VALUE,True,True,25,C,[]
+review_cdf212ca6073,PVDF-HFP-LLZTO(15wt%),polymer_composite,10.3390_gels12060534,,,DUP_VALUE,True,True,25,C,[]
+review_3073de552fb8,Li1oGeP2S12,sulfide,10.1126_science.abq1347,,,SCRIBED,False,False,20,D,"; SCRIBED(scanned PDF, no text layer) — unverifiable by text methods, requires OCR/vision"
+review_d80c0d8e210a,PEO/mPEO-TMS/LITFSI,polymer_composite,10.1126_science.abq1347,,,SCRIBED,False,False,20,D,"; SCRIBED(scanned PDF, no text layer) — unverifiable by text methods, requires OCR/vision"
+review_3da3503bdeb7,PEO,polymer_composite,10.1126_science.abq1347,,,SCRIBED,False,False,20,D,"; SCRIBED(scanned PDF, no text layer) — unverifiable by text methods, requires OCR/vision"

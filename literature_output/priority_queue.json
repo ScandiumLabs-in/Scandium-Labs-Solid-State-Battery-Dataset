@@ -1,0 +1,98 @@
+{
+  "version": "1.1",
+  "built_at": "2026-08-02",
+  "last_updated": "2026-08-02 round 2 complete: 13 records from 4 on-disk PDFs (sulfide, nasicon, perovskite, polymer).",
+  "basis": "Family deficits vs v2.0 targets over 143 approved records; multi-paper consensus gaps; OA reachability from this network.",
+  "family_targets_pct": {
+    "oxide": 25,
+    "sulfide": 20,
+    "halide": 15,
+    "garnet": 10,
+    "nasicon": 10,
+    "hydride": 5,
+    "borohydride": 5,
+    "antiperovskite": 5,
+    "polymer_composite": 5
+  },
+  "family_deficits_after_round2": {
+    "oxide": 0.160,
+    "sulfide": 0.118,
+    "halide": 0.074,
+    "hydride": 0.050,
+    "nasicon": 0.012,
+    "antiperovskite": 0.012
+  },
+  "round2_mined": [
+    "10.1021_acsami.4c22390 (sulfide, Li4GeS4 + P/As/Sb Ea)",
+    "10.1016_j.jallcom.2019.153072 (nasicon, LATP-0.1LBSO + LATP)",
+    "10.15625_0868-3166_17946 (perovskite, Li0.27La0.58TiO3)",
+    "10.3390_gels12060534 (polymer, PVDF-HFP/10%LLZTO)"
+  ],
+  "on_disk_unmined_candidates": [
+    {
+      "pdf": "10.1021_acsami.4c22390.pdf",
+      "doi": "10.1021/acsami.4c22390",
+      "title": "Directing Ion Transport and Interfacial Chemistry in Pnictogen-Substituted Thio-LISICONs",
+      "family": "sulfide",
+      "priority": 1,
+      "reachable": "on_disk",
+      "notes": "MINED round 2 (Li4GeS4 sigma+Ea, P/As/Sb Ea)."
+    },
+    {
+      "pdf": "10.1016_j.jallcom.2019.153072.pdf",
+      "doi": "10.1016/j.jallcom.2019.153072",
+      "title": "Impact of Li2.9B0.9S0.1O3.1 glass additive on LATP-based ceramics",
+      "family": "nasicon",
+      "priority": 2,
+      "reachable": "on_disk",
+      "notes": "MINED round 2 (LATP-0.1LBSO + LATP sigma/Ea)."
+    },
+    {
+      "pdf": "10.15625_0868-3166_17946.pdf",
+      "doi": "10.15625/0868-3166/17946",
+      "title": "Li-ionic conductivity of La2/3-xLi3xTiO3 ceramics via SPS",
+      "family": "perovskite",
+      "priority": 3,
+      "reachable": "on_disk",
+      "notes": "MINED round 2 (Li0.27La0.58TiO3 grain/total + Ea)."
+    },
+    {
+      "pdf": "10.1038_s41467-020-17493-x.pdf",
+      "doi": "10.1038/s41467-020-17493-x",
+      "title": "Li2CO3-affiliative air-accessible interface engineering of garnet electrolyte",
+      "family": "garnet",
+      "priority": 4,
+      "reachable": "on_disk",
+      "notes": "Garnet is over-target; low value. Interface/full-cell focus likely, not primary conductivity."
+    },
+    {
+      "pdf": "10.3390_gels12060534.pdf",
+      "doi": "10.3390/gels12060534",
+      "title": "Gel Polymer Electrolyte Membranes via Slit-Coating Technology",
+      "family": "polymer_composite",
+      "priority": 5,
+      "reachable": "on_disk",
+      "notes": "MINED round 2 (PVDF-HFP/10%LLZTO)."
+    },
+    {
+      "pdf": "10.1021_jacs.1c07481.pdf",
+      "doi": "10.1021/jacs.1c07481",
+      "title": "Li2ZrCl6 synthesis - KNOWN SKIP (magneto-optic paper, not Li2ZrCl6)",
+      "family": "halide",
+      "priority": 6,
+      "reachable": "on_disk",
+      "notes": "Wrong paper - confirmed skip. Halide deficit 0.074 remains unfilled."
+    }
+  ],
+  "harvest_targets_oa": [
+    {
+      "doi": "10.1002/admi.202000425",
+      "title": "Sastre et al. - LLZO thin-film electrolyte (Wiley Open Access)",
+      "family": "garnet",
+      "priority": 6,
+      "reachable": "blocked_cloudflare",
+      "notes": "Wiley-OA route failed from this network; retry via alternate mirror if found."
+    }
+  ],
+  "sourcing_note": "Paper sourcing is the bottleneck: oxide/sulfide/halide papers that would fill the biggest deficits are predominantly ACS/Elsevier/Wiley-paywalled. Only OA routes (Nature Comms/Sci Rep, MDPI-via-EPMC, Springer, Wiley-OA, eScholarship/PMC mirrors) are reachable. Scaling toward 250 verified labels requires either manual PDF provision or a paid/vision-enabled extraction route."
+}

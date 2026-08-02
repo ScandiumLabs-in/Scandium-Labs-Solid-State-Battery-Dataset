@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block title %}Review {{ item.composition }}{% endblock %}
+{% block content %}
+
+<div class="row mb-3">
+  <div class="col">
+    <a class="btn btn-sm btn-outline-secondary" href="/">&larr; Queue</a>
+    <span class="ms-3 text-muted mono">{{ item.review_id }}</span>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- Left column: record + evidence -->
+  <div class="col-lg-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h4 class="mono mb-1">{{ item.composition }}</h4>
+            <div class="text-muted small">DOI: {{ item.doi or item.paper_id or '—' }}</div>
+          </div>
+          <span class="badge text-bg-secondary status-{{ item.status }}">{{ item.status }}</span>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-6">
+            <div class="text-muted small">Property</div>
+            <div class="fw-semibold">{{ item.property }}</div>
+          </div>
+          <div class="col-6">
+            <div class="text-muted small">Value</div>
+            <div class="value-display mono">
+              {% if item.edited_value is not none %}{{ item.edited_value | fmt(item.edited_unit or item.unit) }}
+              {% else %}{{ item.value | fmt(item.unit) }}{% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-4"><div class="text-muted small">Temperature</div><div class="mono">{{ item.temperature_celsius if item.temperature_celsius is not none else '—' }} °C</div></div>
+          <div class="col-4"><div class="text-muted small">Family</div><div>{{ item.family or '—' }}</div></div>
+          <div class="col-4"><div class="text-muted small">Confidence</div><div class="mono">{{ "%.2f" | format(item.confidence or 0) }}</div></div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-6"><div class="text-muted small">Type</div><div>{{ item.conductivity_type or '—' }}</div></div>
+          <div class="col-6"><div class="text-muted small">Method</div><div>{{ item.measurement_method or '—' }}</div></div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-6"><div class="text-muted small">Page / Section / Table</div><div class="mono">{{ item.page or '—' }} / {{ item.section or '—' }} / {{ item.table_number or '—' }}</div></div>
+          <div class="col-6"><div class="text-muted small">Extraction model</div><div class="mono">{{ item.llm_model or '—' }}</div></div>
+        </div>
+        {% if item.edited_value is not none %}
+        <div class="alert alert-warning mt-3 mb-0 py-2 small">Edited from reported <span class="mono">{{ item.value | fmt(item.unit) }}</span></div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if item._ai.overall %}
+    <div class="card mb-4">
+      <div class="card-header">AI Review</div>
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-2">
+          <div class="fs-3 fw-bold me-3">{{ "%.1f" | format(item._ai.overall) }}</div>
+          <span class="badge text-bg-{% if item._ai.decision == 'auto_approve' %}success{% elif item._ai.decision == 'auto_reject' %}danger{% else %}warning{% endif %} fs-6">
+            {{ item._ai.decision }}
+          </span>
+        </div>
+        {% if item._ai.reasons %}<div class="small text-muted mb-2">{{ item._ai.reasons | join('; ') }}</div>{% endif %}
+        <div class="row g-2">
+          {% for factor, val in item._ai.factors.items() %}
+          <div class="col-6">
+            <div class="d-flex justify-content-between small">
+              <span class="text-capitalize">{{ factor }}</span>
+              <span class="mono">{{ "%.2f" | format(val) }}</span>
+            </div>
+            <div class="factor-bar"><div class="factor-fill" style="width:{{ (val * 100) | int }}%"></div></div>
+          </div>
+          {% endfor %}
+        </div>
+        <table class="table table-sm mt-3 mb-0">
+          <tbody>
+            {% for r in item._ai.rules %}
+            <tr>
+              <td class="text-nowrap"><span class="rule-{{ r.status }} fw-semibold">{{ r.status }}</span></td>
+              <td class="mono">{{ r.rule }}</td>
+              <td class="small text-muted">{{ r.message }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="card mb-4">
+      <div class="card-header">Extraction evidence</div>
+      <div class="card-body">
+        {% if item.evidence_sentence %}
+        <div class="evidence-box">{{ item.evidence_sentence }}</div>
+        {% else %}
+        <div class="text-muted">No extraction sentence recorded.</div>
+        {% endif %}
+        {% if item.verified_snippet %}
+        <div class="small text-muted mt-2"><strong>Verifier snippet</strong> (p.{{ item.verified_page or '?' }}):</div>
+        <pre class="mono small bg-light p-2 mt-1 mb-0">{{ item.verified_snippet }}</pre>
+        {% endif %}
+        {% if item.verified_values %}
+        <div class="small mt-2"><strong>Verifier values:</strong> <span class="mono">{{ item.verified_values | join('; ') }}</span></div>
+        {% endif %}
+        {% if item.verified_verdict %}
+        <div class="small mt-1"><strong>Verifier verdict:</strong> {{ item.verified_verdict }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% set exp = item.experiment %}
+    {% if exp %}
+    <div class="card mb-4">
+      <div class="card-header">Experimental conditions</div>
+      <div class="card-body py-2">
+        <table class="table table-sm mb-0">
+          <tbody>
+            {% for k, v in exp.items() %}
+            {% if v is not none and v != '' %}
+            <tr>
+              <td class="text-muted small text-nowrap" style="width:45%">{{ k.replace('_', ' ') | title }}</td>
+              <td class="small">
+                {% if v is number and v < 0.01 %}{{ v | fmt('') }}{% else %}{{ v }}{% endif %}
+              </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- Right column: consensus + similar + decision -->
+  <div class="col-lg-6">
+    <div class="card mb-4">
+      <div class="card-header">Material consensus</div>
+      <div class="card-body">
+    {% set mc = item._material_consensus %}
+    {% if mc %}
+    <table class="table table-sm mb-0">
+      <tr><td>Group</td><td class="mono">{{ mc.group }}</td></tr>
+      {% if mc.n_papers %}<tr><td>Publications</td><td>{{ mc.n_papers }}</td></tr>{% endif %}
+      {% if mc.n_sigma >= 1 %}<tr><td>Records with σ</td><td>{{ mc.n_sigma }}</td></tr>{% endif %}
+      {% if mc.median_sigma %}<tr><td>Median σ</td><td class="mono">{{ mc.median_sigma | fmt('S/cm') }}</td></tr>{% endif %}
+      {% if mc.min_sigma %}<tr><td>σ range</td><td class="mono">{{ mc.min_sigma | fmt('S/cm') }} – {{ mc.max_sigma | fmt('S/cm') }}</td></tr>{% endif %}
+      {% if mc.sigma_ci95 %}<tr><td>σ 95% CI</td><td class="mono">{{ mc.sigma_ci95[0] | fmt('S/cm') }} – {{ mc.sigma_ci95[1] | fmt('S/cm') }}</td></tr>{% endif %}
+      {% if mc.median_ea %}<tr><td>Median Ea</td><td class="mono">{{ mc.median_ea | fmt('eV') }}</td></tr>{% endif %}
+      {% if mc.flagged %}
+      <tr><td colspan="2"><span class="text-danger fw-semibold">OUTLIER</span> — this record disagrees with the queue consensus</td></tr>
+      {% endif %}
+      {% if mc.outliers %}
+      <tr><td colspan="2"><span class="text-danger fw-semibold">DB OUTLIER</span>:
+        <span class="small">{% for o in mc.outliers %}{{ o.note }}{% if not loop.last %}; {% endif %}{% endfor %}</span></td></tr>
+      {% endif %}
+      {% if mc.temperature_histogram %}
+      <tr><td colspan="2"><span class="text-muted small">Temp histogram: {% for b in mc.temperature_histogram %}{{ b.bin_c }}°C×{{ b.count }}{% if not loop.last %}, {% endif %}{% endfor %}</span></td></tr>
+      {% endif %}
+    </table>
+    {% else %}
+    <div class="text-muted small">No consensus records for this material group.</div>
+    {% endif %}
+      </div>
+    </div>
+
+    {% if item._similar %}
+    <div class="card mb-4">
+      <div class="card-header">Similar papers</div>
+      <div class="card-body p-0">
+        <table class="table table-sm mb-0">
+          <thead><tr><th>Material</th><th>σ/Ea</th><th>Status</th></tr></thead>
+          <tbody>
+            {% for s in item._similar %}
+            <tr>
+              <td class="mono small">{{ s.composition }}</td>
+              <td class="mono small">{{ s.value | fmt(s.unit) }}</td>
+              <td><span class="status-{{ s.status }} small">{{ s.status }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="card mb-4 border-primary">
+      <div class="card-header bg-primary text-white">Human decision</div>
+      <div class="card-body">
+        {% if item.status != 'pending' %}
+        <div class="alert alert-{{ 'success' if item.status == 'approved' else 'danger' }} py-2 small mb-3">
+          Already <strong>{{ item.status }}</strong>{% if item.reviewer %} by <span class="mono">{{ item.reviewer }}</span>{% endif %}{% if item.reviewed_at %} on {{ item.reviewed_at }}{% endif %}.
+          {% if item.review_note %}<br>Note: {{ item.review_note }}{% endif %}
+        </div>
+        {% endif %}
+        <form method="post" action="/record/{{ item.review_id }}/decision">
+          <div class="row g-2 mb-2">
+            <div class="col-md-6">
+              <label class="form-label small mb-1">Edited value (optional)</label>
+              <input class="form-control form-control-sm" name="edited_value" placeholder="e.g. 0.00081">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small mb-1">Edited unit (optional)</label>
+              <input class="form-control form-control-sm" name="edited_unit" placeholder="e.g. S/cm">
+            </div>
+          </div>
+          <div class="mb-2">
+            <label class="form-label small mb-1">Reviewer note</label>
+            <input class="form-control form-control-sm" name="note" placeholder="reason / paper quote">
+          </div>
+          <div class="d-flex gap-2">
+            <input type="hidden" name="reviewer" value="dashboard-human">
+            <button class="btn btn-success btn-sm" name="action" value="approve">Approve</button>
+            <button class="btn btn-warning btn-sm" name="action" value="edit">Edit + approve</button>
+            <button class="btn btn-danger btn-sm" name="action" value="reject">Reject</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

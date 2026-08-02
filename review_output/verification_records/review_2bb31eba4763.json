@@ -1,0 +1,25 @@
+{
+  "review_id": "review_2bb31eba4763",
+  "paper_id": "10.35378_gujs.1589340",
+  "composition": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+  "family": "polymer_composite",
+  "property": "activation_energy",
+  "value": 0.23,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.23,
+  "evidence_page": 11,
+  "evidence_window": "",
+  "physics_ok": false,
+  "physics_notes": [
+    "Ea 0.23 outside polymer_composite Ea range [0.30,1.50]"
+  ],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 28.2,
+  "auto_decision": "reject",
+  "notes": [
+    "Ea 0.23 outside polymer_composite Ea range [0.30,1.50]"
+  ]
+}

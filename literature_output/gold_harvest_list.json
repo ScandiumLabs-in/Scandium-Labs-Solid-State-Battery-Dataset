@@ -1,0 +1,242 @@
+[
+  {
+    "doi": "10.3389/fenrg.2016.00028",
+    "family": "oxide",
+    "title": "Development of Lithium-Stuffed Garnet-Type Oxide Solid Electrolytes with High Ionic Conductivity for Application to All-Solid-State Batteries",
+    "score": 11.0
+  },
+  {
+    "doi": "10.3390/ma13030560",
+    "family": "sulfide",
+    "title": "Submicron-Sized Nb-Doped Lithium Garnet for High Ionic Conductivity Solid Electrolyte and Performance of Quasi-Solid-State Lithium Battery",
+    "score": 11.0
+  },
+  {
+    "doi": "10.1080/15567036.2023.2275710",
+    "family": "antiperovskite",
+    "title": "Investigating the amount of water on reducing Lix(OH)yClz hydroxide phases in the synthesis of Li3OCl anti-perovskite as a solid electrolyte in Li-ion batteries",
+    "score": 11.0
+  },
+  {
+    "doi": "10.1126/sciadv.abj7698",
+    "family": "sulfide",
+    "title": "Enhancing ionic conductivity in solid electrolyte by relocating diffusion ions to under-coordination sites",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/nano12244355",
+    "family": "sulfide",
+    "title": "Cl- and Al-Doped Argyrodite Solid Electrolyte Li6PS5Cl for All-Solid-State Lithium Batteries with Improved Ionic Conductivity",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/ELECTROCHEM2030026",
+    "family": "garnet",
+    "title": "Crystal Structure and Preparation of Li7La3Zr2O12 (LLZO) Solid-State Electrolyte and Doping Impacts on the Conductivity: An Overview",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/ma17153846",
+    "family": "nasicon",
+    "title": "The Impact of Boron Compounds on the Structure and Ionic Conductivity of LATP Solid Electrolytes",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/molecules26020299",
+    "family": "perovskite",
+    "title": "Syntheses and Characterization of Novel Perovskite-Type LaScO3-Based Lithium Ionic Conductors",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/batteries10010021",
+    "family": "halide",
+    "title": "In Situ/Operando Techniques for Unraveling Mechanisms of Ionic Transport in Solid-State Lithium Indium Halide Electrolyte",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/ma16072751",
+    "family": "argyrodite",
+    "title": "Sn-Substituted Argyrodite Li6PS5Cl Solid Electrolyte for Improving Interfacial and Atmospheric Stability",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/ecp2022-12627",
+    "family": "nasicon",
+    "title": "Li1+yTi2-x-yGexAly(PO4)3 NASICON-Type Electrolytes with Enhanced Conductivity for Solid-State Lithium-Ion Batteries",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/ecp2022-12617",
+    "family": "nasicon",
+    "title": "Synthesis and Ionic Conductivity of Lithium Titanium Phosphate with NASICON-Type Structure Doping with Zirconium and Aluminum",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/inorganics11010017",
+    "family": "borohydride",
+    "title": "Synthesis, Structure and Mg2+ Ionic Conductivity of Isopropylamine Magnesium Borohydride",
+    "score": 10.0
+  },
+  {
+    "doi": "10.1080/17436753.2023.2265193",
+    "family": "garnet",
+    "title": "Enhanced densification and ionic conductivity of LLZO by flash sintering",
+    "score": 10.0
+  },
+  {
+    "doi": "10.1038/s43246-024-00601-5",
+    "family": "borohydride",
+    "title": "Nanoconfinement of an ammine magnesium borohydride composite electrolyte in a mesoporous silica scaffold",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3389/fchem.2021.744417",
+    "family": "antiperovskite",
+    "title": "Li-Rich Antiperovskite/Nitrile Butadiene Rubber Composite Electrolyte for Sheet-Type Solid-State Lithium Metal Battery",
+    "score": 10.0
+  },
+  {
+    "doi": "10.3390/batteries9100503",
+    "family": "argyrodite",
+    "title": "New Insights of Infiltration Process of Argyrodite Li6PS5Cl Solid Electrolyte into Conventional Lithium-Ion Electrodes for Solid-State Batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-019-09061-9",
+    "family": "hydride",
+    "title": "A complex hydride lithium superionic conductor for high-energy-density all-solid-state lithium metal batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-021-24697-2",
+    "family": "borohydride",
+    "title": "A cost-effective and humidity-tolerant chloride solid electrolyte for lithium batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-023-42385-1",
+    "family": "antiperovskite",
+    "title": "Boosting lithium ion conductivity of antiperovskite solid electrolyte by potassium ions substitution for cation clusters",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/molecules29081759",
+    "family": "oxide",
+    "title": "Covalent Organic Framework Enhanced Solid Polymer Electrolyte for Lithium Metal Batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3389/fmats.2022.864478",
+    "family": "oxide",
+    "title": "A Cross-Linked Poly(Ethylene Oxide)-Based Electrolyte for All-Solid-State Lithium Metal Batteries With Long Cycling Stability",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/nano12172946",
+    "family": "garnet",
+    "title": "Synergetic Effect of Li-Ion Concentration and Triple Doping on Ionic Conductivity of Li7La3Zr2O12 Solid Electrolyte",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s43246-026-01164-3",
+    "family": "perovskite",
+    "title": "Engineering ionic pathways by phonon-structure connection in perovskite solid electrolyte Li0.29La0.57TiO3",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries8100173",
+    "family": "nasicon",
+    "title": "Effect of Lithium Salt Concentration on Materials Characteristics and Electrochemical Performance of Hybrid Inorganic/Polymer Solid Electrolyte for Solid-State Lithium-Ion Batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-026-69737-x",
+    "family": "halide",
+    "title": "Polyanion-stabilized amorphous halide electrolytes with low lithium content for all-solid-state lithium batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3389/fenrg.2020.606494",
+    "family": "argyrodite",
+    "title": "High-Performance All-Solid-State Lithium\u2013Sulfur Batteries Enabled by Slurry-Coated Li6PS5Cl/S/C Composite Electrodes",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries7040077",
+    "family": "argyrodite",
+    "title": "Preparation of Composite Electrodes for All-Solid-State Batteries Based on Sulfide Electrolytes: An Electrochemical Point of View",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-023-37564-z",
+    "family": "borohydride",
+    "title": "Realizing high-capacity all-solid-state lithium-sulfur batteries using a low-density inorganic solid-state electrolyte",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3389/fchem.2020.562549",
+    "family": "antiperovskite",
+    "title": "Lithium and Chlorine-Rich Preparation of Mechanochemically Activated Antiperovskite Composites for Solid-State Batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/nano13071294",
+    "family": "polymer_composite",
+    "title": "In Situ Nano-SiO2 Electrospun Polyethylene-Oxide-Based Nano-Fiber Composite Solid Polymer Electrolyte for High-Performance Lithium-Ion Batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-023-35857-x",
+    "family": "sulfide",
+    "title": "Tailoring polymer electrolyte ionic conductivity for production of low- temperature operating quasi-all-solid-state lithium metal batteries",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/polym12091889",
+    "family": "sulfide",
+    "title": "Promotion of Ionic Conductivity of PEO-Based Solid Electrolyte Using Ultrasonic Vibration",
+    "score": 9.0
+  },
+  {
+    "doi": "10.1038/s41467-025-58108-7",
+    "family": "oxide",
+    "title": "Disorder-driven sintering-free garnet-type solid electrolytes",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries9110526",
+    "family": "oxide",
+    "title": "Optimizing Li Ion Transport in a Garnet-Type Solid Electrolyte via a Grain Boundary Design",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries9090430",
+    "family": "oxide",
+    "title": "Predicting Ionic Conductivity in Thin Films of Garnet Electrolytes Using Machine Learning",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries11070268",
+    "family": "garnet",
+    "title": "Surface Fluorination for the Stabilization in Air of Garnet-Type Oxide Solid Electrolyte for Lithium Ion Battery",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/molecules30092028",
+    "family": "garnet",
+    "title": "Preparation and Electrochemical Characteristics of the Co-Doped Li7La3Zr2O12 Solid Electrolyte with Fe3+ and Bi3+",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3390/batteries8100158",
+    "family": "garnet",
+    "title": "Effect of Ga2O3 Addition on the Properties of Garnet-Type Ta-Doped Li7La3Zr2O12 Solid Electrolyte",
+    "score": 9.0
+  },
+  {
+    "doi": "10.3389/fchem.2022.966274",
+    "family": "perovskite",
+    "title": "Engineered interfaces between perovskite La2/3xLi3xTiO3 electrolyte and Li metal for solid-state batteries",
+    "score": 9.0
+  }
+]

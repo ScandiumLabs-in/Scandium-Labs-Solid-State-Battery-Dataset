@@ -1,0 +1,36 @@
+{
+  "review_id": "review_a8cc3f6c7a7f",
+  "paper_id": "10.1021_acsaem.0c02525",
+  "composition": "LiBH4-MgO",
+  "family": "borohydride",
+  "property": "conductivity",
+  "value": 0.000286,
+  "sigma_S_per_cm": 0.000286,
+  "Ea_eV": null,
+  "evidence_page": 2,
+  "evidence_window": "positions, the as-received LiBH4 was ball-milled for 2 h at 500 rpm in a Fritsch Pulverisette 7 planetary mill and was used as the starting material for the LiBH4\u2212oxide composite. All samples were bal",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "agree",
+  "consensus_agree": false,
+  "model_agreement": "1/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "not_reported",
+      "quote": ""
+    }
+  ],
+  "review_score": 78.2,
+  "auto_decision": "reject",
+  "notes": [
+    "literature agree"
+  ]
+}

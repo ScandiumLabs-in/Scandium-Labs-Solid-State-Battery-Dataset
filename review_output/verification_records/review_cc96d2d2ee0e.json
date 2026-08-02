@@ -1,0 +1,34 @@
+{
+  "review_id": "review_cc96d2d2ee0e",
+  "paper_id": "10.1038_s41467-021-24697-2",
+  "composition": "Li2ZrCl6",
+  "family": "halide",
+  "property": "activation_energy",
+  "value": 0.5,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.5,
+  "evidence_page": 3,
+  "evidence_window": "ies, the activation energies were evaluated through the Arrhenius plot (Fig. 2d). Consistent with the measured ionic conductivities, the activation energy of the as- milled LZC (0.35 eV) is much lower",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "1/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "no",
+      "ea_found": "yes",
+      "quote": "0.50 eV"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "no",
+      "ea_found": "different",
+      "quote": "the activation energy of the as- milled LZC (0.35 eV) is much lower than that of the 350 \u00b0C- annealed one (0.50 eV)"
+    }
+  ],
+  "review_score": 80.0,
+  "auto_decision": "needs_review",
+  "notes": []
+}

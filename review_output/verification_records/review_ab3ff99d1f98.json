@@ -1,0 +1,21 @@
+{
+  "review_id": "review_ab3ff99d1f98",
+  "paper_id": "10.3390_nano12244355",
+  "composition": "Li5.5PS4.5Cl1.5",
+  "family": "argyrodite",
+  "property": "activation_energy",
+  "value": 0.17,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.17,
+  "evidence_page": 3,
+  "evidence_window": "ion, \u03c3 = A exp(\u2212Ea/kT), where T is the absolute temperature, A is a pre-exponential factor, and k is the Boltzmann constant. The Ea value of the Li6PS5Cl electrolyte was 0.22 eV, and the Ea values of ",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

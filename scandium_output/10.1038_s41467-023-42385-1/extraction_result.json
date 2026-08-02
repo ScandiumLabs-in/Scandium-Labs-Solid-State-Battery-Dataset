@@ -1,0 +1,256 @@
+{
+  "paper_id": "10.1038_s41467-023-42385-1",
+  "doi": "10.1038/s41467-023-42385-1",
+  "metadata": {
+    "doi": "10.1038/s41467-023-42385-1",
+    "title": "Boosting lithium ion conductivity of\nantiperovskite solid electrolyte by potassium\nions substitution for cation clusters\nLei Gao1, Xinyu Zhang2, Jinlong Zhu\n2, Songbai Han\n2\n, Hao Zhang1,\nLiping Wang",
+    "year": 20,
+    "authors": "Lei Gao1, Xinyu Zhang2, Jinlong Zhu"
+  },
+  "primary_composition": "(Li2OH)0.99K0.01Cl",
+  "primary_material_detector": {
+    "primary_material": "(Li2OH)0.99K0.01Cl",
+    "name": "",
+    "confidence": 1,
+    "evidence": "The antiperovskite solid-state electrolyte (Li2OH)0.99K0.01Cl was prepared by one-step heating treatment of low-cost ingredients."
+  },
+  "compositions": [
+    {
+      "formula": "(Li2OH)0.99K0.01Cl",
+      "name": null,
+      "dopant": null,
+      "is_primary": true,
+      "source_type": "primary",
+      "evidence": "The primary material is believed to be related to: (Li2OH)0.99K0.01Cl",
+      "notes": "",
+      "family": "unknown",
+      "_confidence": 1.0,
+      "_issues": [],
+      "_valid": true
+    },
+    {
+      "formula": "LiOHCl",
+      "name": "argyrodite",
+      "dopant": null,
+      "is_primary": false,
+      "source_type": "primary",
+      "evidence": "tage disturbance at various frequencies and temperatures. Using the Nyquist curve of (Li2OH)0.99K0.01Cl at 25 \u00b0C as an illustrative example (Supplementary Fig. 7), it presents a characteristic semicircle pattern at high frequencies indicating the series combination of bulk and grain boundary resistance, and the linear segment at low frequencies sig- nifying ion blocking electrode.",
+      "notes": "",
+      "family": "unknown",
+      "_confidence": 1.0,
+      "_issues": [],
+      "_valid": true
+    },
+    {
+      "formula": "(Li2OH)1\u2012xKxCl",
+      "name": null,
+      "dopant": "K",
+      "is_primary": false,
+      "source_type": "primary",
+      "evidence": "Figure 4a displays Arrhenius plots for the (Li2OH)1\u2012xKxCl electro- lytes indicating the correlation between ionic conductivity and tem- perature within the temperature range of 25 and 120 \u00b0C.",
+      "notes": "",
+      "family": "unknown",
+      "_confidence": 1.0,
+      "_issues": [],
+      "_valid": true
+    }
+  ],
+  "conductivities": {
+    "high_confidence": [],
+    "flagged": []
+  },
+  "activation_energies": {
+    "high_confidence": [
+      {
+        "value": 0.326,
+        "unit": "eV",
+        "temperature_range": null,
+        "method": "Arrhenius",
+        "pressure_MPa": null,
+        "is_primary": true,
+        "source_type": "primary",
+        "material_formula": "(Li2OH)0.99K0.01Cl",
+        "source": "Source 1, BVSE method",
+        "notes": "Dominant mode of Li+ ions transport in (Li2OH)0.99K0.01Cl",
+        "_family": "unknown",
+        "value_normalized": 0.326,
+        "unit_normalized": "eV",
+        "_confidence": 1.0,
+        "_issues": [],
+        "_valid": true,
+        "_primary_composition": "(Li2OH)0.99K0.01Cl",
+        "_property_type": "activation_energy"
+      }
+    ],
+    "flagged": []
+  },
+  "evidence_graph_nodes": [
+    {
+      "sentence": "Supplementary Fig. 7",
+      "material": "(Li2OH)0.99K0.01Cl",
+      "property_type": "conductivity",
+      "value": 0.0045,
+      "unit": "mS/cm",
+      "source_type": "literature",
+      "source": "Supplementary Fig. 7",
+      "section": "Figure",
+      "is_primary": false,
+      "confidence": 0.7,
+      "issues": [],
+      "valid": true
+    },
+    {
+      "sentence": "Supplementary Fig. 7",
+      "material": "(Li2OH)0.99K0.01Cl",
+      "property_type": "conductivity",
+      "value": 0.0045,
+      "unit": "mS/cm",
+      "source_type": "literature",
+      "source": "Supplementary Fig. 7",
+      "section": "Figure",
+      "is_primary": false,
+      "confidence": 0.55,
+      "issues": [],
+      "valid": true
+    },
+    {
+      "sentence": "Supplementary Fig. 7",
+      "material": "(Li2OH)0.99K0.01Cl",
+      "property_type": "conductivity",
+      "value": 0.0045,
+      "unit": "mS/cm",
+      "source_type": "literature",
+      "source": "Supplementary Fig. 7",
+      "section": "Figure",
+      "is_primary": false,
+      "confidence": 0.55,
+      "issues": [],
+      "valid": true
+    },
+    {
+      "sentence": "Supplementary Fig. 7",
+      "material": "(Li2OH)0.99K0.01Cl",
+      "property_type": "conductivity",
+      "value": 0.0045,
+      "unit": "mS/cm",
+      "source_type": "literature",
+      "source": "Supplementary Fig. 7",
+      "section": "Figure",
+      "is_primary": false,
+      "confidence": 0.55,
+      "issues": [],
+      "valid": true
+    },
+    {
+      "sentence": "Dominant mode of Li+ ions transport in (Li2OH)0.99K0.01Cl",
+      "material": "(Li2OH)0.99K0.01Cl",
+      "property_type": "activation_energy",
+      "value": 0.326,
+      "unit": "eV",
+      "source_type": "primary",
+      "source": "Source 1, BVSE method",
+      "section": "Unknown",
+      "is_primary": true,
+      "confidence": 1.0,
+      "issues": [],
+      "valid": true
+    }
+  ],
+  "evidence_graph": {
+    "total_nodes": 5,
+    "primary_nodes": 1,
+    "by_property": {
+      "conductivity": 4,
+      "activation_energy": 1
+    },
+    "by_source_type": {
+      "literature": 4,
+      "primary": 1
+    }
+  },
+  "verification": {
+    "n_compositions": 3,
+    "n_conductivities": 0,
+    "n_activation_energies": 1,
+    "composition_issues": [
+      "Unrecognized element: H in (Li2OH)0.99K0.01Cl",
+      "Unrecognized element: H in LiOHCl",
+      "Charge imbalance in LiOHCl: net charge = -2.0",
+      "Unrecognized element: H in (Li2OH)1\u2012xKxCl"
+    ],
+    "cross_source_conflicts": [],
+    "arrhenius_flags": [],
+    "summary": {
+      "primary_composition": "(Li2OH)0.99K0.01Cl",
+      "high_confidence_conductivities": 0,
+      "flagged_conductivities": 0,
+      "high_confidence_activation_energies": 1,
+      "flagged_activation_energies": 0,
+      "total_conflicts": 0,
+      "composition_issues": 4
+    }
+  },
+  "n_chunks": 65,
+  "n_sections": 6,
+  "evidence": [
+    {
+      "evidence_id": "c1d665f9282cecca",
+      "paper_id": "10.1038_s41467-023-42385-1",
+      "doi": "10.1038/s41467-023-42385-1",
+      "composition": "(Li2OH)0.99K0.01Cl",
+      "family": "unknown",
+      "property": "activation_energy",
+      "value": 0.326,
+      "unit": "eV",
+      "normalized_value": 0.326,
+      "normalized_unit": "eV",
+      "temperature_celsius": null,
+      "conductivity_type": null,
+      "measurement_method": null,
+      "pressure_MPa": null,
+      "source": "Source 1, BVSE method",
+      "is_primary": true,
+      "confidence": 1.0,
+      "issues": [],
+      "valid": true,
+      "extraction_date": "2026-07-31T01:26:14.207429"
+    }
+  ],
+  "dataset_record": {
+    "dataset_id": "05220d22",
+    "generated_at": "2026-07-31T01:26:14.210777",
+    "paper": {
+      "paper_id": "10.1038_s41467-023-42385-1",
+      "doi": "10.1038/s41467-023-42385-1",
+      "title": "Boosting lithium ion conductivity of\nantiperovskite solid electrolyte by potassium\nions substitution for cation clusters\nLei Gao1, Xinyu Zhang2, Jinlong Zhu\n2, Songbai Han\n2\n, Hao Zhang1,\nLiping Wang",
+      "year": 20
+    },
+    "evidence": [
+      {
+        "evidence_id": "c1d665f9282cecca",
+        "paper_id": "10.1038_s41467-023-42385-1",
+        "doi": "10.1038/s41467-023-42385-1",
+        "composition": "(Li2OH)0.99K0.01Cl",
+        "family": "unknown",
+        "property": "activation_energy",
+        "value": 0.326,
+        "unit": "eV",
+        "normalized_value": 0.326,
+        "normalized_unit": "eV",
+        "temperature_celsius": null,
+        "conductivity_type": null,
+        "measurement_method": null,
+        "pressure_MPa": null,
+        "source": "Source 1, BVSE method",
+        "is_primary": true,
+        "confidence": 1.0,
+        "issues": [],
+        "valid": true,
+        "extraction_date": "2026-07-31T01:26:14.207429"
+      }
+    ],
+    "n_evidence": 1,
+    "n_high_confidence": 1,
+    "n_flagged": 0
+  }
+}

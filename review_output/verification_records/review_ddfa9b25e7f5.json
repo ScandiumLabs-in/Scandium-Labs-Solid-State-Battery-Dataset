@@ -1,0 +1,21 @@
+{
+  "review_id": "review_ddfa9b25e7f5",
+  "paper_id": "10.3390_ma13030560",
+  "composition": "Li6.6La3Zr1.6Nb0.4O12",
+  "family": "garnet",
+  "property": "conductivity",
+  "value": 0.000509,
+  "sigma_S_per_cm": 0.000509,
+  "Ea_eV": null,
+  "evidence_page": 7,
+  "evidence_window": "Materials 2020, 13, 560 7 of 11 Figure 5. (a) Arrhenius plots and \ufb01tting results and (b) the activation energy of di\ufb00erent LLZNO ceramics. SEM images of cross sections of the LLZNO ceramics, which wer",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "no_ref",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}

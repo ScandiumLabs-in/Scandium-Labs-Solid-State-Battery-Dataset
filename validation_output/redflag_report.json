@@ -1,0 +1,21 @@
+{
+  "total_records": 674,
+  "total_flags": 1,
+  "high_severity": 1,
+  "medium_severity": 0,
+  "low_severity": 0,
+  "per_family_summary": {
+    "duplicate_composition_different_values": 1
+  },
+  "flags": [
+    {
+      "record_id": "[6, 22]",
+      "flag_type": "duplicate_composition_different_values",
+      "severity": "high",
+      "message": "Composition 'PEO-LiTFSI' appears 2 times with \u03c3 values ranging 1.0e-06\u20131.0e-05 S/cm (ratio=10x) \u2014 families: {'polymer_composite'}",
+      "field": "ion_transport.sigma_RT",
+      "value": "1.0e-06\u20131.0e-05",
+      "expected_range": "ratio < 10x"
+    }
+  ]
+}

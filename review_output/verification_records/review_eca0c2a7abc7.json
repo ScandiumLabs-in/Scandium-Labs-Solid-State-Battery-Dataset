@@ -1,0 +1,25 @@
+{
+  "review_id": "review_eca0c2a7abc7",
+  "paper_id": "10.1038_s41467-019-09061-9",
+  "composition": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+  "family": "polymer_composite",
+  "property": "activation_energy",
+  "value": 0.0289,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.0289,
+  "evidence_page": 4,
+  "evidence_window": " trochemical stability was \ufb01rst evaluated by cyclic voltammetry (CV) with a Mo/0.7Li(CB9H10)\u20130.3Li(CB11H12)/Li cell at 25 \u00b0C (Fig. 4a and Supplementary Fig. 12). The cell displays sharp and reversible",
+  "physics_ok": false,
+  "physics_notes": [
+    "Ea 0.03 outside polymer_composite Ea range [0.30,1.50]"
+  ],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 47.0,
+  "auto_decision": "reject",
+  "notes": [
+    "Ea 0.03 outside polymer_composite Ea range [0.30,1.50]"
+  ]
+}

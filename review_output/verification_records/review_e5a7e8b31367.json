@@ -1,0 +1,36 @@
+{
+  "review_id": "review_e5a7e8b31367",
+  "paper_id": "10.1038_s41467-021-24697-2",
+  "composition": "Li2ZrCl6",
+  "family": "halide",
+  "property": "conductivity",
+  "value": 0.00081,
+  "sigma_S_per_cm": 0.00081,
+  "Ea_eV": null,
+  "evidence_page": 1,
+  "evidence_window": "s unlikely. Here, a cost-effective chloride solid elec- trolyte, Li2ZrCl6, is reported. Its raw materials are several orders of magnitude cheaper than those for the state-of-the-art chloride solid ele",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "agree",
+  "consensus_agree": true,
+  "model_agreement": "2/2",
+  "verdicts": [
+    {
+      "model": "llama-3.1-8b-instant",
+      "sigma_found": "yes",
+      "ea_found": "not_reported",
+      "quote": "0.81 mS cm\u20131"
+    },
+    {
+      "model": "llama-3.3-70b-versatile",
+      "sigma_found": "yes",
+      "ea_found": "not_reported",
+      "quote": "0.81 mS cm\u20131"
+    }
+  ],
+  "review_score": 96.2,
+  "auto_decision": "spot_check",
+  "notes": [
+    "literature agree"
+  ]
+}

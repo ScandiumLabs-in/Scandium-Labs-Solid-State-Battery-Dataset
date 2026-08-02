@@ -1,0 +1,25 @@
+{
+  "review_id": "review_6884b5b3ad27",
+  "paper_id": "10.3390_nano12244355",
+  "composition": "Li5.4Al0.1PS4.7Cl1.3",
+  "family": "argyrodite",
+  "property": "activation_energy",
+  "value": 0.09,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.09,
+  "evidence_page": 1,
+  "evidence_window": "S5Cl (Li5.4Al0.1PS4.7Cl1.3) electrolyte was 7.29 \u00d7 10\u22123 S cm\u22121 at room temperature, which is 4.7 times higher than that of Li6PS5Cl. The Arrhenius plot of the Li5.4Al0.1PS4.7Cl1.3 electrolyte further ",
+  "physics_ok": false,
+  "physics_notes": [
+    "Ea 0.09 outside argyrodite Ea range [0.15,0.50]"
+  ],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 47.0,
+  "auto_decision": "reject",
+  "notes": [
+    "Ea 0.09 outside argyrodite Ea range [0.15,0.50]"
+  ]
+}

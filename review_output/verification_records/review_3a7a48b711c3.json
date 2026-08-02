@@ -1,0 +1,21 @@
+{
+  "review_id": "review_3a7a48b711c3",
+  "paper_id": "10.3390_ma13030560",
+  "composition": "Li6.6La3Zr1.6Nb0.4O12",
+  "family": "garnet",
+  "property": "activation_energy",
+  "value": 0.311,
+  "sigma_S_per_cm": null,
+  "Ea_eV": 0.311,
+  "evidence_page": 9,
+  "evidence_window": "ut mother powder, which reduces the sintering temperature and shortens the sintering time. After being sintered at 1150 \u25e6C for 60 min, the total ionic conductivity, relative density, and activation en",
+  "physics_ok": true,
+  "physics_notes": [],
+  "literature": "pending",
+  "consensus_agree": false,
+  "model_agreement": "0/0",
+  "verdicts": [],
+  "review_score": 62.0,
+  "auto_decision": "reject",
+  "notes": []
+}
