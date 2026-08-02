@@ -25,7 +25,7 @@ from ssb_dataset.schema import (
     ThermodynamicsBlock,
 )
 from ssb_dataset.sources.base import BaseSourceConnector
-from ssb_dataset.sources.classifier import classify_family
+from ssb_dataset.sources.classifier import classify_family, is_electrolyte_candidate
 
 
 class MPConnector(BaseSourceConnector):
@@ -86,6 +86,7 @@ class MPConnector(BaseSourceConnector):
                 source_db=SourceDB.materials_project,
                 source_id=str(raw.get("material_id", "")),
                 family=classify_family(struct=struct),
+                is_electrolyte_candidate=is_electrolyte_candidate(struct=struct),
                 ingestion_date=datetime.now(timezone.utc),
                 confidence_tier=ConfidenceTier.dft_native,
             ),

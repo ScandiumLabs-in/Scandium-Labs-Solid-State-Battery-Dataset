@@ -17,7 +17,44 @@ from ssb_dataset.schema import (
     StructureType,
     SynthesisBlock,
 )
-from ssb_dataset.sources.classifier import classify_family
+from ssb_dataset.sources.classifier import classify_family, is_electrolyte_candidate
+
+
+class TestElectrolyteCandidateFlag:
+    """Relevance heuristics for the bulk DFT catalog: a composition stays in its
+    formula family (LiCoO2 -> oxide) but is flagged as NON-electrolyte when it is a
+    known intercalation cathode. Garnet/LLTO/NASICON are always candidates."""
+
+    @pytest.mark.parametrize(
+        ("composition", "expected"),
+        [
+            ("LiCoO2", False),
+            ("LiMn2O4", False),
+            ("LiNiO2", False),
+            ("Li3NiMnO5", False),
+            ("LiFePO4", False),
+            ("Li7La3Zr2O12", True),   # LLZO garnet
+            ("Li6.5La3Zr1.5Ta0.5O12", True),
+            ("Li3xLa2/3-xTiO3", True),  # LLTO perovskite
+            ("Li10GeP2S12", True),    # LGPS sulfide
+            ("Li6PS5Cl", True),       # argyrodite
+            ("LiO2", True),
+            ("Li3PO4", True),
+            ("Li2O", True),
+        ],
+    )
+    def test_candidate_flag(self, composition: str, expected: bool) -> None:
+        assert is_electrolyte_candidate(composition=composition) == expected
+
+    def test_garnet_family_preserved_and_candidate(self) -> None:
+        """relabeling a composition family: LLZO stays garnet AND candidate."""
+        assert classify_family(composition="Li7La3Zr2O12") == Family.garnet
+        assert is_electrolyte_candidate(composition="Li7La3Zr2O12") is True
+
+    def test_cathode_stays_oxide_but_not_candidate(self) -> None:
+        """LiCoO2 is an oxide by composition but not an electrolyte candidate."""
+        assert classify_family(composition="LiCoO2") == Family.oxide
+        assert is_electrolyte_candidate(composition="LiCoO2") is False
 
 
 class TestFamilyClassifier:

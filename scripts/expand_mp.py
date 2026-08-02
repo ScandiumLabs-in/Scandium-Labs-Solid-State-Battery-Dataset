@@ -53,6 +53,7 @@ from ssb_dataset.schema import (  # noqa: E402
     ThermodynamicsBlock,
 )
 from ssb_dataset.sources.classifier import classify_family  # noqa: E402
+from ssb_dataset.sources.classifier import is_electrolyte_candidate  # noqa: E402
 
 BASE = Path("data/raw/materials_project")
 RAW_DIR = BASE / "raw_json"
@@ -344,6 +345,7 @@ def build_record(d: dict) -> MaterialRecord:
             source_id=mid,
             composition=composition_str,
             family=family,
+            is_electrolyte_candidate=is_electrolyte_candidate(elements=elements, struct=struct),
             subfamily_tag=[d.get("chemsys", "")] if d.get("chemsys") else [],
             ingestion_date=datetime.now(timezone.utc),
             schema_version="0.1.0",

@@ -30,6 +30,7 @@ sys.path.insert(0, str(BASE))
 sys.path.insert(0, str(BASE / "src"))
 
 from ssb_dataset.sources.classifier import classify_family
+from ssb_dataset.sources.classifier import is_electrolyte_candidate
 
 STAGING_JARVIS = BASE / "staging" / "jarvis"
 STAGING_NOMAD = BASE / "staging" / "nomad"
@@ -57,6 +58,7 @@ FULL_COLUMNS = [
     "identity.source_id",
     "identity.family",
     "identity.subfamily_tag",
+    "identity.is_electrolyte_candidate",
     "identity.ingestion_date",
     "identity.schema_version",
     "identity.confidence_tier",
@@ -186,6 +188,7 @@ def harvest_jarvis(limit: int | None = None) -> list[dict[str, object]]:
                     "identity.source_db": "jarvis",
                     "identity.source_id": jid,
                     "identity.family": family_value,
+                    "identity.is_electrolyte_candidate": is_electrolyte_candidate(elements=elements),
                     "identity.ingestion_date": datetime.now(timezone.utc),
                     "identity.confidence_tier": "dft_native",
                     "structure.space_group": entry.get("spg_symbol") or entry.get("spg", ""),
@@ -243,6 +246,7 @@ def harvest_nomad(limit: int = 3000) -> list[dict[str, object]]:
                             "identity.source_db": "nomad",
                             "identity.source_id": entry_id,
                             "identity.family": family_value,
+                            "identity.is_electrolyte_candidate": is_electrolyte_candidate(elements=elements),
                             "identity.ingestion_date": datetime.now(timezone.utc),
                             "identity.confidence_tier": "dft_native",
                             "structure.structure_relaxed": entry.get("cif") or None,

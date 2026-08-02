@@ -15,7 +15,7 @@ from ssb_dataset.schema import (
     StructureBlock,
 )
 from ssb_dataset.sources.base import BaseSourceConnector
-from ssb_dataset.sources.classifier import classify_family
+from ssb_dataset.sources.classifier import classify_family, is_electrolyte_candidate
 
 
 class ICSDConnector(BaseSourceConnector):
@@ -65,6 +65,7 @@ class ICSDConnector(BaseSourceConnector):
             source_db=SourceDB.icsd,
             source_id=entry_id,
             family=classify_family(elements=elements),
+            is_electrolyte_candidate=is_electrolyte_candidate(elements=elements),
             ingestion_date=datetime.now(timezone.utc),
             confidence_tier=ConfidenceTier.verified_human,
         )

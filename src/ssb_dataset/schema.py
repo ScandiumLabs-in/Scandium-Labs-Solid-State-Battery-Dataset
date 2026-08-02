@@ -125,6 +125,7 @@ class IdentityProvenance(BaseModel):
     composition: str = ""
     family: Family
     subfamily_tag: list[str] = Field(default_factory=list)
+    is_electrolyte_candidate: bool = True
     ingestion_date: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     schema_version: str = "0.1.0"
     confidence_tier: ConfidenceTier

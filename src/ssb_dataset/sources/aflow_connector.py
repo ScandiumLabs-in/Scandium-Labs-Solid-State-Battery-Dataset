@@ -15,7 +15,7 @@ from ssb_dataset.schema import (
     StructureBlock,
 )
 from ssb_dataset.sources.base import BaseSourceConnector
-from ssb_dataset.sources.classifier import classify_family
+from ssb_dataset.sources.classifier import classify_family, is_electrolyte_candidate
 
 
 class AFLOWConnector(BaseSourceConnector):
@@ -62,6 +62,7 @@ class AFLOWConnector(BaseSourceConnector):
             source_db=SourceDB.aflow,
             source_id=str(raw.get("auid", "")),
             family=classify_family(elements=elements),
+            is_electrolyte_candidate=is_electrolyte_candidate(elements=elements),
             ingestion_date=datetime.now(timezone.utc),
             confidence_tier=ConfidenceTier.dft_native,
         )

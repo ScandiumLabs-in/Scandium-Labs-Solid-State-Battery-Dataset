@@ -23,6 +23,68 @@ NON_METALS = {
     "SE", "AS", "TE", "AT", "RN",
 }
 
+# Transition metals that dominate intercalation *cathode* chemistries (LiCoO2,
+# LiMn2O4, LiNiO2, NMC) rather than solid-electrolyte frameworks. Their presence
+# as the only framework metal in a Li+O compound is a strong anti-electrolyte
+# signal. NOTE: this is a *relevance* heuristic for the bulk screening flag, NOT a
+# replacement for family classification — a compound stays in its composition
+# family (e.g. LiCoO2 remains an oxide) and is merely flagged as a non-electrolyte
+# candidate. LLZO-type garnets (La+Zr) and LLTO-type perovskites (La+Ti) are pulled
+# out BEFORE this check by the family rules, never filtered here.
+CATHODE_TM = {"CO", "MN", "NI"}
+CATHODE_TRANSITIONAL = {"FE"}  # Fe used conservatively (see phospho-olivine note)
+
+
+def is_electrolyte_candidate(
+    composition: dict[str, float] | str | Composition | None = None,
+    elements: set[str] | None = None,
+    struct: Structure | None = None,
+) -> bool:
+    """Relevance flag: is this composition plausibly a solid *electrolyte* candidate,
+    as distinct from being a member of a formula family?
+
+    Complements `classify_family` (which is pure composition/taxonomy). Routes the
+    bulk structural catalog's Li+O+Transition-metal catch-all: known intercalation
+    cathode chemistries (Co/Mn/Ni-dominant oxides) are flagged as NON-electrolytes
+    without changing their family. Used to produce an honest "electrolyte-candidate
+    fraction" for the bulk DFT records, which otherwise reads as 68% oxide when most
+    of that is LiCoO2-type cathodes.
+    """
+    if struct is not None:
+        comp = struct.composition
+        elements = {el.symbol for el in comp.elements}
+    elif isinstance(composition, str):
+        try:
+            comp = Composition(composition)
+            elements = {el.symbol for el in comp.elements}
+        except Exception:
+            elements = _parse_formula_string(composition)
+    elif isinstance(composition, dict):
+        elements = set(composition.keys())
+    elif isinstance(composition, Composition):
+        elements = {el.symbol for el in composition.elements}
+
+    if not elements:
+        return False
+    upper = {e.upper() for e in elements}
+
+    has_li = "LI" in upper
+    if not has_li:
+        return False
+
+    # Known intercalation cathode oxides → NOT an electrolyte candidate.
+    if upper & CATHODE_TM:
+        return False
+    # Fe-olivine (LiFePO4): Fe + P as the ONLY framework pair.
+    if upper & CATHODE_TRANSITIONAL and (
+        ({"FE"} <= upper and "P" in upper and not (upper & {"TI", "ZR", "GE", "AL", "SN", "SCR", "V"}) )
+        or ({"FE"} == upper & CATHODE_TRANSITIONAL and "CO" not in upper and "NI" not in upper and "MN" not in upper)
+    ):
+        return False
+
+    # Default: treat as a candidate unless a specific counter-signal applies.
+    return True
+
 
 def _parse_formula_string(formula: str) -> set[str]:
     """Extract element symbols from a formula string, handling polymer/composite notation."""
