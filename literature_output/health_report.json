@@ -3,18 +3,18 @@
   "verified_records": 116,
   "coverage": {
     "temperature_celsius": 94.0,
-    "measurement_method": 99.1,
+    "measurement_method": 70.7,
     "conductivity_type": 92.2,
-    "pelletizing_pressure_MPa": 0.0,
-    "relative_density_pct": 0.0,
+    "pelletizing_pressure_MPa": 29.3,
+    "relative_density_pct": 11.2,
     "theoretical_density_g_per_cm3": 0.0,
-    "electrode_material": 0.0,
-    "atmosphere": 0.0,
-    "sample_form": 0.0,
-    "frequency_max_Hz": 0.0,
-    "sinter_temperature_C": 0.0,
-    "sinter_time_h": 0.0,
-    "page": 87.1,
+    "electrode_material": 85.3,
+    "atmosphere": 85.3,
+    "sample_form": 85.3,
+    "frequency_max_Hz": 5.2,
+    "sinter_temperature_C": 29.3,
+    "sinter_time_h": 12.9,
+    "page": 44.8,
     "evidence_sentence": 87.1
   },
   "family_balance": {
@@ -56,27 +56,26 @@
   "materials_with_pub_years": 104,
   "pub_years_coverage_pct": 26.9,
   "materials_with_sigma_by_temp": 385,
-  "quality_score_avg": 35.8,
+  "quality_score_avg": 30.4,
   "quality_score_min": 16,
-  "quality_score_max": 86,
+  "quality_score_max": 84,
   "quality_grade_distribution": {
-    "D": 194,
-    "C": 11,
-    "B": 1,
-    "A": 1
+    "D": 372,
+    "C": 14,
+    "B": 1
   },
-  "queue_items": 285,
-  "queue_pending": 0,
+  "queue_items": 362,
+  "queue_pending": 77,
   "queue_approved": 143,
   "queue_rejected": 142,
-  "queue_with_experiment_block": 37,
+  "queue_with_experiment_block": 114,
   "quality": {
     "records": 143,
-    "avg_score": 47.3,
+    "avg_score": 47.7,
     "grade_distribution": {
-      "C": 90,
+      "C": 87,
       "D": 51,
-      "B": 2
+      "B": 5
     },
     "tier_distribution": {
       "silver": 138,
@@ -347,6 +346,18 @@
     }
   },
   "drift": {
+    "coverage_drift_gt_5pct": {
+      "atmosphere": 85.3,
+      "relative_density_pct": 11.2,
+      "sample_form": 85.3,
+      "electrode_material": 85.3,
+      "sinter_temperature_C": 29.3,
+      "frequency_max_Hz": 5.2,
+      "pelletizing_pressure_MPa": 29.3,
+      "measurement_method": -28.4,
+      "sinter_time_h": 12.9,
+      "page": -42.3
+    },
     "record_count_change": 0,
     "baseline_records": 116
   }

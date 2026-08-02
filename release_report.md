@@ -1,7 +1,7 @@
 # Scandium Dataset — Release Report
 
 - Version: **v0.2.0**
-- Generated: 2026-08-02T10:36:41.518760+00:00
+- Generated: 2026-08-02T20:31:27.479637+00:00
 
 ## Dataset size
 
@@ -15,28 +15,30 @@
 | Gate | Status |
 |---|---|
 | tests_passing | PASS |
-| validation_passed | PASS |
-| no_pending_review_flags | PASS |
-| evidence_coverage | PASS |
+| validation_passed | FAIL |
+| no_pending_review_flags | FAIL |
+| evidence_coverage | FAIL |
 | duplicate_rate | PASS |
-| metadata_completeness | PASS |
+| metadata_completeness | FAIL |
 | doi_provenance | PASS |
 | min_verified_labels | PASS |
 | min_total_records | PASS |
 | health_report_generated | PASS |
+
+**Failing gates:** validation_passed, no_pending_review_flags, evidence_coverage, metadata_completeness
 
 ## Quality distribution
 
 ```json
 {
   "records": 143,
-  "score_avg": 47.3,
+  "score_avg": 47.7,
   "score_min": 35,
-  "score_max": 65,
+  "score_max": 66,
   "grade_distribution": {
-    "C": 90,
+    "C": 87,
     "D": 51,
-    "B": 2
+    "B": 5
   },
   "tier_distribution": {
     "silver": 138,
@@ -53,14 +55,6 @@
   "bronze_records": 0,
   "rejected_records": 5,
   "family_scores": {
-    "": {
-      "n": 6,
-      "avg_score": 45.2,
-      "tiers": {
-        "rejected": 5,
-        "silver": 1
-      }
-    },
     "LLZO": {
       "n": 1,
       "avg_score": 47.0,
@@ -76,17 +70,19 @@
       }
     },
     "argyrodite": {
-      "n": 10,
-      "avg_score": 50.0,
+      "n": 11,
+      "avg_score": 50.2,
       "tiers": {
-        "silver": 10
+        "silver": 10,
+        "rejected": 1
       }
     },
     "borohydride": {
-      "n": 8,
-      "avg_score": 47.0,
+      "n": 12,
+      "avg_score": 46.2,
       "tiers": {
-        "silver": 8
+        "silver": 11,
+        "rejected": 1
       }
     },
     "garnet": {
@@ -97,17 +93,24 @@
       }
     },
     "halide": {
-      "n": 10,
-      "avg_score": 49.2,
+      "n": 12,
+      "avg_score": 47.7,
       "tiers": {
-        "silver": 10
+        "silver": 12
+      }
+    },
+    "hydride": {
+      "n": 2,
+      "avg_score": 44.0,
+      "tiers": {
+        "silver": 2
       }
     },
     "nasicon": {
-      "n": 15,
-      "avg_score": 50.3,
+      "n": 22,
+      "avg_score": 48.0,
       "tiers": {
-        "silver": 15
+        "silver": 22
       }
     },
     "oxide": {
@@ -118,31 +121,26 @@
       }
     },
     "perovskite": {
-      "n": 13,
-      "avg_score": 49.2,
+      "n": 14,
+      "avg_score": 49.6,
       "tiers": {
-        "silver": 13
+        "silver": 13,
+        "rejected": 1
       }
     },
     "polymer_composite": {
-      "n": 26,
-      "avg_score": 48.4,
+      "n": 28,
+      "avg_score": 49.4,
       "tiers": {
-        "silver": 26
+        "silver": 26,
+        "rejected": 2
       }
     },
     "sulfide": {
       "n": 7,
-      "avg_score": 49.6,
+      "avg_score": 50.6,
       "tiers": {
         "silver": 7
-      }
-    },
-    "unknown": {
-      "n": 13,
-      "avg_score": 42.2,
-      "tiers": {
-        "silver": 13
       }
     }
   }
