@@ -113,13 +113,13 @@ def test_suspicious_value_flagged(tmp_path):
     assert r.atmosphere == "N2"
 
 
-def test_equivalent_circuit_disabled(tmp_path):
-    # equivalent_circuit is intentionally not stamped from the text layer yet
-    # (capture produced prose garbage); it must always be None for now.
+def test_equivalent_circuit_captured_when_clean(tmp_path):
+    # equivalent_circuit is now stamped ONLY when the parser captures a compact
+    # circuit expression (R, CPE, Q, W, parens, ||) with no prose words.
     from src.ssb_dataset.pipeline.experiment_extract import (
         _clean_circuit, _looks_like_circuit,
     )
-# helpers exist and correctly discriminate a real circuit from prose
+    # helpers exist and correctly discriminate a real circuit from prose
     assert _looks_like_circuit("R(CPE)(R||CPE)")
     assert not _looks_like_circuit("model and scheme of int")
     pdf = _make_pdf(tmp_path, (
@@ -127,7 +127,33 @@ def test_equivalent_circuit_disabled(tmp_path):
         "R(CPE)(R||CPE) using a custom routine in air."
     ))
     r = extract_conditions(pdf)
+    assert r.equivalent_circuit == "R(CPE)(R||CPE)"
+
+
+def test_equivalent_circuit_rejects_prose(tmp_path):
+    # the old failure mode — capturing a prose fragment — must stay None
+    pdf = _make_pdf(tmp_path, (
+        "The equivalent circuit model and scheme of the interface is described "
+        "in Figure 4 with all the used parameters."
+    ))
+    r = extract_conditions(pdf)
     assert r.equivalent_circuit is None
+
+
+def test_humidity_extracted(tmp_path):
+    pdf = _make_pdf(tmp_path, (
+        "Pellets were stored under an argon atmosphere at a relative humidity "
+        "of 50% before impedance measurement."
+    ))
+    r = extract_conditions(pdf)
+    assert r.humidity == "50%"
+    assert r.atmosphere == "AR"
+
+
+def test_humidity_rejects_out_of_range(tmp_path):
+    pdf = _make_pdf(tmp_path, "relative humidity of 120% and nothing else here")
+    r = extract_conditions(pdf)
+    assert r.humidity is None
 
 
 def test_extract_rejects_hydrogen_pressure(tmp_path):

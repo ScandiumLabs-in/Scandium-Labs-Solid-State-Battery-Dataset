@@ -17,6 +17,7 @@ class SourceDB(str, Enum):
     icsd = "icsd"
     cod = "cod"
     nomad = "nomad"
+    materials_cloud = "materials_cloud"
     literature_mined = "literature_mined"
     scandium_computed = "scandium_computed"
 

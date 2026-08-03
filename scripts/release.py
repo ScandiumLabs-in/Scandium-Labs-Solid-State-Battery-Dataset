@@ -394,6 +394,15 @@ def main() -> int:
     (ROOT / "release_report.json").write_text(json.dumps(report, indent=2, default=str))
     (ROOT / "release_report.md").write_text(render_release_report_md(report))
 
+    # Phase E0 — never let a release leave the README's status block stale.
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from sync_readme_status import sync_readme_status
+    changed = sync_readme_status(report, ROOT / "README.md")
+    if changed:
+        print("  · README status block re-synced to release report ✓")
+    else:
+        print("  · README status block already in sync ✓")
+
     failed = [k for k, v in gates.items() if not v["ok"]]
     print("\n--- RELEASE GATES ---")
     for k, v in gates.items():

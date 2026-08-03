@@ -9,7 +9,6 @@ from typing import Any
 from ssb_dataset.schema import (
     ConfidenceTier,
     IdentityProvenance,
-    LatticeParams,
     MaterialRecord,
     SourceDB,
     StructureBlock,

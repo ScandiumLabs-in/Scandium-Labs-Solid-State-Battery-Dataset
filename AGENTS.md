@@ -102,6 +102,39 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 # Current Status (July 2026)
 
+## Expansion Phase E — implemented (2026-08-03)
+
+Phase E of the expansion guide shipped. **Institution-limited setup (no VIT Bhopal
+library access) — Phase E2 is adapted to a free-and-legal-only strategy**, documented
+in `docs/access-strategy.md`. See `CHANGELOG.md` [v0.4.0].
+
+- **E0 — README auto-sync**: `scripts/sync_readme_status.py` rewrites the README
+  `## Status` block from `release_report.json` between `<!-- status-begin/end -->`;
+  `scripts/release.py` calls it every release. Honest verified-vs-DFT caveat +
+  tier distribution. Front page can no longer drift.
+- **E1 — widened discovery**: `scripts/harvest_openalex.py` (OpenAlex, DOI-merged,
+  source-tagged), `scripts/harvest_unpaywall.py` (per-DOI `blocked_doi_reasons.json`)
+  ; `harvest_multi_route.py` adds OpenAlex OA + DOAJ pre-check + CORE + BASE routes.
+- **E3 — connectors re-enabled**: AFLOW (AFLUX REST) + OQMD (REST) no longer need
+  stale client packages; new `MaterialsCloudConnector` (OPTIMADE, keyless);
+  COD fixed to `dft_native` tier + CIF fetch. New `SourceDB.materials_cloud`.
+- **E4 — sulfide-deficit queue**: `scripts/prioritize_discovery.py` ranks families
+  by benchmark-target-share vs verified-share and targets thio-LISICON/LGPS/
+  argyrodite/Li7P3S11.
+- **E5 — vision extraction**: `verifier.py::vision_locate_evidence()` (Groq vision
+  or local Ollama) renders SCRIBED pages → transcribes → runs the SAME `_scan_pages`
+  matcher, so SCRIBED records can leave `needs_review` limbo without a second
+  pipeline. `locate_evidence_with_fallback()` text-first.
+- **E6 — model benchmark**: `scripts/benchmark_extraction_model.py` — switch the
+  default extraction model only on a measured accuracy delta (ground-truth + 5-run
+  determinism).
+- **E7 — metadata backfill**: `experiment_extract.py` adds `humidity` + re-enables
+  `equivalent_circuit` under the conservative parser.
+- **E8 — consensus growth**: `scripts/prioritize_consensus_growth.py` per-composition
+  queries, priority benchmarks first.
+- **E9 — community**: `.github/ISSUE_TEMPLATE/single_value_submission.md`.
+- **Tests**: 600 pass (+58). All 10 release gates PASS. README re-synced.
+
 ## Priority 1 — Label-growth harvest + extraction (2026-08-02)
 
 - **Harvest round complete**: probed **594 discovery-candidate DOIs** (from `literature_output/discovery_candidates.json`, aggregated across 11 families; 772 unique total, 594 not previously attempted). Multi-route (Unpaywall → direct publisher → Europe PMC render → Semantic Scholar) recovered **78 new OA PDFs** → PDFs on disk **75 → 153**. Downloaded: 36 via EPMC render (MDPI/Frontiers/Nature/Wiley-OA deposited in PMC), 71 via direct; 666 blocked (paywalled MCDFI/ACS/Elsevier/Wiley walls, as expected). Manifest: 25 already_have + 36 downloaded_epmc + 12 downloaded + 71 downloaded_direct + 666 blocked.

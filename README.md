@@ -32,19 +32,16 @@ the ~30k unlabeled DFT structures.
 
 ## Status
 
-**Active.** v0.3.x development build. The dataset is real and growing; all release gates pass. This README and the companion files are living artifacts kept in lock-step with the data (see `CHANGELOG.md`).
-
-The dataset is three things of differing maturity, stated honestly:
+<!-- status-begin -->
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.2.0**, generated 2026-08-03T12:48:47.209956+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|
-| **Bulk structural records** | ~30,071 | DFT-native pulls (Materials Project / JARVIS / NOMAD), Li-containing full catalog. **Not screened for SSE relevance** — e.g. `oxide` is ~68% of the dump and includes cathode chemistries (`LiCoO2`-type) that share the Li+O+metal formula pattern. Pending an electrolyte-candidate filter. |
+| **Bulk structural records** | ~30071 | DFT-native pulls (Materials Project / JARVIS / NOMAD / COD / etc.), Li-containing catalog. **Not screened for SSE relevance** — the dump includes cathode chemistries that share the Li+O+metal formula pattern. |
 | **Verified experimental labels** | 116 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
-| **Consensus database** | 405 materials / 942 measurements | Cross-paper consensus: only **24 materials** have n≥3 independent papers (real consensus); 28/405 are `verified` tier, 30 `high`, 276 `needs-verification`. |
+| **Consensus (n≥3 papers)** | 24 | Cross-paper consensus: only 24 materials have ≥3 independent papers. |
 
-> Framing: the current verified labels (116–150 across 8 families) are at the
-> realistic ceiling for OA literature mining, and match the low-hundreds range of
-> published conductivity compilations. They support a clean eval/benchmark set,
-> few-shot fine-tuning, and self-supervised pretraining on the unlabeled structures —
-> not yet large-scale supervised training. See `docs/calibration_history.md` and
-> `docs/blocked_doi_segmentation.md` for the honest limits.
+> **Honest caveat.** Of the ~30071 records, only **116 carry human-verified conductivity/Ea labels**; the remainder are structural/thermodynamic DFT records *without* transport labels. Quality-tier distribution: silver 97.4%, rejected 2.6%. See `quality_output/quality_report.json` and `release_report.json` — stated up front so the rest of the dataset's claims are credible.
+
+> *This block is generated. Run `python scripts/sync_readme_status.py` (or any `scripts/release.py` invocation) to regenerate; if it disagrees with the report, regenerate — never hand-edit.*
+<!-- status-end -->

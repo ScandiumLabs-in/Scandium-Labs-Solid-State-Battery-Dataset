@@ -70,18 +70,26 @@ def _has_page_evidence(record: dict[str, Any]) -> bool:
 
 
 def _evidence_quality(record: dict[str, Any]) -> tuple[int, list[str]]:
-    """0-20 evidence sub-score. Requires page + table + sentence for full marks."""
+    """0-20 evidence sub-score. Requires page + location (table/figure/section/source) + sentence for full marks."""
     misses: list[str] = []
     has_page = _present(record.get("page")) or _present(record.get("evidence_page"))
-    has_table = _present(record.get("table_number")) or _present(record.get("evidence_table_number"))
+    has_location = (
+        _present(record.get("table_number"))
+        or _present(record.get("evidence_table_number"))
+        or _present(record.get("figure_number"))
+        or _present(record.get("evidence_figure_number"))
+        or _present(record.get("section"))
+        or _present(record.get("evidence_section"))
+        or _present(record.get("source"))
+    )
     has_sentence = _present(record.get("evidence_sentence"))
     if not has_page:
         misses.append("evidence_page")
-    if not has_table:
-        misses.append("evidence_table_number")
+    if not has_location:
+        misses.append("evidence_location")
     if not has_sentence:
         misses.append("evidence_sentence")
-    score = sum([has_page, has_table, has_sentence]) / 3 * 20
+    score = sum([has_page, has_location, has_sentence]) / 3 * 20
     return int(round(score)), misses
 
 

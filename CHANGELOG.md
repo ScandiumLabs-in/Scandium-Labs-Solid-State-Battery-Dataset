@@ -1,6 +1,61 @@
 
 
 
+## [v0.4.0] — 2026-08-03 (Expansion Phase E — discovery, connectors, vision, docs)
+
+Phase E of the expansion guide implemented. Institution-limited setup (no VIT
+Bhopal access) documented in `docs/access-strategy.md`; paper sourcing stays
+free-and-legal (Unpaywall/OpenAlex/EPMC/CORE/BASE/DOAJ), never a paywall bypass.
+
+### Added
+- **README status auto-sync** (`scripts/sync_readme_status.py`, Phase E0): the
+  `## Status` block is now machine-generated from `release_report.json` between
+  `<!-- status-begin/end -->` markers, with an honest verified-vs-DFT caveat and
+  quality-tier distribution. `scripts/release.py` calls it on every release, so
+  the front page can no longer drift from the data.
+- **Widened discovery funnel (`E1`)**: `scripts/harvest_openalex.py` (OpenAlex
+  discovery + DOI-merge into `discovery_candidates.json`, source-tagged without
+  truncation); `scripts/harvest_unpaywall.py` (re-sweep every blocked DOI with a
+  per-DOI reason → `blocked_doi_reasons.json`); `harvest_multi_route.py` now adds
+  OpenAlex OA + DOAJ venue pre-check + CORE (key-gated) + BASE fallback routes.
+- **Structural connectors re-enabled (`E3`)**: AFLOW (`AFLUX` REST, no client
+  package) and OQMD (`oqmdapi` REST, no client package) answer directly over
+  `httpx`; new `MaterialsCloudConnector` (free, keyless OPTIMADE); COD connector
+  fixed to `dft_native` tier (was wrongly `verified_human`) + tolerant response
+  parsing + per-ID CIF fetch. New `SourceDB.materials_cloud` enum value.
+- **Sulfide-deficit discovery queue (`E4`)**: `scripts/prioritize_discovery.py`
+  ranks families by benchmark-target-share vs verified-label-share and emits
+  targeted thio-LISICON / LGPS / argyrodite / Li7P3S11 queries.
+- **Vision extraction (`E5`)**: `verifier.py` gains `vision_locate_evidence()`
+  (Groq vision or local Ollama, provider via env) that renders SCRIBED pages to
+  images, transcribes them, and runs the SAME `_scan_pages` matcher so the output
+  plugs unchanged into the review pipeline. `locate_evidence_with_fallback()` ;
+  text-layer first, vision only when needed.
+- **Metadata backfill extension (`E7`)**: `experiment_extract.py` now captures
+  `humidity` and re-enables `equivalent_circuit` under the conservative parser
+  (rejects prose fragments); `backfill_experiment_metadata.py` maps the new fields.
+- **Consensus-growth queue (`E8`)**: `scripts/prioritize_consensus_growth.py`
+  emits per-composition discovery queries (priority benchmarks first) to push
+  n=1 materials toward real n≥3 consensus.
+- **Extraction-model benchmark (`E6`)**: `scripts/benchmark_extraction_model.py`
+  scores a model against the ground-truth labels and runs the 5-run determinism
+  test — so switching the default extraction model is done on a measured delta.
+- **Community template (`E9`)**: `.github/ISSUE_TEMPLATE/single_value_submission.md`
+  — a 5-field "submit one verified value" form.
+
+### Tests
+**600 pass** (+58). New suites: `test_sync_readme` (7), `test_discovery_funnel` (7),
+`test_prioritization` (6), `test_verifier_vision` (5), `test_extraction_benchmark`
+(4), plus new connector tests in `test_ingestion` (Materials Cloud, COD tier,
+AFLUX formula classification, OQMD unit-cell) and `test_experiment_extract`
+(equivalent_circuit capture/reject, humidity).
+
+### Verified
+All 10 release gates PASS (**RELEASE READY**), README re-synced by
+`scripts/release.py`; ruff-clean on all touched files.
+
+
+
 ## [v0.3.2] — 2026-08-03 (Priority-1 review integration — honest verifier signals)
 
 ### Added

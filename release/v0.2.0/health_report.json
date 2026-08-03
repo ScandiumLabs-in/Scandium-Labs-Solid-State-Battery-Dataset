@@ -72,11 +72,11 @@
   "queue_with_experiment_block": 114,
   "quality": {
     "records": 191,
-    "avg_score": 46.9,
+    "avg_score": 53.7,
     "grade_distribution": {
-      "C": 103,
-      "D": 83,
-      "B": 5
+      "C": 176,
+      "D": 8,
+      "B": 7
     },
     "tier_distribution": {
       "silver": 186,

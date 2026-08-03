@@ -40,6 +40,7 @@ class ExtractResult:
     instrument: str | None = None
     equivalent_circuit: str | None = None
     dc_bias_V: float | None = None
+    humidity: str | None = None
     suspicious: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
@@ -148,8 +149,12 @@ _SINTER_T = re.compile(r"(?:sinter(?:ed|ing)?|fired?|calcined?|anneal(?:ed|ing)?
 _TIME_H = re.compile(r"(\d+(?:\.\d+)?)\s*h\b")
 _BIAS_V = re.compile(r"(?:dc|d\.c\.|d\.c)\s+bias[^0-9]{0,10}?(\d+(?:\.\d+)?)\s*V", re.I)
 _EC = re.compile(
-    r"equivalent\s+circuit[^0-9A-Za-z]{0,12}?"
+    r"(?:equivalent\s+circuit|equivalent\s+circuit\s+model|"
+    r"fitted\s+to\s+(?:an?\s+)?equivalent\s+circuit)[^0-9A-Za-z]{0,12}?"
     r"([(A-Za-z][A-Za-z0-9()\[\]{}|+*/.,~-]*?)(?=\s+[A-Za-z]{2,}|\s*\.|\s*$)", re.I)
+_HUMIDITY = re.compile(
+    r"(?:relative\s+humidity\s+(?:of|was|=)?\s*(\d+(?:\.\d+)?)\s*%"
+    r"|(\d+(?:\.\d+)?)\s*%\s*(?:relative\s+)?(?:RH|humidity)\b)", re.I)
 
 
 def _freq_hz(num_s: str, unit_s: str | None) -> float | None:
@@ -388,11 +393,26 @@ def extract_conditions(pdf_path: str | Path) -> ExtractResult:
             res.instrument = ins
             break
 
-    # equivalent_circuit: DELIBERATELY DISABLED. Text-layer capture produces
-    # prose fragments ("model and scheme of int") rather than the R(RC) grammar,
-    # and a wrong value is worse than no value. Helpers `_looks_like_circuit` /
-    # `_clean_circuit` remain for a future structural parser.
-    res.equivalent_circuit = None
+    # equivalent_circuit: enabled with the conservative parser only. A candidate
+    # survives only if it is a compact circuit expression (R, CPE, Q, W,
+    # parentheses, ||) and contains no prose words — so the classic failure mode
+    # (capturing "model and scheme of int") is rejected by _looks_like_circuit.
+    ec = _EC.search(text)
+    if ec:
+        cand = ec.group(1)
+        if _looks_like_circuit(cand) and len(cand) >= 3:
+            cleaned = _clean_circuit(cand)
+            if cleaned:
+                res.equivalent_circuit = cleaned
+
+    # humidity (open-air / glovebox papers often report RH during storage or
+    # measurement; store as a canonical string like "50%" or "DRIED")
+    hm = _HUMIDITY.search(text)
+    if hm:
+        val = hm.group(1) or hm.group(2)
+        pct = float(val)
+        if 0.0 <= pct <= 100.0:
+            res.humidity = f"{pct:g}%"
 
     # dc bias
     bi = _BIAS_V.search(text)

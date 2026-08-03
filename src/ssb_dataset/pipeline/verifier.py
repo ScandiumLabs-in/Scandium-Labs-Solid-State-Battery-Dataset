@@ -33,7 +33,6 @@ from typing import Any
 
 import fitz  # PyMuPDF
 
-from ssb_dataset.literature.extraction import _extract_conductivity_text
 from ssb_dataset.pipeline.redflags import (
     FAMILY_EA_RANGES,
     FAMILY_SIGMA_RANGES,
@@ -200,28 +199,11 @@ def _norm_formula(f: str) -> str:
     return f.strip()
 
 
-def locate_evidence(pdf_path: str | Path, composition: str,
-                    sigma: float | None, ea: float | None,
-                    window_expand: int = 0) -> Evidence | None:
-    """Scan the PDF text layer for the composition and the sigma/Ea values,
-    returning a window of text around the best match.
-
-    Unit-aware sigma matching: the paper may report mS/cm or uS/cm while the
-    record stores S/cm; the matcher tries the raw value AND its converted
-    equivalents within a page so the window lands on the real number.
-    """
-    pdf_path = Path(pdf_path)
-    if not pdf_path.exists():
-        return None
-    try:
-        doc = fitz.open(str(pdf_path))
-        pages = [p.get_text("text") for p in doc]
-        doc.close()
-    except Exception:
-        return None
-    if not pages or sum(len(p) for p in pages) < 100:
-        return None  # scanned/SCRIBED — no text layer (needs vision)
-
+def _scan_pages(pages: list[str], composition: str,
+                sigma: float | None, ea: float | None,
+                window_expand: int = 0) -> Evidence | None:
+    """Core evidence search over a list of page-texts (shared by the text-layer
+    and vision paths). Returns Evidence when a composition/value match is found."""
     comp_clean = _norm_formula(composition)
     targets = [("sigma", sigma), ("ea", ea)]
 
@@ -255,7 +237,6 @@ def locate_evidence(pdf_path: str | Path, composition: str,
                 variants.append((target * 1e3, abs(target * 1e3) * 0.35))   # mS/cm
                 variants.append((target * 1e6, abs(target * 1e6) * 0.35))    # uS/cm
             # Track the single closest match across all variants (unit-agnostic)
-            best_v: float | None = None
             best_dist: float = float("inf")
             best_pos: int | None = None
             for i, (tv, ttol) in enumerate(variants):
@@ -282,7 +263,6 @@ def locate_evidence(pdf_path: str | Path, composition: str,
                     d = abs(v - tv)
                     if d <= ttol and d < best_dist:
                         best_dist = d
-                        best_v = v
                         best_pos = m.start()
             if best_pos is not None:
                 w = _VALUE_WINDOW + window_expand
@@ -296,10 +276,9 @@ def locate_evidence(pdf_path: str | Path, composition: str,
 
         score = (3 if found_comp else 0) + (2 if found_sigma else 0) + (1 if found_ea else 0)
         if score > best_score:
-            # window: prefer a value window, else the composition context
             window = win_sigma or win_ea
             if not window and found_comp:
-                ci = text.lower().find(comp_clean.replace(".", "").replace("x", "").lower())
+                ci = text.find(comp_clean.lower())
                 if ci >= 0:
                     window = text[max(0, ci - 120): ci + _VALUE_WINDOW + window_expand].replace("\n", " ")
             best = Evidence(
@@ -313,6 +292,196 @@ def locate_evidence(pdf_path: str | Path, composition: str,
             )
             best_score = score
     return best if best_score >= 0 else None
+
+
+def locate_evidence(pdf_path: str | Path, composition: str,
+                    sigma: float | None, ea: float | None,
+                    window_expand: int = 0) -> Evidence | None:
+    """Scan the PDF text layer for the composition and the sigma/Ea values,
+    returning a window of text around the best match.
+
+    Unit-aware sigma matching: the paper may report mS/cm or uS/cm while the
+    record stores S/cm; the matcher tries the raw value AND its converted
+    equivalents within a page so the window lands on the real number.
+
+    Returns None for scanned/SCRIBED PDFs (thin or empty text layer) — the
+    caller should then fall back to ``vision_locate_evidence``.
+    """
+    pdf_path = Path(pdf_path)
+    if not pdf_path.exists():
+        return None
+    try:
+        doc = fitz.open(str(pdf_path))
+        pages = [p.get_text("text") for p in doc]
+        doc.close()
+    except Exception:
+        return None
+    if not pages or sum(len(p) for p in pages) < 100:
+        return None  # scanned/SCRIBED — no text layer (needs vision)
+    return _scan_pages(pages, composition, sigma, ea, window_expand)
+
+
+# --------------------------------------------------------------------------
+# Vision path (Phase E5) — unlocks scanned/SCRIBED PDFs with a clean text layer
+# --------------------------------------------------------------------------
+
+VISION_PROMPT = (
+    "You are an OCR/reconstruction model for a scientific battery paper page. "
+    "Transcribe EVERY number and chemical formula on this page, especially any "
+    "table of ionic conductivity vs temperature and any activation-energy "
+    "values, preserving the surrounding words (units like mS/cm, 'S cm-1', and "
+    "labels like 'Li6PS5Cl'). Output only plain text."
+)
+
+
+def vision_enabled() -> bool:
+    """True when a vision provider is configured via env vars."""
+    import os
+    return bool(os.environ.get("VISION_PROVIDER", "")) or bool(
+        os.environ.get("VISION_BASE_URL", ""))
+
+
+def _render_page_png(pdf_path: str | Path, page_idx: int, dpi: int = 160) -> bytes | None:
+    """Render a single PDF page to PNG bytes via PyMuPDF (no external dep)."""
+    try:
+        doc = fitz.open(str(pdf_path))
+        page = doc[page_idx]
+        pix = page.get_pixmap(matrix=fitz.Matrix(dpi / 72, dpi / 72))
+        doc.close()
+        return pix.tobytes("png")
+    except Exception:
+        return None
+
+
+def _vision_transcribe_bytes(png_bytes: bytes, page_no: int, provider: str,
+                             model: str, *, base_url: str = "") -> str:
+    """Send one page image to a vision model; return a plain-text transcription.
+
+    provider ``ollama`` — POST to a local Ollama :11434/api/chat with an image
+        (fully free, deterministic, no rate limit).
+    provider ``groq`` (or a custom OpenAI-compatible base_url) — a chat
+        completion with an image part.
+
+    Injectable: tests monkeypatch this to avoid the network.
+    """
+    import base64
+    import os
+    import httpx
+
+    b64 = base64.b64encode(png_bytes).decode()
+
+    if provider == "ollama":
+        if not model:
+            model = os.environ.get("VISION_MODEL", "llava")
+        payload = {
+            "model": model,
+            "images": [b64],
+            "messages": [{"role": "user", "content": VISION_PROMPT}],
+            "stream": False,
+        }
+        r = httpx.post(
+            base_url or "http://localhost:11434/api/chat",
+            json=payload, timeout=180,
+        )
+        r.raise_for_status()
+        return (r.json().get("message", {}) or {}).get("content", "")
+
+    # OpenAI-compatible (Groq) vision
+    _base = base_url or os.environ.get("VISION_BASE_URL",
+                                       "https://api.groq.com/openai/v1")
+    _model = model or os.environ.get("VISION_MODEL",
+                                     "llama-3.2-90b-vision-preview")
+    _key = os.environ.get("VISION_API_KEY", os.environ.get("LLM_API_KEY", ""))
+    if not _key:
+        return ""
+    payload = {
+        "model": _model,
+        "temperature": 0.0,
+        "messages": [{
+            "role": "user",
+            "content": [
+                {"type": "text", "text": VISION_PROMPT},
+                {"type": "image_url", "image_url": {
+                    "url": f"data:image/png;base64,{b64}"}},
+            ],
+        }],
+    }
+    r = httpx.post(
+        f"{_base.rstrip('/')}/chat/completions",
+        headers={"Authorization": f"Bearer {_key}"},
+        json=payload, timeout=180,
+    )
+    r.raise_for_status()
+    try:
+        return r.json()["choices"][0]["message"]["content"]
+    except Exception:
+        return ""
+
+
+def vision_locate_evidence(pdf_path: str | Path, composition: str,
+                           sigma: float | None, ea: float | None,
+                           window_expand: int = 0,
+                           provider: str | None = None,
+                           model: str = "",
+                           transcribe=None) -> Evidence | None:
+    """Vision OCR fallback for scanned PDFs (Phase E5).
+
+    Renders each page to an image, transcribes it (Groq vision or local Ollama),
+    then runs the SAME deterministic matcher as the text-layer path so the vision
+    result carries an identical Evidence schema and plugs straight into
+    ``verify_single`` / the review pipeline — one input format, not a second one.
+
+    ``transcribe`` is injectable for deterministic tests (defaults to
+    ``_vision_transcribe_bytes``). Returns None when no provider is configured or
+    nothing is found.
+    """
+    import os
+    pdf_path = Path(pdf_path)
+    if not pdf_path.exists():
+        return None
+    provider = provider or os.environ.get("VISION_PROVIDER", "")
+    if not provider:
+        return None  # vision not configured — this stays a SCRIBED/needs_review gap
+    model = model or os.environ.get("VISION_MODEL", "")
+    transcribe = transcribe or _vision_transcribe_bytes
+
+    try:
+        doc = fitz.open(str(pdf_path))
+        n_pages = doc.page_count
+        doc.close()
+    except Exception:
+        return None
+
+    pages: list[str] = []
+    for i in range(n_pages):
+        png = _render_page_png(pdf_path, i)
+        if not png:
+            continue
+        text = ""
+        try:
+            text = transcribe(png, i + 1, provider=provider, model=model)
+        except Exception:
+            text = ""
+        if text:
+            pages.append(text)
+
+    if not pages:
+        return None
+    return _scan_pages(pages, composition, sigma, ea, window_expand)
+
+
+def locate_evidence_with_fallback(pdf_path: str | Path, composition: str,
+                                  sigma: float | None, ea: float | None,
+                                  window_expand: int = 0,
+                                  transcribe=None) -> Evidence | None:
+    """Text layer first; if None (SCRIBED), fall back to the vision path."""
+    ev = locate_evidence(pdf_path, composition, sigma, ea, window_expand)
+    if ev is not None:
+        return ev
+    if vision_enabled():
+        return vision_locate_evidence(pdf_path, composition, sigma, ea,
+                                      window_expand, transcribe=transcribe)
+    return None
 
 
 # --------------------------------------------------------------------------

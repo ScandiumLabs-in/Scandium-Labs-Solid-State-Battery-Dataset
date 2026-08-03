@@ -242,6 +242,94 @@ class TestICSDConnector:
         assert rec.identity.confidence_tier == ConfidenceTier.verified_human
 
 
+class TestCODConnector:
+    def test_to_material_record_is_dft_native(self) -> None:
+        """COD is experimental structural data WITHOUT conductivity — so the
+        tier must be dft_native, not verified_human (which implies a reviewed
+        σ/Ea label)."""
+        from ssb_dataset.sources.cod_connector import CODConnector
+        conn = CODConnector()
+        rec = conn.to_material_record({
+            "cod_id": "1234567",
+            "elements": ["Li", "La", "Zr", "O"],
+            "lattice": {"a": 13.0, "b": 13.0, "c": 13.0},
+            "space_group": "Ia-3d",
+            "cif": "",
+        })
+        assert rec.identity.source_db == SourceDB.cod
+        assert rec.identity.confidence_tier == ConfidenceTier.dft_native
+        assert rec.identity.family == Family.garnet
+
+    def test_to_material_record_classifies_antiperovskite(self) -> None:
+        from ssb_dataset.sources.cod_connector import CODConnector
+        conn = CODConnector()
+        rec = conn.to_material_record({
+            "cod_id": "9",
+            "elements": ["Li", "O", "Cl"],
+            "lattice": {},
+            "space_group": "Pm-3m",
+            "cif": "",
+        })
+        assert rec.identity.family == Family.antiperovskite
+
+
+class TestMaterialsCloudConnector:
+    def test_to_material_record(self) -> None:
+        from ssb_dataset.sources.materials_cloud_connector import (
+            MaterialsCloudConnector,
+        )
+        conn = MaterialsCloudConnector()
+        raw = {
+            "mc_id": "mc-0001",
+            "formula": "Li7La3Zr2O12",
+            "elements": ["Li", "La", "Zr", "O"],
+            "lattice": {"a": 13.0, "b": 13.0, "c": 13.0,
+                        "alpha": 90.0, "beta": 90.0, "gamma": 90.0},
+            "space_group": "Ia-3d",
+        }
+        rec = conn.to_material_record(raw)
+        assert rec.identity.source_db == SourceDB.materials_cloud
+        assert rec.identity.family == Family.garnet
+        assert rec.identity.confidence_tier == ConfidenceTier.dft_native
+        assert rec.structure.lattice_params.a == 13.0
+
+    def test_source_db_registered(self) -> None:
+        assert "materials_cloud" in SourceDB._value2member_map_
+
+
+class TestAFLOWAFLUX:
+    def test_to_material_record_from_compound(self) -> None:
+        """AFLUX entries carry a formula string (compound) but no CIF; the
+        connector must classify from the formula, not just raw elements."""
+        conn = AFLOWConnector()
+        raw = {
+            "auid": "aflow:abc",
+            "compound": "Li10GeP2S12",
+            "cif": "",
+            "ca": 12.0, "cb": 12.0, "cc": 12.0,
+            "alpha": 90.0, "beta": 90.0, "gamma": 90.0,
+            "spacegroup_relax": {"symbol": "P4_3 2_1 2"},
+        }
+        rec = conn.to_material_record(raw)
+        assert rec.identity.source_db == SourceDB.aflow
+        assert rec.identity.family == Family.sulfide
+        assert rec.structure.space_group == "P4_3 2_1 2"
+
+
+class TestOQMDUnitCell:
+    def test_unit_cell_matrix_to_lattice(self) -> None:
+        from ssb_dataset.sources.oqmd_connector import _unit_cell_to_lattice
+        import math
+        out = _unit_cell_to_lattice({"lattice": [
+            [5.0, 0.0, 0.0],
+            [0.0, 5.0, 0.0],
+            [0.0, 0.0, 5.0],
+        ]})
+        assert math.isclose(out["a"], 5.0)
+        assert math.isclose(out["alpha"], 90.0)
+        assert math.isclose(out["gamma"], 90.0)
+
+
 class TestClassifierExtended:
     @pytest.mark.parametrize(
         ("formula", "expected"),

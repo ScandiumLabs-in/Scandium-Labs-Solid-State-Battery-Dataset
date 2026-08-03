@@ -50,8 +50,10 @@ def phase1_survey() -> None:
         "materials_project": {"families": 8, "status": "ready"},
         "jarvis": {"families": 8, "status": "ready"},
         "aflow": {"families": 8, "status": "ready"},
-        "oqmd": {"families": 8, "status": "ready (requires oqmd package)"},
+        "oqmd": {"families": 8, "status": "ready"},
         "nomad": {"families": 8, "status": "ready"},
+        "cod": {"families": 8, "status": "ready (free experimental structures)"},
+        "materials_cloud": {"families": 8, "status": "ready (free, keyless)"},
         "icsd": {"families": 8, "status": "ready (requires ICSD_API_KEY)"},
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
@@ -93,6 +95,26 @@ def phase2_ingest() -> None:
         print(f"  Skipping JARVIS: {e}")
 
     for name, ConnCls in [("aflow", AFLOWConnector), ("oqmd", OQMDConnector), ("nomad", NOMADConnector)]:
+        try:
+            conn = ConnCls()
+            conn.connect()
+            connectors[name] = _wrap(conn, limit=settings.pipeline.batch_size)
+            print(f"  Connected to {name}")
+        except Exception as e:
+            print(f"  Skipping {name}: {e}")
+
+    # Phase E3 — experimental structures (COD) and curated archives (Materials
+    # Cloud) are both free, keyless REST sources; they skip gracefully when the
+    # network is unavailable, like the other non-MP connectors.
+    try:
+        from ssb_dataset.sources.cod_connector import CODConnector
+        from ssb_dataset.sources.materials_cloud_connector import MaterialsCloudConnector
+    except Exception:
+        CODConnector = None  # type: ignore[assignment]
+        MaterialsCloudConnector = None  # type: ignore[assignment]
+    for name, ConnCls in [("cod", CODConnector), ("materials_cloud", MaterialsCloudConnector)]:
+        if ConnCls is None:
+            continue
         try:
             conn = ConnCls()
             conn.connect()

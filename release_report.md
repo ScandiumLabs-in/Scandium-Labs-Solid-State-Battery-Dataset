@@ -1,7 +1,7 @@
 # Scandium Dataset — Release Report
 
-- Version: **v0.3.2**
-- Generated: 2026-08-02T22:03:02.814951+00:00
+- Version: **v0.2.0**
+- Generated: 2026-08-03T12:48:47.209956+00:00
 
 ## Dataset size
 
@@ -30,13 +30,13 @@
 ```json
 {
   "records": 191,
-  "score_avg": 47.3,
-  "score_min": 35,
-  "score_max": 66,
+  "score_avg": 53.7,
+  "score_min": 41,
+  "score_max": 72,
   "grade_distribution": {
-    "C": 103,
-    "D": 83,
-    "B": 5
+    "C": 176,
+    "D": 8,
+    "B": 7
   },
   "tier_distribution": {
     "silver": 186,
@@ -55,21 +55,21 @@
   "family_scores": {
     "LLZO": {
       "n": 1,
-      "avg_score": 50.0,
+      "avg_score": 57.0,
       "tiers": {
         "silver": 1
       }
     },
     "antiperovskite": {
       "n": 6,
-      "avg_score": 45.0,
+      "avg_score": 51.3,
       "tiers": {
         "silver": 6
       }
     },
     "argyrodite": {
       "n": 17,
-      "avg_score": 48.4,
+      "avg_score": 55.4,
       "tiers": {
         "silver": 16,
         "rejected": 1
@@ -77,7 +77,7 @@
     },
     "borohydride": {
       "n": 12,
-      "avg_score": 46.2,
+      "avg_score": 52.7,
       "tiers": {
         "silver": 11,
         "rejected": 1
@@ -85,42 +85,42 @@
     },
     "garnet": {
       "n": 28,
-      "avg_score": 46.2,
+      "avg_score": 52.6,
       "tiers": {
         "silver": 28
       }
     },
     "halide": {
       "n": 22,
-      "avg_score": 48.7,
+      "avg_score": 55.3,
       "tiers": {
         "silver": 22
       }
     },
     "hydride": {
       "n": 3,
-      "avg_score": 43.7,
+      "avg_score": 50.0,
       "tiers": {
         "silver": 3
       }
     },
     "nasicon": {
       "n": 32,
-      "avg_score": 46.4,
+      "avg_score": 52.0,
       "tiers": {
         "silver": 32
       }
     },
     "oxide": {
       "n": 12,
-      "avg_score": 43.9,
+      "avg_score": 50.2,
       "tiers": {
         "silver": 12
       }
     },
     "perovskite": {
       "n": 14,
-      "avg_score": 49.6,
+      "avg_score": 56.0,
       "tiers": {
         "silver": 13,
         "rejected": 1
@@ -128,7 +128,7 @@
     },
     "polymer_composite": {
       "n": 36,
-      "avg_score": 48.1,
+      "avg_score": 54.7,
       "tiers": {
         "silver": 34,
         "rejected": 2
@@ -136,7 +136,7 @@
     },
     "sulfide": {
       "n": 8,
-      "avg_score": 49.6,
+      "avg_score": 56.4,
       "tiers": {
         "silver": 8
       }

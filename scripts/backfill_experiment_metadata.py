@@ -53,6 +53,8 @@ FIELD_MAP = {
     "annealing_time_h": "annealing_time_h",
     "instrument": "instrument",
     "dc_bias_V": "dc_bias_V",
+    "equivalent_circuit": "equivalent_circuit",
+    "humidity": "humidity",
 }
 
 
@@ -71,15 +73,6 @@ def find_pdf(doi: str | None) -> Path | None:
     name = doi.replace("/", "_") + ".pdf"
     p = PDF_DIR / name
     return p if p.exists() else None
-
-
-def result_to_dict(r: ExtractResult) -> dict:
-    d = {}
-    for src_key, dst_key in FIELD_MAP.items():
-        v = getattr(r, src_key)
-        if v is not None:
-            d[dst_key] = v
-    return d
 
 
 def _render_report(out: list) -> str:

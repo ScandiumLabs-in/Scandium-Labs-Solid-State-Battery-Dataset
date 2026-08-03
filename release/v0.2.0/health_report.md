@@ -89,9 +89,9 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 
 ## Record quality (A3/A4)
 
-- Scored records: **191** (avg score 46.9/100)
+- Scored records: **191** (avg score 53.7/100)
 - Tiers: Gold **0** (0.0%), Silver 186, Bronze 0, Rejected 5
-- Grade distribution: {'C': 103, 'D': 83, 'B': 5}
+- Grade distribution: {'C': 176, 'D': 8, 'B': 7}
 
 ## Missing-data recommendations (curation queue)
 
