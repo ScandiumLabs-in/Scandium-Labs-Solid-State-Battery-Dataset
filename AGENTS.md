@@ -102,6 +102,60 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 # Current Status (July 2026)
 
+## Path-to-10k Actions 0–6 — implemented (2026-08-03)
+
+The 10,000+ records companion plan (`docs/10k-path-to-10000.md`). Actions 0–6
+shipped as tooling + docs; the **built-vs-run gap is now quantified**: the
+Unpaywall full-blocked-DOI sweep ran to completion, extraction is running
+through the existing pipeline, and the size of the accessible literature is
+documented in `docs/literature_sizing.md` (verdict: 10k is an 18–36 month,
+multi-contributor target; 1,500–3,000 is the free-access ceiling). See
+`CHANGELOG.md` [v0.5.0].
+
+- **A0 — version drift fixed for good**: `scripts/release.py` no longer
+  hardcodes a version — `latest_version_from_changelog()` reads the newest
+  `## [vX.Y.Z]` from `CHANGELOG.md`; report/README/staging all use it.
+  Verified: `release_report.md` now shows v0.4.0 (was stuck at v0.2.0 after
+  three "fixed" commits).
+- **A0 — Unpaywall full sweep**: `scripts/harvest_unpaywall.py --persist` re-probed
+  all **736 blocked DOIs** → `literature_output/blocked_doi_reasons.json`
+  (439 not_open_access, 199 download_failed, 86 no_pdf_downloadable, 12
+  unpaywall_error:http_404). The "135 blocked" number is now a documented,
+  per-DOI-reason count. 0 new recoveries this round — the barrier is genuinely
+  publisher paywalls, not the discovery route.
+- **A2 — query-matrix discovery**: `scripts/query_matrix_discovery.py` runs the
+  full (family × query-type × decade) matrix as a batch job with per-cell yield
+  logging to `literature_output/query_matrix_yield.json` (fam|query-type →
+  n_candidates / n_OA / top-relevance). Verified working (dry-run 27 sulfide
+  candidates); full run needs the OpenAlex polite pool off-peak (429s during
+  concurrent sweeps).
+- **A3 — combinatorial target**: `COMBINATORIAL_TYPES` in the matrix
+  (composition screening / combinatorial synthesis / compositional mapping /
+  solid solution series) route high-throughput-screening papers straight to the
+  vision extraction queue — the order-of-magnitude records-per-paper lever.
+- **A4 — plot digitization**: `scripts/harvest_plot_digitize.py` — affine
+  pixel→data calibration from 2 tick marks, Arrhenius Ea recovery from ≥2
+  digitized points, `extraction_method="plot_digitized"` + WIDE ±0.30-decade
+  uncertainty until a second independent tick-run confirms (then ±0.15).
+  New `ExtractionMethod.plot_digitized` in schema.
+- **A5 — continuous consensus flywheel**: `store.apply_decision` stamps each
+  approved composition into `consensus_flywheel_feed.json`; next
+  `prioritize_consensus_growth.py` sweep sorts those to the top immediately.
+  Health report now emits `consensus_depth_ratio` (n≥3 materials / verified
+  records) so breadth-vs-depth regression is visible.
+- **A6 — review scaling policy**: `docs/calibration_history.md` documents the
+  exact 100%-review vs spot-audit routing (10–20% sampling on top-tier records,
+  ≥95% sampled-precision target, bulk-source never sampled, switch gated on
+  per-source-type calibration). New blocking `min_gold_pct` release gate in
+  `release_config.toml` (0% now — non-blocking until Gold leaves zero).
+- **A1 — sizing memo**: `docs/literature_sizing.md` — addressable core ~2,000–
+  4,000 papers, accessible ~25–35% (≈500–1,400 papers), yield 0.7 → 2–5
+  records/PDF as combinatorial + plot levers land → ceiling ~1,500–3,000
+  (free-access) / ~4,200 (with institutional/community access).
+- **Tests**: 616 pass (+16: plot digitizer 9, flywheel 3, health ratio 2,
+  min_gold gate 2, ExtractionMethod enum 1). **All 11 release gates PASS**
+  (10 prior + new min_gold_pct).
+
 ## Expansion Phase E — implemented (2026-08-03)
 
 Phase E of the expansion guide shipped. **Institution-limited setup (no VIT Bhopal

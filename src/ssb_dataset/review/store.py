@@ -150,5 +150,19 @@ def apply_decision(
         record_training_pair(item, action, note or "")
         save_queue(queue)
         export_approved(queue)
+        if action in ("approve", "edit"):
+            # Action 5 — continuous consensus flywheel: stamp the composition so
+            # the next prioritize_consensus_growth.py sweep re-targets it
+            # immediately (depth tracks breadth, not lagging behind it).
+            comp = item.get("composition") or item.get("material_id")
+            if comp:
+                try:
+                    try:
+                        from scripts.prioritize_consensus_growth import stamp_feed
+                    except ImportError:
+                        from prioritize_consensus_growth import stamp_feed
+                    stamp_feed(str(comp), source="review")
+                except Exception:
+                    pass
         return item
     return None

@@ -26,7 +26,7 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 ## Status
 
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.2.0**, generated 2026-08-03T13:37:35.977356+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.5.0**, generated 2026-08-03T14:51:27.454969+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|

@@ -153,6 +153,19 @@ def test_build_health_report_aggregates(fake_dataset):
     assert rep["queue_with_experiment_block"] == 1
     assert rep["queue_pending"] == 1
     assert rep["quality_score_avg"] == 62.0
+    # Action 5: depth-vs-breadth ratio (n≥3 / verified records)
+    assert rep["consensus_depth_ratio"] == 1 / 4
+
+
+def test_consensus_depth_ratio_zero_verified(fake_dataset):
+    hr = fake_dataset
+    hr.CONSENSUS.write_text(json.dumps({
+        "Li6PS5Cl": {"n_sigma": 3, "n_ea": 1, "n_papers": 3},
+    }))
+    rep = hr.build_health_report()
+    assert rep["verified_records"] == 4
+    # ratio = n3 / verified, not zero just because consensus is empty
+    assert rep["consensus_depth_ratio"] == 1 / 4
 
 
 def test_render_markdown_smoke(fake_dataset):

@@ -34,8 +34,10 @@
   },
   "10.3390/ma13030560": {
     "family": "sulfide",
-    "status": "downloaded",
-    "pdf_path": "/home/shamique/Scandium labs SSB dataset/literature_output/pdfs/10.3390_ma13030560.pdf"
+    "status": "already_have",
+    "pdf_path": "literature_output/pdfs/10.3390_ma13030560.pdf",
+    "source_url": null,
+    "venue_oa": null
   },
   "10.1126/sciadv.abj7698": {
     "family": "sulfide",
@@ -409,7 +411,9 @@
   "10.20944/preprints201912.0307.v1": {
     "status": "blocked",
     "pdf_path": null,
-    "source_url": null
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   },
   "10.7868/s3034560x25060052": {
     "status": "blocked",
@@ -4408,5 +4412,471 @@
     "source_url": null,
     "venue_oa": null,
     "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acsenergylett.8b00249": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_acsenergylett.8b00249.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1475558",
+    "venue_oa": null
+  },
+  "10.1016/j.jmat.2023.01.007": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.4191/kcers.2016.53.6.712": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.4191_kcers.2016.53.6.712.pdf",
+    "source_url": "https://www.jkcs.or.kr/upload/pdf/jkcs-53-6-712.pdf",
+    "venue_oa": null
+  },
+  "10.5796/electrochemistry.84.210": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.5796_electrochemistry.84.210.pdf",
+    "source_url": "https://www.jstage.jst.go.jp/article/electrochemistry/84/4/84_15-11-E2649/_pdf",
+    "venue_oa": null
+  },
+  "10.1073/pnas.1805029115": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1149/2.0161904jes": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acsami.4c08882": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.5796/electrochemistry.84.967": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.5796_electrochemistry.84.967.pdf",
+    "source_url": "https://www.jstage.jst.go.jp/article/electrochemistry/84/12/84_16-E00091/_pdf",
+    "venue_oa": null
+  },
+  "10.1021/acs.chemmater.1c01490": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3390/su14159090": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.nxmate.2026.101619": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1007/s40820-024-01498-y": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1007_s40820-024-01498-y.pdf",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s40820-024-01498-y.pdf",
+    "venue_oa": false
+  },
+  "10.1002/adfm.202214432": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3389/fenrg.2016.00023": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fenrg.2016.00023.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2016.00023/pdf",
+    "venue_oa": null
+  },
+  "10.7716/aem.v1i1.16": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.7716_aem.v1i1.16.pdf",
+    "source_url": "http://www.aemjournal.org/index.php/AEM/article/download/16/30",
+    "venue_oa": false
+  },
+  "10.1093/micmic/ozad067.650": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1093/micmic/ozad067.649": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.18297/etd/4014": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1039/c4cp04834b": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3390/batteries7040075": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1038/s41467-020-17233-1": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-020-17233-1.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-020-17233-1.pdf",
+    "venue_oa": false
+  },
+  "10.1007/s40820-022-00996-1": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1007_s40820-022-00996-1.pdf",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s40820-022-00996-1.pdf",
+    "venue_oa": false
+  },
+  "10.1007/s40820-023-01055-z": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1007_s40820-023-01055-z.pdf",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s40820-023-01055-z.pdf",
+    "venue_oa": false
+  },
+  "10.3389/fenrg.2020.00202": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fenrg.2020.00202.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2020.00202/pdf",
+    "venue_oa": false
+  },
+  "10.1002/aenm.202001235": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3389/fmats.2021.727617": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fmats.2021.727617.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fmats.2021.727617/pdf",
+    "venue_oa": false
+  },
+  "10.48550/arxiv.2204.00091": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.48550_arxiv.2204.00091.pdf",
+    "source_url": "https://arxiv.org/pdf/2204.00091",
+    "venue_oa": null
+  },
+  "10.1021/acsaem.0c01601": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_acsaem.0c01601.pdf",
+    "source_url": "https://arxiv.org/pdf/2010.02608",
+    "venue_oa": null
+  },
+  "10.1002/hlca.202000203": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.48550/arxiv.2305.01632": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.48550_arxiv.2305.01632.pdf",
+    "source_url": "https://arxiv.org/pdf/2305.01632",
+    "venue_oa": null
+  },
+  "10.1088/2752-5724/ae5120": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1039/c8cp03586e": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.5796/electrochemistry.82.870": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.5796_electrochemistry.82.870.pdf",
+    "source_url": "https://www.jstage.jst.go.jp/article/electrochemistry/82/10/82_14-E00033/_pdf",
+    "venue_oa": null
+  },
+  "10.3390/batteries7010018": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1016/j.jeurceramsoc.2021.11.014": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3389/fenrg.2016.00012": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fenrg.2016.00012.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2016.00012/pdf",
+    "venue_oa": false
+  },
+  "10.3740/mrsk.2012.22.7.346": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3740_mrsk.2012.22.7.346.pdf",
+    "source_url": "http://koreascience.or.kr:80/article/JAKO201225067515233.pdf",
+    "venue_oa": null
+  },
+  "10.3389/fenrg.2021.682008": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fenrg.2021.682008.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2021.682008/pdf",
+    "venue_oa": false
+  },
+  "10.1021/jacs.0c06668": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_jacs.0c06668.pdf",
+    "source_url": "https://purehost.bath.ac.uk/ws/files/214936012/Na3PS4_mechanical_v11.pdf",
+    "venue_oa": null
+  },
+  "10.1016/j.ssi.2024.116482": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/inf2.12222": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1002/aenm.201601392": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1002_aenm.201601392.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1533066",
+    "venue_oa": null
+  },
+  "10.1016/j.jeurceramsoc.2022.04.009": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.procir.2022.08.132": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.matdes.2023.111690": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.26434/chemrxiv-2022-x7llq": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/jacs.3c07343": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_jacs.3c07343.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/2476596",
+    "venue_oa": null
+  },
+  "10.20944/preprints202311.1860.v1": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acsaem.5c01383": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acsenergylett.3c00763": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_acsenergylett.3c00763.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/2000311",
+    "venue_oa": null
+  },
+  "10.1016/j.jpcs.2025.113327": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1038/s41467-025-68210-5": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-025-68210-5.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-025-68210-5_reference.pdf",
+    "venue_oa": false
+  },
+  "10.1038/s41467-026-71879-x": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-026-71879-x.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-026-71879-x_reference.pdf",
+    "venue_oa": false
+  },
+  "10.1016/j.ceja.2022.100377": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.26434/chemrxiv-2022-dhvjf": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1038/s41467-026-68394-4": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-026-68394-4.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-026-68394-4_reference.pdf",
+    "venue_oa": false
+  },
+  "10.26434/chemrxiv-2024-x2rld": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acs.chemmater.5c02303": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/aenm.202003190": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1002_aenm.202003190.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1766778",
+    "venue_oa": null
+  },
+  "10.1016/j.est.2023.108244": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.26434/chemrxiv-2024-nqsh2-v2": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/est2.506": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1002_est2.506.pdf",
+    "source_url": "https://myresearchspace.uws.ac.uk/ws/files/44689923/2023_07_01_Zulfiqar_et_al_Electrolytes_accepted_-_for_Pure.pdf",
+    "venue_oa": null
+  },
+  "10.1021/acsenergylett.5c03415": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.26434/chemrxiv-2022-0jghq": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3390/batteries12020051": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.26434/chemrxiv.13224296.v1": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1039/d5dt00817d": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acsenergylett.3c02307": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_acsenergylett.3c02307.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/2309844",
+    "venue_oa": null
+  },
+  "10.3390/nano14221773": {
+    "status": "downloaded_epmc",
+    "pdf_path": "literature_output/pdfs/10.3390_nano14221773.pdf",
+    "source_url": "https://europepmc.org/articles/PMC11597872?pdf=render",
+    "venue_oa": false
+  },
+  "10.1021/jacs.4c14670": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1038/s41467-025-58522-x": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-025-58522-x.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-025-58522-x.pdf",
+    "venue_oa": false
   }
 }

@@ -73,3 +73,47 @@ class TestPrioritizeConsensus:
         from prioritize_consensus_growth import prioritize
         targets = prioritize(self._consensus())
         assert all(t["material"] != "Zero" for t in targets)
+
+    def test_feed_trigger_sorts_flagged_first(self, monkeypatch) -> None:
+        from prioritize_consensus_growth import prioritize
+        monkeypatch.setattr(
+            "prioritize_consensus_growth.read_feed",
+            lambda: ["SomeExotic"],
+        )
+        targets = prioritize(self._consensus())
+        flagged = next(t for t in targets if t["material"] == "SomeExotic")
+        assert flagged["recently_gained_record"] is True
+        # a trigger-flagged material sorts to the very top even without n≥3
+        assert targets[0]["material"] == "SomeExotic"
+        assert all(not t["recently_gained_record"] for t in targets[1:])
+
+    def test_stamp_feed_roundtrip(self, tmp_path, monkeypatch) -> None:
+        import prioritize_consensus_growth as pg
+        feed_path = tmp_path / "feed.json"
+        monkeypatch.setattr(pg, "FEED", feed_path)
+        pg.stamp_feed("Li6PS5Cl")
+        pg.stamp_feed("Li6PS5Cl")  # idempotent
+        assert pg.read_feed() == ["Li6PS5Cl"]
+        pg.clear_feed()
+        assert pg.read_feed() == []
+
+
+class TestFlywheelStoreStamp:
+    def test_apply_decision_stamps_feed(self, tmp_path, monkeypatch) -> None:
+        import scripts.prioritize_consensus_growth as pg_store_mod
+        import ssb_dataset.review.store as store
+        feed_path = tmp_path / "feed.json"
+        monkeypatch.setattr(pg_store_mod, "FEED", feed_path)
+        # Keep apply_decision from touching the real repo queue/parquet/training files.
+        monkeypatch.setattr(store, "QUEUE_PATH", tmp_path / "queue.json")
+        monkeypatch.setattr(store, "APPROVED_PATH", tmp_path / "approved.parquet")
+        monkeypatch.setattr(store, "TRAINING_PAIRS", tmp_path / "training_pairs.jsonl")
+
+        q = {"items": [{
+            "review_id": "r1", "status": "pending", "composition": "LLZO",
+            "sigma_S_per_cm": 1e-4, "unit": "S/cm", "property": "sigma",
+        }]}
+        item = store.apply_decision(q, "r1", "approve", "tester",
+                                    note="ok")
+        assert item["status"] == "approved"
+        assert pg_store_mod.read_feed() == ["LLZO"]

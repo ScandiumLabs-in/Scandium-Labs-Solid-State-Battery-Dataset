@@ -219,6 +219,29 @@ def test_release_gates_block_pending(tmp_path):
     assert gates["no_pending_review_flags"]["ok"] is False
 
 
+def test_release_gate_min_gold_pct_blocks_when_threshold_set(tmp_path):
+    import scripts.release as rel
+    root = tmp_path
+    (root / "quality_output").mkdir()
+    (root / "quality_output" / "quality_report.json").write_text(json.dumps(
+        {"tier_distribution": {"gold": 1, "silver": 99, "rejected": 0}}))
+    # 1% gold < a 5% threshold -> must block
+    cfg = dict(rel.DEFAULT_CONFIG)
+    cfg["min_gold_pct"] = 5
+    rel.ROOT = root
+    gates = rel.check_gates(cfg)
+    assert gates["min_gold_pct"]["ok"] is False
+
+
+def test_release_gate_min_gold_pct_passes_zero_threshold(tmp_path):
+    import scripts.release as rel
+    root = tmp_path
+    # no quality_output at all -> gold_pct = 0, min_gold_pct = 0 -> passes
+    rel.ROOT = root
+    gates = rel.check_gates()
+    assert gates["min_gold_pct"]["ok"] is True
+
+
 def test_release_gates_tolerate_known_benign_benchmark(tmp_path):
     import scripts.release as rel
     root = tmp_path

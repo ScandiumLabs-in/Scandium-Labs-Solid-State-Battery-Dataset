@@ -86,6 +86,7 @@ class ExtractionMethod(str, Enum):
     human_curated = "human_curated"
     grobid_table_parse = "grobid_table_parse"
     llm_extraction = "llm_extraction"
+    plot_digitized = "plot_digitized"
 
 
 class SplitAssignment(str, Enum):

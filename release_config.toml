@@ -11,6 +11,7 @@ metadata_method_threshold = 80        # % records with measurement method
 duplicate_threshold = 1            # duplicate rate % (must be < this)
 doi_threshold = 100                # % DOI provenance on experimental records
 gold_threshold = 50                # target % of verified records that are Gold (info)
+min_gold_pct = 0                   # BLOCKING gate: % of verified records that must be Gold tier (0 = not blocking until Gold leaves zero)
 benchmark_target = 100             # target benchmark materials (info)
 
 # Benchmark compounds that fail verification by design (general formulas that

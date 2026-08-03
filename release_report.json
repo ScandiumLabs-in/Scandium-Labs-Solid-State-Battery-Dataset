@@ -1,6 +1,6 @@
 {
-  "version": "v0.2.0",
-  "generated_at": "2026-08-03T13:37:35.977356+00:00",
+  "version": "v0.5.0",
+  "generated_at": "2026-08-03T14:51:27.454969+00:00",
   "total_records": 30071,
   "verified_records": 116,
   "materials_total": 405,
@@ -178,7 +178,8 @@
     "doi_provenance": true,
     "min_verified_labels": true,
     "min_total_records": true,
-    "health_report_generated": true
+    "health_report_generated": true,
+    "min_gold_pct": true
   },
   "gate_failures": []
 }

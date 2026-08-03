@@ -140,6 +140,10 @@ class TestExtractionRecord:
         assert rec.ion_transport.label_available is True
         assert rec.text_provenance.extraction_method == ExtractionMethod.llm_extraction
 
+    def test_plot_digitized_extraction_method(self) -> None:
+        assert ExtractionMethod.plot_digitized == "plot_digitized"
+        assert ExtractionMethod.plot_digitized in ExtractionMethod
+
     def test_to_material_record_no_conductivity(self) -> None:
         extracted = ExtractedConductivityRecord(
             composition="Li3InCl6",

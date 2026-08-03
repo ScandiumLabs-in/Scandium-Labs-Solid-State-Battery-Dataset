@@ -119,6 +119,11 @@ def build_health_report() -> dict:
     consensus = _load_json(CONSENSUS)
     report["materials_total"] = len(consensus)
     report["materials_with_consensus_n3"] = sum(1 for v in consensus.values() if v.get("n_sigma", 0) >= 3)
+    # Action 5 — depth-vs-breadth ratio: n≥3 consensus materials per verified
+    # label. A shrinking ratio as volume scales means breadth without depth.
+    n3 = report["materials_with_consensus_n3"]
+    verified = report.get("verified_records", 0)
+    report["consensus_depth_ratio"] = round(n3 / verified, 4) if verified else 0.0
     report["materials_with_sigma"] = sum(1 for v in consensus.values() if v.get("n_sigma", 0) > 0)
     report["materials_with_ea"] = sum(1 for v in consensus.values() if v.get("n_ea", 0) > 0)
     report["materials_with_multipaper"] = sum(1 for v in consensus.values() if v.get("n_papers", 0) >= 2)

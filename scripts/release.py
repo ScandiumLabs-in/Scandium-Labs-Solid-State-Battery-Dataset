@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -47,6 +48,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "duplicate_threshold": 1.0,
     "doi_threshold": 100.0,
     "gold_threshold": 50.0,
+    "min_gold_pct": 0,
     "benchmark_target": 100,
 }
 
@@ -197,13 +199,40 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
         "requirement": "health_report.json exists and is non-empty",
     }
 
+    # 10. Gold-tier share (Action 6) — blocking once Gold leaves zero.
+    # min_gold_pct=0 keeps the gate non-blocking while Gold has no real
+    # denominator; raise it in release_config.toml as Gold grows.
+    quality = _load_json(ROOT / "quality_output" / "quality_report.json")
+    dist = quality.get("tier_distribution", {}) if quality else {}
+    n_gold = dist.get("gold", 0)
+    n_tot = sum(int(v) for v in dist.values()) if dist else 0
+    gold_pct = (n_gold / n_tot * 100.0) if n_tot else 0.0
+    gold_thr = cfg.get("min_gold_pct", 0)
+    gates["min_gold_pct"] = {
+        "ok": gold_pct >= gold_thr,
+        "detail": f"{n_gold}/{n_tot} Gold ({gold_pct:.1f}%, target {gold_thr}%)",
+        "requirement": f">={gold_thr}% of verified records are Gold tier",
+    }
+
     return gates
 
 
 # ── Release report (D3) ───────────────────────────────────────────────────────
 
 
-def build_release_report(gates: dict, version: str = "v0.3.2") -> dict:
+def latest_version_from_changelog() -> str:
+    """Read the version from the most recent `## [vX.Y.Z]` heading in
+    CHANGELOG.md so a release can never hardcode a stale version string."""
+    changelog = (ROOT / "CHANGELOG.md").read_text()
+    for line in changelog.splitlines():
+        m = re.match(r"^## \[(v[0-9]+\.[0-9]+\.[0-9]+)\]", line.strip())
+        if m:
+            return m.group(1)
+    return "v0.0.0"
+
+
+def build_release_report(gates: dict, version: str | None = None) -> dict:
+    version = version or latest_version_from_changelog()
     health = _load_json(ROOT / "literature_output" / "health_report.json")
     consensus = _load_json(ROOT / "literature_output" / "consensus_db.json")
     quality = _load_json(ROOT / "quality_output" / "quality_report.json")
@@ -364,7 +393,8 @@ def run_build_chain() -> None:
 def main() -> int:
     global CONFIG_PATH
     parser = argparse.ArgumentParser(description="Scandium Dataset release pipeline")
-    parser.add_argument("--version", default="v0.2.0")
+    parser.add_argument("--version", default=None,
+                        help="release version (default: latest in CHANGELOG.md)")
     parser.add_argument("--publish", action="store_true", help="publish to HF/Zenodo/GitHub after gates pass")
     parser.add_argument("--skip-tests", action="store_true", help="skip the pytest gate (CI convenience)")
     parser.add_argument("--build", action="store_true",
@@ -386,11 +416,13 @@ def main() -> int:
     if args.build:
         run_build_chain()
 
+    version = args.version or latest_version_from_changelog()
+
     gates = check_gates(cfg)
     if args.skip_tests:
         gates["tests_passing"] = {"ok": True, "detail": "skipped via --skip-tests", "requirement": "-"}
 
-    report = build_release_report(gates, version=args.version)
+    report = build_release_report(gates, version=version)
     (ROOT / "release_report.json").write_text(json.dumps(report, indent=2, default=str))
     (ROOT / "release_report.md").write_text(render_release_report_md(report))
 
@@ -415,7 +447,7 @@ def main() -> int:
         print("=" * 64)
         return 1
 
-    staged = stage_artifacts(args.version)
+    staged = stage_artifacts(version)
     print("\n--- VERSIONED ARTIFACTS ---")
     for p in staged:
         print(f"  {p.relative_to(ROOT)}")
