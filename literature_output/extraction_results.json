@@ -1008,6 +1008,10 @@
       "temperature_celsius": null,
       "doi": null,
       "title": null,
+      "extraction_confidence": 0.7,
+      "ensemble_votes": 2,
+      "ensemble_size": 3,
+      "sigma_spread_frac": 0.0,
       "experiment": {
         "sample_form": null,
         "relative_density_pct": null,
@@ -1025,12 +1029,16 @@
       "family": "halide",
       "composition": "Li3InCl6",
       "sigma_RT": 0.001,
-      "Ea": 0.1,
+      "Ea": 0.3,
       "method": null,
       "conductivity_type": "ConductivityType.total",
       "temperature_celsius": null,
       "doi": null,
       "title": null,
+      "extraction_confidence": 0.7,
+      "ensemble_votes": 2,
+      "ensemble_size": 3,
+      "sigma_spread_frac": 0.0,
       "experiment": {
         "sample_form": null,
         "relative_density_pct": null,
@@ -1054,6 +1062,10 @@
       "temperature_celsius": null,
       "doi": null,
       "title": null,
+      "extraction_confidence": 0.7,
+      "ensemble_votes": 2,
+      "ensemble_size": 3,
+      "sigma_spread_frac": 0.0,
       "experiment": {
         "sample_form": null,
         "relative_density_pct": null,
@@ -2272,5 +2284,6 @@
   "10.7498_aps.71.20221050.pdf": [],
   "10.7498_aps.74.20250588.pdf": [],
   "10.7498_aps.75.20251641.pdf": [],
-  "10.7716_AEM.V1I1.16.pdf": []
+  "10.7716_AEM.V1I1.16.pdf": [],
+  "10.1002_advs.202201718.pdf": []
 }

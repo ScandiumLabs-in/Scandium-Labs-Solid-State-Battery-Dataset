@@ -2874,7 +2874,9 @@
   "10.1002/anie.202217581": {
     "status": "blocked",
     "pdf_path": null,
-    "source_url": null
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   },
   "10.1002/adfm.202416671": {
     "status": "blocked",
@@ -3039,7 +3041,9 @@
   "10.1021/acsami.1c12753": {
     "status": "blocked",
     "pdf_path": null,
-    "source_url": null
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   },
   "10.1149/ma2025-016702mtgabs": {
     "status": "blocked",
@@ -3214,7 +3218,9 @@
   "10.1039/c9cp00664h": {
     "status": "blocked",
     "pdf_path": null,
-    "source_url": null
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   },
   "10.1002/advs.202521791": {
     "status": "downloaded_epmc",
@@ -3634,7 +3640,9 @@
   "10.1002/aenm.202203307": {
     "status": "blocked",
     "pdf_path": null,
-    "source_url": null
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   },
   "10.1021/jacs.2c11807": {
     "status": "downloaded_epmc",
@@ -4070,5 +4078,335 @@
     "status": "blocked",
     "pdf_path": null,
     "source_url": null
+  },
+  "10.1021/acsenergylett.9b01693": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/jacs.8b10282": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1088/2515-7655/ab95f4": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.xcrp.2020.100217": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.3389/fenrg.2016.00025": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fenrg.2016.00025.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2016.00025/pdf",
+    "venue_oa": false
+  },
+  "10.1038/s41467-023-40669-0": {
+    "status": "already_have",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-023-40669-0.pdf",
+    "source_url": null,
+    "venue_oa": null
+  },
+  "10.1038/s41467-019-13214-1": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-019-13214-1.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-019-13214-1.pdf",
+    "venue_oa": false
+  },
+  "10.1002/aenm.201800035": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/acs.accounts.0c00874": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.jallcom.2018.03.027": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.3390/nano10081606": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1038/s41598-020-68885-4": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41598-020-68885-4.pdf",
+    "source_url": "https://www.nature.com/articles/s41598-020-68885-4.pdf",
+    "venue_oa": null
+  },
+  "10.3389/fchem.2022.837978": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fchem.2022.837978.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fchem.2022.837978/pdf",
+    "venue_oa": false
+  },
+  "10.1038/srep02261": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_srep02261.pdf",
+    "source_url": "https://www.nature.com/articles/srep02261.pdf",
+    "venue_oa": null
+  },
+  "10.1016/j.jascer.2013.03.005": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1038/s41467-017-01187-y": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-017-01187-y.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-017-01187-y.pdf",
+    "venue_oa": false
+  },
+  "10.1038/ncomms8436": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_ncomms8436.pdf",
+    "source_url": "https://www.nature.com/articles/ncomms8436.pdf",
+    "venue_oa": null
+  },
+  "10.1038/s41467-019-13178-2": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41467-019-13178-2.pdf",
+    "source_url": "https://www.nature.com/articles/s41467-019-13178-2.pdf",
+    "venue_oa": false
+  },
+  "10.1021/acsami.6b14402": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/cm3011315": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1103/physrevmaterials.5.035408": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1039/c8ee01053f": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.jpowsour.2018.06.038": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.jpowsour.2015.09.111": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1038/srep19892": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_srep19892.pdf",
+    "source_url": "https://www.nature.com/articles/srep19892.pdf",
+    "venue_oa": null
+  },
+  "10.3389/fchem.2019.00522": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fchem.2019.00522.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fchem.2019.00522/pdf",
+    "venue_oa": false
+  },
+  "10.3389/fchem.2020.00468": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.3389_fchem.2020.00468.pdf",
+    "source_url": "https://www.frontiersin.org/articles/10.3389/fchem.2020.00468/pdf",
+    "venue_oa": false
+  },
+  "10.1038/s41524-018-0064-0": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1038_s41524-018-0064-0.pdf",
+    "source_url": "https://www.nature.com/articles/s41524-018-0064-0.pdf",
+    "venue_oa": null
+  },
+  "10.1039/c6ta03249d": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/advs.202201718": {
+    "status": "downloaded_epmc",
+    "pdf_path": "literature_output/pdfs/10.1002_advs.202201718.pdf",
+    "source_url": "https://europepmc.org/articles/PMC10074084?pdf=render",
+    "venue_oa": false
+  },
+  "10.1007/s40820-023-01051-3": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1007_s40820-023-01051-3.pdf",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s40820-023-01051-3.pdf",
+    "venue_oa": false
+  },
+  "10.1016/j.jallcom.2019.153237": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.34133/2022/9753506": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1007/s40145-022-0626-y": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1007_s40145-022-0626-y.pdf",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s40145-022-0626-y.pdf",
+    "venue_oa": null
+  },
+  "10.1149/1.2403248": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/advs.201500213": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1021/ja502133j": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1073/pnas.1600422113": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1016/j.polymer.2006.05.069": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/smll.202103617": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1039/c3ee42099j": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1126/sciadv.1601659": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1126_sciadv.1601659.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1425393",
+    "venue_oa": null
+  },
+  "10.1016/j.jsamd.2018.01.002": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1021/acs.chemmater.5b03854": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1021_acs.chemmater.5b03854.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1261353",
+    "venue_oa": null
+  },
+  "10.1039/d1ta10966a": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1002/adma.202306111": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
+  },
+  "10.1186/s40580-020-00252-5": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1186_s40580-020-00252-5.pdf",
+    "source_url": "https://nanoconvergencejournal.springeropen.com/track/pdf/10.1186/s40580-020-00252-5",
+    "venue_oa": false
+  },
+  "10.3390/electrochem2030026": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": false,
+    "reason": "not_open_access"
+  },
+  "10.1002/aenm.201803440": {
+    "status": "downloaded_direct",
+    "pdf_path": "literature_output/pdfs/10.1002_aenm.201803440.pdf",
+    "source_url": "https://www.osti.gov/servlets/purl/1508374",
+    "venue_oa": null
+  },
+  "10.1039/c1cp22108f": {
+    "status": "blocked",
+    "pdf_path": null,
+    "source_url": null,
+    "venue_oa": null,
+    "reason": "no_oa_route_reachable"
   }
 }

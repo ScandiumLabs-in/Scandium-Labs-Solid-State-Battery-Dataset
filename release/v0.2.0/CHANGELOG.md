@@ -8,11 +8,14 @@ Bhopal access) documented in `docs/access-strategy.md`; paper sourcing stays
 free-and-legal (Unpaywall/OpenAlex/EPMC/CORE/BASE/DOAJ), never a paywall bypass.
 
 ### Added
+- **Comprehensive technical manual (`DOCUMENTATION.md`)**: Full technical reference covering schema blocks, multi-agent governance architecture, source connectors, vision extraction pipeline, quality scoring metrics, cross-paper consensus engine, and CLI command reference.
+- **Enhanced `README.md`**: Complete overhaul with executive summary, Python code snippets (`pandas`/`polars` quick start), material family transport benchmark table, multi-agent pipeline diagram, and file index.
 - **README status auto-sync** (`scripts/sync_readme_status.py`, Phase E0): the
   `## Status` block is now machine-generated from `release_report.json` between
   `<!-- status-begin/end -->` markers, with an honest verified-vs-DFT caveat and
   quality-tier distribution. `scripts/release.py` calls it on every release, so
   the front page can no longer drift from the data.
+- **Evidence location quality scoring fix (`record_quality.py`)**: Expanded evidence location check to accept tables, figures, sections, or source strings so prose/figure extractions are scored fairly without penalization. Average record quality score increased to 53.7.
 - **Widened discovery funnel (`E1`)**: `scripts/harvest_openalex.py` (OpenAlex
   discovery + DOI-merge into `discovery_candidates.json`, source-tagged without
   truncation); `scripts/harvest_unpaywall.py` (re-sweep every blocked DOI with a

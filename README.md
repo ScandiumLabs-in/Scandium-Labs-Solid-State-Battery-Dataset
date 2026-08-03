@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/badge/dataset--release-v0.2.0-blue.svg)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)
 [![Release Gates](https://img.shields.io/badge/release--gates-10%2F10%20PASS-brightgreen.svg)](release_report.json)
 [![Tests](https://img.shields.io/badge/tests-600%20PASSing-success.svg)](tests/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 
 > **A Literature-Derived & DFT-Anchored Dataset for Solid-State Battery Electrolytes**  
@@ -26,7 +26,7 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 ## Status
 
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.2.0**, generated 2026-08-03T12:48:47.209956+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.2.0**, generated 2026-08-03T13:37:35.977356+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|
@@ -161,4 +161,4 @@ Execution of the pipeline is governed by **11 specialist agents** coordinated by
 
 ### License
 
-This project and dataset are distributed under the [MIT License](LICENSE). Structural data sourced from third-party databases retain their respective open computational licenses (Creative Commons / Materials Project Terms).
+This project and dataset are distributed under the [Creative Commons Attribution 4.0 International License (CC-BY-4.0)](LICENSE). You are free to share and adapt the material for any purpose, even commercially, provided you give appropriate credit, link to the license, and indicate if changes were made. Structural data sourced from third-party databases retain their respective open computational licenses (Creative Commons / Materials Project Terms).

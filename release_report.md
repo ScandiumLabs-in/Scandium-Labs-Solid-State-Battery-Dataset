@@ -1,7 +1,7 @@
 # Scandium Dataset — Release Report
 
 - Version: **v0.2.0**
-- Generated: 2026-08-03T12:48:47.209956+00:00
+- Generated: 2026-08-03T13:37:35.977356+00:00
 
 ## Dataset size
 
