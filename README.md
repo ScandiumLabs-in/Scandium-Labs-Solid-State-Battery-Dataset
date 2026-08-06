@@ -1,4 +1,4 @@
-# Scandium Labs — Solid-State Battery (SSB) Transport Dataset
+# Scandium Labs — Solid-State Battery (SSB) Materials Dataset
 
 [![Release](https://img.shields.io/badge/dataset--release-v0.2.0-blue.svg)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)
 [![Release Gates](https://img.shields.io/badge/release--gates-10%2F10%20PASS-brightgreen.svg)](release_report.json)
