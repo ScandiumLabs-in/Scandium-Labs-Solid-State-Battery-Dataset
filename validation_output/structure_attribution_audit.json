@@ -1,0 +1,1844 @@
+{
+  "methodology": "Structure-to-label attribution audit: each verified label's composition is reduced-formula matched against the structure-bearing Materials Project backbone. 'structure_attached' means a DFT structure of the same reduced formula exists and is what featurization pairs with the label (this structure is from MP, NOT from the measurement paper \u2014 the documented systematic borrow our architecture makes). 'n_mp_structures_for_formula' counts distinct polymorph structures, exposing ambiguity about which polymorph the label was measured on.",
+  "n_labeled_rows": 183,
+  "status": {
+    "no_structure_match": 148,
+    "structure_attached": 35
+  },
+  "n_attached": 35,
+  "n_without_structure": 148,
+  "labeled_rows_without_structure": [
+    "(Li0.45La0.78Ce0.05)ScO3",
+    "(Li0.45La0.85)ScO3",
+    "(Li0.4Ce0.15La0.67)ScO3",
+    "(Li2OH)0.99K0.01Cl",
+    "0-LATP/PVDF-HFP-LiTFSI CSE",
+    "0.5Li2SO4-ZrCl4",
+    "0.7Li(CB9H10)-0.3Li(CB11H12)",
+    "1.4Li2O-0.75ZrCl4-0.25AlCl3",
+    "40wt% Li2OHCl0.5Br0.5/NBR CPE",
+    "80(3LiBH4LiCl)20P2S5",
+    "C4N2H12ZnBr4",
+    "Ca-CeO2/LiTFSI/PEO",
+    "Co-LATP/PVDF-HFP-LiTFSI CSE",
+    "CsSn0.9In0.067Cl3",
+    "Cu-LATP/PVDF-HFP-LiTFSI CSE",
+    "LATP-0.1LBSO",
+    "La0.57Li0.29TiO3",
+    "Li(BH4)1-xIx",
+    "Li(CB9H10)",
+    "Li0.27La0.58TiO3",
+    "Li0.29La0.57TiO3",
+    "Li0.33La0.56TiO3",
+    "Li0.34La0.56TiO3 (G-LLTO)",
+    "Li0.34La0.56TiO3 (M-LLTO)",
+    "Li0.35La0.55TiO3",
+    "Li0.35La0.55TiO3 (LLTO-F0)",
+    "Li0.35La0.55TiO3-2wt%LiF",
+    "Li0.35La0.55TiO3-4wt%LiF",
+    "Li0.35La0.55TiO3-6wt%LiF",
+    "Li0.35La0.55TiO3-F2",
+    "Li0.375Sr0.4375Ta0.75Zr0.25O3",
+    "Li0.4Sr0.3Ti1.5Zr0.5(PO4)3",
+    "Li0.4Sr0.3Zr2(PO4)3",
+    "Li1.3Al0.15Y0.15Ti1.7(PO4)3",
+    "Li1.3Al0.25Y0.05Ti1.7(PO4)3",
+    "Li1.3Al0.29Y0.01Ti1.7(PO4)3",
+    "Li1.3Al0.2Y0.1Ti1.7(PO4)3",
+    "Li1.3Al0.3BxTi1.7-x(PO4)3 (10% H3BO3)",
+    "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+    "Li1.3Al0.3Ti1.7(PO4)3",
+    "Li1.3Al0.3Ti1.7(PO4)3-4wt%Li0.348La0.55TiO3",
+    "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
+    "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFP CSE",
+    "Li1.5Al0.5Ge1.5(PO4)3",
+    "Li2.50In0.56Nb0.06Zr0.38Cl6",
+    "Li2.51In0.63Nb0.12Zr0.25Cl6",
+    "Li2.56In0.75Nb0.19Zr0.06Cl6",
+    "Li2.61Y1.13Cl6 (MC)",
+    "Li2.61Y1.13Cl6 (SS)",
+    "Li2.96Ge0.72P0.32O4 (LGPO ITLP thin film)",
+    "Li2O-TaCl5",
+    "Li2SO4-ZrCl4",
+    "Li2ZrCl5.5F0.5",
+    "Li2ZrCl6",
+    "Li3.08Ge0.52P0.47O4 (LGPO HTLP thin film)",
+    "Li3.7Ge0.7As0.3S4",
+    "Li3.7Ge0.7P0.3S4",
+    "Li3.7Ge0.7Sb0.3S4",
+    "Li3OCl (x=1)",
+    "Li3OCl (x=1.5)",
+    "Li3PS4-2LiBH4",
+    "Li3YCl6",
+    "Li3YCl6 (as-prepared)",
+    "Li3Zr2Si2PO12",
+    "Li3xZrCl4Nx",
+    "Li4-xGe1-xPxO4",
+    "Li4.8InCl7.8",
+    "Li5.4Al0.1PS4.7Cl1.3",
+    "Li5.5PS4.5Cl1.5",
+    "Li6.1Ga0.3La3Zr2O12 (LGLZO_5)",
+    "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+    "Li6.4Ga0.2La3Zr1.9Ce0.1O12",
+    "Li6.4Ga0.2La3Zr2O12",
+    "Li6.4Ga0.2La3Zr2O12 (x=0)",
+    "Li6.55Ge0.05La3Zr1.75Ta0.25O12",
+    "Li6.5Fe0.2La3Zr1.9Bi0.1O12",
+    "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+    "Li6.5La3Zr1.5Ta0.5O12",
+    "Li6.5P0.5Ge0.5S5I",
+    "Li6.65Ge0.05La3Zr1.85Ta0.15O12",
+    "Li6.6La3Zr1.6Nb0.4O12",
+    "Li6.7Ge0.595Si0.105P0.3S5I",
+    "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
+    "Li6.8Ge0.05La3Zr2O12",
+    "Li6.98Ga0.072La3Zr1.982Ta0.018O12",
+    "Li6PS4Cl0.75-OF0.25",
+    "Li6PS5Cl/TEGDMA",
+    "Li6PS5Cl0.5Br0.5",
+    "Li7La2.75Ca0.25Zr1.75Nb0.25O12",
+    "Li7La3Zr0.4Hf0.4Sn0.4Sc0.4Ta0.4O12",
+    "Li7La3Zr0.5Hf0.5Sc0.5Nb0.5O12",
+    "Li7La3Zr2O12-8wt.%Li3BO3",
+    "Li9.54Si1.74P1.44S11.7Cl0.3",
+    "Li9.54[Si0.6Ge0.4]1.74P1.44S11.1Br0.3O0.6",
+    "LiBH4-LiI/Al2O3",
+    "LiBH4-MgO",
+    "LiBH4-MgO (CE26)",
+    "LiBH4-MgO (CE74)",
+    "LiCB9H10",
+    "LiDFOB-TXE-FDMA-FEC",
+    "LiTFSI-PC(quasi-solid)",
+    "LiTFSI-SN",
+    "LiTFSI-SN-FEC",
+    "Mg(BH4)21.47NH3",
+    "Mg(BH4)2\u00b71.47NH3 nanoconfined in SBA-15",
+    "Mg(en)1(BH4)2",
+    "NBR SPE",
+    "Na2.9H(Se0.9I0.1)",
+    "Na3.2Hf0.8Sc0.2ZrSi2PO12",
+    "Na3.4Hf0.6Sc0.4ZrSi2PO12",
+    "Na3HSe",
+    "Na3HfSc(SiO4)(PO4)2",
+    "Na3HfZr(SiO4)2(PO4)",
+    "Na3PS4",
+    "NaCB9H10",
+    "PAFP",
+    "PEO",
+    "PEO-5% COF-LZU1",
+    "PEO-LiTFSI",
+    "PEO-LiTFSI-AlOC",
+    "PEO-LiTFSI-LLZTO-SN-ETPTA",
+    "PEO-PAPI (crosslinked)",
+    "PEO/LiFSI",
+    "PEO/LiTFSI",
+    "PEO/LiTFSI (electrospun)",
+    "PEO/LiTFSI/in-situ SiO2 (10wt%)",
+    "PVDF-HFP",
+    "PVDF-HFP-LLZTO(10wt%)",
+    "PVDF-HFP/10%LLZTO",
+    "Sn-LATP/PVDF-HFP-LiTFSI CSE",
+    "UiO-66/PEO",
+    "V-LATP/PVDF-HFP-LiTFSI CSE",
+    "Zr-LATP/PVDF-HFP-LiTFSI CSE"
+  ],
+  "polymorph_ambiguity": {
+    "n_attached_with_multiple_mp_structures": 11,
+    "examples": [
+      {
+        "composition": "Li10GeP2S12",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li10GeP2S12",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li2B12H12",
+        "n_mp_structures_for_formula": 3
+      },
+      {
+        "composition": "Li3InCl6",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li3InCl6",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li3InCl6",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li3InCl6",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "Li3PS4",
+        "n_mp_structures_for_formula": 3
+      },
+      {
+        "composition": "Li4GeS4",
+        "n_mp_structures_for_formula": 3
+      },
+      {
+        "composition": "Li6PS5I",
+        "n_mp_structures_for_formula": 2
+      },
+      {
+        "composition": "LiBH4",
+        "n_mp_structures_for_formula": 9
+      }
+    ]
+  },
+  "per_row": [
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1038/s41467-022-35287-1",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr0.5Hf0.5Sc0.5Nb0.5O12",
+      "reduced_formula": "Li7La3Hf0.5Zr0.5Sc0.5Nb0.5O12",
+      "source_doi": "10.1038/s41467-022-35287-1",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La3Zr0.4Hf0.4Sn0.4Sc0.4Ta0.4O12",
+      "reduced_formula": "Li7La3Hf0.4Zr0.4Sc0.4Ta0.4Sn0.4O12",
+      "source_doi": "10.1038/s41467-022-35287-1",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2OHCl",
+      "reduced_formula": "Li2HClO",
+      "source_doi": "10.1038/s41467-023-42385-1",
+      "family": "antiperovskite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "(Li2OH)0.99K0.01Cl",
+      "reduced_formula": "K0.01Li1.98H0.99Cl1O0.99",
+      "source_doi": "10.1038/s41467-023-42385-1",
+      "family": "antiperovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO-LiTFSI-AlOC",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-024-51191-2",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li10GeP2S12",
+      "reduced_formula": "Li10Ge(PS6)2",
+      "source_doi": "10.1038/nmat3066",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.1039/C5EE02930D",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6PS5Br",
+      "reduced_formula": "Li6PS5Br",
+      "source_doi": "10.1039/C5EE02930D",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3PS4",
+      "reduced_formula": "Li3PS4",
+      "source_doi": "10.1016/j.ssi.2015.09.010",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 3,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1002/anie.200701144",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6.5La3Zr1.5Ta0.5O12",
+      "reduced_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "source_doi": "10.1039/C6EE00556K",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.33La0.56TiO3",
+      "reduced_formula": "Li0.33La0.56Ti1O3",
+      "source_doi": "10.1016/0167-2738(93)90241-4",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.1016/S0167-2738(03)00260-7",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.5Al0.5Ge1.5(PO4)3",
+      "reduced_formula": "Li1.5Al0.5Ge1.5P3O12",
+      "source_doi": "10.1016/j.electacta.2012.04.007",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3InCl6",
+      "reduced_formula": "Li3InCl6",
+      "source_doi": "10.1038/s41467-019-09619-5",
+      "family": "halide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3YCl6",
+      "reduced_formula": "Li3YCl6",
+      "source_doi": "10.1016/j.matt.2019.06.004",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2ZrCl6",
+      "reduced_formula": "Li2ZrCl6",
+      "source_doi": "10.1021/jacs.1c07481",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiBH4",
+      "reduced_formula": "LiBH4",
+      "source_doi": "10.1038/nmat1912",
+      "family": "hydride",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 9,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li2B12H12",
+      "reduced_formula": "Li(BH)6",
+      "source_doi": "10.1039/C6EE02745A",
+      "family": "hydride",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 3,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3OCl",
+      "reduced_formula": "Li3ClO",
+      "source_doi": "10.1021/ja305709z",
+      "family": "antiperovskite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "PEO-LiTFSI",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-024-51191-2",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-019-09061-9",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Ca-CeO2/LiTFSI/PEO",
+      "reduced_formula": null,
+      "source_doi": "10.1002/aenm.202000049",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "La0.57Li0.29TiO3",
+      "reduced_formula": "Li0.29La0.57Ti1O3",
+      "source_doi": "10.3389/fchem.2022.966274",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+      "reduced_formula": null,
+      "source_doi": "10.35378/gujs.1589340",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.3390/ma14164737",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2ZrCl6",
+      "reduced_formula": "Li2ZrCl6",
+      "source_doi": "10.1038/s41467-021-24697-2",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3OCl",
+      "reduced_formula": "Li3ClO",
+      "source_doi": "10.3389/fchem.2020.562549",
+      "family": "antiperovskite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3Zr2Si2PO12",
+      "reduced_formula": "Li3Zr2Si2PO12",
+      "source_doi": "10.1126/sciadv.abj7698",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li5.4Al0.1PS4.7Cl1.3",
+      "reduced_formula": "Li5.4Al0.1P1S4.7Cl1.3",
+      "source_doi": "10.3390/nano12244355",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li5.5PS4.5Cl1.5",
+      "reduced_formula": "Li5.5P1S4.5Cl1.5",
+      "source_doi": "10.3390/nano12244355",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsaem.5c01010",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.5Fe0.2La3Zr1.9Bi0.1O12",
+      "reduced_formula": "Li6.5La3Zr1.9Fe0.2Bi0.1O12",
+      "source_doi": "10.3390/molecules30092028",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fenrg.2016.00028",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.5La3Zr1.5Ta0.5O12",
+      "reduced_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "source_doi": "10.1038/s41467-025-58108-7",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.6La3Zr1.6Nb0.4O12",
+      "reduced_formula": "Li6.6La3Zr1.6Nb0.4O12",
+      "source_doi": "10.3390/ma13030560",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.3390/nano12244355",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6PS5Cl0.5Br0.5",
+      "reduced_formula": "Li6P1S5Br0.5Cl0.5",
+      "source_doi": "10.3390/en16135100",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1021/acs.chemmater.3c01831",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "LiBH4-LiI/Al2O3",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsami.0c10361",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiBH4-MgO",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsaem.0c02525",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiDFOB-TXE-FDMA-FEC",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-023-35857-x",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Mg(BH4)21.47NH3",
+      "reduced_formula": "Mg1B21.47H88.88N1",
+      "source_doi": "10.1038/s43246-024-00601-5",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3HfZr(SiO4)2(PO4)",
+      "reduced_formula": "Na3HfZrSi2PO12",
+      "source_doi": "10.1038/s41467-023-40669-0",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO-LiTFSI",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym12091889",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "(Li2OH)0.99K0.01Cl",
+      "reduced_formula": "K0.01Li1.98H0.99Cl1O0.99",
+      "source_doi": "10.1038/s41467-023-42385-1",
+      "family": "antiperovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.29La0.57TiO3",
+      "reduced_formula": "Li0.29La0.57Ti1O3",
+      "source_doi": "10.1038/s43246-026-01164-3",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2SO4-ZrCl4",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-026-69737-x",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1038/s41467-022-35287-1",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "PEO-LiTFSI",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-024-51191-2",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.375Sr0.4375Ta0.75Zr0.25O3",
+      "reduced_formula": "Sr0.4375Li0.375Zr0.25Ta0.75O3",
+      "source_doi": "10.1038/s41467-023-37115-6",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na2.9H(Se0.9I0.1)",
+      "reduced_formula": "Na2.9H1Se0.9I0.1",
+      "source_doi": "10.1038/s41467-020-20370-2",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3HSe",
+      "reduced_formula": "Na3HSe",
+      "source_doi": "10.1038/s41467-020-20370-2",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3HfSc(SiO4)(PO4)2",
+      "reduced_formula": "Na3HfScSi(PO6)2",
+      "source_doi": "10.1038/s41467-023-40669-0",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "(Li0.45La0.85)ScO3",
+      "reduced_formula": "Li0.45La0.85Sc1O3",
+      "source_doi": "10.3390/molecules26020299",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "(Li0.4Ce0.15La0.67)ScO3",
+      "reduced_formula": "Li0.4La0.67Ce0.15Sc1O3",
+      "source_doi": "10.3390/molecules26020299",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "40wt% Li2OHCl0.5Br0.5/NBR CPE",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fchem.2021.744417",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3BxTi1.7-x(PO4)3 (10% H3BO3)",
+      "reduced_formula": null,
+      "source_doi": "10.3390/ma17153846",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.98Ga0.072La3Zr1.982Ta0.018O12",
+      "reduced_formula": "Li6.98La3Zr1.982Ta0.018Ga0.072O12",
+      "source_doi": "10.3390/nano12172946",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "NBR SPE",
+      "reduced_formula": "ERBPSN",
+      "source_doi": "10.3389/fchem.2021.744417",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO",
+      "reduced_formula": "H4C2O",
+      "source_doi": "10.3390/molecules29081759",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO-5% COF-LZU1",
+      "reduced_formula": null,
+      "source_doi": "10.3390/molecules29081759",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO-PAPI (crosslinked)",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fmats.2022.864478",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO/LiTFSI (electrospun)",
+      "reduced_formula": null,
+      "source_doi": "10.3390/nano13071294",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO/LiTFSI/in-situ SiO2 (10wt%)",
+      "reduced_formula": null,
+      "source_doi": "10.3390/nano13071294",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.37614/2949-1215.2025.16.2.020",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.4Ga0.2La3Zr1.9Ce0.1O12",
+      "reduced_formula": "Li6.4La3Ce0.1Zr1.9Ga0.2O12",
+      "source_doi": "10.1007/s11664-026-12871-5",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "CsSn0.9In0.067Cl3",
+      "reduced_formula": "Cs1In0.067Sn0.9Cl3",
+      "source_doi": "10.1002/aenm.202300982",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3-F2",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.2Y0.1Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Y0.1Ti1.7Al0.2P3O12",
+      "source_doi": "10.3390/nano15010042",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.3390/nano15010042",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.55Ge0.05La3Zr1.75Ta0.25O12",
+      "reduced_formula": "Li6.55La3Zr1.75Ta0.25Ge0.05O12",
+      "source_doi": "10.1016/j.ceramint.2023.09.330",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Sn-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "0.5Li2SO4-ZrCl4",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-026-69737-x",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFP CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/membranes13020201",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3YCl6 (as-prepared)",
+      "reduced_formula": null,
+      "source_doi": "10.1021/jacs.1c11335",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.1Ga0.3La3Zr2O12 (LGLZO_5)",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41427-024-00563-7",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Mg(BH4)2\u00b71.47NH3 nanoconfined in SBA-15",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s43246-024-00601-5",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.61Y1.13Cl6 (MC)",
+      "reduced_formula": "M1Li2.61Y1.13C1Cl6",
+      "source_doi": "10.1021/acsenergylett.4c00317",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3.08Ge0.52P0.47O4 (LGPO HTLP thin film)",
+      "reduced_formula": null,
+      "source_doi": "10.1039/d5ta07144e",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3PS4-2LiBH4",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-023-37564-z",
+      "family": "sulfide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Mg(en)1(BH4)2",
+      "reduced_formula": null,
+      "source_doi": "10.1038/srep46189",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.61Y1.13Cl6 (SS)",
+      "reduced_formula": "Li2.61Y1.13S2Cl6",
+      "source_doi": "10.1021/acsenergylett.4c00317",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.96Ge0.72P0.32O4 (LGPO ITLP thin film)",
+      "reduced_formula": null,
+      "source_doi": "10.1039/d5ta07144e",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "(Li0.45La0.78Ce0.05)ScO3",
+      "reduced_formula": "Li0.45La0.78Ce0.05Sc1O3",
+      "source_doi": "10.3390/molecules26020299",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.65Ge0.05La3Zr1.85Ta0.15O12",
+      "reduced_formula": "Li6.65La3Zr1.85Ta0.15Ge0.05O12",
+      "source_doi": "10.1016/j.ceramint.2023.09.330",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.8Ge0.05La3Zr2O12",
+      "reduced_formula": "Li6.8La3Zr2Ge0.05O12",
+      "source_doi": "10.1016/j.ceramint.2023.09.330",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3.2Hf0.8Sc0.2ZrSi2PO12",
+      "reduced_formula": "Na3.2Hf0.8Zr1Sc0.2Si2P1O12",
+      "source_doi": "10.1038/s41467-023-40669-0",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3.4Hf0.6Sc0.4ZrSi2PO12",
+      "reduced_formula": "Na3.4Hf0.6Zr1Sc0.4Si2P1O12",
+      "source_doi": "10.1038/s41467-023-40669-0",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3 (LLTO-F0)",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.4Ga0.2La3Zr2O12 (x=0)",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-026-12871-5",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3OCl (x=1)",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fchem.2020.562549",
+      "family": "antiperovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3OCl (x=1.5)",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fchem.2020.562549",
+      "family": "antiperovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.34La0.56TiO3 (G-LLTO)",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fchem.2022.966274",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.34La0.56TiO3 (M-LLTO)",
+      "reduced_formula": null,
+      "source_doi": "10.3389/fchem.2022.966274",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2OHCl",
+      "reduced_formula": "Li2HClO",
+      "source_doi": "10.1038/s41467-023-42385-1",
+      "family": "antiperovskite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li(CB9H10)",
+      "reduced_formula": "LiB9H10C",
+      "source_doi": "10.1038/s41467-019-09061-9",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "0-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Co-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Cu-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "V-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Zr-LATP/PVDF-HFP-LiTFSI CSE",
+      "reduced_formula": null,
+      "source_doi": "10.3390/polym16091251",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.3390/ma16072751",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "LiBH4-MgO (CE26)",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsaem.0c02525",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiBH4-MgO (CE74)",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsaem.0c02525",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.1021/acsaem.3c02858",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6PS5Cl/TEGDMA",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsaem.3c02858",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LATP-0.1LBSO",
+      "reduced_formula": null,
+      "source_doi": "10.1016/j.jallcom.2019.153072",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.27La0.58TiO3",
+      "reduced_formula": "Li0.27La0.58Ti1O3",
+      "source_doi": "10.15625/0868-3166/17946",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.1016/j.jallcom.2019.153072",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3.7Ge0.7As0.3S4",
+      "reduced_formula": "Li3.7Ge0.7As0.3S4",
+      "source_doi": "10.1021/acsami.4c22390",
+      "family": "sulfide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3.7Ge0.7P0.3S4",
+      "reduced_formula": "Li3.7Ge0.7P0.3S4",
+      "source_doi": "10.1021/acsami.4c22390",
+      "family": "sulfide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3.7Ge0.7Sb0.3S4",
+      "reduced_formula": "Li3.7Ge0.7Sb0.3S4",
+      "source_doi": "10.1021/acsami.4c22390",
+      "family": "sulfide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li4GeS4",
+      "reduced_formula": "Li4GeS4",
+      "source_doi": "10.1021/acsami.4c22390",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 3,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "PVDF-HFP/10%LLZTO",
+      "reduced_formula": null,
+      "source_doi": "10.3390/gels12060534",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "80(3LiBH4LiCl)20P2S5",
+      "reduced_formula": null,
+      "source_doi": "10.1039/d0cp01334j",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.15Y0.15Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Y0.15Ti1.7Al0.15P3O12",
+      "source_doi": "10.3390/nano15010042",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.25Y0.05Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Y0.05Ti1.7Al0.25P3O12",
+      "source_doi": "10.3390/nano15010042",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.29Y0.01Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Y0.01Ti1.7Al0.29P3O12",
+      "source_doi": "10.3390/nano15010042",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.1039/d5ra09944g",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3",
+      "reduced_formula": "Li1.3Ti1.7Al0.3P3O12",
+      "source_doi": "10.3390/membranes13020201",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
+      "reduced_formula": null,
+      "source_doi": "10.1016/j.heliyon.2024.e28097",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li10GeP2S12",
+      "reduced_formula": "Li10Ge(PS6)2",
+      "source_doi": "10.1002/smll.202509918",
+      "family": "sulfide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li2O-TaCl5",
+      "reduced_formula": null,
+      "source_doi": "10.20517/energymater.2024.277",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2OHCl",
+      "reduced_formula": "Li2HClO",
+      "source_doi": "10.1021/acs.chemmater.0c02602",
+      "family": "antiperovskite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3InCl6",
+      "reduced_formula": "Li3InCl6",
+      "source_doi": "10.1002/adma.202513255",
+      "family": "halide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3InCl6",
+      "reduced_formula": "Li3InCl6",
+      "source_doi": "10.1002/advs.202403208",
+      "family": "halide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li4-xGe1-xPxO4",
+      "reduced_formula": null,
+      "source_doi": "10.1039/d5ta07144e",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.4Ga0.2La3Zr2O12",
+      "reduced_formula": "Li6.4La3Zr2Ga0.2O12",
+      "source_doi": "10.16984/saufenbilder.1590407",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.5La3Zr1.5Ta0.5O12",
+      "reduced_formula": "Li6.5La3Zr1.5Ta0.5O12",
+      "source_doi": "10.1038/s41467-020-17493-x",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.7Ge0.595Si0.105P0.3S5I",
+      "reduced_formula": "Li6.7Si0.105Ge0.595P0.3S5I1",
+      "source_doi": "10.1002/smll.202509918",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
+      "reduced_formula": null,
+      "source_doi": "10.1016/j.ceramint.2023.09.330",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS4Cl0.75-OF0.25",
+      "reduced_formula": null,
+      "source_doi": "10.1002/advs.202304117",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS5I",
+      "reduced_formula": "Li6PS5I",
+      "source_doi": "10.1002/smll.202509918",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1016/j.heliyon.2024.e36206",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1038/srep18053",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.20517/energymater.2023.87",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "reduced_formula": "Li9.54Si1.74P1.44S11.7Cl0.3",
+      "source_doi": "10.1002/smll.202509918",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li9.54[Si0.6Ge0.4]1.74P1.44S11.1Br0.3O0.6",
+      "reduced_formula": "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6",
+      "source_doi": "10.1002/smll.202509918",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiTFSI-PC(quasi-solid)",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-022-29118-6",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiTFSI-SN",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s40820-024-01592-1",
+      "family": "hydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "LiTFSI-SN-FEC",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s40820-024-01592-1",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO-LiTFSI-LLZTO-SN-ETPTA",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11581-024-05451-2",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PVDF-HFP",
+      "reduced_formula": null,
+      "source_doi": "10.3390/gels12060534",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PVDF-HFP-LLZTO(10wt%)",
+      "reduced_formula": null,
+      "source_doi": "10.3390/gels12060534",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "UiO-66/PEO",
+      "reduced_formula": null,
+      "source_doi": "10.15541/jim20200206",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li(BH4)1-xIx",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsomega.5c13516",
+      "family": "borohydride",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3",
+      "reduced_formula": "Li0.35La0.55Ti1O3",
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3-2wt%LiF",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3-4wt%LiF",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.35La0.55TiO3-6wt%LiF",
+      "reduced_formula": null,
+      "source_doi": "10.1007/s11664-021-09331-7",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.4Sr0.3Ti1.5Zr0.5(PO4)3",
+      "reduced_formula": "Sr0.3Li0.4Zr0.5Ti1.5P3O12",
+      "source_doi": "10.1007/s43939-024-00089-3",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.4Sr0.3Zr2(PO4)3",
+      "reduced_formula": "Sr0.3Li0.4Zr2P3O12",
+      "source_doi": "10.1007/s43939-024-00089-3",
+      "family": "nasicon",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2ZrCl5.5F0.5",
+      "reduced_formula": "Li2Zr1Cl5.5F0.5",
+      "source_doi": "10.1021/acsami.3c03513",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2ZrCl6",
+      "reduced_formula": "Li2ZrCl6",
+      "source_doi": "10.1021/acsami.3c03513",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3YCl6",
+      "reduced_formula": "Li3YCl6",
+      "source_doi": "10.1021/acsenergylett.4c00317",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.1002/advs.202521791",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li6PS5Cl",
+      "reduced_formula": "Li6PS5Cl",
+      "source_doi": "10.1021/acs.langmuir.5c06765",
+      "family": "argyrodite",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1007/s11666-026-02240-3",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1021/acs.chemmater.8b00649",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "PAFP",
+      "reduced_formula": "AP2F",
+      "source_doi": "10.1002/advs.202400466",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO/LiFSI",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsnano.3c03901",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "PEO/LiTFSI",
+      "reduced_formula": null,
+      "source_doi": "10.1021/acsnano.3c03901",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "1.4Li2O-0.75ZrCl4-0.25AlCl3",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-025-68210-5",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "C4N2H12ZnBr4",
+      "reduced_formula": "ZnH12C4(Br2N)2",
+      "source_doi": "10.1038/s41467-026-68394-4",
+      "family": "unknown",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3YBr6",
+      "reduced_formula": "Li3YBr6",
+      "source_doi": "10.1149/1945-7111/acfdd1",
+      "family": "halide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li3xZrCl4Nx",
+      "reduced_formula": null,
+      "source_doi": "10.1038/s41467-026-71879-x",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.1021/acsenergylett.8b00249",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li7La3Zr2O12-8wt.%Li3BO3",
+      "reduced_formula": null,
+      "source_doi": "10.4191/kcers.2016.53.6.712",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li0.375Sr0.4375Ta0.75Zr0.25O3",
+      "reduced_formula": "Sr0.4375Li0.375Zr0.25Ta0.75O3",
+      "source_doi": "10.48550/arxiv.2204.00091",
+      "family": "oxide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li1.3Al0.3Ti1.7(PO4)3-4wt%Li0.348La0.55TiO3",
+      "reduced_formula": null,
+      "source_doi": "10.5796/electrochemistry.84.967",
+      "family": "perovskite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.50In0.56Nb0.06Zr0.38Cl6",
+      "reduced_formula": "Li2.5Zr0.38Nb0.06In0.56Cl6",
+      "source_doi": "10.5796/electrochemistry.24-00088",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.51In0.63Nb0.12Zr0.25Cl6",
+      "reduced_formula": "Li2.51Zr0.25Nb0.12In0.63Cl6",
+      "source_doi": "10.5796/electrochemistry.24-00088",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li2.56In0.75Nb0.19Zr0.06Cl6",
+      "reduced_formula": "Li2.56Zr0.06Nb0.19In0.75Cl6",
+      "source_doi": "10.5796/electrochemistry.24-00088",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li3InCl6",
+      "reduced_formula": "Li3InCl6",
+      "source_doi": "10.1038/s41467-025-56932-5",
+      "family": "halide",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 2,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "Li4.8InCl7.8",
+      "reduced_formula": "Li4.8In1Cl7.8",
+      "source_doi": "10.1038/s41467-025-56932-5",
+      "family": "halide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li6.5P0.5Ge0.5S5I",
+      "reduced_formula": "Li6.5Ge0.5P0.5S5I1",
+      "source_doi": "10.1021/acs.nanolett.0c01028",
+      "family": "argyrodite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La2.75Ca0.25Zr1.75Nb0.25O12",
+      "reduced_formula": "Li7Ca0.25La2.75Zr1.75Nb0.25O12",
+      "source_doi": "10.1126/sciadv.1601659",
+      "family": "garnet",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Li7La3Zr2O12",
+      "reduced_formula": "Li7La3Zr2O12",
+      "source_doi": "10.4191/kcers.2016.53.6.712",
+      "family": "garnet",
+      "structure_attached": true,
+      "n_mp_structures_for_formula": 1,
+      "status": "structure_attached"
+    },
+    {
+      "composition": "LiCB9H10",
+      "reduced_formula": "LiB9H10C",
+      "source_doi": "10.1002/aenm.201502237",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "Na3PS4",
+      "reduced_formula": "Na3PS4",
+      "source_doi": "10.1021/jacs.0c06668",
+      "family": "sulfide",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    },
+    {
+      "composition": "NaCB9H10",
+      "reduced_formula": "NaB9H10C",
+      "source_doi": "10.1002/aenm.201502237",
+      "family": "polymer_composite",
+      "structure_attached": false,
+      "n_mp_structures_for_formula": 0,
+      "status": "no_structure_match"
+    }
+  ],
+  "interpretation": "Structure borrowing is systematic and documented here: labeled rows carry an MP DFT structure of the same composition, not the paper's own structure. Labels with no MP structure match have no structure at all (honest gap). Labels matching a formula with multiple MP polymorphs are ambiguous about which polymorph was measured \u2014 model cards should caveat this."
+}

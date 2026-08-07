@@ -1,0 +1,55 @@
+{
+  "methodology": "Rejection statistic computed from the human review queue (all_queue_records.json). Rejection rate = rejected / (approved + rejected). Reasons are categorized deterministically from the human review note text.",
+  "funnel": {
+    "submitted": 402,
+    "approved": 215,
+    "rejected": 178,
+    "pending": 9,
+    "decided": 393
+  },
+  "rejection_rate": 0.4529262086513995,
+  "rejection_rate_pct": 45.3,
+  "top_rejection_reasons": [
+    [
+      "duplicate / near-duplicate (incl. DUP_VALUE copy-paste across compositions)",
+      80
+    ],
+    [
+      "hallucination / value not in paper",
+      25
+    ],
+    [
+      "unit error (mS/cm\u2192S/cm or similar 1000\u00d7/100\u00d7 misread)",
+      18
+    ],
+    [
+      "evidence missing / cannot verify",
+      17
+    ],
+    [
+      "composition series out of range / hallucinated variants",
+      13
+    ],
+    [
+      "wrong value / correct value is different",
+      8
+    ],
+    [
+      "composition misattribution",
+      4
+    ],
+    [
+      "other",
+      4
+    ],
+    [
+      "computed/simulated value not a measurement (AIMD/DFT/MD barrier)",
+      3
+    ],
+    [
+      "false positive (regex matched wrong context: vacancy/sampling/activation)",
+      2
+    ]
+  ],
+  "n_rejected_with_note": 177
+}

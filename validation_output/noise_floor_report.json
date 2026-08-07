@@ -1,0 +1,557 @@
+{
+  "methodology": "OBELiX-style reproducibility floor: within each (composition[, conductivity-type]) group with >=2 independent sigma measurements, deviation of every value from its group mean/median in log10(sigma_S_per_cm).",
+  "n_materials": 427,
+  "n_sigma_measurements": 596,
+  "n_repeat_groups": 76,
+  "n_entries_in_repeat_groups": 206,
+  "obeliX_comparison": {
+    "obeliX_repeat_groups": 48,
+    "obeliX_entries": 122,
+    "obeliX_rms_log10": 0.63,
+    "obeliX_mad_log10": 0.41
+  },
+  "our_metrics": {
+    "rms_deviation_from_group_means_log10": 0.35356904736080436,
+    "mad_from_group_medians_log10": 0.15326395994709194
+  },
+  "global_spread": {
+    "log10_sigma_min": -10.0,
+    "log10_sigma_max": -0.619788758288394,
+    "log10_sigma_std": 1.5004205313364243
+  },
+  "interpretation": "A model's test-set MAE in log10(sigma) below the noise-floor MAD is very likely overfit: it cannot be more accurate than the experimental measurement process itself.",
+  "groups": [
+    {
+      "group": "Li7La3Zr2O12::total",
+      "n": 19,
+      "log10_mean": -3.7135424487014155,
+      "log10_median": -3.5228787452803374,
+      "spread_log10": 2.240332155310369
+    },
+    {
+      "group": "Li1.3Ti1.7Al0.3P3O12::total",
+      "n": 10,
+      "log10_mean": -3.979665053351064,
+      "log10_median": -3.721246399047171,
+      "spread_log10": 2.0
+    },
+    {
+      "group": "Li6PS5Cl::total",
+      "n": 10,
+      "log10_mean": -2.9764277229552834,
+      "log10_median": -3.0,
+      "spread_log10": 0.11210151190312745
+    },
+    {
+      "group": "Li3InCl6::total",
+      "n": 8,
+      "log10_mean": -2.6465903387996543,
+      "log10_median": -2.5654310959658013,
+      "spread_log10": 0.6053050461411096
+    },
+    {
+      "group": "Li2ZrCl6::total",
+      "n": 5,
+      "log10_mean": -3.3910286515258052,
+      "log10_median": -3.0915149811213505,
+      "spread_log10": 0.8860566476931631
+    },
+    {
+      "group": "Li6.5La3Zr1.5Ta0.5O12::total",
+      "n": 5,
+      "log10_mean": -3.4570670014274922,
+      "log10_median": -3.3979400086720375,
+      "spread_log10": 0.744727494896694
+    },
+    {
+      "group": "Sr0.4375Li0.375Zr0.25Ta0.75O3::bulk",
+      "n": 4,
+      "log10_mean": -3.1883753548010496,
+      "log10_median": -3.1883753548010496,
+      "spread_log10": 0.535113201697349
+    },
+    {
+      "group": "Li10Ge(PS6)2::total",
+      "n": 3,
+      "log10_mean": -1.9736062513174584,
+      "log10_median": -2.0,
+      "spread_log10": 0.07918124604762489
+    },
+    {
+      "group": "Li2HClO::total",
+      "n": 3,
+      "log10_mean": -6.190341120495706,
+      "log10_median": -5.853871964321762,
+      "spread_log10": 1.0094074685218315
+    },
+    {
+      "group": "Li3ClO::total",
+      "n": 3,
+      "log10_mean": -5.328996645063419,
+      "log10_median": -4.493494967595128,
+      "spread_log10": 2.5065050324048723
+    },
+    {
+      "group": "Li3YCl6::total",
+      "n": 3,
+      "log10_mean": -4.23299000144534,
+      "log10_median": -4.698970004336019,
+      "spread_log10": 1.3979400086720375
+    },
+    {
+      "group": "Mg1B21.47H88.88N1::total",
+      "n": 3,
+      "log10_mean": -3.2767242654596864,
+      "log10_median": -3.1307682802690238,
+      "spread_log10": 0.4378679555719889
+    },
+    {
+      "group": "Na3PS4::bulk",
+      "n": 3,
+      "log10_mean": -4.666666666666667,
+      "log10_median": -5.0,
+      "spread_log10": 1.0
+    },
+    {
+      "group": "PEO-LiTFSI::total",
+      "n": 3,
+      "log10_mean": -5.163151663264462,
+      "log10_median": -5.7447274948966935,
+      "spread_log10": 2.255272505103306
+    },
+    {
+      "group": "0.7Li(CB9H10)-0.3Li(CB11H12)::total",
+      "n": 2,
+      "log10_mean": -2.1739251972991736,
+      "log10_median": -2.1739251972991736,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "80(3LiBH4LiCl)20P2S5::total",
+      "n": 2,
+      "log10_mean": -5.0,
+      "log10_median": -5.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Ca-CeO2/LiTFSI/PEO::total",
+      "n": 2,
+      "log10_mean": -3.886056647693163,
+      "log10_median": -3.886056647693163,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Cs1In0.067Sn0.9Cl3::total",
+      "n": 2,
+      "log10_mean": -3.47851546330341,
+      "log10_median": -3.47851546330341,
+      "spread_log10": 0.032669116753368144
+    },
+    {
+      "group": "H4C2O::total",
+      "n": 2,
+      "log10_mean": -4.094380113623355,
+      "log10_median": -4.094380113623355,
+      "spread_log10": 1.276896315947262
+    },
+    {
+      "group": "Li(BH4)1-xIx::total",
+      "n": 2,
+      "log10_mean": -4.309803919971486,
+      "log10_median": -4.309803919971486,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li0.29La0.57Ti1O3::total",
+      "n": 2,
+      "log10_mean": -3.677780705266081,
+      "log10_median": -3.677780705266081,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li0.35La0.55Ti1O3::total",
+      "n": 2,
+      "log10_mean": -4.804100347590766,
+      "log10_median": -4.804100347590766,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li0.35La0.55TiO3-2wt%LiF::total",
+      "n": 2,
+      "log10_mean": -3.9913998282380825,
+      "log10_median": -3.9913998282380825,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li0.35La0.55TiO3-4wt%LiF::total",
+      "n": 2,
+      "log10_mean": -4.609064892896621,
+      "log10_median": -4.609064892896621,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li0.35La0.55TiO3-6wt%LiF::total",
+      "n": 2,
+      "log10_mean": -4.647817481888637,
+      "log10_median": -4.647817481888637,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF::total",
+      "n": 2,
+      "log10_mean": -4.769551078621726,
+      "log10_median": -4.769551078621726,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Al0.3Ti1.7(PO4)3-4wt%Li0.348La0.55TiO3::total",
+      "n": 2,
+      "log10_mean": -3.1191864077192086,
+      "log10_median": -3.1191864077192086,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP::total",
+      "n": 2,
+      "log10_mean": -4.0,
+      "log10_median": -4.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Y0.01Ti1.7Al0.29P3O12::total",
+      "n": 2,
+      "log10_mean": -5.075720713938118,
+      "log10_median": -5.075720713938118,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Y0.05Ti1.7Al0.25P3O12::total",
+      "n": 2,
+      "log10_mean": -4.920818753952375,
+      "log10_median": -4.920818753952375,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li1.3Y0.1Ti1.7Al0.2P3O12::total",
+      "n": 2,
+      "log10_mean": -3.847754736113256,
+      "log10_median": -3.847754736113256,
+      "spread_log10": 1.5440680443502752
+    },
+    {
+      "group": "Li2.51Zr0.25Nb0.12In0.63Cl6::total",
+      "n": 2,
+      "log10_mean": -3.193820026016113,
+      "log10_median": -3.193820026016113,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li2.56Zr0.06Nb0.19In0.75Cl6::total",
+      "n": 2,
+      "log10_mean": -3.2441251443275085,
+      "log10_median": -3.2441251443275085,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li2.5Zr0.38Nb0.06In0.56Cl6::total",
+      "n": 2,
+      "log10_mean": -3.275724130399211,
+      "log10_median": -3.275724130399211,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li2O-TaCl5::total",
+      "n": 2,
+      "log10_mean": -2.0809219076239263,
+      "log10_median": -2.0809219076239263,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li2SO4-ZrCl4::total",
+      "n": 2,
+      "log10_mean": -2.8239087409443187,
+      "log10_median": -2.8239087409443187,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li2Zr1Cl5.5F0.5::total",
+      "n": 2,
+      "log10_mean": -3.958607314841775,
+      "log10_median": -3.958607314841775,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li3InCl6::bulk",
+      "n": 2,
+      "log10_mean": -3.2006594505464183,
+      "log10_median": -3.2006594505464183,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li3YBr6::bulk",
+      "n": 2,
+      "log10_mean": -3.6989700043360187,
+      "log10_median": -3.6989700043360187,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li3xZrCl4Nx::bulk",
+      "n": 2,
+      "log10_mean": -2.4934949675951277,
+      "log10_median": -2.4934949675951277,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li4-xGe1-xPxO4::total",
+      "n": 2,
+      "log10_mean": -5.0,
+      "log10_median": -5.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li4.8In1Cl7.8::bulk",
+      "n": 2,
+      "log10_mean": -4.221848749616356,
+      "log10_median": -4.221848749616356,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li5.4Al0.1P1S4.7Cl1.3::total",
+      "n": 2,
+      "log10_mean": -2.1372724716820253,
+      "log10_median": -2.1372724716820253,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li5.5P1S4.5Cl1.5::total",
+      "n": 2,
+      "log10_mean": -2.2967086218813386,
+      "log10_median": -2.2967086218813386,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.25Al0.25La3Zr2O12-in-PEGDA::total",
+      "n": 2,
+      "log10_mean": -3.2924298239020637,
+      "log10_median": -3.2924298239020637,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.4La3Ce0.1Zr1.9Ga0.2O12::total",
+      "n": 2,
+      "log10_mean": -3.3979400086720375,
+      "log10_median": -3.3979400086720375,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.4La3Zr2Ga0.2O12::total",
+      "n": 2,
+      "log10_mean": -3.9829666607012197,
+      "log10_median": -3.9829666607012197,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.5Ge0.5P0.5S5I1::bulk",
+      "n": 2,
+      "log10_mean": -3.2676062401770314,
+      "log10_median": -3.2676062401770314,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12::total",
+      "n": 2,
+      "log10_mean": -3.078833949362261,
+      "log10_median": -3.078833949362261,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.5La3Zr1.9Fe0.2Bi0.1O12::total",
+      "n": 2,
+      "log10_mean": -3.1209041204999273,
+      "log10_median": -3.1209041204999273,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.6La3Zr1.6Nb0.4O12::total",
+      "n": 2,
+      "log10_mean": -3.2932822176632413,
+      "log10_median": -3.2932822176632413,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12::total",
+      "n": 2,
+      "log10_mean": -3.17979854051436,
+      "log10_median": -3.17979854051436,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6P1S5Br0.5Cl0.5::unknown",
+      "n": 2,
+      "log10_mean": -2.159379381312206,
+      "log10_median": -2.159379381312206,
+      "spread_log10": 0.4771212547196624
+    },
+    {
+      "group": "Li6P1S5I0.5Cl0.5::unknown",
+      "n": 2,
+      "log10_mean": -3.0,
+      "log10_median": -3.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6PS4Cl0.75-OF0.25::total",
+      "n": 2,
+      "log10_mean": -5.607303046740334,
+      "log10_median": -5.607303046740334,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li6PS5Cl/TEGDMA::total",
+      "n": 2,
+      "log10_mean": -3.7190618910504916,
+      "log10_median": -3.7190618910504916,
+      "spread_log10": 0.12690832947120434
+    },
+    {
+      "group": "Li6PS5I::total",
+      "n": 2,
+      "log10_mean": -6.0,
+      "log10_median": -6.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li7La3Zr2O12-8wt.%Li3BO3::total",
+      "n": 2,
+      "log10_mean": -4.79317412396815,
+      "log10_median": -4.79317412396815,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6::total",
+      "n": 2,
+      "log10_mean": -1.494850021680094,
+      "log10_median": -1.494850021680094,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li9.54Si1.74P1.44S11.7Cl0.3::total",
+      "n": 2,
+      "log10_mean": -1.6020599913279623,
+      "log10_median": -1.6020599913279623,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Li9.54Si1.74P1.44S11.7Cl0.3::unknown",
+      "n": 2,
+      "log10_mean": -1.6020599913279623,
+      "log10_median": -1.6020599913279623,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "LiB9H10C::bulk",
+      "n": 2,
+      "log10_mean": -1.5228787452803376,
+      "log10_median": -1.5228787452803376,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "LiBH4-LiI/Al2O3::total",
+      "n": 2,
+      "log10_mean": -4.0,
+      "log10_median": -4.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "LiBH4-MgO::total",
+      "n": 2,
+      "log10_mean": -3.543633966870957,
+      "log10_median": -3.543633966870957,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "LiDFOB-TXE-FDMA-FEC::total",
+      "n": 2,
+      "log10_mean": -3.657577319177794,
+      "log10_median": -3.657577319177794,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Na2.9H1Se0.9I0.1::total",
+      "n": 2,
+      "log10_mean": -4.0,
+      "log10_median": -4.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Na3HSe::total",
+      "n": 2,
+      "log10_mean": -4.0,
+      "log10_median": -4.0,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Na3HfScSi(PO6)2::total",
+      "n": 2,
+      "log10_mean": -3.9208187539523753,
+      "log10_median": -3.9208187539523753,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "NaB9H10C::bulk",
+      "n": 2,
+      "log10_mean": -1.5228787452803376,
+      "log10_median": -1.5228787452803376,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "PEO-LiTFSI-LLZTO-SN-ETPTA::total",
+      "n": 2,
+      "log10_mean": -3.6736641390712483,
+      "log10_median": -3.6736641390712483,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "PVDF-HFP::total",
+      "n": 2,
+      "log10_mean": -4.376750709602099,
+      "log10_median": -4.376750709602099,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "PVDF-HFP-LLZTO(10wt%)::total",
+      "n": 2,
+      "log10_mean": -3.4685210829577446,
+      "log10_median": -3.4685210829577446,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Sr0.3Li0.4Zr0.5Ti1.5P3O12::total",
+      "n": 2,
+      "log10_mean": -5.015472686656207,
+      "log10_median": -5.015472686656207,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "Sr0.3Li0.4Zr2P3O12::total",
+      "n": 2,
+      "log10_mean": -4.494850021680094,
+      "log10_median": -4.494850021680094,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "UiO-66/PEO::total",
+      "n": 2,
+      "log10_mean": -4.522878745280337,
+      "log10_median": -4.522878745280337,
+      "spread_log10": 0.0
+    },
+    {
+      "group": "ZnH12C4(Br2N)2::bulk",
+      "n": 2,
+      "log10_mean": -3.537602002101044,
+      "log10_median": -3.537602002101044,
+      "spread_log10": 0.0
+    }
+  ]
+}
