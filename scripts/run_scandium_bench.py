@@ -192,6 +192,7 @@ def render(args, results: dict, tasks, manifests: dict) -> None:
                 "best_model": best, "best_metrics": best_m,
                 "evaluation": res.get("evaluation"),
                 "error": res.get("error"),
+                "models": res.get("models"),  # full per-model metrics per regime
             }
         report["tasks"].append(tr)
     report["split_manifests"] = manifests
@@ -199,6 +200,9 @@ def render(args, results: dict, tasks, manifests: dict) -> None:
         json.dumps(report, indent=2))
     (args.out / "scandium_bench_report.md").write_text(render_md(report))
     print(f"ScandiumBench leaderboard -> {args.out / 'scandium_bench_report.md'}")
+
+
+MODEL_LABELS = ("dummy", "ridge", "rf", "mlp", "logistic")
 
 
 def _fmt_metric(best_m: dict, metric: str) -> str:
@@ -217,29 +221,47 @@ def render_md(report: dict) -> str:
         f"Generated {report.get('generated_at')} · "
         f"{len(report.get('tasks', []))} tasks × "
         f"{len(report.get('regimes', []))} split regimes · deterministic "
-        "sklearn baselines (dummy / linear / random forest).",
+        "sklearn baselines (dummy / linear / random forest / MLP).",
         "",
         "Split regimes: **random** (Phase-6 leakage-checked, reused), "
         "**family_ood** (test chemistries never seen in train), "
         "**composition_ood** (no composition in both train and test), "
-        "**crystal_system_ood** (test crystal systems unseen in train).",
+        "**crystal_system_ood** (test crystal systems unseen in train), "
+        "**paper_ood** (no paper or composition shared across train/test).",
+        "",
+        "Per-task tables list every baseline model's primary metric per regime; "
+        "the bolded cell is the regime's best model.",
         "",
     ]
     for t in report.get("tasks", []):
         metric = t["metric"]
         lines.append(f"### {t['name']} (`{t['task']}`, metric={metric})")
         lines.append("")
-        lines.append("| Regime | n_train | n_test | Best model | Value | Eval |")
-        lines.append("|---|---|---:|---|---|---|")
+        lines.append("| Regime | n_train | n_test | Best | " + " | ".join(
+            f"{m}" for m in MODEL_LABELS) + " | Eval |")
+        ncols = 4 + len(MODEL_LABELS) + 1
+        lines.append("|" + "|".join(["---:"] * ncols) + "|")
         for r, d in t["per_regime"].items():
             if "error" in d and d["error"]:
-                lines.append(f"| {r} | — | — | error | — | {d['error']} |")
+                cells = [f"{r}", "—", "—", "error"] + ["—"] * len(MODEL_LABELS)
+                cells.append(d["error"])
+                lines.append("| " + " | ".join(cells) + " |")
                 continue
+            best = d.get("best_model") or "none"
+            vals = []
+            models = d.get("models") or {}
+            for m in MODEL_LABELS:
+                mm = models.get(m) or {}
+                v = mm.get(metric)
+                if v is None:
+                    vals.append("—")
+                elif m == best:
+                    vals.append(f"**{_fmt_metric(mm, metric)}**")
+                else:
+                    vals.append(_fmt_metric(mm, metric))
             lines.append(
                 f"| {r} | {d.get('n_train') or '—'} | {d.get('n_test') or '—'} "
-                f"| {d.get('best_model') or '—'} | "
-                f"{_fmt_metric(d.get('best_metrics') or {}, metric)} | "
-                f"{d.get('evaluation') or '—'} |")
+                f"| {best} | " + " | ".join(vals) + f" | {d.get('evaluation') or '—'} |")
         lines.append("")
     return "\n".join(lines) + "\n"
 

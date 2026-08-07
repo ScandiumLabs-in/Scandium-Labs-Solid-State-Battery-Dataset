@@ -47,7 +47,7 @@ def _synthetic_frame(n: int = 200) -> pd.DataFrame:
 
 def test_regimes_exist():
     assert set(REGIMES) == {"random", "family_ood", "composition_ood",
-                            "crystal_system_ood"}
+                            "crystal_system_ood", "paper_ood"}
 
 
 def test_family_ood_holdout_nonempty_and_defined():
@@ -103,6 +103,57 @@ def test_crystal_system_ood_no_group_straddle():
     df["_s"] = df["identity.material_id"].astype(str).map(smap)
     g = df.groupby("structure.crystal_system")["_s"].nunique()
     assert int((g[g == 2]).sum()) == 0
+
+
+def _paper_aware_frame():
+    """Synthetic frame with paper+composition columns for paper_ood tests."""
+    df = _synthetic_frame()
+    df["text_provenance.source_doi"] = [f"doi{i % 5}" for i in range(len(df))]
+    return df
+
+
+def test_paper_ood_no_paper_or_composition_straddle():
+    from ssb_dataset.benchmarks.splits import paper_ood_split_map
+    df = _paper_aware_frame()
+    smap = paper_ood_split_map(df)
+    df["_s"] = df["identity.material_id"].astype(str).map(smap)
+    # no source DOI appears in both train and test
+    g = df.groupby("text_provenance.source_doi")["_s"].nunique()
+    assert int((g[g == 2]).sum()) == 0
+    # no reduced formula appears in both train and test
+    g2 = df.groupby("identity.reduced_formula")["_s"].nunique()
+    assert int((g2[g2 == 2]).sum()) == 0
+
+
+def test_paper_ood_doping_series_stays_together():
+    # One paper reporting N variants of one composition must not straddle —
+    # the union-find grouping treats same-paper rows as one component.
+    import pandas as pd
+    from ssb_dataset.benchmarks.splits import paper_ood_split_map
+    df = pd.DataFrame({
+        "identity.material_id": [f"LATP{i}" for i in range(4)] + ["Li2O"],
+        "text_provenance.source_doi": ["doiA"] * 4 + [None],
+        "identity.reduced_formula": [f"LATP{i}" for i in range(4)] + ["Li2O"],
+        "identity.family": ["nasicon"] * 4 + ["oxide"],
+        "structure.crystal_system": ["hexagonal"] * 5,
+        "thermodynamics.is_stable": [True] * 5,
+        "thermodynamics.is_metal": [False] * 5,
+    })
+    smap = paper_ood_split_map(df)
+    series_splits = {smap[f"LATP{i}"] for i in range(4)}
+    assert len(series_splits) == 1
+    assert smap["Li2O"] in {"train", "val", "test"}
+
+
+def test_paper_ood_empty_frame_returns_empty():
+    import pandas as pd
+    from ssb_dataset.benchmarks.splits import paper_ood_split_map
+    df = pd.DataFrame({
+        "identity.material_id": pd.Series(dtype=str),
+        "text_provenance.source_doi": pd.Series(dtype=str),
+        "identity.reduced_formula": pd.Series(dtype=str),
+    })
+    assert paper_ood_split_map(df) == {}
 
 
 def test_family_ood_holdout_families_all_test():
@@ -177,6 +228,23 @@ def test_grouped_cv_routing_when_split_test_degenerate():
     t = get_task("negative_result_classification")
     res = run_task(t, df, smap)
     assert res["n_train"] > 0 and res["n_test"] > 0
+
+
+def test_mlp_baseline_present_in_split_and_cv():
+    # Guide §5 action 2 requires RF + MLP as the published baselines; MLP must
+    # appear on both the split-test path and the grouped-CV path.
+    from ssb_dataset.benchmarks.evaluate import run_task
+    df = _synthetic_frame()
+    smap = {f"m{i}": ("train" if i % 2 == 0 else "test")
+            for i in range(len(df))}
+    t = get_task("stability_classification")
+    res = run_task(t, df, smap)
+    assert res["evaluation"].startswith("split_test")
+    assert "mlp" in res["models"] and "macro_f1" in res["models"]["mlp"]
+    t2 = get_task("conductive_candidate_ranking")
+    res2 = run_task(t2, df, smap, prefer_grouped_cv=True)
+    assert res2["evaluation"].startswith("grouped_cv")
+    assert "mlp" in res2["models"] and "ndcg10" in res2["models"]["mlp"]
 
 
 # ---------------------------------------------------------------------------

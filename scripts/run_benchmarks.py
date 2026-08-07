@@ -4,7 +4,7 @@
 Loads the canonical dataset + featurized descriptors, reuses the
 leakage-checked train/val/test split assignment from Phase 6, and evaluates
 every benchmark task in `ssb_dataset.benchmarks.tasks` with deterministic
-sklearn baselines (dummy + linear + random forest).
+sklearn baselines (dummy + linear + random forest + MLP).
 
 Output:
   benchmark_output/tasks/<task_id>.json    per-task metrics + features
@@ -239,8 +239,8 @@ def render_md(report: dict) -> str:
         "",
         f"Generated {report.get('generated_at')} · "
         f"{report.get('frame_rows')} canonical rows · deterministic sklearn "
-        "baselines (dummy / linear / random forest) on the leakage-checked "
-        "test split"
+        "baselines (dummy / linear / random forest / MLP) on the leakage-"
+        "checked test split"
         + (" **+ dataset_ml GCN baseline (v1.3.0)**." if has_gnn else "."),
         "",
         "| Task | Type | n_train | n_test | Best model | Primary metric | Value |",

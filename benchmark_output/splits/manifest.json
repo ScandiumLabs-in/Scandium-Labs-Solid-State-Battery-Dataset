@@ -46,5 +46,14 @@
       "val": 1861,
       "test": 16147
     }
+  },
+  "paper_ood": {
+    "regime": "paper_ood",
+    "description": "OBELiX-style leakage-free split: entries grouped by (paper of origin, composition); any two entries sharing either must land in the same split. Bulk DFT rows (no paper) fall back to composition-only grouping.",
+    "split_sizes": {
+      "train": 21731,
+      "val": 2853,
+      "test": 6254
+    }
   }
 }

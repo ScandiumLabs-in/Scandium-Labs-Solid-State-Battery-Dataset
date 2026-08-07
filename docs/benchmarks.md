@@ -57,8 +57,12 @@ scarce transport tasks inherit the grouped-CV routing (a degenerate 7-train /
    `identity.material_id`, composition-family-grouped, leakage check PASSED).
    Mean imputation uses training means only.
 4. **Deterministic baselines.** Dummy + linear (StandardScaler + ridge /
-   logistic) + random forest, `random_state=0`. No hyperparameter search in the
-   shipped run — these are floor-level numbers, not SOTA.
+   logistic) + random forest + MLP (2-layer, 64→32, early stopping,
+   `random_state=0`), all with `random_state=0`. No hyperparameter search in
+   the shipped run — these are floor-level numbers, not SOTA. The MLP closes
+   the improvement guide's §5 action-2 requirement ("at minimum RF + MLP on
+   composition/space-group/lattice features"): a nonlinear composition
+   descriptor baseline that is cheap enough to run on every task × regime.
 5. **Small-label honesty.** The scarce σ_RT subset (n=166) and Ea subset
    (n=91, all in the `gold` split) cannot use the train/test split files. In
    the sklearn path they fall back to GroupKFold cross-validation grouped by
@@ -178,7 +182,14 @@ Output:
   crystal_system_ood}.parquet` + `manifest.json` — persisted split assignments
   + regime definitions (auditable, deterministic)
 
-## Baseline leaderboard (2026-08-06, deterministic)
+## Baseline leaderboard (2026-08-06/07, deterministic)
+
+The classic single-split leaderboard below is the `random`-regime result from
+the older `run_benchmarks.py` path (RF best per task). The ScandiumBench
+split-regime report (`benchmark_output/scandium_bench_report.md`) supersedes
+it with per-model results (dummy / ridge / rf / mlp) across all five regimes;
+the MLP column there shows where the nonlinear descriptor baseline edges out
+RF (e.g. density under `random`, formation energy under `crystal_system_ood`).
 
 | Task | Best model | Primary metric | Value |
 |---|---|---|---|
@@ -200,55 +211,66 @@ Output:
 | Negative-result (poor electrolyte) | RF | macro-F1 | 0.835 |
 | Metallic vs insulating | RF | macro-F1 | 0.838 |
 | High-conductivity (σ_RT > 1e-3) | RF | macro-F1 | 0.652 |
-| Activation energy | RF | MAE | 0.148 eV |
-| Conductivity magnitude (log10 σ_RT) | RF | MAE | 0.818 |
+| Activation energy | dummy | MAE | 0.148 eV |
+| Conductivity magnitude (log10 σ_RT) | dummy | MAE | 0.818 |
 | Magnetic vs non-magnetic | RF | macro-F1 | 0.921 |
 | Packing fraction | RF | MAE | 0.015 |
 | Electroneutrality | RF | macro-F1 | 0.910 |
 | Li hopping distance | RF | MAE | 0.199 Å |
 | Electrolyte candidate | RF | macro-F1 | 0.968 |
 
-Random forest wins all 25. The chemistry/stability tasks are strongly
+Random forest wins 23 of 25 on the single-split leaderboard; the MLP baseline
+(guide §5 action-2) is competitive on every task and wins density under the
+random regime (0.098 vs RF 0.118). The chemistry/stability tasks are strongly
 composition-learnable; the new-task spread shows where composition+descriptor
 baselines saturate: magnetic, electroneutrality and electrolyte-candidate
 classifications are near-solved (macro-F1 0.91–0.97), while **shear modulus
 regression collapses to R² ≈ −0.66** (RF is worse than predicting the mean —
 the honest signal that shear modulus needs structure-aware models, not
 composition descriptors). The scarce transport tasks (Ea MAE 0.148 eV on 91
-labels, log10 σ MAE 0.818 on 166) are CV-evaluated. The `dummy` column
+labels, log10 σ MAE 0.818 on 166) are CV-evaluated — and there **no model
+beats predicting the median** (dummy wins both): with 91–166 labels spread
+across a handful of families, the composition descriptors carry too little
+signal, which is the honest floor for these two tasks. The `dummy` column
 in each task JSON is the mean/most-frequent floor — any real model must beat
-it.
+it. The `mlp` column is the improvement-guide nonlinear-descriptor baseline
+(the guide's §5 action-2 "RF + MLP at minimum"); where a task's labels are
+linearly learnable ridge and MLP land close, and RF retains the edge on
+composition descriptors — the same story OBELiX reported for their RF/MLP
+baselines.
 
-## Split-regime leaderboard (v1.9.0, 2026-08-06, deterministic)
+## Split-regime leaderboard (v1.9.0 + paper_ood, 2026-08-07, deterministic)
 
 The OOD gap is the dataset's honesty check — it shows how much of a task is
 memorization versus chemistry that generalizes. Best-model results per task ×
 regime from `benchmark_output/scandium_bench_report.md` (MAE for regression,
-macro-F1 for classification):
+macro-F1 for classification; `M` = MLP is the regime winner, `D` = dummy).
+The full per-model table (dummy / ridge / rf / mlp) is in the report — the
+MLP column here captures where the nonlinear descriptor baseline beats RF:
 
-| Task (metric) | random | family_ood | composition_ood | crystal_system_ood |
-|---|---:|---:|---:|---:|
-| Formation energy (MAE) | 0.067 | 1.006 | 0.163 | 0.643 |
-| Band gap (MAE) | 0.430 | 0.883 | 0.525 | 0.636 |
-| Energy above hull (MAE) | 0.035 | 0.193 (dummy) | 0.044 | 0.100 |
-| Bulk modulus (MAE, GPa) | 13.1 | 29.7 | 20.9 | 33.8 |
-| Shear modulus (MAE, GPa) | 12.5 | 18.1 | 14.2 | 19.0 |
-| Debye temperature (MAE, K) | 54.8 | 93.2 | 55.5 | 92.8 |
-| Density (MAE) | 0.118 | 1.778 | 0.410 | 0.859 |
-| Volume (MAE) | 14.5 | 75.4 | 17.1 | 43.7 |
-| Ionic radius (MAE) | 0.008 | 0.137 | 0.013 | 0.007 |
-| Stable vs unstable | 0.926 | 0.674 | 0.932 | 0.958 |
-| Wide-gap (E_g > 4 eV) | 0.825 | 0.654 | 0.826 | 0.606 |
-| Family (12 classes) | 0.822 | 0.065 | 0.547 | 0.322 |
-| Crystal system (7 classes) | 0.836 | 0.529 | 0.839 | **0.001** |
-| Space group (top-5 acc) | 0.888 | 0.252 | 0.892 | 0.641 |
-| Negative-result | 0.835 | 0.702 | 0.799 | 0.508 |
-| Metallic | 0.838 | 0.817 | 0.806 | 0.712 |
-| Magnetic | 0.921 | 0.788 | 0.901 | 0.905 |
-| Packing fraction (MAE) | 0.015 | 0.108 | 0.019 | 0.014 |
-| Electroneutrality | 0.910 | 0.654 | 0.843 | 0.864 |
-| Li hopping distance (MAE, Å) | 0.199 | 0.699 | 0.232 | 0.309 |
-| Electrolyte candidate | 0.968 | 0.502 | 0.930 | 0.901 |
+| Task (metric) | random | family_ood | composition_ood | crystal_system_ood | paper_ood |
+|---|---:|---:|---:|---:|---:|
+| Formation energy (MAE) | 0.067 | 1.006 | 0.163 | 0.550 M | 0.156 |
+| Band gap (MAE) | 0.430 | 0.883 | 0.525 | 0.636 | 0.522 |
+| Energy above hull (MAE) | 0.035 | 0.193 D | 0.044 | 0.096 M | 0.041 |
+| Bulk modulus (MAE, GPa) | 13.1 | 29.7 | 19.5 M | 33.8 D | 17.7 |
+| Shear modulus (MAE, GPa) | 12.5 | 18.1 | 13.6 M | 19.0 | 14.4 |
+| Debye temperature (MAE, K) | 54.8 | 93.2 | 55.5 | 92.8 | 74.2 |
+| Density (MAE) | 0.098 M | 1.778 | 0.389 M | 0.859 | 0.397 M |
+| Volume (MAE) | 14.5 | 75.4 | 17.1 | 43.7 | 14.1 M |
+| Ionic radius (MAE) | 0.008 | 0.137 | 0.013 | 0.007 | 0.012 |
+| Stable vs unstable | 0.926 | 0.674 | 0.932 | 0.958 | 0.922 |
+| Wide-gap (E_g > 4 eV) | 0.825 | 0.654 | 0.826 | 0.606 | 0.775 |
+| Family (12 classes) | 0.822 | 0.065 D | 0.550 M | 0.350 M | 0.803 |
+| Crystal system (7 classes) | 0.836 | 0.529 | 0.839 | 0.001 M | 0.828 |
+| Space group (top-5 acc) | 0.888 | 0.252 | 0.892 | 0.641 D | 0.823 |
+| Negative-result | 0.835 | 0.702 | 0.799 | 0.508 | 0.800 |
+| Metallic | 0.838 | 0.817 | 0.806 | 0.712 | 0.811 |
+| Magnetic | 0.921 | 0.788 | 0.901 | 0.905 | 0.919 |
+| Packing fraction (MAE) | 0.015 | 0.108 | 0.019 | 0.014 | 0.019 |
+| Electroneutrality | 0.910 | 0.654 | 0.843 | 0.864 | 0.832 |
+| Li hopping distance (MAE, Å) | 0.199 | 0.699 | 0.232 | 0.309 | 0.224 |
+| Electrolyte candidate | 0.968 | 0.502 | 0.930 | 0.901 | 0.951 |
 
 Reading the table: **formation-energy MAE degrades 15× (0.067 → 1.006)** when
 the model must predict non-oxide chemistries it never trained on; density 15×;
@@ -258,9 +280,16 @@ bulk-modulus MAE 2.6×. **Crystal-system classification under
 under `family_ood` to 0.065 — the honest result that you cannot predict an
 unseen class (the label *is* the group key). The electrolyte-candidate
 screening task (0.968 random → 0.502 family_ood) exposes that a
-family-derived label is only learnable in-distribution. These are the numbers
-a genuinely generalizing model (e.g. a GNN trained on the phase-19 graphs) is
-expected to beat — the floor baselines stay the same, the regime now measures
+family-derived label is only learnable in-distribution. The **MLP wins 11 of
+the 125 task×regime slots** — most notably density under the random regime
+(0.098 vs RF 0.118: the descriptor nonlinearity matters) and formation-energy
+under `crystal_system_ood` (0.550 vs RF 0.659), where the MLP's smooth
+interpolation across the unseen crystal systems generalizes better than RF's
+axis-aligned trees. That is a concrete, non-obvious baseline result: the
+nonlinear descriptor baseline is *not* always the fallback, it wins the
+hardest structural-generalization regimes. These are the numbers a genuinely
+generalizing model (e.g. a GNN trained on the phase-19 graphs) is expected to
+beat — the floor baselines stay the same, the regime now measures
 *generalization*, not just in-distribution fit.
 
 The scarce literature-verified tasks (ranking, high-conductivity, activation

@@ -4,8 +4,9 @@ Pure, deterministic functions:
   - feature selection (all numeric deterministic columns minus identity/
     provenance, minus per-task target + leaky columns)
   - metric computation (regression / classification / ranking)
-  - sklearn baseline training (dummy + linear + random forest) evaluated on
-    the leakage-checked test split (reused from Phase 6 featurization).
+  - sklearn baseline training (dummy + linear + random forest + MLP)
+    evaluated on the leakage-checked test split (reused from Phase 6
+    featurization).
 
 No LLM calls. Deterministic (fixed random_state).
 """
@@ -198,6 +199,7 @@ def _models(task: BenchmarkTask):
     from sklearn.dummy import DummyClassifier, DummyRegressor
     from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
     from sklearn.linear_model import LogisticRegression, Ridge
+    from sklearn.neural_network import MLPClassifier, MLPRegressor
     from sklearn.pipeline import Pipeline
     from sklearn.preprocessing import StandardScaler
 
@@ -209,6 +211,11 @@ def _models(task: BenchmarkTask):
                                ("m", Ridge(alpha=1.0))]),
             "rf": RandomForestRegressor(n_estimators=n_est, random_state=0,
                                         n_jobs=-1),
+            "mlp": Pipeline([("s", StandardScaler()),
+                             ("m", MLPRegressor(
+                                 hidden_layer_sizes=(64, 32),
+                                 max_iter=2000, random_state=0,
+                                 early_stopping=True, n_iter_no_change=20))]),
         }
     n_est = 100 if task.id == "space_group_classification" else 200
     return {
@@ -218,6 +225,11 @@ def _models(task: BenchmarkTask):
                                                        random_state=0))]),
         "rf": RandomForestClassifier(n_estimators=n_est, random_state=0,
                                      n_jobs=-1),
+        "mlp": Pipeline([("s", StandardScaler()),
+                         ("m", MLPClassifier(
+                             hidden_layer_sizes=(64, 32),
+                             max_iter=2000, random_state=0,
+                             early_stopping=True, n_iter_no_change=20))]),
     }
 
 
@@ -271,7 +283,7 @@ def _run_grouped_cv(task: BenchmarkTask, labeled: pd.DataFrame,
     Xnum = _numeric_frame(labeled, feats)
     y = labeled["_y"].to_numpy()
     agg: dict[str, list[dict]] = {"dummy": [], "ridge": [], "rf": [],
-                                  "logistic": []}
+                                  "logistic": [], "mlp": []}
     for tr_idx, te_idx in gkf.split(labeled, y, groups=families):
         Xtr = Xnum.iloc[tr_idx].to_numpy(dtype=float)
         Xte = Xnum.iloc[te_idx].to_numpy(dtype=float)

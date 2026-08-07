@@ -1,8 +1,8 @@
-"""ScandiumBench v1.0 — deterministic split regimes.
+"""ScandiumBench — deterministic split regimes.
 
 A research-grade benchmark needs reproducible, chemically-meaningful splits —
 not just one random split. This module produces per-material split assignments
-for four regimes, all deterministic (no RNG state, no network):
+for five regimes, all deterministic (no RNG state, no network):
 
   random            existing Phase-6 leakage-checked train/val/test split
                     (reused unchanged so results stay comparable to prior
@@ -18,6 +18,14 @@ for four regimes, all deterministic (no RNG state, no network):
                     to compositions never seen during training.
   crystal_system_ood  whole crystal systems are assigned to one split, so the
                     model never trains on a test-time crystal system.
+  paper_ood         OBELiX-style leakage-free split: entries are grouped by
+                    (paper of origin, composition), so any two entries sharing
+                    a source paper OR a composition must land in the same
+                    split. This is the field's current best practice for
+                    experimental labels — without it, near-identical
+                    measurements reported in one paper can straddle train and
+                    test and inflate benchmark numbers. Bulk DFT rows (no
+                    paper) fall back to composition-only grouping.
 
 Group assignment uses a stable hash of the group key, so a split never changes
 run-to-run and no group straddles the train/test boundary.
@@ -37,7 +45,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 OUT = ROOT / "benchmark_output" / "splits"
 
-REGIMES = ("random", "family_ood", "composition_ood", "crystal_system_ood")
+REGIMES = ("random", "family_ood", "composition_ood",
+           "crystal_system_ood", "paper_ood")
 
 # Family OOD hold-out: the non-oxide electrolyte chemistries. Training set is
 # then oxides + unknown (Li intermetallics/nitrides); test is the families the
@@ -150,6 +159,76 @@ def crystal_system_ood_split_map(df: pd.DataFrame) -> dict[str, str]:
     return _grouped_split_map(df, "structure.crystal_system")
 
 
+def paper_ood_split_map(df: pd.DataFrame) -> dict[str, str]:
+    """Leakage-free split grouped by (paper of origin OR composition).
+
+    OBELiX's rule, verbatim: any two entries sharing a paper *or* a
+    composition must land in the same split. That is a union constraint, so we
+    build connected components (union-find) over two edge types — same source
+    DOI, and same reduced formula — and assign each whole component to one
+    split. A paper reporting a doping series (N LATP variants from one study)
+    forms one component and can never straddle train/test.
+
+    Bulk DFT rows have no paper (source_doi null); their components are
+    single compositions, so the regime degrades cleanly to composition-only
+    grouping on the full corpus.
+    """
+    df = df.reset_index(drop=True)
+    n = len(df)
+    if n == 0:
+        return {}
+    parent = list(range(n))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(a: int, b: int) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[rb] = ra
+
+    def _vals(col: str) -> pd.Series:
+        if col not in df.columns:
+            return pd.Series([""] * n, index=df.index)
+        s = df[col].fillna("").astype(str)
+        return s
+
+    paper = _vals("text_provenance.source_doi")
+    formula = _vals("identity.reduced_formula")
+
+    # edges: same paper (only for non-empty DOIs) and same composition
+    paper_groups: dict[str, list[int]] = {}
+    formula_groups: dict[str, list[int]] = {}
+    for i in range(n):
+        p = paper.iloc[i]
+        f = formula.iloc[i]
+        if p:
+            paper_groups.setdefault(p, []).append(i)
+        formula_groups.setdefault(f, []).append(i)
+    for group in paper_groups.values():
+        for i in range(1, len(group)):
+            union(group[0], group[i])
+    for group in formula_groups.values():
+        for i in range(1, len(group)):
+            union(group[0], group[i])
+
+    # assign whole components by stable hash of the component's min row
+    out: dict[str, str] = {}
+    comp_key: dict[int, str] = {}
+    for i in range(n):
+        root = find(i)
+        if root not in comp_key:
+            # representative key: paper first, else formula (deterministic)
+            p, f = paper.iloc[root], formula.iloc[root]
+            comp_key[root] = (p + "::" + f) if p else ("::" + f)
+        mid = str(df["identity.material_id"].iloc[i])
+        out[mid] = _group_bucket(comp_key[root])
+    return out
+
+
 def build_split_map(regime: str, df: pd.DataFrame) -> dict[str, str]:
     if regime == "random":
         return random_split_map()
@@ -159,6 +238,8 @@ def build_split_map(regime: str, df: pd.DataFrame) -> dict[str, str]:
         return composition_ood_split_map(df)
     if regime == "crystal_system_ood":
         return crystal_system_ood_split_map(df)
+    if regime == "paper_ood":
+        return paper_ood_split_map(df)
     raise ValueError(f"unknown regime: {regime}")
 
 
@@ -225,4 +306,8 @@ REGIME_DESCRIPTIONS = {
     "crystal_system_ood": ("Held-out-crystal-system split: whole crystal "
                            "systems assigned to one split by stable group "
                            "hash."),
+    "paper_ood": ("OBELiX-style leakage-free split: entries grouped by "
+                  "(paper of origin, composition); any two entries sharing "
+                  "either must land in the same split. Bulk DFT rows (no "
+                  "paper) fall back to composition-only grouping."),
 }

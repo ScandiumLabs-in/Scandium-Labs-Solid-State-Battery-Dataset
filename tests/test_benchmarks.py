@@ -294,7 +294,7 @@ def test_run_task_regression_synthetic():
     t = get_task("band_gap_regression")
     res = run_task(t, df, split_map)
     assert res["n_train"] == 40 and res["n_test"] == 40
-    assert set(res["models"]) >= {"dummy", "ridge", "rf"}
+    assert set(res["models"]) >= {"dummy", "ridge", "rf", "mlp"}
     for m in res["models"].values():
         assert "mae" in m and "r2" in m
     # the real models should at least match or beat the dummy
@@ -388,7 +388,7 @@ def test_run_task_object_boolean_classification():
         res = run_task(t, df, split_map)
         assert "error" not in res
         assert res["n_test"] > 0
-        assert set(res["models"]) >= {"dummy", "logistic", "rf"}
+        assert set(res["models"]) >= {"dummy", "logistic", "rf", "mlp"}
         assert "macro_f1" in res["models"]["rf"]
 
 

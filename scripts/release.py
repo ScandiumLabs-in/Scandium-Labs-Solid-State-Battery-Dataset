@@ -444,9 +444,10 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
         "requirement": "negative results database with evidence-backed flags",
     }
 
-    # 21. ScandiumBench v1.0 split regimes (v1.8) — the benchmark must have
-    # persisted, deterministic per-material split assignments for every regime
-    # (random + the three OOD regimes) plus a rendered leaderboard.
+    # 21. ScandiumBench split regimes (v1.8 + guide A1 paper_ood) — the
+    # benchmark must have persisted, deterministic per-material split
+    # assignments for every regime (random + the four OOD regimes) plus a
+    # rendered leaderboard.
     try:
         import json as _json  # noqa: F811
         split_manifest = _load_json(
@@ -462,7 +463,7 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
         sb_tasks = 0
         n_tasks = int(cfg.get("scandium_bench_min_tasks", 15))
     required_regimes = {"random", "family_ood", "composition_ood",
-                        "crystal_system_ood"}
+                        "crystal_system_ood", "paper_ood"}
     gates["scandium_bench_built"] = {
         "ok": (required_regimes <= sb_regimes and sb_tasks >= n_tasks
                and (ROOT / "benchmark_output" / "splits"
@@ -472,7 +473,7 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
         "detail": (f"{sb_tasks} tasks × {len(sb_regimes)} split regimes "
                    f"(need ≥{n_tasks} tasks and {len(required_regimes)} "
                    f"regimes: random/family_ood/composition_ood/"
-                   f"crystal_system_ood)"),
+                   f"crystal_system_ood/paper_ood)"),
         "requirement": "ScandiumBench split manifests + leaderboard rendered",
     }
 
@@ -653,6 +654,32 @@ def stage_artifacts(version: str) -> list[Path]:
          "splits_composition_ood.parquet"),
         ("benchmark_output/splits/crystal_system_ood.parquet",
          "splits_crystal_system_ood.parquet"),
+        ("benchmark_output/splits/paper_ood.parquet",
+         "splits_paper_ood.parquet"),
+        # improvement guide §5 artifacts (noise floor, bulk/total audit,
+        # rejection stats, attribution audit, Ea audit, UMAP coverage)
+        ("validation_output/noise_floor_report.json",
+         "noise_floor_report.json"),
+        ("validation_output/noise_floor_report.md",
+         "noise_floor_report.md"),
+        ("validation_output/conductivity_type_audit.json",
+         "conductivity_type_audit.json"),
+        ("validation_output/rejection_statistics.json",
+         "rejection_statistics.json"),
+        ("validation_output/rejection_statistics.md",
+         "rejection_statistics.md"),
+        ("validation_output/structure_attribution_audit.json",
+         "structure_attribution_audit.json"),
+        ("validation_output/structure_attribution_audit.md",
+         "structure_attribution_audit.md"),
+        ("validation_output/ea_consistency_audit.json",
+         "ea_consistency_audit.json"),
+        ("validation_output/ea_consistency_audit.md",
+         "ea_consistency_audit.md"),
+        ("visualization_output/compositional_coverage.png",
+         "compositional_coverage.png"),
+        ("visualization_output/compositional_coverage.json",
+         "compositional_coverage.json"),
     ]
 
     staged: list[Path] = []
@@ -689,6 +716,18 @@ BUILD_STEPS: list[tuple[str, list[str]]] = [
      ["scripts/build_negative_results.py"]),
     ("ScandiumBench split regimes + leaderboard (v1.8)",
      ["scripts/run_scandium_bench.py"]),
+    ("split_assignment + split_group_key backfill (improvement guide A1)",
+     ["scripts/backfill_split_assignment.py"]),
+    ("experimental noise floor (guide A3)",
+     ["scripts/compute_noise_floor.py"]),
+    ("conductivity_type normalization (guide A4)",
+     ["scripts/normalize_conductivity_type.py"]),
+    ("rejection-rate statistic (guide A5)",
+     ["scripts/compute_rejection_stats.py"]),
+    ("structure-to-label attribution audit (guide A6)",
+     ["scripts/audit_structure_attribution.py"]),
+    ("Ea field consistency audit (guide A9)",
+     ["scripts/audit_ea_consistency.py"]),
     ("consensus DB (Stage 3)", ["scripts/build_consensus_db.py"]),
     ("material cards (M5)", ["scripts/build_material_cards.py"]),
     ("health report (C1)", ["scripts/build_health_report.py"]),
