@@ -1,0 +1,50 @@
+{
+  "overlap_formulas": 3504,
+  "records_validated": 17802,
+  "mp_records": 10935,
+  "jarvis_records": 6867,
+  "mean_agreement": 0.2716,
+  "median_agreement": 0.2286,
+  "agreement_distribution": {
+    "p25": 0.097,
+    "p50": 0.2286,
+    "p75": 0.4118
+  },
+  "per_property": {
+    "formation_energy_per_atom": {
+      "unit": "eV/atom",
+      "n": 17802,
+      "mean_abs_dev": 0.2149,
+      "median_abs_dev": 0.1321,
+      "p95_abs_dev": 0.4457
+    },
+    "band_gap": {
+      "unit": "eV",
+      "n": 17802,
+      "mean_abs_dev": 0.728,
+      "median_abs_dev": 0.3175,
+      "p95_abs_dev": 2.6946
+    },
+    "density": {
+      "unit": "g/cm3",
+      "n": 17802,
+      "mean_abs_dev": 0.0807,
+      "median_abs_dev": 0.0476,
+      "p95_abs_dev": 0.2108
+    },
+    "volume_per_formula_unit": {
+      "unit": "A3/f.u.",
+      "n": 17802,
+      "mean_abs_dev": 0.0807,
+      "median_abs_dev": 0.0476,
+      "p95_abs_dev": 0.2108
+    }
+  },
+  "excluded_sources": {
+    "nomad": "staging rows carry no composition/density/volume and no formation-energy/band-gap values to compare",
+    "cod": "staging rows carry lattice params only (formation/gap null) and the CIFs have heavy occupancy defects; 66-row source too small for a meaningful agreement signal",
+    "aflow": "connector stubbed \u2014 no data on disk",
+    "oqmd": "connector stubbed \u2014 no data on disk"
+  },
+  "band_gap_note": "JARVIS reports OptB88vdW band gaps, MP PBE \u2014 a known functional systematic. The 0.5 eV tolerance absorbs it; the per-property mean_abs_dev is the honest offset magnitude."
+}

@@ -1,0 +1,403 @@
+{
+  "suite": "Scandium Benchmark Suite",
+  "version": "v0.8.0",
+  "generated_at": "2026-08-06T18:41:09",
+  "frame_rows": null,
+  "tasks": [
+    {
+      "task": "band_gap_regression",
+      "name": "Band gap regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 16394,
+      "n_test": 3248,
+      "n_classes": 10762,
+      "n_features": 127,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.43896011454893985,
+        "rmse": 0.7341036313713355,
+        "r2": 0.7461631137447544
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 116.1
+      }
+    },
+    {
+      "task": "conductive_candidate_ranking",
+      "name": "Conductive-candidate ranking",
+      "task_type": "ranking",
+      "metric": "ndcg10",
+      "n_train": 166,
+      "n_test": 166,
+      "n_classes": 121,
+      "n_features": 52,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.8816266148500501,
+        "rmse": 1.1792251709834916,
+        "spearman": 0.2832368672612567,
+        "ndcg10": 0.5725642834140415
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 164,
+        "n_test": 35,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 9,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 3.3
+      }
+    },
+    {
+      "task": "crystal_system_classification",
+      "name": "Crystal system prediction",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 7,
+      "n_features": 131,
+      "best_model": "rf",
+      "best_metrics": {
+        "accuracy": 0.8581164807930607,
+        "macro_f1": 0.8375751109194861
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 129.0
+      }
+    },
+    {
+      "task": "density_regression",
+      "name": "Density regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 15019,
+      "n_features": 130,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.10877198824982849,
+        "rmse": 0.223024444332281,
+        "r2": 0.974884976100195
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 37,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 101.9
+      }
+    },
+    {
+      "task": "energy_above_hull_regression",
+      "name": "Energy above hull regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 13878,
+      "n_features": 131,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.03526179586008549,
+        "rmse": 0.0887375422321812,
+        "r2": 0.9454937245063116
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 20,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 55.7
+      }
+    },
+    {
+      "task": "family_classification",
+      "name": "Family classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "n_train": 17046,
+      "n_test": 3370,
+      "n_classes": 12,
+      "n_features": 133,
+      "best_model": "rf",
+      "best_metrics": {
+        "accuracy": 0.9614243323442137,
+        "macro_f1": 0.8476305789951614
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 127.2
+      }
+    },
+    {
+      "task": "formation_energy_regression",
+      "name": "Formation energy regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 16394,
+      "n_test": 3248,
+      "n_classes": 16382,
+      "n_features": 132,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.0762188220077046,
+        "rmse": 0.1997914997633301,
+        "r2": 0.9495479236303103
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 25,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 75.5
+      }
+    },
+    {
+      "task": "ionic_radius_regression",
+      "name": "Ionic-radius regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 2642,
+      "n_features": 132,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 0.008127283767038763,
+        "rmse": 0.01884150028906434,
+        "r2": 0.9724700041968962
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 138.2
+      }
+    },
+    {
+      "task": "space_group_classification",
+      "name": "Space group prediction",
+      "task_type": "classification",
+      "metric": "top5_accuracy",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 187,
+      "n_features": 131,
+      "best_model": "rf",
+      "best_metrics": {
+        "accuracy": 0.6939281288723668,
+        "macro_f1": 0.3846234327094256,
+        "top5_accuracy": 0.8869268897149938
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 124.0
+      }
+    },
+    {
+      "task": "stability_classification",
+      "name": "Stable vs unstable classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 2,
+      "n_features": 131,
+      "best_model": "rf",
+      "best_metrics": {
+        "accuracy": 0.9795539033457249,
+        "macro_f1": 0.9307360095504251,
+        "roc_auc": 0.989446787550411
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 9,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 34.2
+      }
+    },
+    {
+      "task": "volume_regression",
+      "name": "Volume regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "n_train": 15064,
+      "n_test": 3228,
+      "n_classes": 15020,
+      "n_features": 130,
+      "best_model": "rf",
+      "best_metrics": {
+        "mae": 14.970510565989365,
+        "rmse": 49.25468237173397,
+        "r2": 0.9780495111698283
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 15064,
+        "n_test": 3228,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 116.5
+      }
+    },
+    {
+      "task": "wide_gap_classification",
+      "name": "Wide-gap classification (E_g > 4 eV)",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "n_train": 11566,
+      "n_test": 2298,
+      "n_classes": 2,
+      "n_features": 127,
+      "best_model": "rf",
+      "best_metrics": {
+        "accuracy": 0.959094865100087,
+        "macro_f1": 0.8292109033292536,
+        "roc_auc": 0.9675230825726575
+      },
+      "error": null,
+      "gcn": {
+        "n_train": 10744,
+        "n_test": 2279,
+        "evaluation": "split_test (dataset_ml train/val/test)",
+        "architecture": {
+          "name": "GCN",
+          "hidden": 64,
+          "layers": 3,
+          "epochs_attempted": 40,
+          "patience": 8,
+          "batch_size": 128,
+          "lr": 0.001,
+          "seed": 0
+        },
+        "runtime_s": 96.2
+      }
+    }
+  ]
+}

@@ -1,172 +1,186 @@
 {
-  "version": "v0.5.0",
-  "generated_at": "2026-08-03T14:51:27.454969+00:00",
-  "total_records": 30071,
-  "verified_records": 116,
-  "materials_total": 405,
-  "papers_total": 177,
-  "consensus_materials": 405,
-  "consensus_n3": 24,
+  "version": "v1.9.0",
+  "generated_at": "2026-08-06T20:20:05.654519+00:00",
+  "total_records": 30838,
+  "verified_records": 183,
+  "materials_total": 427,
+  "papers_total": 244,
+  "consensus_materials": 427,
+  "consensus_n3": 32,
   "benchmark_materials": 0,
   "family_distribution": {
-    "polymer_composite": 24,
-    "garnet": 18,
-    "nasicon": 13,
-    "perovskite": 10,
-    "sulfide": 9,
-    "halide": 9,
-    "antiperovskite": 8,
-    "unknown": 7,
-    "argyrodite": 6,
-    "borohydride": 5,
-    "oxide": 5,
-    "hydride": 2
+    "polymer_composite": 35,
+    "garnet": 30,
+    "halide": 21,
+    "nasicon": 20,
+    "perovskite": 15,
+    "argyrodite": 15,
+    "sulfide": 11,
+    "antiperovskite": 9,
+    "unknown": 9,
+    "oxide": 9,
+    "borohydride": 6,
+    "hydride": 3
   },
   "agreement_grade_distribution": {
-    "C": 343,
-    "B": 34,
-    "A+": 9,
-    "A": 7,
-    "": 7,
-    "D": 5
+    "C": 328,
+    "B": 64,
+    "": 11,
+    "D": 10,
+    "A+": 8,
+    "A": 6
   },
   "metadata_coverage": {
-    "temperature_celsius": 94.0,
-    "measurement_method": 99.1,
-    "conductivity_type": 92.2,
-    "pelletizing_pressure_MPa": 29.3,
-    "relative_density_pct": 11.2,
+    "temperature_celsius": 91.3,
+    "measurement_method": 50.8,
+    "conductivity_type": 90.2,
+    "pelletizing_pressure_MPa": 30.6,
+    "relative_density_pct": 12.0,
     "theoretical_density_g_per_cm3": 0.0,
-    "electrode_material": 85.3,
-    "atmosphere": 85.3,
-    "sample_form": 85.3,
-    "frequency_max_Hz": 5.2,
-    "sinter_temperature_C": 29.3,
-    "sinter_time_h": 12.9,
-    "page": 87.1,
-    "evidence_sentence": 87.1
+    "electrode_material": 87.4,
+    "atmosphere": 90.7,
+    "sample_form": 85.8,
+    "frequency_max_Hz": 8.7,
+    "sinter_temperature_C": 30.1,
+    "sinter_time_h": 15.3,
+    "page": 90.7,
+    "evidence_sentence": 85.2
   },
   "evidence_threshold": 85,
   "evidence_threshold_rationale": "Set to 85% because 15 legacy benchmark seeds are human-verified but their source papers are paywalled and have no reachable open-access PDF route.",
   "quality_distribution": {
-    "records": 191,
-    "score_avg": 53.7,
-    "score_min": 41,
-    "score_max": 72,
+    "records": 244,
+    "score_avg": 63.6,
+    "score_min": 44,
+    "score_max": 78,
     "grade_distribution": {
-      "C": 176,
-      "D": 8,
-      "B": 7
+      "C": 124,
+      "B": 119,
+      "D": 1
     },
     "tier_distribution": {
-      "silver": 186,
+      "silver": 239,
       "rejected": 5
     },
     "tier_pct": {
       "gold": 0.0,
-      "silver": 97.4,
+      "silver": 98.0,
       "bronze": 0.0,
-      "rejected": 2.6
+      "rejected": 2.0
     },
     "gold_records": 0,
-    "silver_records": 186,
+    "silver_records": 239,
     "bronze_records": 0,
     "rejected_records": 5,
     "family_scores": {
       "LLZO": {
         "n": 1,
-        "avg_score": 57.0,
+        "avg_score": 54.0,
         "tiers": {
           "silver": 1
         }
       },
       "antiperovskite": {
         "n": 6,
-        "avg_score": 51.3,
+        "avg_score": 59.3,
         "tiers": {
           "silver": 6
         }
       },
       "argyrodite": {
-        "n": 17,
-        "avg_score": 55.4,
+        "n": 20,
+        "avg_score": 66.8,
         "tiers": {
-          "silver": 16,
+          "silver": 19,
           "rejected": 1
         }
       },
       "borohydride": {
-        "n": 12,
-        "avg_score": 52.7,
+        "n": 13,
+        "avg_score": 65.5,
         "tiers": {
-          "silver": 11,
+          "silver": 12,
           "rejected": 1
         }
       },
-      "garnet": {
-        "n": 28,
-        "avg_score": 52.6,
+      "complex_hydride": {
+        "n": 2,
+        "avg_score": 76.0,
         "tiers": {
-          "silver": 28
+          "silver": 2
+        }
+      },
+      "garnet": {
+        "n": 41,
+        "avg_score": 62.9,
+        "tiers": {
+          "silver": 41
         }
       },
       "halide": {
-        "n": 22,
-        "avg_score": 55.3,
+        "n": 34,
+        "avg_score": 60.6,
         "tiers": {
-          "silver": 22
+          "silver": 34
         }
       },
       "hydride": {
         "n": 3,
-        "avg_score": 50.0,
+        "avg_score": 61.7,
         "tiers": {
           "silver": 3
         }
       },
       "nasicon": {
-        "n": 32,
-        "avg_score": 52.0,
+        "n": 34,
+        "avg_score": 63.9,
         "tiers": {
-          "silver": 32
+          "silver": 34
         }
       },
       "oxide": {
-        "n": 12,
-        "avg_score": 50.2,
+        "n": 16,
+        "avg_score": 63.2,
         "tiers": {
-          "silver": 12
+          "silver": 16
         }
       },
       "perovskite": {
-        "n": 14,
-        "avg_score": 56.0,
+        "n": 20,
+        "avg_score": 67.3,
         "tiers": {
-          "silver": 13,
+          "silver": 19,
           "rejected": 1
         }
       },
       "polymer_composite": {
-        "n": 36,
-        "avg_score": 54.7,
+        "n": 41,
+        "avg_score": 63.8,
         "tiers": {
-          "silver": 34,
+          "silver": 39,
           "rejected": 2
         }
       },
       "sulfide": {
-        "n": 8,
-        "avg_score": 56.4,
+        "n": 10,
+        "avg_score": 63.3,
         "tiers": {
-          "silver": 8
+          "silver": 10
+        }
+      },
+      "unknown": {
+        "n": 3,
+        "avg_score": 59.3,
+        "tiers": {
+          "silver": 3
         }
       }
     }
   },
   "review_stats": {
-    "approved": 191,
+    "approved": 244,
     "pending": 0,
-    "rejected": 171
+    "rejected": 252
   },
   "gates": {
     "tests_passing": true,
@@ -179,7 +193,18 @@
     "min_verified_labels": true,
     "min_total_records": true,
     "health_report_generated": true,
-    "min_gold_pct": true
+    "min_gold_pct": true,
+    "canonical_quality_scored": true,
+    "anomaly_report_passed": true,
+    "unit_normalization_passed": true,
+    "relational_tables_built": true,
+    "measurement_provenance": true,
+    "multi_experiment_preserved": true,
+    "ml_export_built": true,
+    "papers_metadata_recovered": true,
+    "cross_db_validation": true,
+    "negative_results_built": true,
+    "scandium_bench_built": true
   },
   "gate_failures": []
 }

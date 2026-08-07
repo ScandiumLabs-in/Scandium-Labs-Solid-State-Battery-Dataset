@@ -213,7 +213,7 @@
   },
   "0.7Li(CB9H10)-0.3Li(CB11H12)": {
     "material": "0.7Li(CB9H10)-0.3Li(CB11H12)",
-    "family": "hydride",
+    "family": "complex_hydride",
     "n_papers": 2,
     "n_sigma": 3,
     "n_ea": 3,
@@ -246,9 +246,9 @@
     "temperature_counts": 3,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-019-09061-9",
@@ -270,7 +270,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -285,7 +285,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -474,32 +474,81 @@
   "80(3LiBH4LiCl)20P2S5": {
     "material": "80(3LiBH4LiCl)20P2S5",
     "family": "argyrodite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 1e-05,
     "sigma_ci95": null,
     "min_sigma": 1e-05,
     "max_sigma": 1e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 1e-05,
+        "min_sigma": 1e-05,
+        "max_sigma": 1e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1039/d0cp01334j",
       "10.1039_d0cp01334j"
     ],
     "papers": [
+      {
+        "doi": "10.1039/d0cp01334j",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1039_d0cp01334j",
         "measurements": [
@@ -523,7 +572,113 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "AP2F": {
+    "material": "AP2F",
+    "family": "unknown",
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.043,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 20,
+    "consensus_verdict": "no consensus",
+    "quality_score": 20,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1002/advs.202400466",
+      "10.1002_advs.202400466"
+    ],
+    "papers": [
+      {
+        "doi": "10.1002/advs.202400466",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.043,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.043,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1002_advs.202400466",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.043,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.043,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202400466.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "BaLi2O4": {
     "material": "BaLi2O4",
@@ -764,8 +919,8 @@
     "family": "polymer_composite",
     "n_papers": 2,
     "n_sigma": 2,
-    "n_ea": 1,
-    "n_measurements": 3,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 0.00013000000000000004,
     "sigma_ci95": null,
     "min_sigma": 0.00013000000000000004,
@@ -789,54 +944,17 @@
       24.850000000000023
     ],
     "temperature_counts": 2,
-    "consensus_score": 34,
+    "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1002/aenm.202000049",
       "10.1002_aenm.202000049"
     ],
     "papers": [
-      {
-        "doi": "10.1002/aenm.202000049",
-        "measurements": [
-          {
-            "property": "conductivity",
-            "value": 0.00013,
-            "unit": "S/cm",
-            "sigma_S_per_cm": 0.00013,
-            "activation_energy_eV": null,
-            "temperature_celsius": 24.850000000000023,
-            "reviewer": "verification-pass-2026-08-01",
-            "page": null,
-            "section": "",
-            "table_number": "",
-            "evidence_sentence": "",
-            "measurement_method": "EIS",
-            "conductivity_type": "ConductivityType.total"
-          },
-          {
-            "property": "activation_energy",
-            "value": NaN,
-            "unit": "eV",
-            "sigma_S_per_cm": null,
-            "activation_energy_eV": NaN,
-            "temperature_celsius": 24.850000000000023,
-            "reviewer": "verification-pass-2026-08-01",
-            "page": null,
-            "section": "",
-            "table_number": "",
-            "evidence_sentence": "",
-            "measurement_method": "EIS",
-            "conductivity_type": "ConductivityType.total"
-          }
-        ],
-        "n_sigma": 1,
-        "n_ea": 1
-      },
       {
         "doi": "10.1002_aenm.202000049",
         "measurements": [
@@ -854,10 +972,62 @@
             "evidence_sentence": "LLM ensemble extraction from 10.1002_aenm.202000049.pdf",
             "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_aenm.202000049.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
-        "n_ea": 0
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1002/aenm.202000049",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00013,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00013,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "verification-pass-2026-08-01",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "verification-pass-2026-08-01",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
     "structure": {
@@ -959,18 +1129,18 @@
   "Cs1In0.067Sn0.9Cl3": {
     "material": "Cs1In0.067Sn0.9Cl3",
     "family": "halide",
-    "n_papers": 1,
-    "n_sigma": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
     "n_ea": 1,
-    "n_measurements": 2,
-    "median_sigma": 0.0003449999999999999,
+    "n_measurements": 3,
+    "median_sigma": 0.00033226495451672285,
     "sigma_ci95": null,
-    "min_sigma": 0.0003449999999999999,
+    "min_sigma": 0.00031999999999999986,
     "max_sigma": 0.0003449999999999999,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
+    "sigma_mad_log10": 0.016334558376684072,
+    "sigma_std_log10": 0.016334558376684072,
+    "sigma_iqr_log10": 0.016334558376684072,
+    "agreement_grade": "B",
     "sigma_by_temp": [
       {
         "temp_c": 25,
@@ -986,14 +1156,15 @@
       25.0
     ],
     "temperature_counts": 2,
-    "consensus_score": 19,
-    "consensus_verdict": "no consensus",
-    "quality_score": 44,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 48,
     "quality_grade": "D",
-    "metadata_completeness": 1.0,
+    "metadata_completeness": 0.5,
     "outliers": [],
     "dois": [
-      "10.1002/aenm.202300982"
+      "10.1002/aenm.202300982",
+      "10.1002_aenm.202300982"
     ],
     "papers": [
       {
@@ -1032,6 +1203,28 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1002_aenm.202300982",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00032,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00032,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_aenm.202300982.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -1459,7 +1652,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -2000,6 +2193,116 @@
       "is_stable": true
     }
   },
+  "Li(BH4)1-xIx": {
+    "material": "Li(BH4)1-xIx",
+    "family": "borohydride",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 4.900000000000002e-05,
+    "sigma_ci95": null,
+    "min_sigma": 4.900000000000002e-05,
+    "max_sigma": 4.900000000000002e-05,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 4.900000000000002e-05,
+        "min_sigma": 4.900000000000002e-05,
+        "max_sigma": 4.900000000000002e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1021/acsomega.5c13516",
+      "10.1021_acsomega.5c13516"
+    ],
+    "papers": [
+      {
+        "doi": "10.1021/acsomega.5c13516",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 4.9e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 4.9e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsomega.5c13516",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 4.9e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 4.9e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsomega.5c13516.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
   "Li0.06La0.63Ti1O3": {
     "material": "Li0.06La0.63Ti1O3",
     "family": "perovskite",
@@ -2348,9 +2651,9 @@
     "temperature_counts": 3,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 58,
+    "quality_score": 54,
     "quality_grade": "C",
-    "metadata_completeness": 0.25,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41598-018-23824-y",
@@ -2374,7 +2677,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -2389,7 +2692,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -2411,7 +2714,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -2426,7 +2729,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           }
         ],
@@ -3032,43 +3335,92 @@
   "Li0.35La0.55Ti1O3": {
     "material": "Li0.35La0.55Ti1O3",
     "family": "perovskite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
-    "median_sigma": 0.0007000000000000001,
-    "sigma_ci95": null,
-    "min_sigma": 0.0007000000000000001,
+    "n_papers": 3,
+    "n_sigma": 3,
+    "n_ea": 2,
+    "n_measurements": 5,
+    "median_sigma": 1.570000000000001e-05,
+    "sigma_ci95": [
+      1.570000000000001e-05,
+      0.0005789460839089875
+    ],
+    "min_sigma": 1.570000000000001e-05,
     "max_sigma": 0.0007000000000000001,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.7774395755982879,
+    "sigma_iqr_log10": 0.8245991938025115,
+    "agreement_grade": "D",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 1,
-        "median_sigma": 0.0007000000000000001,
-        "min_sigma": 0.0007000000000000001,
+        "n": 2,
+        "median_sigma": 0.00010483320084782306,
+        "min_sigma": 1.570000000000001e-05,
         "max_sigma": 0.0007000000000000001
       }
     ],
-    "median_ea": 0.3,
+    "median_ea": NaN,
     "temperature_range_c": [
-      25.0,
+      24.850000000000023,
       25.0
     ],
-    "temperature_counts": 1,
-    "consensus_score": 19,
+    "temperature_counts": 3,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "quality_score": 30,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
-    "outliers": [],
+    "outliers": [
+      {
+        "sigma": 0.0007,
+        "median_sigma": 1.570000000000001e-05,
+        "delta_log10": 1.65,
+        "note": "7.00e-04 is 45x from group median"
+      }
+    ],
     "dois": [
+      "10.1007/s11664-021-09331-7",
+      "10.1007_s11664-021-09331-7",
       "10.1016/j.ssi.2006.06.027"
     ],
     "papers": [
+      {
+        "doi": "10.1007/s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.57e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.57e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1016/j.ssi.2006.06.027",
         "measurements": [
@@ -3105,9 +3457,38 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.57e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.57e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li0.35La0.55TiO3(LLTO-F0)": {
     "material": "Li0.35La0.55TiO3(LLTO-F0)",
@@ -3185,6 +3566,351 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "Li0.35La0.55TiO3-2wt%LiF": {
+    "material": "Li0.35La0.55TiO3-2wt%LiF",
+    "family": "perovskite",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
+    "median_sigma": 0.00010199999999999999,
+    "sigma_ci95": null,
+    "min_sigma": 0.00010199999999999999,
+    "max_sigma": 0.00010199999999999999,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.00010199999999999999,
+        "min_sigma": 0.00010199999999999999,
+        "max_sigma": 0.00010199999999999999
+      }
+    ],
+    "median_ea": 0.26,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007/s11664-021-09331-7",
+      "10.1007_s11664-021-09331-7"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007_s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000102,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000102,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.26,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.26,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007/s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000102,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000102,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.26,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.26,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "Li0.35La0.55TiO3-4wt%LiF": {
+    "material": "Li0.35La0.55TiO3-4wt%LiF",
+    "family": "perovskite",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 2.4600000000000012e-05,
+    "sigma_ci95": null,
+    "min_sigma": 2.4600000000000012e-05,
+    "max_sigma": 2.4600000000000012e-05,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 2.4600000000000012e-05,
+        "min_sigma": 2.4600000000000012e-05,
+        "max_sigma": 2.4600000000000012e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007/s11664-021-09331-7",
+      "10.1007_s11664-021-09331-7"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007/s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.46e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.46e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.46e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.46e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "Li0.35La0.55TiO3-6wt%LiF": {
+    "material": "Li0.35La0.55TiO3-6wt%LiF",
+    "family": "perovskite",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 2.250000000000001e-05,
+    "sigma_ci95": null,
+    "min_sigma": 2.250000000000001e-05,
+    "max_sigma": 2.250000000000001e-05,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 2.250000000000001e-05,
+        "min_sigma": 2.250000000000001e-05,
+        "max_sigma": 2.250000000000001e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007/s11664-021-09331-7",
+      "10.1007_s11664-021-09331-7"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007/s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.25e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.25e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s11664-021-09331-7",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.25e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.25e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -4339,9 +5065,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.35378/gujs.1589340",
@@ -4363,7 +5089,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -4378,7 +5104,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -4420,29 +5146,41 @@
   "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP": {
     "material": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 0.0001,
     "sigma_ci95": null,
     "min_sigma": 0.0001,
     "max_sigma": 0.0001,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.0001,
+        "min_sigma": 0.0001,
+        "max_sigma": 0.0001
+      }
+    ],
     "median_ea": 0.2,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 14,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1016/j.heliyon.2024.e28097",
       "10.1016_j.heliyon.2024.e28097"
     ],
     "papers": [
@@ -4482,9 +5220,53 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1016/j.heliyon.2024.e28097",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.2,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.2,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE": {
     "material": "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE",
@@ -4591,41 +5373,41 @@
   "Li1.3Ti1.7Al0.3P3O12": {
     "material": "Li1.3Ti1.7Al0.3P3O12",
     "family": "nasicon",
-    "n_papers": 8,
-    "n_sigma": 9,
-    "n_ea": 7,
-    "n_measurements": 16,
+    "n_papers": 10,
+    "n_sigma": 11,
+    "n_ea": 9,
+    "n_measurements": 20,
     "median_sigma": 0.00018999999999999996,
     "sigma_ci95": [
-      5.133192358364696e-06,
+      5.870892255801345e-06,
       0.00030000000000000014
     ],
     "min_sigma": 3.0000000000000013e-06,
     "max_sigma": 0.00030000000000000014,
     "sigma_mad_log10": 0.19836765376683374,
-    "sigma_std_log10": 0.6255080855037881,
-    "sigma_iqr_log10": 0.8096683018297091,
+    "sigma_std_log10": 0.5847564998345488,
+    "sigma_iqr_log10": 0.6307273686770003,
     "agreement_grade": "D",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 5,
-        "median_sigma": 0.0001,
+        "n": 7,
+        "median_sigma": 0.00018999999999999996,
         "min_sigma": 4.399999999999995e-05,
         "max_sigma": 0.00030000000000000014
       }
     ],
-    "median_ea": 0.4,
+    "median_ea": NaN,
     "temperature_range_c": [
       24.850000000000023,
       200.0
     ],
-    "temperature_counts": 8,
+    "temperature_counts": 12,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 53,
+    "quality_score": 51,
     "quality_grade": "C",
-    "metadata_completeness": 0.444,
+    "metadata_completeness": 0.364,
     "outliers": [
       {
         "sigma": 3e-06,
@@ -4637,8 +5419,10 @@
     "dois": [
       "10.1016/S0167-2738(03)00260-7",
       "10.1016/j.jallcom.2019.153072",
+      "10.1039/d5ra09944g",
       "10.1039_d5ra09944g",
       "10.3390/ma14164737",
+      "10.3390/membranes13020201",
       "10.3390/nano15010042",
       "10.3390_membranes13020201",
       "10.3390_nano15010042",
@@ -4876,6 +5660,80 @@
         "n_ea": 1
       },
       {
+        "doi": "10.1039/d5ra09944g",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00019,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00019,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.3390/membranes13020201",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000283,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000283,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
         "doi": "10.3390_nano15010042",
         "measurements": [
           {
@@ -4954,29 +5812,41 @@
   "Li1.3Y0.01Ti1.7Al0.29P3O12": {
     "material": "Li1.3Y0.01Ti1.7Al0.29P3O12",
     "family": "nasicon",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 8.400000000000008e-06,
     "sigma_ci95": null,
     "min_sigma": 8.400000000000008e-06,
     "max_sigma": 8.400000000000008e-06,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 8.400000000000008e-06,
+        "min_sigma": 8.400000000000008e-06,
+        "max_sigma": 8.400000000000008e-06
+      }
+    ],
     "median_ea": 0.4,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 14,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.3390/nano15010042",
       "10.3390_nano15010042"
     ],
     "papers": [
@@ -5016,36 +5886,92 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.3390/nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 8.4e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 8.4e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.4,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.4,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li1.3Y0.05Ti1.7Al0.25P3O12": {
     "material": "Li1.3Y0.05Ti1.7Al0.25P3O12",
     "family": "nasicon",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 1.2000000000000007e-05,
     "sigma_ci95": null,
     "min_sigma": 1.2000000000000007e-05,
     "max_sigma": 1.2000000000000007e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 1.2000000000000007e-05,
+        "min_sigma": 1.2000000000000007e-05,
+        "max_sigma": 1.2000000000000007e-05
+      }
+    ],
     "median_ea": 0.3,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 14,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.3390/nano15010042",
       "10.3390_nano15010042"
     ],
     "papers": [
@@ -5085,17 +6011,61 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.3390/nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.3,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.3,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li1.3Y0.15Ti1.7Al0.15P3O12": {
     "material": "Li1.3Y0.15Ti1.7Al0.15P3O12",
     "family": "nasicon",
-    "n_papers": 1,
-    "n_sigma": 0,
-    "n_ea": 1,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
     "median_sigma": null,
     "sigma_ci95": null,
     "min_sigma": null,
@@ -5108,16 +6078,54 @@
     "median_ea": 0.1,
     "temperature_range_c": null,
     "temperature_counts": 0,
-    "consensus_score": 4,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 14,
+    "quality_score": 20,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.3390/nano15010042",
       "10.3390_nano15010042"
     ],
     "papers": [
+      {
+        "doi": "10.3390/nano15010042",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.3390_nano15010042",
         "measurements": [
@@ -5141,7 +6149,14 @@
         "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li1.3Y0.1Ti1.7Al0.2P3O12": {
     "material": "Li1.3Y0.1Ti1.7Al0.2P3O12",
@@ -6560,43 +7575,44 @@
   "Li10Ge(PS6)2": {
     "material": "Li10Ge(PS6)2",
     "family": "sulfide",
-    "n_papers": 2,
-    "n_sigma": 3,
-    "n_ea": 2,
-    "n_measurements": 5,
-    "median_sigma": 0.012000000000000002,
+    "n_papers": 3,
+    "n_sigma": 4,
+    "n_ea": 3,
+    "n_measurements": 7,
+    "median_sigma": 0.010954451150103326,
     "sigma_ci95": [
-      0.010091577558276131,
+      0.01,
       0.012000000000000002
     ],
     "min_sigma": 0.01,
     "max_sigma": 0.012000000000000002,
-    "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.037326397348717386,
-    "sigma_iqr_log10": 0.03959062302381233,
+    "sigma_mad_log10": 0.039590623023812443,
+    "sigma_std_log10": 0.039590623023812443,
+    "sigma_iqr_log10": 0.07918124604762489,
     "agreement_grade": "A+",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 2,
+        "n": 3,
         "median_sigma": 0.012000000000000002,
-        "min_sigma": 0.012000000000000002,
+        "min_sigma": 0.01,
         "max_sigma": 0.012000000000000002
       }
     ],
-    "median_ea": 0.22,
+    "median_ea": NaN,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 3,
-    "consensus_score": 70,
-    "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "temperature_counts": 5,
+    "consensus_score": 85,
+    "consensus_verdict": "strong consensus",
+    "quality_score": 66,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.25,
     "outliers": [],
     "dois": [
+      "10.1002/smll.202509918",
       "10.1002_smll.202509918",
       "10.1038/nmat3066"
     ],
@@ -6667,6 +7683,43 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1002/smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.01,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.01,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       },
       {
         "doi": "10.1002_smll.202509918",
@@ -8016,28 +9069,28 @@
   "Li2HClO": {
     "material": "Li2HClO",
     "family": "antiperovskite",
-    "n_papers": 2,
-    "n_sigma": 3,
-    "n_ea": 2,
-    "n_measurements": 5,
-    "median_sigma": 1.4000000000000004e-07,
+    "n_papers": 3,
+    "n_sigma": 4,
+    "n_ea": 3,
+    "n_measurements": 7,
+    "median_sigma": 4.4271887242357325e-07,
     "sigma_ci95": [
-      1.371484616359696e-07,
-      1.2477513133872447e-06
+      1.3722275277387642e-07,
+      1.4000000000000006e-06
     ],
     "min_sigma": 1.3699999999999997e-07,
     "max_sigma": 1.4000000000000006e-06,
-    "sigma_mad_log10": 0.009407468521831497,
-    "sigma_std_log10": 0.47363745370526245,
-    "sigma_iqr_log10": 0.5047037342609162,
-    "agreement_grade": "C",
+    "sigma_mad_log10": 0.5,
+    "sigma_std_log10": 0.5023628777760712,
+    "sigma_iqr_log10": 1.002351867130458,
+    "agreement_grade": "B",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 2,
-        "median_sigma": 1.3849187701811237e-07,
+        "n": 3,
+        "median_sigma": 1.4000000000000004e-07,
         "min_sigma": 1.3699999999999997e-07,
-        "max_sigma": 1.4000000000000004e-07
+        "max_sigma": 1.4000000000000006e-06
       }
     ],
     "median_ea": NaN,
@@ -8045,14 +9098,15 @@
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 3,
-    "consensus_score": 60,
-    "consensus_verdict": "moderate consensus",
-    "quality_score": 42,
-    "quality_grade": "D",
-    "metadata_completeness": 0.333,
+    "temperature_counts": 5,
+    "consensus_score": 75,
+    "consensus_verdict": "strong consensus",
+    "quality_score": 54,
+    "quality_grade": "C",
+    "metadata_completeness": 0.25,
     "outliers": [],
     "dois": [
+      "10.1021/acs.chemmater.0c02602",
       "10.1021_acs.chemmater.0c02602",
       "10.1038/s41467-023-42385-1"
     ],
@@ -8123,6 +9177,43 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1021/acs.chemmater.0c02602",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1.4e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1.4e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       },
       {
         "doi": "10.1021_acs.chemmater.0c02602",
@@ -9127,32 +10218,81 @@
   "Li2O-TaCl5": {
     "material": "Li2O-TaCl5",
     "family": "oxide",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 0.008299999999999997,
     "sigma_ci95": null,
     "min_sigma": 0.008299999999999997,
     "max_sigma": 0.008299999999999997,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.008299999999999997,
+        "min_sigma": 0.008299999999999997,
+        "max_sigma": 0.008299999999999997
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.20517/energymater.2024.277",
       "10.20517_energymater.2024.277"
     ],
     "papers": [
+      {
+        "doi": "10.20517/energymater.2024.277",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0083,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0083,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.20517_energymater.2024.277",
         "measurements": [
@@ -9176,7 +10316,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li2O-TeO2glass": {
     "material": "Li2O-TeO2glass",
@@ -10389,9 +11536,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-026-69737-x",
@@ -10450,7 +11597,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -10465,7 +11612,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -11228,6 +12375,116 @@
     ],
     "structure": null
   },
+  "Li2Zr1Cl5.5F0.5": {
+    "material": "Li2Zr1Cl5.5F0.5",
+    "family": "halide",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 0.00010999999999999996,
+    "sigma_ci95": null,
+    "min_sigma": 0.00010999999999999996,
+    "max_sigma": 0.00010999999999999996,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.00010999999999999996,
+        "min_sigma": 0.00010999999999999996,
+        "max_sigma": 0.00010999999999999996
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1021/acsami.3c03513",
+      "10.1021_acsami.3c03513"
+    ],
+    "papers": [
+      {
+        "doi": "10.1021/acsami.3c03513",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00011,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00011,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsami.3c03513",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00011,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00011,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsami.3c03513.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
   "Li2ZrBr6": {
     "material": "Li2ZrBr6",
     "family": "halide",
@@ -11309,44 +12566,46 @@
   "Li2ZrCl6": {
     "material": "Li2ZrCl6",
     "family": "halide",
-    "n_papers": 3,
-    "n_sigma": 4,
-    "n_ea": 5,
-    "n_measurements": 9,
-    "median_sigma": 0.0008999999999999998,
+    "n_papers": 5,
+    "n_sigma": 6,
+    "n_ea": 6,
+    "n_measurements": 12,
+    "median_sigma": 0.0008099999999999995,
     "sigma_ci95": [
-      0.0008099999999999995,
+      0.00013000000000000004,
       0.001
     ],
-    "min_sigma": 0.0008099999999999995,
+    "min_sigma": 0.00013000000000000004,
     "max_sigma": 0.001,
-    "sigma_mad_log10": 0.04575749056067524,
-    "sigma_std_log10": 0.04575749056067524,
-    "sigma_iqr_log10": 0.09151498112135048,
-    "agreement_grade": "A+",
+    "sigma_mad_log10": 0.09151498112135048,
+    "sigma_std_log10": 0.39787879709635765,
+    "sigma_iqr_log10": 0.6645424857698723,
+    "agreement_grade": "C",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 3,
-        "median_sigma": 0.001,
-        "min_sigma": 0.0008099999999999995,
+        "n": 4,
+        "median_sigma": 0.0008999999999999998,
+        "min_sigma": 0.00013000000000000004,
         "max_sigma": 0.001
       }
     ],
-    "median_ea": 0.35,
+    "median_ea": 0.425,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 5,
-    "consensus_score": 85,
+    "temperature_counts": 7,
+    "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 70,
-    "quality_grade": "B",
-    "metadata_completeness": 0.5,
+    "quality_score": 60,
+    "quality_grade": "C",
+    "metadata_completeness": 0.167,
     "outliers": [],
     "dois": [
+      "10.1021/acsami.3c03513",
       "10.1021/jacs.1c07481",
+      "10.1021_acsami.3c03513",
       "10.1038/s41467-021-24697-2",
       "10.1038_s41467-021-24697-2"
     ],
@@ -11485,7 +12744,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -11500,12 +12759,71 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1021/acsami.3c03513",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00013,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00013,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsami.3c03513",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00013,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00013,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsami.3c03513.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -12225,7 +13543,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -12327,7 +13645,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -12433,7 +13751,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -13472,9 +14790,9 @@
     "temperature_counts": 5,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 40,
+    "quality_score": 37,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.25,
     "outliers": [
       {
         "sigma": 1e-07,
@@ -13504,7 +14822,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -13519,7 +14837,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -14923,43 +16241,45 @@
   "Li3InCl6": {
     "material": "Li3InCl6",
     "family": "halide",
-    "n_papers": 3,
-    "n_sigma": 7,
-    "n_ea": 7,
-    "n_measurements": 14,
+    "n_papers": 5,
+    "n_sigma": 9,
+    "n_ea": 10,
+    "n_measurements": 19,
     "median_sigma": 0.0027199999999999998,
     "sigma_ci95": [
-      0.0011095694720678455,
-      0.003973829220006909
+      0.001,
+      0.0039552801503256645
     ],
     "min_sigma": 0.001,
     "max_sigma": 0.0040300000000000015,
     "sigma_mad_log10": 0.13353890837021742,
-    "sigma_std_log10": 0.1912478675379131,
-    "sigma_iqr_log10": 0.22487222420065667,
+    "sigma_std_log10": 0.20926239654709833,
+    "sigma_iqr_log10": 0.18610837981320527,
     "agreement_grade": "A",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 2,
+        "n": 4,
         "median_sigma": 0.0020000000000000005,
-        "min_sigma": 0.0020000000000000005,
-        "max_sigma": 0.0020000000000000005
+        "min_sigma": 0.001,
+        "max_sigma": 0.0027199999999999998
       }
     ],
-    "median_ea": 0.25,
+    "median_ea": 0.26,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 3,
+    "temperature_counts": 7,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 63,
-    "quality_grade": "C",
-    "metadata_completeness": 0.143,
+    "quality_score": 71,
+    "quality_grade": "B",
+    "metadata_completeness": 0.111,
     "outliers": [],
     "dois": [
+      "10.1002/adma.202513255",
+      "10.1002/advs.202403208",
       "10.1002_adma.202513255",
       "10.1002_advs.202403208",
       "10.1038/s41467-019-09619-5"
@@ -15189,6 +16509,95 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "LLM ensemble extraction from 10.1002_adma.202513255.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.3,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.3,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_adma.202513255.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 2
+      },
+      {
+        "doi": "10.1002/adma.202513255",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.001,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1002/advs.202403208",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00272,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00272,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.27,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.27,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
             "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
@@ -17368,41 +18777,46 @@
   "Li3YCl6": {
     "material": "Li3YCl6",
     "family": "halide",
-    "n_papers": 1,
-    "n_sigma": 2,
-    "n_ea": 2,
-    "n_measurements": 4,
-    "median_sigma": 0.0004999999999999999,
-    "sigma_ci95": null,
-    "min_sigma": 0.0004999999999999999,
+    "n_papers": 3,
+    "n_sigma": 4,
+    "n_ea": 3,
+    "n_measurements": 7,
+    "median_sigma": 0.0001,
+    "sigma_ci95": [
+      2e-05,
+      0.0004999999999999999
+    ],
+    "min_sigma": 2e-05,
     "max_sigma": 0.0004999999999999999,
-    "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.0,
-    "sigma_iqr_log10": 0.0,
+    "sigma_mad_log10": 0.6989700043360187,
+    "sigma_std_log10": 0.6989700043360187,
+    "sigma_iqr_log10": 1.3979400086720375,
     "agreement_grade": "B",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 2,
+        "n": 3,
         "median_sigma": 0.0004999999999999999,
-        "min_sigma": 0.0004999999999999999,
+        "min_sigma": 2e-05,
         "max_sigma": 0.0004999999999999999
       }
     ],
-    "median_ea": 0.38,
+    "median_ea": NaN,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 3,
-    "consensus_score": 40,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 44,
-    "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "temperature_counts": 5,
+    "consensus_score": 85,
+    "consensus_verdict": "strong consensus",
+    "quality_score": 54,
+    "quality_grade": "C",
+    "metadata_completeness": 0.25,
     "outliers": [],
     "dois": [
-      "10.1016/j.matt.2019.06.004"
+      "10.1016/j.matt.2019.06.004",
+      "10.1021/acsenergylett.4c00317",
+      "10.1021_acsenergylett.4c00317"
     ],
     "papers": [
       {
@@ -17471,6 +18885,65 @@
         ],
         "n_sigma": 2,
         "n_ea": 2
+      },
+      {
+        "doi": "10.1021/acsenergylett.4c00317",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsenergylett.4c00317",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsenergylett.4c00317.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -17920,29 +19393,41 @@
   "Li4-xGe1-xPxO4": {
     "material": "Li4-xGe1-xPxO4",
     "family": "oxide",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 1e-05,
     "sigma_ci95": null,
     "min_sigma": 1e-05,
     "max_sigma": 1e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 1e-05,
+        "min_sigma": 1e-05,
+        "max_sigma": 1e-05
+      }
+    ],
     "median_ea": 0.47,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 14,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1039/d5ta07144e",
       "10.1039_d5ta07144e"
     ],
     "papers": [
@@ -17982,9 +19467,53 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1039/d5ta07144e",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.47,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.47,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li4.8Si1.2P1.2S12": {
     "material": "Li4.8Si1.2P1.2S12",
@@ -18798,9 +20327,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/nano12244355",
@@ -18859,7 +20388,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -18874,7 +20403,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -18926,9 +20455,9 @@
     "temperature_counts": 3,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 58,
+    "quality_score": 54,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1039/C7CC05980K",
@@ -18988,7 +20517,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -19003,7 +20532,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -19508,9 +21037,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsaem.5c01010",
@@ -19532,7 +21061,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -19547,7 +21076,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20019,9 +21548,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1007/s11664-026-12871-5",
@@ -20080,7 +21609,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -20095,7 +21624,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20351,43 +21880,84 @@
   "Li6.4La3Zr2Ga0.2O12": {
     "material": "Li6.4La3Zr2Ga0.2O12",
     "family": "garnet",
-    "n_papers": 1,
-    "n_sigma": 2,
-    "n_ea": 1,
-    "n_measurements": 3,
-    "median_sigma": 0.00036769552621700494,
-    "sigma_ci95": null,
+    "n_papers": 2,
+    "n_sigma": 3,
+    "n_ea": 2,
+    "n_measurements": 5,
+    "median_sigma": 0.00010399999999999998,
+    "sigma_ci95": [
+      0.00010399999999999998,
+      0.0011457710680670863
+    ],
     "min_sigma": 0.00010399999999999998,
     "max_sigma": 0.0013000000000000006,
-    "sigma_mad_log10": 0.5484550065040283,
-    "sigma_std_log10": 0.5484550065040283,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.5170883390329474,
     "sigma_iqr_log10": 0.5484550065040286,
-    "agreement_grade": "B",
+    "agreement_grade": "D",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 1,
-        "median_sigma": 0.0013000000000000006,
-        "min_sigma": 0.0013000000000000006,
+        "n": 2,
+        "median_sigma": 0.00036769552621700494,
+        "min_sigma": 0.00010399999999999998,
         "max_sigma": 0.0013000000000000006
       }
     ],
-    "median_ea": 0.3,
+    "median_ea": NaN,
     "temperature_range_c": [
-      25.0,
+      24.850000000000023,
       25.0
     ],
-    "temperature_counts": 1,
-    "consensus_score": 34,
+    "temperature_counts": 3,
+    "consensus_score": 30,
     "consensus_verdict": "weak consensus",
-    "quality_score": 37,
+    "quality_score": 32,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.16984/saufenbilder.1590407",
       "10.16984_saufenbilder.1590407"
     ],
     "papers": [
+      {
+        "doi": "10.16984/saufenbilder.1590407",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000104,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000104,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "unknown",
         "measurements": [
@@ -20448,7 +22018,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li6.55La2.9Ta0.5O12": {
     "material": "Li6.55La2.9Ta0.5O12",
@@ -20649,9 +22226,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3389/fenrg.2016.00028",
@@ -20673,7 +22250,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -20688,7 +22265,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -20886,10 +22463,10 @@
   "Li6.5La3Zr1.5Ta0.5O12": {
     "material": "Li6.5La3Zr1.5Ta0.5O12",
     "family": "garnet",
-    "n_papers": 4,
-    "n_sigma": 5,
-    "n_ea": 5,
-    "n_measurements": 10,
+    "n_papers": 5,
+    "n_sigma": 6,
+    "n_ea": 6,
+    "n_measurements": 12,
     "median_sigma": 0.00040000000000000013,
     "sigma_ci95": [
       0.00017999999999999998,
@@ -20898,14 +22475,14 @@
     "min_sigma": 0.00017999999999999998,
     "max_sigma": 0.001,
     "sigma_mad_log10": 0.3467874862246565,
-    "sigma_std_log10": 0.33320935093891085,
-    "sigma_iqr_log10": 0.744727494896694,
+    "sigma_std_log10": 0.30427269435291154,
+    "sigma_iqr_log10": 0.5585456211725206,
     "agreement_grade": "A",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 3,
-        "median_sigma": 0.001,
+        "n": 4,
+        "median_sigma": 0.000632455532033676,
         "min_sigma": 0.00017999999999999998,
         "max_sigma": 0.001
       }
@@ -20915,14 +22492,15 @@
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 5,
+    "temperature_counts": 7,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 68,
-    "quality_grade": "C",
-    "metadata_completeness": 0.4,
+    "quality_score": 72,
+    "quality_grade": "B",
+    "metadata_completeness": 0.167,
     "outliers": [],
     "dois": [
+      "10.1038/s41467-020-17493-x",
       "10.1038/s41467-025-58108-7",
       "10.1038_s41467-020-17493-x",
       "10.1038_s41467-025-58108-7",
@@ -21085,7 +22663,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -21100,7 +22678,44 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1038/s41467-020-17493-x",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0004,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0004,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.36,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.36,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -21227,9 +22842,9 @@
     "temperature_counts": 2,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/molecules30092028",
@@ -21251,7 +22866,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -21266,7 +22881,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -21502,9 +23117,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.3390/ma13030560",
@@ -21563,7 +23178,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -21578,7 +23193,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -22076,10 +23691,10 @@
   "Li6.7Si0.105Ge0.595P0.3S5I1": {
     "material": "Li6.7Si0.105Ge0.595P0.3S5I1",
     "family": "argyrodite",
-    "n_papers": 1,
-    "n_sigma": 0,
-    "n_ea": 1,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
     "median_sigma": null,
     "sigma_ci95": null,
     "min_sigma": null,
@@ -22092,16 +23707,54 @@
     "median_ea": 0.2,
     "temperature_range_c": null,
     "temperature_counts": 0,
-    "consensus_score": 4,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 14,
+    "quality_score": 20,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002/smll.202509918",
       "10.1002_smll.202509918"
     ],
     "papers": [
+      {
+        "doi": "10.1002/smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.2,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.2,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1002_smll.202509918",
         "measurements": [
@@ -22125,34 +23778,53 @@
         "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12": {
     "material": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
     "family": "garnet",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 1,
-    "n_measurements": 2,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 2,
+    "n_measurements": 4,
     "median_sigma": 0.0006609999999999999,
     "sigma_ci95": null,
     "min_sigma": 0.0006609999999999999,
     "max_sigma": 0.0006609999999999999,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.0006609999999999999,
+        "min_sigma": 0.0006609999999999999,
+        "max_sigma": 0.0006609999999999999
+      }
+    ],
     "median_ea": 0.25,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 14,
-    "consensus_verdict": "no consensus",
-    "quality_score": 28,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 40,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1016/j.ceramint.2023.09.330",
       "10.1016_j.ceramint.2023.09.330"
     ],
     "papers": [
@@ -22192,9 +23864,53 @@
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1016/j.ceramint.2023.09.330",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000661,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000661,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.25,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.25,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li6.85La3Zr1.85Nb0.15O12": {
     "material": "Li6.85La3Zr1.85Nb0.15O12",
@@ -23427,32 +25143,81 @@
   "Li6PS4Cl0.75-OF0.25": {
     "material": "Li6PS4Cl0.75-OF0.25",
     "family": "argyrodite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 2.4700000000000005e-06,
     "sigma_ci95": null,
     "min_sigma": 2.4700000000000005e-06,
     "max_sigma": 2.4700000000000005e-06,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 2.4700000000000005e-06,
+        "min_sigma": 2.4700000000000005e-06,
+        "max_sigma": 2.4700000000000005e-06
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002/advs.202304117",
       "10.1002_advs.202304117"
     ],
     "papers": [
+      {
+        "doi": "10.1002/advs.202304117",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 2.47e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 2.47e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1002_advs.202304117",
         "measurements": [
@@ -23476,7 +25241,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li6PS5Br": {
     "material": "Li6PS5Br",
@@ -23598,28 +25370,28 @@
   "Li6PS5Cl": {
     "material": "Li6PS5Cl",
     "family": "argyrodite",
-    "n_papers": 5,
-    "n_sigma": 7,
-    "n_ea": 6,
-    "n_measurements": 13,
+    "n_papers": 9,
+    "n_sigma": 11,
+    "n_ea": 8,
+    "n_measurements": 19,
     "median_sigma": 0.001,
     "sigma_ci95": [
-      0.0009376003785612801,
-      0.0011712715241883598
+      0.0009447345550606861,
+      0.0011999999999999995
     ],
     "min_sigma": 0.0009270000000000003,
-    "max_sigma": 0.0011869999999999997,
+    "max_sigma": 0.0011999999999999995,
     "sigma_mad_log10": 0.0,
-    "sigma_std_log10": 0.03174785744813848,
-    "sigma_iqr_log10": 0.01791491262641376,
+    "sigma_std_log10": 0.037414612167018656,
+    "sigma_iqr_log10": 0.05514027210370953,
     "agreement_grade": "A+",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 6,
+        "n": 8,
         "median_sigma": 0.001,
         "min_sigma": 0.0009270000000000003,
-        "max_sigma": 0.0011869999999999997
+        "max_sigma": 0.0011999999999999995
       }
     ],
     "median_ea": NaN,
@@ -23627,15 +25399,19 @@
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 10,
+    "temperature_counts": 14,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 86,
-    "quality_grade": "A",
-    "metadata_completeness": 0.714,
+    "quality_score": 80,
+    "quality_grade": "B",
+    "metadata_completeness": 0.364,
     "outliers": [],
     "dois": [
+      "10.1002/advs.202521791",
+      "10.1002_advs.202521791",
+      "10.1021/acs.langmuir.5c06765",
       "10.1021/acsaem.3c02858",
+      "10.1021_acs.langmuir.5c06765",
       "10.1039/C5EE02930D",
       "10.3390/ma16072751",
       "10.3390/nano12244355",
@@ -23850,7 +25626,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -23865,12 +25641,130 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
         "n_ea": 1
+      },
+      {
+        "doi": "10.1002/advs.202521791",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.001,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "auto-approve-cross-paper",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "auto-approve-cross-paper",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021/acs.langmuir.5c06765",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0012,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0012,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1002_advs.202521791",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "auto-approve-cross-paper",
+            "page": 2,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1002_advs.202521791.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      },
+      {
+        "doi": "10.1021_acs.langmuir.5c06765",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0012,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0012,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.langmuir.5c06765.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
       }
     ],
     "structure": {
@@ -24005,44 +25899,92 @@
   "Li6PS5I": {
     "material": "Li6PS5I",
     "family": "argyrodite",
-    "n_papers": 2,
-    "n_sigma": 2,
-    "n_ea": 1,
-    "n_measurements": 3,
-    "median_sigma": 6.78232998312527e-06,
-    "sigma_ci95": null,
+    "n_papers": 3,
+    "n_sigma": 3,
+    "n_ea": 2,
+    "n_measurements": 5,
+    "median_sigma": 1e-06,
+    "sigma_ci95": [
+      1e-06,
+      3.798568304137482e-05
+    ],
     "min_sigma": 1e-06,
     "max_sigma": 4.600000000000003e-05,
-    "sigma_mad_log10": 0.8313789158407872,
-    "sigma_std_log10": 0.8313789158407872,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.7838315588353875,
     "sigma_iqr_log10": 0.8313789158407872,
-    "agreement_grade": "C",
+    "agreement_grade": "D",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 1,
-        "median_sigma": 4.600000000000003e-05,
-        "min_sigma": 4.600000000000003e-05,
+        "n": 2,
+        "median_sigma": 6.78232998312527e-06,
+        "min_sigma": 1e-06,
         "max_sigma": 4.600000000000003e-05
       }
     ],
-    "median_ea": 0.36,
+    "median_ea": NaN,
     "temperature_range_c": [
-      25.0,
+      24.850000000000023,
       25.0
     ],
-    "temperature_counts": 1,
-    "consensus_score": 34,
-    "consensus_verdict": "weak consensus",
-    "quality_score": 35,
+    "temperature_counts": 3,
+    "consensus_score": 20,
+    "consensus_verdict": "no consensus",
+    "quality_score": 30,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
-    "outliers": [],
+    "outliers": [
+      {
+        "sigma": 4.6e-05,
+        "median_sigma": 1e-06,
+        "delta_log10": 1.66,
+        "note": "4.60e-05 is 46x from group median"
+      }
+    ],
     "dois": [
+      "10.1002/smll.202509918",
       "10.1002_smll.202509918",
       "10.1039/C5EE02930D"
     ],
     "papers": [
+      {
+        "doi": "10.1002/smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 1e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 1e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1039/C5EE02930D",
         "measurements": [
@@ -24537,49 +26479,56 @@
   "Li7La3Zr2O12": {
     "material": "Li7La3Zr2O12",
     "family": "LLZO",
-    "n_papers": 7,
-    "n_sigma": 9,
-    "n_ea": 6,
-    "n_measurements": 15,
-    "median_sigma": 0.00042918527467749907,
+    "n_papers": 14,
+    "n_sigma": 17,
+    "n_ea": 13,
+    "n_measurements": 30,
+    "median_sigma": 0.00030000000000000014,
     "sigma_ci95": [
-      0.00030000000000000014,
-      0.001032886271116008
+      0.0001,
+      0.0010399999999999997
     ],
-    "min_sigma": 0.00030000000000000014,
+    "min_sigma": 0.0001,
     "max_sigma": 0.0010399999999999997,
-    "sigma_mad_log10": 0.1555235582107528,
-    "sigma_std_log10": 0.23634658207076387,
-    "sigma_iqr_log10": 0.4657002159018626,
-    "agreement_grade": "A",
+    "sigma_mad_log10": 0.4618809804143502,
+    "sigma_std_log10": 0.3994981217740565,
+    "sigma_iqr_log10": 0.9237619608287004,
+    "agreement_grade": "B",
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 4,
+        "n": 9,
         "median_sigma": 0.00030000000000000014,
-        "min_sigma": 0.00030000000000000014,
-        "max_sigma": 0.001
+        "min_sigma": 0.0001,
+        "max_sigma": 0.0010399999999999997
       }
     ],
-    "median_ea": NaN,
+    "median_ea": 0.35,
     "temperature_range_c": [
       24.850000000000023,
       25.0
     ],
-    "temperature_counts": 7,
+    "temperature_counts": 17,
     "consensus_score": 100,
     "consensus_verdict": "strong consensus",
-    "quality_score": 74,
-    "quality_grade": "B",
-    "metadata_completeness": 0.333,
+    "quality_score": 65,
+    "quality_grade": "C",
+    "metadata_completeness": 0.118,
     "outliers": [],
     "dois": [
       "10.1002/anie.200701144",
+      "10.1007/s11666-026-02240-3",
+      "10.1007_s11666-026-02240-3",
+      "10.1016/j.heliyon.2024.e36206",
       "10.1016_j.heliyon.2024.e36206",
       "10.1021/acs.chemmater.3c01831",
+      "10.1021/acs.chemmater.8b00649",
       "10.1021_acs.chemmater.3c01831",
+      "10.1021_acs.chemmater.8b00649",
       "10.1038/s41467-022-35287-1",
+      "10.1038/srep18053",
       "10.1038_srep18053",
+      "10.20517/energymater.2023.87",
       "10.20517_energymater.2023.87"
     ],
     "papers": [
@@ -24643,7 +26592,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           }
         ],
@@ -24749,6 +26698,95 @@
             "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.chemmater.3c01831.pdf",
             "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "auto-approve-cross-paper",
+            "page": 3,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.chemmater.3c01831.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 2,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s11666-026-02240-3",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 4,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11666-026-02240-3.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 4,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s11666-026-02240-3.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acs.chemmater.8b00649",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "auto-approve-cross-paper",
+            "page": 3,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.chemmater.8b00649.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.22,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.22,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 3,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acs.chemmater.8b00649.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
           }
         ],
         "n_sigma": 1,
@@ -24769,7 +26807,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -24784,7 +26822,192 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1016/j.heliyon.2024.e36206",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00104,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00104,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1038/srep18053",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000614,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000614,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.20517/energymater.2023.87",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000839,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000839,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007/s11666-026-02240-3",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.1,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.1,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021/acs.chemmater.8b00649",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.0001,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.0001,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "auto-approve-cross-paper",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.22,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.22,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "auto-approve-cross-paper",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -25117,32 +27340,81 @@
   "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6": {
     "material": "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6",
     "family": "argyrodite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 0.03200000000000001,
     "sigma_ci95": null,
     "min_sigma": 0.03200000000000001,
     "max_sigma": 0.03200000000000001,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.03200000000000001,
+        "min_sigma": 0.03200000000000001,
+        "max_sigma": 0.03200000000000001
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002/smll.202509918",
       "10.1002_smll.202509918"
     ],
     "papers": [
+      {
+        "doi": "10.1002/smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.032,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.032,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1002_smll.202509918",
         "measurements": [
@@ -25166,15 +27438,22 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li9.54Si1.74P1.44S11.7Cl0.3": {
     "material": "Li9.54Si1.74P1.44S11.7Cl0.3",
     "family": "argyrodite",
-    "n_papers": 3,
-    "n_sigma": 3,
-    "n_ea": 2,
-    "n_measurements": 5,
+    "n_papers": 4,
+    "n_sigma": 4,
+    "n_ea": 3,
+    "n_measurements": 7,
     "median_sigma": 0.025000000000000005,
     "sigma_ci95": [
       0.025000000000000005,
@@ -25189,7 +27468,7 @@
     "sigma_by_temp": [
       {
         "temp_c": 25,
-        "n": 2,
+        "n": 3,
         "median_sigma": 0.025000000000000005,
         "min_sigma": 0.025000000000000005,
         "max_sigma": 0.025000000000000005
@@ -25197,22 +27476,60 @@
     ],
     "median_ea": 0.2,
     "temperature_range_c": [
-      25.0,
+      24.850000000000023,
       25.0
     ],
-    "temperature_counts": 2,
-    "consensus_score": 70,
-    "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "temperature_counts": 4,
+    "consensus_score": 75,
+    "consensus_verdict": "strong consensus",
+    "quality_score": 66,
     "quality_grade": "C",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1002/smll.202509918",
       "10.1002_smll.202509918",
       "10.1016/j.matlet.2020.127508",
       "10.1038/s41563-023-01522-1"
     ],
     "papers": [
+      {
+        "doi": "10.1002/smll.202509918",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.025,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.025,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1016/j.matlet.2020.127508",
         "measurements": [
@@ -25310,7 +27627,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "Li9.6P3S12": {
     "material": "Li9.6P3S12",
@@ -26789,9 +29113,9 @@
     "temperature_counts": 2,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsami.0c10361",
@@ -26850,7 +29174,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -26865,7 +29189,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -27155,9 +29479,9 @@
     "temperature_counts": 2,
     "consensus_score": 64,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1021/acsaem.0c02525",
@@ -27194,7 +29518,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -28110,9 +30434,9 @@
     "temperature_counts": 4,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 60,
+    "quality_score": 56,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-35857-x",
@@ -28134,7 +30458,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "total"
           },
           {
@@ -28149,7 +30473,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "total"
           },
           {
@@ -29493,10 +31817,10 @@
   "LiTFSI-PC(quasi-solid)": {
     "material": "LiTFSI-PC(quasi-solid)",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 0,
-    "n_ea": 1,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
     "median_sigma": null,
     "sigma_ci95": null,
     "min_sigma": null,
@@ -29509,16 +31833,54 @@
     "median_ea": 0.3,
     "temperature_range_c": null,
     "temperature_counts": 0,
-    "consensus_score": 4,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 14,
+    "quality_score": 20,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1038/s41467-022-29118-6",
       "10.1038_s41467-022-29118-6"
     ],
     "papers": [
+      {
+        "doi": "10.1038/s41467-022-29118-6",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.3,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.3,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1038_s41467-022-29118-6",
         "measurements": [
@@ -29542,15 +31904,22 @@
         "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "LiTFSI-SN": {
     "material": "LiTFSI-SN",
     "family": "hydride",
-    "n_papers": 1,
-    "n_sigma": 0,
-    "n_ea": 1,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
     "median_sigma": null,
     "sigma_ci95": null,
     "min_sigma": null,
@@ -29563,16 +31932,54 @@
     "median_ea": 0.23,
     "temperature_range_c": null,
     "temperature_counts": 0,
-    "consensus_score": 4,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 14,
+    "quality_score": 20,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1007/s40820-024-01592-1",
       "10.1007_s40820-024-01592-1"
     ],
     "papers": [
+      {
+        "doi": "10.1007/s40820-024-01592-1",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.23,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.23,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1007_s40820-024-01592-1",
         "measurements": [
@@ -29596,15 +32003,22 @@
         "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "LiTFSI-SN-FEC": {
     "material": "LiTFSI-SN-FEC",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 0,
-    "n_ea": 1,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
     "median_sigma": null,
     "sigma_ci95": null,
     "min_sigma": null,
@@ -29617,16 +32031,54 @@
     "median_ea": 0.18,
     "temperature_range_c": null,
     "temperature_counts": 0,
-    "consensus_score": 4,
+    "consensus_score": 20,
     "consensus_verdict": "no consensus",
-    "quality_score": 14,
+    "quality_score": 20,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1007/s40820-024-01592-1",
       "10.1007_s40820-024-01592-1"
     ],
     "papers": [
+      {
+        "doi": "10.1007/s40820-024-01592-1",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.18,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.18,
+            "temperature_celsius": null,
+            "reviewer": "queue-clear-v0.3.2",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1007_s40820-024-01592-1",
         "measurements": [
@@ -29650,7 +32102,14 @@
         "n_ea": 1
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "LiTaCl6": {
     "material": "LiTaCl6",
@@ -30768,9 +33227,9 @@
     "temperature_counts": 2,
     "consensus_score": 70,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 54,
+    "quality_score": 50,
     "quality_grade": "C",
-    "metadata_completeness": 0.333,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s43246-024-00601-5",
@@ -30844,7 +33303,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -30859,7 +33318,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -30908,9 +33367,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-020-20370-2",
@@ -30969,7 +33428,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -30984,7 +33443,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -31679,9 +34138,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-020-20370-2",
@@ -31740,7 +34199,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -31755,7 +34214,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -31882,9 +34341,9 @@
     "temperature_counts": 3,
     "consensus_score": 34,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-40669-0",
@@ -31906,7 +34365,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -31921,7 +34380,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -34102,9 +36561,9 @@
     "temperature_counts": 4,
     "consensus_score": 60,
     "consensus_verdict": "moderate consensus",
-    "quality_score": 42,
+    "quality_score": 38,
     "quality_grade": "D",
-    "metadata_completeness": 0.4,
+    "metadata_completeness": 0.2,
     "outliers": [
       {
         "sigma": 0.00018,
@@ -34164,7 +36623,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": ""
           },
           {
@@ -34216,7 +36675,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           },
           {
@@ -34231,7 +36690,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "ConductivityType.total"
           }
         ],
@@ -34708,32 +37167,81 @@
   "PEO-LiTFSI-LLZTO-SN-ETPTA": {
     "material": "PEO-LiTFSI-LLZTO-SN-ETPTA",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 0.0002120000000000001,
     "sigma_ci95": null,
     "min_sigma": 0.0002120000000000001,
     "max_sigma": 0.0002120000000000001,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.0002120000000000001,
+        "min_sigma": 0.0002120000000000001,
+        "max_sigma": 0.0002120000000000001
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.1007/s11581-024-05451-2",
       "10.1007_s11581-024-05451-2"
     ],
     "papers": [
+      {
+        "doi": "10.1007/s11581-024-05451-2",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.000212,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.000212,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.1007_s11581-024-05451-2",
         "measurements": [
@@ -34757,7 +37265,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "PEO-LiTFSI-Li6.4La3Zr1.4Ta0.6O12(30%)": {
     "material": "PEO-LiTFSI-Li6.4La3Zr1.4Ta0.6O12(30%)",
@@ -35070,6 +37585,204 @@
           }
         ],
         "n_sigma": 1,
+        "n_ea": 1
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "PEO/LiFSI": {
+    "material": "PEO/LiFSI",
+    "family": "polymer_composite",
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.35,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 20,
+    "consensus_verdict": "no consensus",
+    "quality_score": 20,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1021/acsnano.3c03901",
+      "10.1021_acsnano.3c03901"
+    ],
+    "papers": [
+      {
+        "doi": "10.1021/acsnano.3c03901",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.35,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.35,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsnano.3c03901",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.35,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.35,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 16,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsnano.3c03901.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
+        "n_ea": 1
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "PEO/LiTFSI": {
+    "material": "PEO/LiTFSI",
+    "family": "polymer_composite",
+    "n_papers": 2,
+    "n_sigma": 1,
+    "n_ea": 2,
+    "n_measurements": 3,
+    "median_sigma": null,
+    "sigma_ci95": null,
+    "min_sigma": null,
+    "max_sigma": null,
+    "sigma_mad_log10": null,
+    "sigma_std_log10": null,
+    "sigma_iqr_log10": null,
+    "agreement_grade": "",
+    "sigma_by_temp": [],
+    "median_ea": 0.43,
+    "temperature_range_c": null,
+    "temperature_counts": 0,
+    "consensus_score": 20,
+    "consensus_verdict": "no consensus",
+    "quality_score": 20,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1021/acsnano.3c03901",
+      "10.1021_acsnano.3c03901"
+    ],
+    "papers": [
+      {
+        "doi": "10.1021/acsnano.3c03901",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": NaN,
+            "unit": "S/cm",
+            "sigma_S_per_cm": NaN,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          },
+          {
+            "property": "activation_energy",
+            "value": 0.43,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.43,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": ""
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1021_acsnano.3c03901",
+        "measurements": [
+          {
+            "property": "activation_energy",
+            "value": 0.43,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": 0.43,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 3,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1021_acsnano.3c03901.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 0,
         "n_ea": 1
       }
     ],
@@ -35415,32 +38128,81 @@
   "PVDF-HFP": {
     "material": "PVDF-HFP",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 4.200000000000003e-05,
     "sigma_ci95": null,
     "min_sigma": 4.200000000000003e-05,
     "max_sigma": 4.200000000000003e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 4.200000000000003e-05,
+        "min_sigma": 4.200000000000003e-05,
+        "max_sigma": 4.200000000000003e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.3390/gels12060534",
       "10.3390_gels12060534"
     ],
     "papers": [
+      {
+        "doi": "10.3390/gels12060534",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 4.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 4.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.3390_gels12060534",
         "measurements": [
@@ -35464,7 +38226,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "PVDF-HFP-EMITFSI": {
     "material": "PVDF-HFP-EMITFSI",
@@ -35547,32 +38316,81 @@
   "PVDF-HFP-LLZTO(10wt%)": {
     "material": "PVDF-HFP-LLZTO(10wt%)",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 0.0003400000000000002,
     "sigma_ci95": null,
     "min_sigma": 0.0003400000000000002,
     "max_sigma": 0.0003400000000000002,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 0.0003400000000000002,
+        "min_sigma": 0.0003400000000000002,
+        "max_sigma": 0.0003400000000000002
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.3390/gels12060534",
       "10.3390_gels12060534"
     ],
     "papers": [
+      {
+        "doi": "10.3390/gels12060534",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 0.00034,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 0.00034,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.3390_gels12060534",
         "measurements": [
@@ -35596,7 +38414,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "PVDF-HFP-LiTFSI": {
     "material": "PVDF-HFP-LiTFSI",
@@ -35945,6 +38770,226 @@
     ],
     "structure": null
   },
+  "Sr0.3Li0.4Zr0.5Ti1.5P3O12": {
+    "material": "Sr0.3Li0.4Zr0.5Ti1.5P3O12",
+    "family": "nasicon",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 9.65e-06,
+    "sigma_ci95": null,
+    "min_sigma": 9.65e-06,
+    "max_sigma": 9.65e-06,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 9.65e-06,
+        "min_sigma": 9.65e-06,
+        "max_sigma": 9.65e-06
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007/s43939-024-00089-3",
+      "10.1007_s43939-024-00089-3"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007/s43939-024-00089-3",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 9.65e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 9.65e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s43939-024-00089-3",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 9.65e-06,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 9.65e-06,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s43939-024-00089-3.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
+  "Sr0.3Li0.4Zr2P3O12": {
+    "material": "Sr0.3Li0.4Zr2P3O12",
+    "family": "nasicon",
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
+    "median_sigma": 3.200000000000002e-05,
+    "sigma_ci95": null,
+    "min_sigma": 3.200000000000002e-05,
+    "max_sigma": 3.200000000000002e-05,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 3.200000000000002e-05,
+        "min_sigma": 3.200000000000002e-05,
+        "max_sigma": 3.200000000000002e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
+    "quality_grade": "D",
+    "metadata_completeness": 0.0,
+    "outliers": [],
+    "dois": [
+      "10.1007/s43939-024-00089-3",
+      "10.1007_s43939-024-00089-3"
+    ],
+    "papers": [
+      {
+        "doi": "10.1007/s43939-024-00089-3",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 3.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 3.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
+      {
+        "doi": "10.1007_s43939-024-00089-3",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 3.2e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 3.2e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": null,
+            "reviewer": "ai-reviewer",
+            "page": 1,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "LLM ensemble extraction from 10.1007_s43939-024-00089-3.pdf",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 0
+      }
+    ],
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
+  },
   "Sr0.4375Li0.375Zr0.25Ta0.75O3": {
     "material": "Sr0.4375Li0.375Zr0.25Ta0.75O3",
     "family": "oxide",
@@ -35977,9 +39022,9 @@
     "temperature_counts": 3,
     "consensus_score": 40,
     "consensus_verdict": "weak consensus",
-    "quality_score": 48,
+    "quality_score": 41,
     "quality_grade": "D",
-    "metadata_completeness": 0.5,
+    "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
       "10.1038/s41467-023-37115-6",
@@ -36038,7 +39083,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "bulk"
           },
           {
@@ -36053,7 +39098,7 @@
             "section": "",
             "table_number": "",
             "evidence_sentence": "",
-            "measurement_method": "EIS",
+            "measurement_method": "",
             "conductivity_type": "bulk"
           }
         ],
@@ -36073,32 +39118,81 @@
   "UiO-66/PEO": {
     "material": "UiO-66/PEO",
     "family": "polymer_composite",
-    "n_papers": 1,
-    "n_sigma": 1,
-    "n_ea": 0,
-    "n_measurements": 1,
+    "n_papers": 2,
+    "n_sigma": 2,
+    "n_ea": 1,
+    "n_measurements": 3,
     "median_sigma": 3.000000000000001e-05,
     "sigma_ci95": null,
     "min_sigma": 3.000000000000001e-05,
     "max_sigma": 3.000000000000001e-05,
-    "sigma_mad_log10": null,
-    "sigma_std_log10": null,
-    "sigma_iqr_log10": null,
-    "agreement_grade": "C",
-    "sigma_by_temp": [],
-    "median_ea": null,
-    "temperature_range_c": null,
-    "temperature_counts": 0,
-    "consensus_score": 10,
-    "consensus_verdict": "no consensus",
-    "quality_score": 18,
+    "sigma_mad_log10": 0.0,
+    "sigma_std_log10": 0.0,
+    "sigma_iqr_log10": 0.0,
+    "agreement_grade": "B",
+    "sigma_by_temp": [
+      {
+        "temp_c": 25,
+        "n": 1,
+        "median_sigma": 3.000000000000001e-05,
+        "min_sigma": 3.000000000000001e-05,
+        "max_sigma": 3.000000000000001e-05
+      }
+    ],
+    "median_ea": NaN,
+    "temperature_range_c": [
+      24.850000000000023,
+      24.850000000000023
+    ],
+    "temperature_counts": 2,
+    "consensus_score": 34,
+    "consensus_verdict": "weak consensus",
+    "quality_score": 41,
     "quality_grade": "D",
     "metadata_completeness": 0.0,
     "outliers": [],
     "dois": [
+      "10.15541/jim20200206",
       "10.15541_jim20200206"
     ],
     "papers": [
+      {
+        "doi": "10.15541/jim20200206",
+        "measurements": [
+          {
+            "property": "conductivity",
+            "value": 3e-05,
+            "unit": "S/cm",
+            "sigma_S_per_cm": 3e-05,
+            "activation_energy_eV": null,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          },
+          {
+            "property": "activation_energy",
+            "value": NaN,
+            "unit": "eV",
+            "sigma_S_per_cm": null,
+            "activation_energy_eV": NaN,
+            "temperature_celsius": 24.850000000000023,
+            "reviewer": "ai-reviewer",
+            "page": null,
+            "section": "",
+            "table_number": "",
+            "evidence_sentence": "",
+            "measurement_method": "",
+            "conductivity_type": "ConductivityType.total"
+          }
+        ],
+        "n_sigma": 1,
+        "n_ea": 1
+      },
       {
         "doi": "10.15541_jim20200206",
         "measurements": [
@@ -36122,7 +39216,14 @@
         "n_ea": 0
       }
     ],
-    "structure": null
+    "structure": {
+      "space_group": null,
+      "space_group_number": NaN,
+      "crystal_system": null,
+      "band_gap": NaN,
+      "formation_energy_per_atom": NaN,
+      "is_stable": null
+    }
   },
   "V-LATP/PVDF-HFP-LiTFSICSE": {
     "material": "V-LATP/PVDF-HFP-LiTFSICSE",

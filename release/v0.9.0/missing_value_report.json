@@ -1,0 +1,377 @@
+{
+  "materials": {
+    "identity.composition": {
+      "missing": 9127,
+      "pct": 29.6
+    },
+    "identity.formula_pretty": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "identity.formula_anonymous": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "identity.chemsys": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "identity.elements": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "identity.nelements": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "identity.subfamily_tag": {
+      "missing": 9027,
+      "pct": 29.3
+    },
+    "identity.is_electrolyte_candidate": {
+      "missing": 8573,
+      "pct": 27.8
+    },
+    "structure.space_group_number": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.crystal_system": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.point_group": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.density": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.volume": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.nsites": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.li_site_count": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.li_vacancy_fraction": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "structure.li_hopping_distance": {
+      "missing": 10267,
+      "pct": 33.3
+    },
+    "thermodynamics.formation_energy_per_atom": {
+      "missing": 946,
+      "pct": 3.1
+    },
+    "thermodynamics.energy_above_hull": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "thermodynamics.band_gap": {
+      "missing": 946,
+      "pct": 3.1
+    },
+    "thermodynamics.is_stable": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "thermodynamics.is_metal": {
+      "missing": 9281,
+      "pct": 30.1
+    },
+    "thermodynamics.efermi": {
+      "missing": 9281,
+      "pct": 30.1
+    },
+    "thermodynamics.cbm": {
+      "missing": 15337,
+      "pct": 49.8
+    },
+    "thermodynamics.vbm": {
+      "missing": 15337,
+      "pct": 49.8
+    },
+    "magnetic.is_magnetic": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "magnetic.ordering": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "electronic.possible_species": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "redox.electroneutral": {
+      "missing": 11469,
+      "pct": 37.2
+    },
+    "chemistry.electronegativity_mean": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "chemistry.average_group": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "chemistry.average_period": {
+      "missing": 9273,
+      "pct": 30.1
+    },
+    "mechanical.bulk_modulus": {
+      "missing": 27642,
+      "pct": 89.7
+    },
+    "mechanical.shear_modulus": {
+      "missing": 27642,
+      "pct": 89.7
+    },
+    "dielectric.e_total": {
+      "missing": 29699,
+      "pct": 96.4
+    }
+  },
+  "papers": {
+    "title": {
+      "missing": 111,
+      "pct": 100.0
+    },
+    "journal": {
+      "missing": 111,
+      "pct": 100.0
+    },
+    "year": {
+      "missing": 111,
+      "pct": 100.0
+    }
+  },
+  "experiments": {
+    "sample_id": {
+      "missing": 17,
+      "pct": 9.5
+    },
+    "synthesis_id": {
+      "missing": 17,
+      "pct": 9.5
+    },
+    "sample_form": {
+      "missing": 26,
+      "pct": 14.5
+    },
+    "atmosphere": {
+      "missing": 17,
+      "pct": 9.5
+    },
+    "pelletizing_pressure_MPa": {
+      "missing": 126,
+      "pct": 70.4
+    },
+    "sinter_temperature_C": {
+      "missing": 127,
+      "pct": 70.9
+    },
+    "sinter_time_h": {
+      "missing": 152,
+      "pct": 84.9
+    },
+    "annealing_temperature_C": {
+      "missing": 164,
+      "pct": 91.6
+    },
+    "annealing_time_h": {
+      "missing": 179,
+      "pct": 100.0
+    },
+    "measurement_method": {
+      "missing": 179,
+      "pct": 100.0
+    },
+    "conductivity_type": {
+      "missing": 179,
+      "pct": 100.0
+    },
+    "instrument": {
+      "missing": 94,
+      "pct": 52.5
+    },
+    "electrode_material": {
+      "missing": 23,
+      "pct": 12.8
+    },
+    "frequency_min_Hz": {
+      "missing": 160,
+      "pct": 89.4
+    },
+    "frequency_max_Hz": {
+      "missing": 163,
+      "pct": 91.1
+    },
+    "pellet_diameter_mm": {
+      "missing": 133,
+      "pct": 74.3
+    },
+    "thickness_mm": {
+      "missing": 147,
+      "pct": 82.1
+    },
+    "relative_density_pct": {
+      "missing": 157,
+      "pct": 87.7
+    },
+    "temperature_min_C": {
+      "missing": 13,
+      "pct": 7.3
+    },
+    "temperature_max_C": {
+      "missing": 13,
+      "pct": 7.3
+    },
+    "evidence_page": {
+      "missing": 17,
+      "pct": 9.5
+    },
+    "evidence_section": {
+      "missing": 163,
+      "pct": 91.1
+    },
+    "evidence_table_number": {
+      "missing": 177,
+      "pct": 98.9
+    },
+    "evidence_sentence": {
+      "missing": 15,
+      "pct": 8.4
+    },
+    "reviewer": {
+      "missing": 22,
+      "pct": 12.3
+    }
+  },
+  "measurements": {
+    "temperature_c": {
+      "missing": 14,
+      "pct": 5.5
+    },
+    "temperature_min_C": {
+      "missing": 14,
+      "pct": 5.5
+    },
+    "temperature_max_C": {
+      "missing": 14,
+      "pct": 5.5
+    },
+    "measurement_method": {
+      "missing": 118,
+      "pct": 46.5
+    },
+    "conductivity_type": {
+      "missing": 16,
+      "pct": 6.3
+    },
+    "evidence_page": {
+      "missing": 32,
+      "pct": 12.6
+    },
+    "evidence_section": {
+      "missing": 229,
+      "pct": 90.2
+    },
+    "evidence_table_number": {
+      "missing": 250,
+      "pct": 98.4
+    },
+    "evidence_sentence": {
+      "missing": 30,
+      "pct": 11.8
+    },
+    "reviewer": {
+      "missing": 40,
+      "pct": 15.7
+    }
+  },
+  "synthesis": {
+    "precursors": {
+      "missing": 154,
+      "pct": 95.1
+    },
+    "ball_milling": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "solid_state": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "sintering": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "annealing": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "calcination": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "hot_pressing": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "spark_plasma_sintering": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "sol_gel": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "mechanochemical": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "sinter_temperature_C": {
+      "missing": 110,
+      "pct": 67.9
+    },
+    "sinter_time_h": {
+      "missing": 135,
+      "pct": 83.3
+    },
+    "annealing_temperature_C": {
+      "missing": 147,
+      "pct": 90.7
+    },
+    "annealing_time_h": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "pelletizing_pressure_MPa": {
+      "missing": 109,
+      "pct": 67.3
+    },
+    "heating_rate_C_per_min": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "cooling_rate_C_per_min": {
+      "missing": 162,
+      "pct": 100.0
+    },
+    "reaction_string": {
+      "missing": 162,
+      "pct": 100.0
+    }
+  },
+  "dopants": {}
+}

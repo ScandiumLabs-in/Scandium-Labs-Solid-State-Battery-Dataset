@@ -1,0 +1,12 @@
+{
+  "measurements": 254,
+  "coverage": {
+    "paper_id": 100.0,
+    "evidence_page": 87.4,
+    "evidence_sentence": 88.2,
+    "reviewer": 84.3,
+    "confidence": 100.0,
+    "measurement_method": 53.5,
+    "temperature": 94.5
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "total_input": 21753,
-  "total_output": 21753,
+  "total_input": 30827,
+  "total_output": 30827,
   "arrhenius_failures_count": 0,
   "unit_conversions": {
     "conductivity": 0,
@@ -13,9 +13,9 @@
     "alternate_polymorphs": 0
   },
   "missing_data": {
-    "null_sigma": 21728,
-    "null_ea": 21732,
-    "null_structure": 225,
+    "null_sigma": 30692,
+    "null_ea": 30757,
+    "null_structure": 8651,
     "silent_imputations": 0
   },
   "passed": true

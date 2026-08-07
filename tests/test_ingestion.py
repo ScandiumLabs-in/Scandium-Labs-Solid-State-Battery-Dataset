@@ -5,6 +5,7 @@ from __future__ import annotations
 import tempfile
 from pathlib import Path
 
+import httpx
 import pytest
 from pymatgen.core import Lattice, Structure
 
@@ -33,6 +34,12 @@ def _make_id(source_db: SourceDB, source_id: str, family: Family, tier: Confiden
         family=family,
         confidence_tier=tier,
     )
+
+
+def _fake_json_response(status: int, payload: object) -> httpx.Response:
+    """Build an httpx.Response usable with raise_for_status() (sets request)."""
+    request = httpx.Request("GET", "http://fake/")
+    return httpx.Response(status, json=payload, request=request)
 
 
 class TestIngestionPipeline:
@@ -315,6 +322,88 @@ class TestAFLOWAFLUX:
         assert rec.identity.family == Family.sulfide
         assert rec.structure.space_group == "P4_3 2_1 2"
 
+    def test_to_material_record_prefers_species_over_compound(self) -> None:
+        """AFLUX 'species' is authoritative; a compound string that would
+        misparse (intermetallic header) must not drive classification when
+        species is present."""
+        conn = AFLOWConnector()
+        raw = {
+            "auid": "aflow:xyz",
+            "compound": "AgAlLi_sv/TBCC014.BCA",
+            "species": ["Ag", "Al", "Li"],
+            "cif": "",
+            "spacegroup_relax": {"symbol": "C2/m"},
+        }
+        rec = conn.to_material_record(raw)
+        assert rec.identity.family == Family.unknown
+
+    def test_to_material_record_parses_contcar_lattice(self) -> None:
+        """AFLOW CONTCAR.relax is VASP POSCAR format; lattice params must be
+        parsed from it, not left as zero."""
+        conn = AFLOWConnector()
+        contcar = (
+            "AgAlLi_sv/TBCC014.BCA - (TBCC014.BCA) - \n"
+            "   1.0\n"
+            "     5.0   0.0   0.0\n"
+            "     0.0   5.0   0.0\n"
+            "     0.0   0.0   5.0\n"
+            "   Ag   Al   Li\n"
+            "     1     1     1\n"
+            "Direct\n"
+            "  0.0  0.0  0.0\n"
+            "  0.5  0.5  0.5\n"
+            "  0.25 0.25 0.25\n"
+        )
+        raw = {
+            "auid": "aflow:l",
+            "compound": "AgAlLi",
+            "species": ["Ag", "Al", "Li"],
+            "cif": contcar,
+            "spacegroup_relax": {"symbol": "Pm-3m"},
+        }
+        rec = conn.to_material_record(raw)
+        assert rec.structure.lattice_params is not None
+        assert abs(rec.structure.lattice_params.a - 5.0) < 1e-6
+
+    def test_fetch_records_parses_aflux_dict_response(self) -> None:
+        """AFLUX returns {"1 of N": {...}, ...} not a list; fetch_records must
+        flatten it and honor paging starting at page 1 (page 0 = all results)."""
+        import httpx
+
+        conn = AFLOWConnector()
+        conn._connected = True
+        pages = iter([
+            {"1 of 2": {"auid": "aflow:a", "aurl": "h:LD/A/B", "species": ["Li", "O"]},
+             "2 of 2": {"auid": "aflow:b", "aurl": "h:LD/A/C", "species": ["Li", "Cl"]}},
+        ])
+
+        class FakeClient:
+            def get(self, url: str) -> httpx.Response:
+                assert url.startswith("?species(Li),paging(")
+                return _fake_json_response(200, next(pages))
+
+        conn._client = FakeClient()  # type: ignore[assignment]
+        recs = list(conn.fetch_records(limit=3))
+        assert len(recs) == 2
+        assert recs[0]["auid"] == "aflow:a"
+
+    def test_catalog_cfaflow_returns_empty_is_dropped(self) -> None:
+        """catalog(CFAFLOW_LIB1) returns [] on the live API (2026-08-05); the
+        query must not include it so records are actually returned."""
+        import httpx
+
+        conn = AFLOWConnector()
+        conn._connected = True
+
+        class FakeClient:
+            def get(self, url: str) -> httpx.Response:
+                assert "catalog(" not in url
+                return _fake_json_response(200, {"1 of 1": {"auid": "aflow:a", "species": ["Li", "O"]}})
+
+        conn._client = FakeClient()  # type: ignore[assignment]
+        recs = list(conn.fetch_records(limit=1))
+        assert len(recs) == 1
+
 
 class TestOQMDUnitCell:
     def test_unit_cell_matrix_to_lattice(self) -> None:
@@ -328,6 +417,105 @@ class TestOQMDUnitCell:
         assert math.isclose(out["a"], 5.0)
         assert math.isclose(out["alpha"], 90.0)
         assert math.isclose(out["gamma"], 90.0)
+
+    def test_fetch_records_uses_element_set_filter(self) -> None:
+        """OQMD only honors element filters via filter=element_set=...; the
+        connector must send that, not a bare elements param (which 502s)."""
+        import httpx
+
+        conn = OQMDConnector()
+        conn._connected = True
+
+        class FakeClient:
+            def get(self, path: str, params: dict, timeout: int) -> httpx.Response:
+                assert path == "formationenergy"
+                assert params["filter"].startswith("element_set=")
+                return _fake_json_response(200, {
+                    "data": [
+                        {"entry_id": 1, "name": "LiCl", "composition": {"Li": 1, "Cl": 1}},
+                        {"entry_id": 2, "name": "Li2O", "composition": {"Li": 2, "O": 1}},
+                    ]
+                })
+
+        conn._client = FakeClient()  # type: ignore[assignment]
+        recs = list(conn.fetch_records(limit=5))
+        assert len(recs) == 2
+        assert recs[0]["id"] == 1
+
+    def test_fetch_records_paginates_in_small_pages(self) -> None:
+        """OQMD 502s on large page sizes; fetch_records must page through in
+        chunks of 50 rather than one big request."""
+        import httpx
+
+        conn = OQMDConnector()
+        conn._connected = True
+        calls = []
+
+        class FakeClient:
+            def get(self, path: str, params: dict, timeout: int) -> httpx.Response:
+                calls.append(params["limit"])
+                return _fake_json_response(200, {
+                    "data": [
+                        {"entry_id": i, "name": "LiX", "composition": {"Li": 1, "X": 1}}
+                        for i in range(params["limit"])
+                    ]
+                })
+
+        conn._client = FakeClient()  # type: ignore[assignment]
+        recs = list(conn.fetch_records(limit=55))
+        assert len(recs) == 55
+        assert calls[0] == 50
+        assert calls[-1] == 5  # remainder page
+
+
+class TestCODConnector:
+    def test_to_material_record_reads_file_id_and_lattice(self) -> None:
+        from ssb_dataset.sources.cod_connector import CODConnector
+        conn = CODConnector()
+        raw = {
+            "cod_id": "1000067",
+            "elements": ["Li"],
+            "lattice": {"a": 5.0, "b": 5.0, "c": 5.0, "alpha": 90.0, "beta": 90.0, "gamma": 90.0},
+            "space_group": "P 1",
+            "cif": (
+                "# comment header\n"
+                "data_1\n"
+                "_cell_length_a 5.0\n_cell_length_b 5.0\n_cell_length_c 5.0\n"
+                "_cell_angle_alpha 90\n_cell_angle_beta 90\n_cell_angle_gamma 90\n"
+                "_symmetry_space_group_name_H-M 'P 1'\n"
+                "loop_\n_atom_site_label\n_atom_site_type_symbol\n"
+                "_atom_site_fract_x\n_atom_site_fract_y\n_atom_site_fract_z\n"
+                "Li1 Li 0 0 0\nO1 O 0.5 0.5 0.5\n"
+            ),
+        }
+        rec = conn.to_material_record(raw)
+        assert rec.identity.material_id == "cod-1000067"
+        assert rec.identity.family == Family.oxide
+        assert abs(rec.structure.lattice_params.a - 5.0) < 1e-6
+
+    def test_fetch_records_uses_el1_element_search(self) -> None:
+        """COD's formula= param is an exact-formula match (returns 21 for Li);
+        el1= returns all Li-containing entries (8.8k+)."""
+        import httpx
+
+        from ssb_dataset.sources.cod_connector import CODConnector
+        conn = CODConnector()
+        conn._connected = True
+
+        class FakeClient:
+            def get(self, url: str, params: dict, timeout: int) -> httpx.Response:
+                assert params["el1"] == "Li"
+                return _fake_json_response(200, {
+                    "results": [{"file": "1000067", "a": "5.0", "b": "5.0", "c": "5.0",
+                                 "alpha": "90", "beta": "90", "gamma": "90", "sg": "P 1"}]
+                })
+
+        conn._client = FakeClient()  # type: ignore[assignment]
+        import unittest.mock as mock
+        with mock.patch.object(CODConnector, "_fetch_cif", return_value=""):
+            recs = list(conn.fetch_records(limit=5))
+        assert len(recs) == 1
+        assert recs[0]["cod_id"] == "1000067"
 
 
 class TestClassifierExtended:

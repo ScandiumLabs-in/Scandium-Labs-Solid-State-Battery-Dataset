@@ -1,96 +1,96 @@
 {
-  "total_records": 30071,
-  "verified_records": 116,
+  "total_records": 30119,
+  "verified_records": 164,
   "coverage": {
-    "temperature_celsius": 94.0,
-    "measurement_method": 99.1,
-    "conductivity_type": 92.2,
-    "pelletizing_pressure_MPa": 29.3,
-    "relative_density_pct": 11.2,
+    "temperature_celsius": 90.9,
+    "measurement_method": 50.0,
+    "conductivity_type": 89.6,
+    "pelletizing_pressure_MPa": 26.2,
+    "relative_density_pct": 11.0,
     "theoretical_density_g_per_cm3": 0.0,
-    "electrode_material": 85.3,
-    "atmosphere": 85.3,
-    "sample_form": 85.3,
-    "frequency_max_Hz": 5.2,
-    "sinter_temperature_C": 29.3,
-    "sinter_time_h": 12.9,
-    "page": 87.1,
-    "evidence_sentence": 87.1
+    "electrode_material": 86.6,
+    "atmosphere": 89.6,
+    "sample_form": 86.6,
+    "frequency_max_Hz": 7.9,
+    "sinter_temperature_C": 31.1,
+    "sinter_time_h": 16.5,
+    "page": 90.2,
+    "evidence_sentence": 90.9
   },
   "family_balance": {
-    "polymer_composite": 24,
-    "garnet": 18,
-    "nasicon": 13,
-    "perovskite": 10,
-    "sulfide": 9,
-    "halide": 9,
-    "antiperovskite": 8,
-    "unknown": 7,
-    "argyrodite": 6,
-    "borohydride": 5,
-    "oxide": 5,
-    "hydride": 2
+    "polymer_composite": 33,
+    "garnet": 26,
+    "nasicon": 20,
+    "perovskite": 14,
+    "halide": 14,
+    "argyrodite": 14,
+    "sulfide": 10,
+    "antiperovskite": 9,
+    "unknown": 8,
+    "oxide": 7,
+    "borohydride": 6,
+    "hydride": 3
   },
   "conductivity_type_split": {
     "total": 74,
-    "ConductivityType.total": 24,
-    "bulk": 9,
-    "unknown": 9
+    "ConductivityType.total": 64,
+    "unknown": 17,
+    "bulk": 9
   },
-  "materials_total": 405,
-  "materials_with_consensus_n3": 24,
-  "materials_with_sigma": 400,
-  "materials_with_ea": 397,
-  "materials_with_multipaper": 37,
-  "total_sigma_records": 511,
-  "total_ea_records": 479,
-  "outlier_records": 4,
+  "materials_total": 415,
+  "materials_with_consensus_n3": 28,
+  "consensus_depth_ratio": 0.1707,
+  "materials_with_sigma": 415,
+  "materials_with_ea": 415,
+  "materials_with_multipaper": 69,
+  "total_sigma_records": 575,
+  "total_ea_records": 535,
+  "outlier_records": 6,
   "agreement_grade_distribution": {
-    "C": 343,
-    "B": 34,
-    "A+": 9,
-    "A": 7,
-    "": 7,
-    "D": 5
+    "C": 327,
+    "B": 56,
+    "": 10,
+    "A+": 8,
+    "D": 8,
+    "A": 6
   },
-  "materials_with_pub_years": 127,
-  "pub_years_coverage_pct": 31.4,
-  "materials_with_sigma_by_temp": 385,
-  "quality_score_avg": 30.5,
-  "quality_score_min": 14,
-  "quality_score_max": 86,
+  "materials_with_pub_years": 139,
+  "pub_years_coverage_pct": 33.5,
+  "materials_with_sigma_by_temp": 405,
+  "quality_score_avg": 31.0,
+  "quality_score_min": 16,
+  "quality_score_max": 80,
   "quality_grade_distribution": {
-    "D": 387,
-    "C": 15,
-    "B": 2,
-    "A": 1
+    "D": 395,
+    "C": 17,
+    "B": 3
   },
-  "queue_items": 362,
+  "queue_items": 402,
   "queue_pending": 0,
-  "queue_approved": 191,
-  "queue_rejected": 171,
-  "queue_with_experiment_block": 114,
+  "queue_approved": 215,
+  "queue_rejected": 187,
+  "queue_with_experiment_block": 154,
   "quality": {
-    "records": 191,
-    "avg_score": 53.7,
+    "records": 215,
+    "avg_score": 56.9,
     "grade_distribution": {
-      "C": 176,
-      "D": 8,
-      "B": 7
+      "C": 192,
+      "B": 18,
+      "D": 5
     },
     "tier_distribution": {
-      "silver": 186,
+      "silver": 210,
       "rejected": 5
     },
     "gold_records": 0,
-    "silver_records": 186,
+    "silver_records": 210,
     "bronze_records": 0,
     "rejected_records": 5,
     "gold_pct": 0.0
   },
   "missing_data_recommendations": {
     "pelletizing_pressure_MPa": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -106,7 +106,7 @@
       ]
     },
     "relative_density_pct": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -122,7 +122,7 @@
       ]
     },
     "theoretical_density_g_per_cm3": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -138,7 +138,7 @@
       ]
     },
     "pellet_diameter_mm": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -154,7 +154,7 @@
       ]
     },
     "thickness_mm": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -170,7 +170,7 @@
       ]
     },
     "electrode_material": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -186,7 +186,7 @@
       ]
     },
     "atmosphere": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -202,7 +202,7 @@
       ]
     },
     "humidity": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -218,7 +218,7 @@
       ]
     },
     "sample_form": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -234,7 +234,7 @@
       ]
     },
     "frequency_max_Hz": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -250,7 +250,7 @@
       ]
     },
     "sinter_temperature_C": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -266,7 +266,7 @@
       ]
     },
     "sinter_time_h": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -282,7 +282,7 @@
       ]
     },
     "annealing_temperature_C": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -298,7 +298,7 @@
       ]
     },
     "instrument": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -314,7 +314,7 @@
       ]
     },
     "equivalent_circuit": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -330,7 +330,7 @@
       ]
     },
     "dc_bias_V": {
-      "missing_count": 191,
+      "missing_count": 215,
       "missing_pct": 100.0,
       "top_records": [
         "review_0b5b52b6ae4db541",
@@ -348,6 +348,6 @@
   },
   "drift": {
     "record_count_change": 0,
-    "baseline_records": 116
+    "baseline_records": 164
   }
 }

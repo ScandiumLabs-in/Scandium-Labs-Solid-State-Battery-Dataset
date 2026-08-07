@@ -51,7 +51,7 @@ DOI_COL = "text_provenance.source_doi"
 MAT_COL = "identity.material_id"
 
 _JUNK_RE = re.compile(
-    r"LLM ensemble extraction|LLM extraction|no evidence|N/A|nan|None",
+    r"LLM ensemble extraction|LLM extraction|no evidence|N/A|nan|None|Article https",
     re.IGNORECASE,
 )
 
@@ -121,13 +121,20 @@ def _find_in_text(text: str, target: float, *, is_sigma: bool, is_ea: bool) -> t
     if target is None:
         return None
     if is_sigma:
+        # Unit tokens must tolerate the glyphs PDF text layers actually use:
+        # "S∙cm-1" / "S cm-1" / "S·cm−1" / "S/cm" — a bullet or dot separator
+        # between S and cm and a plain hyphen or U+2212 exponent marker. The
+        # verifier script (`_has_unit_context`) already accepts these; without
+        # them the evidence finder silently skips perfectly-verifiable rows.
         variants = [
-            (float(target), 0.35, r"(S\s*/\s*cm|S\s*cm\s*−?1|S/cm|S cm)"),
-            (float(target) * 1e3, 0.35, r"(mS\s*/\s*cm|mS/cm|mS\s*cm\s*−?1)"),
-            (float(target) * 1e6, 0.35, r"(µ?S\s*/\s*cm|uS/cm|µS/cm|µS\s*cm\s*−?1)"),
+            (float(target), 0.35, r"((?:S\s*[∙·]?\s*/\s*cm|S\s*[∙·]?\s*cm\s*[-\u2212]?\s*1|S/cm|S\s*cm\b|S∙cm|S·cm))"),
+            (float(target) * 1e3, 0.35, r"((?:mS\s*[∙·]?\s*/\s*cm|mS\s*[∙·]?\s*cm\s*[-\u2212]?\s*1|mS/cm|mS\s*cm\b))"),
+            (float(target) * 1e6, 0.35, r"((?:µ?S\s*[∙·]?\s*/\s*cm|µ?S\s*[∙·]?\s*cm\s*[-\u2212]?\s*1|µ?S/cm|µS\s*cm\b))"),
         ]
     else:
-        variants = [(float(target), 0.08, r"(eV)")]
+        # Ea: standalone "eV" only (never the "meV" in an instrument's energy
+        # resolution, which is 1e-3 the scale — a coincidence false positive).
+        variants = [(float(target), 0.08, r"((?<![a-z])eV\b)")]
     best: tuple[float, int, str, str] | None = None
     for tv, rel, unit_re in variants:
         tol = abs(tv) * rel
@@ -209,7 +216,7 @@ def find_evidence_for_row(row: pd.Series) -> dict | None:
             found_comp = present >= max(2, len(elems) - 2)
         res_s = _find_in_text(text, sigma, is_sigma=True, is_ea=False) if sigma is not None else None
         res_e = _find_in_text(text, ea, is_sigma=False, is_ea=True) if ea is not None else None
-        score = (4 if found_comp else 0) + (2 if res_s else 0) + (1 if res_e else 0)
+        score = (4 if found_comp else 0) + (6 if res_s else 0) + (3 if res_e else 0)
         if score > 0:
             scored.append((score, page_idx, text, found_comp, res_s, res_e))
 

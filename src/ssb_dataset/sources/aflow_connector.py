@@ -6,10 +6,18 @@ directly with ``httpx`` — the same API the client wraps — so the source is
 re-enabled without any stale dependency.
 
 AFLUX query grammar used (see https://aflow.org/API/aflux/):
-    catalog(CFAFLOW_LIB1),species(Li),paging(N),format(json)
+    species(Li),paging(N,M),format(json)
 Each result entry carries ``auid``, lattice constants, space group and
 ``compound`` (formula string); the CIF is fetched per-auid from the entry's
 ``aurl`` when reachable.
+
+Notes from live testing (2026-08-05):
+- The summon must be written into the URL path after ``?`` — passing it as an
+  ``API=`` query parameter returns ``DB Fail!null``.
+- ``catalog(CFAFLOW_LIB1)`` (the old default) returns ``[]`` — drop the catalog
+  directive to query the full LIB catalog.
+- ``paging(0,K)`` means "return ALL results" (146k for species(Li) — huge and
+  slow). Pages are 1-indexed: ``paging(1,K)`` is the first page.
 """
 
 from __future__ import annotations
@@ -43,16 +51,27 @@ class AFLOWConnector(BaseSourceConnector):
 
     @staticmethod
     def _fetch_cif(auid: str, aurl: str | None) -> str | None:
-        """Fetch the CIF for an auid when AFLOW exposes one (best-effort)."""
-        if not auid:
+        """Fetch the relaxed structure file for an auid (best-effort).
+
+        AFLOW exposes the relaxed VASP CONTCAR at
+        ``https://aflowlib.duke.edu/AFLOWDATA/<aurl>/CONTCAR.relax``. The legacy
+        ``material.urn.php?auid=...&cif`` endpoint 404s (2026-08-05).
+        """
+        if not auid and not aurl:
             return None
-        for url in (f"https://aflow.org/material.urn.php?auid={auid}&cif",
-                    f"{aurl.rstrip('/')}/{auid}.cif" if aurl else ""):
-            if not url:
-                continue
+        candidates = []
+        if aurl:
+            # aurl looks like "aflowlib.duke.edu:AFLOWDATA/LIB3_WEB/AgAlLi_sv/TBCC014.BCA"
+            aurl_path = aurl.split(":", 1)[-1].rstrip("/")
+            if aurl_path.startswith("AFLOWDATA/"):
+                aurl_path = aurl_path[len("AFLOWDATA/"):]
+            candidates.append(f"https://aflowlib.duke.edu/AFLOWDATA/{aurl_path}/CONTCAR.relax")
+        if auid:
+            candidates.append(f"https://aflowlib.duke.edu/AFLOWDATA/{auid}/CONTCAR.relax")
+        for url in candidates:
             try:
-                r = httpx.get(url, follow_redirects=True, timeout=45)
-                if r.status_code == 200 and r.text.strip().startswith("data_"):
+                r = httpx.get(url, follow_redirects=True, timeout=12)
+                if r.status_code == 200 and r.text.strip() and not r.text.lstrip().startswith("<"):
                     return r.text
             except Exception:
                 continue
@@ -61,15 +80,15 @@ class AFLOWConnector(BaseSourceConnector):
     def fetch_records(self, **kwargs: Any) -> Generator[dict[str, Any], None, None]:
         species = kwargs.get("species", "Li")
         limit = kwargs.get("limit", 1000)
-        page = 0
+        page = 1  # paging(0, K) = "all results"; pages are 1-indexed
         PAGE_SIZE = 200
-        while page * PAGE_SIZE < limit:
+        fetched = 0
+        while not limit or fetched < limit:
             query = (
-                f"catalog(CFAFLOW_LIB1),species({species}),"
-                f"paging({page},{PAGE_SIZE}),format(json)"
+                f"species({species}),paging({page},{PAGE_SIZE}),format(json)"
             )
             try:
-                resp = self._client.get("", params={"API": query})
+                resp = self._client.get(f"?{query}")
             except Exception as exc:
                 print(f"  [WARN] AFLOW query failed: {exc} — skipping AFLOW")
                 return
@@ -80,45 +99,61 @@ class AFLOWConnector(BaseSourceConnector):
                 entries = resp.json()
             except Exception:
                 entries = []
+            # AFLUX returns a dict {"1 of N": {...}, ...}
+            if isinstance(entries, dict):
+                entries = list(entries.values())
             if not isinstance(entries, list) or not entries:
                 break
             for entry in entries:
+                if limit and fetched >= limit:
+                    break
                 cif = self._fetch_cif(str(entry.get("auid", "")), entry.get("aurl"))
                 entry["cif"] = cif or ""
                 yield entry
+                fetched += 1
             if len(entries) < PAGE_SIZE:
                 break
             page += 1
 
     def to_material_record(self, raw: dict[str, Any]) -> MaterialRecord:
-        lattice = raw.get("lattice", {})
-        if not lattice:  # AFLUX names lattice constants ca/cb/cc, alpha/beta/gamma
-            lattice = {
-                "a": raw.get("ca") or raw.get("a") or 0.0,
-                "b": raw.get("cb") or raw.get("b") or 0.0,
-                "c": raw.get("cc") or raw.get("c") or 0.0,
-                "alpha": raw.get("alpha", 90.0),
-                "beta": raw.get("beta", 90.0),
-                "gamma": raw.get("gamma", 90.0),
-            }
-        spg = raw.get("spacegroup", {}) or raw.get("spacegroup_relax", {})
         cif = raw.get("cif", "")
 
+        # Elements: prefer AFLUX's explicit species list (authoritative); the
+        # CONTCAR header is not POSCAR-parseable, so pymatgen would guess
+        # wrong names. Fall back to the compound formula when species is empty.
         elements: set[str] = set()
-        if cif:
-            try:
-                from pymatgen.core import Structure
-                struct = Structure.from_str(cif, fmt="cif")
-                elements = {el.symbol for el in struct.composition.elements}
-            except Exception:
-                pass
+        species_raw = raw.get("species")
+        if species_raw:
+            for s in species_raw:
+                sym = str(s).strip()
+                if sym and not sym[0].isdigit():
+                    elements.add(sym)
         if not elements and raw.get("compound"):
-            # AFLUX gives a formula string like "Li3ClO" / "Li O2"
             try:
                 from pymatgen.core import Composition
                 elements = {el.symbol for el in Composition(raw["compound"]).elements}
             except Exception:
                 pass
+
+        # Lattice params: parse from the CONTCAR text we already fetched, since
+        # AFLUX doesn't return lattice constants unless requested.
+        lattice: dict[str, float] = {}
+        if cif:
+            try:
+                from pymatgen.core import Structure
+                if cif.lstrip().startswith("data_") or "_cell_length_a" in cif:
+                    struct = Structure.from_str(cif, fmt="cif")
+                else:
+                    struct = Structure.from_str(cif, fmt="poscar")
+                lp = struct.lattice
+                lattice = {
+                    "a": lp.a, "b": lp.b, "c": lp.c,
+                    "alpha": lp.alpha, "beta": lp.beta, "gamma": lp.gamma,
+                }
+            except Exception:
+                pass
+
+        spg = raw.get("spacegroup", {}) or raw.get("spacegroup_relax", {})
 
         identity = IdentityProvenance(
             material_id=f"aflow-{raw.get('auid', '')}",
@@ -142,7 +177,7 @@ class AFLOWConnector(BaseSourceConnector):
                     beta=float(lattice.get("beta", 90.0) or 90.0),
                     gamma=float(lattice.get("gamma", 90.0) or 90.0),
                 )
-                if isinstance(lattice, dict)
+                if lattice
                 else None
             ),
         )

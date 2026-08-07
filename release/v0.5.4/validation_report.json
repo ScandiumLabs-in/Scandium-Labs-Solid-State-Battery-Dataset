@@ -1,0 +1,203 @@
+{
+  "total_records": 52366,
+  "records_per_family": {
+    "oxide": 37065,
+    "unknown": 8107,
+    "halide": 3968,
+    "sulfide": 1275,
+    "nasicon": 824,
+    "hydride": 356,
+    "polymer_composite": 242,
+    "borohydride": 199,
+    "antiperovskite": 121,
+    "garnet": 102,
+    "perovskite": 72,
+    "argyrodite": 35
+  },
+  "records_per_source": {
+    "materials_project": 43056,
+    "jarvis": 8327,
+    "cod": 500,
+    "literature_mined": 183,
+    "aflow": 150,
+    "nomad": 100,
+    "oqmd": 50
+  },
+  "records_per_confidence": {
+    "dft_native": 52183,
+    "verified_human": 182,
+    "low_confidence_extraction": 1
+  },
+  "family_distributions": [
+    {
+      "family": "unknown",
+      "count": 8107,
+      "sigma_mean": 0.0002203675,
+      "sigma_median": 0.0001135,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.23459999999999998,
+      "ea_median": 0.16,
+      "ea_outside_range": 0,
+      "band_gap_mean": 0.4400794386633659,
+      "band_gap_outside_range": 0,
+      "flags": []
+    },
+    {
+      "family": "nasicon",
+      "count": 824,
+      "sigma_mean": 0.0004501868421052633,
+      "sigma_median": 0.00019,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.3143333333333333,
+      "ea_median": 0.311,
+      "ea_outside_range": 1,
+      "band_gap_mean": 1.774742513053781,
+      "band_gap_outside_range": 610,
+      "flags": []
+    },
+    {
+      "family": "antiperovskite",
+      "count": 121,
+      "sigma_mean": 7.1405000000000005e-06,
+      "sigma_median": 1.275e-06,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.5566666666666668,
+      "ea_median": 0.56,
+      "ea_outside_range": 0,
+      "band_gap_mean": 2.047131578052236,
+      "band_gap_outside_range": 72,
+      "flags": []
+    },
+    {
+      "family": "hydride",
+      "count": 356,
+      "sigma_mean": 5.05e-05,
+      "sigma_median": 5.05e-05,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.4266666666666667,
+      "ea_median": 0.45,
+      "ea_outside_range": 0,
+      "band_gap_mean": 2.1693998234324323,
+      "band_gap_outside_range": 226,
+      "flags": []
+    },
+    {
+      "family": "borohydride",
+      "count": 199,
+      "sigma_mean": 0.0001281,
+      "sigma_median": 8e-05,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.7525,
+      "ea_median": 0.5599999999999999,
+      "ea_outside_range": 0,
+      "band_gap_mean": 4.2290708255488525,
+      "band_gap_outside_range": 50,
+      "flags": []
+    },
+    {
+      "family": "halide",
+      "count": 3968,
+      "sigma_mean": 0.0008245238095238095,
+      "sigma_median": 0.00053,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.33375,
+      "ea_median": 0.33999999999999997,
+      "ea_outside_range": 1,
+      "band_gap_mean": 2.260570985635015,
+      "band_gap_outside_range": 2970,
+      "flags": []
+    },
+    {
+      "family": "perovskite",
+      "count": 72,
+      "sigma_mean": 0.00019032142857142859,
+      "sigma_median": 4.45e-05,
+      "sigma_outside_range": 1,
+      "ea_mean": 0.3453333333333333,
+      "ea_median": 0.305,
+      "ea_outside_range": 1,
+      "band_gap_mean": 1.360603703703704,
+      "band_gap_outside_range": 38,
+      "flags": []
+    },
+    {
+      "family": "polymer_composite",
+      "count": 242,
+      "sigma_mean": 0.00241396,
+      "sigma_median": 0.0001765,
+      "sigma_outside_range": 4,
+      "ea_mean": 0.42449999999999993,
+      "ea_median": 0.297,
+      "ea_outside_range": 0,
+      "band_gap_mean": 3.236648194549623,
+      "band_gap_outside_range": 48,
+      "flags": []
+    },
+    {
+      "family": "oxide",
+      "count": 37065,
+      "sigma_mean": 0.03214375,
+      "sigma_median": 0.00135,
+      "sigma_outside_range": 1,
+      "ea_mean": 0.4378571428571428,
+      "ea_median": 0.33,
+      "ea_outside_range": 0,
+      "band_gap_mean": 1.158167982652031,
+      "band_gap_outside_range": 25371,
+      "flags": []
+    },
+    {
+      "family": "garnet",
+      "count": 102,
+      "sigma_mean": 0.0004169221428571428,
+      "sigma_median": 0.00033,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.3332823529411765,
+      "ea_median": 0.35,
+      "ea_outside_range": 1,
+      "band_gap_mean": 1.470816901408451,
+      "band_gap_outside_range": 67,
+      "flags": []
+    },
+    {
+      "family": "argyrodite",
+      "count": 35,
+      "sigma_mean": 0.006229105,
+      "sigma_median": 0.0010934999999999999,
+      "sigma_outside_range": 0,
+      "ea_mean": 0.191,
+      "ea_median": 0.2,
+      "ea_outside_range": 0,
+      "band_gap_mean": 2.29507,
+      "band_gap_outside_range": 0,
+      "flags": []
+    },
+    {
+      "family": "sulfide",
+      "count": 1275,
+      "sigma_mean": 0.0045053625,
+      "sigma_median": 0.0035,
+      "sigma_outside_range": 1,
+      "ea_mean": 0.3407777777777778,
+      "ea_median": 0.39,
+      "ea_outside_range": 0,
+      "band_gap_mean": 1.1257010378492933,
+      "band_gap_outside_range": 768,
+      "flags": []
+    }
+  ],
+  "family_distribution_flags": [],
+  "benchmark_compounds_verified": 9,
+  "benchmark_compounds_failed": [
+    "Li3xLa2/3-xTiO3"
+  ],
+  "cross_source_entries_count": 0,
+  "cross_source_failed": 0,
+  "extraction_audit": {
+    "seed_count": 15,
+    "validated_count": 15,
+    "accuracy": 1.0,
+    "passed": true
+  },
+  "passed": false
+}

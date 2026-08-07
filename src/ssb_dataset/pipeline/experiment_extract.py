@@ -186,15 +186,28 @@ def _flatten_wordbreaks(text: str) -> str:
 
 def _looks_like_circuit(s: str) -> bool:
     """True only for a compact equivalent-circuit expression (R, CPE, Q, W,
-    parentheses, parallel ||). Never prose like "used for the fit"."""
+    parentheses, parallel ||). Never prose like "used for the fit" or a bare
+    word such as "consisting"/"fits".
+
+    A genuine expression must contain BOTH:
+      * at least one known circuit element token (R, CPE, Q, W, Z, C, Cdl, ...)
+      * at least one design connector/delimiter (||, -, /, numbers, parentheses)
+    so a lone prose word can never survive.
+    """
     import re
     s = s.strip()
     # must contain only circuit elements and delimiters, not prose words
-    return bool(re.fullmatch(
-        r"[A-Za-z0-9_()\[\]{}|+*/.,~-]+", s)) and not re.search(
+    if not re.fullmatch(r"[A-Za-z0-9_()\[\]{}|+*/.,~-]+", s):
+        return False
+    if re.search(
         r"model|figure|scheme|used|fitting|yield|shown|gives|was|the|of|"
-        r"circuit|using|interface|electrode",
-        s, re.I)
+        r"circuit|using|interface|electrode|consisting|shown|with|and",
+        s, re.I):
+        return False
+    has_element = re.search(r"\b(?:R\d*|CPE\d*|Q\d*|W\d*|Z\d*|C\d*|"
+                            r"Cdl|Cg|Rct|Rb|Rgb|Rbulk)\b", s, re.I)
+    has_connector = re.search(r"[|+()]|\d|-|/", s)
+    return bool(has_element and has_connector)
 
 
 def _clean_circuit(s: str) -> str:

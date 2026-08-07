@@ -1,0 +1,64 @@
+{
+  "canonical_records": 30838,
+  "negative_records": 23400,
+  "unknown_records": 983,
+  "signal_counts": {
+    "thermodynamically_unstable": 16326,
+    "electronic_conductor": 11295,
+    "poor_li_transport_proxy": 3214
+  },
+  "confidence_distribution": {
+    "high": 22670,
+    "medium": 730
+  },
+  "by_source": {
+    "aflow": {
+      "records": 150,
+      "negative": 0,
+      "unknown": 150,
+      "negative_share": 0.0
+    },
+    "cod": {
+      "records": 500,
+      "negative": 0,
+      "unknown": 500,
+      "negative_share": 0.0
+    },
+    "jarvis": {
+      "records": 8327,
+      "negative": 5042,
+      "unknown": 0,
+      "negative_share": 0.6055
+    },
+    "literature_mined": {
+      "records": 183,
+      "negative": 0,
+      "unknown": 183,
+      "negative_share": 0.0
+    },
+    "materials_project": {
+      "records": 21528,
+      "negative": 18358,
+      "unknown": 0,
+      "negative_share": 0.8527
+    },
+    "nomad": {
+      "records": 100,
+      "negative": 0,
+      "unknown": 100,
+      "negative_share": 0.0
+    },
+    "oqmd": {
+      "records": 50,
+      "negative": 0,
+      "unknown": 50,
+      "negative_share": 0.0
+    }
+  },
+  "signals": {
+    "thermodynamically_unstable": "energy_above_hull > 0.025 eV/atom (MP stability convention)",
+    "electronic_conductor": "is_metal True or band_gap == 0 (electronic short)",
+    "poor_li_transport_proxy": "li_hopping_distance > 4.5 A (no percolation path; medium confidence proxy)"
+  },
+  "convention": "is_negative_result=None means no signal was computable for this row (e.g. no MP structure); never a fabricated False. is_negative_result=True means at least one DFT negative signal fired."
+}

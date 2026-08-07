@@ -1,0 +1,2426 @@
+{
+  "scaled_to": [
+    {
+      "material": "Li6PS5Cl",
+      "n_papers": 9,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": true,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li6PS5Cl\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7La3Zr2O12",
+      "n_papers": 14,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": true,
+      "families": [
+        "LLZO",
+        "garnet"
+      ],
+      "query": "\"Li7La3Zr2O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6PS5Cl/TEGDMA",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": true,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Li6PS5Cl/TEGDMA\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7La3Zr2O12(tetragonal)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": true,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li7La3Zr2O12(tetragonal)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7La3Zr2O12:Ta",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": true,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li7La3Zr2O12:Ta\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2ZrCl6",
+      "n_papers": 5,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li2ZrCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3InCl6",
+      "n_papers": 5,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3InCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3YCl6",
+      "n_papers": 3,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3YCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI",
+      "n_papers": 3,
+      "additions_needed": 0,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "80(3LiBH4LiCl)20P2S5",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"80(3LiBH4LiCl)20P2S5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Ca-CeO2/LiTFSI/PEO",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Ca-CeO2/LiTFSI/PEO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-LiI/Al2O3",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-LiI/Al2O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-MgO",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-MgO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-LLZTO-SN-ETPTA",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-LLZTO-SN-ETPTA\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO/LiFSI",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO/LiFSI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO/LiTFSI",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO/LiTFSI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "UiO-66/PEO",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"UiO-66/PEO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3OCl(x=1)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3OCl(x=1)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3OCl(x=1.5)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3OCl(x=1.5)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3OClx=1.0",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3OClx=1.0\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3PS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3PS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3PS4(c-Li3PS4)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3PS4(c-Li3PS4)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3PS4-2LiBH4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3PS4-2LiBH4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3YCl6(as-prepared)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3YCl6(as-prepared)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7P3S11",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li7P3S11\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-LiCl",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-LiCl\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-LiI",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-LiI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-LiNH2(0.67:0.33)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-LiNH2(0.67:0.33)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-MgH2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-MgH2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-MgO(CE26)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"LiBH4-MgO(CE26)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-MgO(CE74)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"LiBH4-MgO(CE74)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-P2S5",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"LiBH4-P2S5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-SiO2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-SiO2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-SrCl2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"LiBH4-SrCl2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiBH4-SrCl2(0.5:0.5)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"LiBH4-SrCl2(0.5:0.5)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiNH2-LiBH4(1:1)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"LiNH2-LiBH4(1:1)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-5%COF-LZU1",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-5%COF-LZU1\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiClO4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiClO4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiClO4(60:40)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiClO4(60:40)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-(electrospun)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-(electrospun)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-AlOC",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-AlOC\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-LATPcomposite",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-LATPcomposite\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-LLZOcomposite",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-LLZOcomposite\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-LiTFSI-SiO2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-LiTFSI-SiO2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO-PAPI(crosslinked)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO-PAPI(crosslinked)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO/LiTFSI(electrospun)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO/LiTFSI(electrospun)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PEO/LiTFSI/in-situSiO2(10wt%)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": true,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PEO/LiTFSI/in-situSiO2(10wt%)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "0.5Li2SO4-ZrCl4",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"0.5Li2SO4-ZrCl4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "0.7Li(CB9H10)-0.3Li(CB11H12)",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "complex_hydride",
+        "hydride"
+      ],
+      "query": "\"0.7Li(CB9H10)-0.3Li(CB11H12)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "AP2F",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "unknown"
+      ],
+      "query": "\"AP2F\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Cs1In0.067Sn0.9Cl3",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Cs1In0.067Sn0.9Cl3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li(BH)6",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"Li(BH)6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li(BH4)1-xIx",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Li(BH4)1-xIx\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.35La0.55TiO3-2wt%LiF",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.35La0.55TiO3-2wt%LiF\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.35La0.55TiO3-4wt%LiF",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.35La0.55TiO3-4wt%LiF\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.35La0.55TiO3-6wt%LiF",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.35La0.55TiO3-6wt%LiF\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Y0.01Ti1.7Al0.29P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.3Y0.01Ti1.7Al0.29P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Y0.05Ti1.7Al0.25P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.3Y0.05Ti1.7Al0.25P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Y0.15Ti1.7Al0.15P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.3Y0.15Ti1.7Al0.15P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Y0.1Ti1.7Al0.2P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.3Y0.1Ti1.7Al0.2P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2O-TaCl5",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2O-TaCl5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2SO4-ZrCl4",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2SO4-ZrCl4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2Zr1Cl5.5F0.5",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li2Zr1Cl5.5F0.5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3Zr2Si2PO12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li3Zr2Si2PO12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li4-xGe1-xPxO4",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li4-xGe1-xPxO4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li5.4Al0.1P1S4.7Cl1.3",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li5.4Al0.1P1S4.7Cl1.3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.25Al0.25La3Zr2O12-in-PEGDA",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Li6.25Al0.25La3Zr2O12-in-PEGDA\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.4La3Ce0.1Zr1.9Ga0.2O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.4La3Ce0.1Zr1.9Ga0.2O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.4La3Zr2Ga0.2O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.4La3Zr2Ga0.2O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.5La3-xBaxZr1.5-xTa0.5+xO12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.5La3-xBaxZr1.5-xTa0.5+xO12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.5La3Zr1.9Fe0.2Bi0.1O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.5La3Zr1.9Fe0.2Bi0.1O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.6La3Zr1.6Nb0.4O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.6La3Zr1.6Nb0.4O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.7Si0.105Ge0.595P0.3S5I1",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li6.7Si0.105Ge0.595P0.3S5I1\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6PS4Cl0.75-OF0.25",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li6PS4Cl0.75-OF0.25\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiDFOB-TXE-FDMA-FEC",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"LiDFOB-TXE-FDMA-FEC\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiTFSI-PC(quasi-solid)",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"LiTFSI-PC(quasi-solid)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiTFSI-SN",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"LiTFSI-SN\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiTFSI-SN-FEC",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"LiTFSI-SN-FEC\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg1B21.47H88.88N1",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg1B21.47H88.88N1\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na2.9H1Se0.9I0.1",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Na2.9H1Se0.9I0.1\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3HSe",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"Na3HSe\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3HfScSi(PO6)2",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3HfScSi(PO6)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3HfZrSi2PO12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3HfZrSi2PO12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PVDF-HFP",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PVDF-HFP\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PVDF-HFP-LLZTO(10wt%)",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PVDF-HFP-LLZTO(10wt%)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Sr0.3Li0.4Zr0.5Ti1.5P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Sr0.3Li0.4Zr0.5Ti1.5P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Sr0.3Li0.4Zr2P3O12",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Sr0.3Li0.4Zr2P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Sr0.4375Li0.375Zr0.25Ta0.75O3",
+      "n_papers": 2,
+      "additions_needed": 1,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Sr0.4375Li0.375Zr0.25Ta0.75O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "0-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"0-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "40wt%Li2OHCl0.5Br0.5/NBRCPE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"40wt%Li2OHCl0.5Br0.5/NBRCPE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Co-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Co-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Cu-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Cu-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "ERBPSN",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"ERBPSN\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "H4C2O",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"H4C2O\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "K0.01Li1.98H0.99Cl1O0.99",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"K0.01Li1.98H0.99Cl1O0.99\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LATP-0.1LBSO",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"LATP-0.1LBSO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LLi6P2S5Cl",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"LLi6P2S5Cl\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li(BH)5",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"Li(BH)5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.27La0.58Ti1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.27La0.58Ti1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.33La0.56Ti1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.33La0.56Ti1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.34La0.51Ti1O2.94",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.34La0.51Ti1O2.94\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.34La0.56TiO3(G-LLTO)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.34La0.56TiO3(G-LLTO)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.34La0.56TiO3(M-LLTO)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.34La0.56TiO3(M-LLTO)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.35La0.55TiO3(LLTO-F0)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.35La0.55TiO3(LLTO-F0)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.35La0.55TiO3-F2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.35La0.55TiO3-F2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.45La0.78Ce0.05Sc1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li0.45La0.78Ce0.05Sc1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.45La0.85Sc1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.45La0.85Sc1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.4La0.67Ce0.15Sc1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.4La0.67Ce0.15Sc1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.5La0.55Ti1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.5La0.55Ti1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li0.5La0.5Ti1O3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li0.5La0.5Ti1O3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.3Al0.3BxTi1.7-x(PO4)3(10%H3BO3)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.3Al0.3BxTi1.7-x(PO4)3(10%H3BO3)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.4Ti1.6Al0.4P3O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.4Ti1.6Al0.4P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li1.5Al0.5Ge1.5P3O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Li1.5Al0.5Ge1.5P3O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li10Si(PS6)2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li10Si(PS6)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li10Sn(PS6)2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li10Sn(PS6)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li11Si2PS12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li11Si2PS12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li14Zn(GeO4)4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li14Zn(GeO4)4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2.5Y0.5Zr0.5Cl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li2.5Y0.5Zr0.5Cl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2.61Y1.13S2Cl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li2.61Y1.13S2Cl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2.96Ge0.72P0.32O4(LGPOITLPthinfilm)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2.96Ge0.72P0.32O4(LGPOITLPthinfilm)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2.9P1N0.46O3.3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2.9P1N0.46O3.3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2HN",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"Li2HN\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2O-Al2O3-TiO2-P2O5(LATPglass-ceramic)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2O-Al2O3-TiO2-P2O5(LATPglass-ceramic)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2S-SiS2-Li3PO4glass",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li2S-SiS2-Li3PO4glass\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li2TiCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li2TiCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3.08Ge0.52P0.47O4(LGPOHTLPthinfilm)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"Li3.08Ge0.52P0.47O4(LGPOHTLPthinfilm)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3.5V0.5Ge0.5O4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li3.5V0.5Ge0.5O4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3.7Ge0.7As0.3S4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3.7Ge0.7As0.3S4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3.7Ge0.7P0.3S4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3.7Ge0.7P0.3S4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3.7Ge0.7Sb0.3S4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3.7Ge0.7Sb0.3S4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3AlCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3AlCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3As0.4P0.6S4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3As0.4P0.6S4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3BrO",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3BrO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3CeCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3CeCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3DyCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3DyCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3ErCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3ErCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3EuCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3EuCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3GdCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3GdCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3HoCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3HoCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3IO",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3IO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3LaCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3LaCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3LuCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3LuCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3NdCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3NdCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3PrCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3PrCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3SCl",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3SCl\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3SI",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "antiperovskite"
+      ],
+      "query": "\"Li3SI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3SbS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li3SbS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3ScCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3ScCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3SmCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3SmCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3TbCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3TbCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3TmCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3TmCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3Y(BrCl)3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3Y(BrCl)3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3YBr6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3YBr6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3YbCl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"Li3YbCl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li3xLa2/3-xTiO3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "perovskite"
+      ],
+      "query": "\"Li3xLa2/3-xTiO3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li4BH10N3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Li4BH10N3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li4GeS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li4GeS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li4SnS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li4SnS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li5La3Nb2O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li5La3Nb2O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li5La3Ta2O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li5La3Ta2O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6+xGe1-xPxS5I",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li6+xGe1-xPxS5I\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.1Ga0.3La3Zr2O12(LGLZO_5)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.1Ga0.3La3Zr2O12(LGLZO_5)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.28La3Zr2Al0.24O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.28La3Zr2Al0.24O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.4Ga0.2La3Zr2O12(x=0)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.4Ga0.2La3Zr2O12(x=0)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.4La3Zr1.4Ta0.6O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.4La3Zr1.4Ta0.6O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.55La2.9Ta0.5O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.55La2.9Ta0.5O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.55La3Zr1.75Ta0.25Ge0.05O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.55La3Zr1.75Ta0.25Ge0.05O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.65La3Zr1.85Ta0.15Ge0.05O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.65La3Zr1.85Ta0.15Ge0.05O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.6La3Zr1.6Sb0.4O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.6La3Zr1.6Sb0.4O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.6La3Zr1.6Ta0.4O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.6La3Zr1.6Ta0.4O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.6P2S8I1",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li6.6P2S8I1\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.75La3Zr1.75Nb0.25O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.75La3Zr1.75Nb0.25O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.75La3Zr1.75Ta0.25O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.75La3Zr1.75Ta0.25O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.8La3Zr2Ge0.05O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.8La3Zr2Ge0.05O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6.98La3Zr1.982Ta0.018Ga0.072O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "garnet"
+      ],
+      "query": "\"Li6.98La3Zr1.982Ta0.018Ga0.072O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6P1-xGexS5I",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Li6P1-xGexS5I\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6P1S5Br0.5Cl0.5",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite",
+        "sulfide"
+      ],
+      "query": "\"Li6P1S5Br0.5Cl0.5\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li6PS5Br",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "argyrodite"
+      ],
+      "query": "\"Li6PS5Br\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7La3Hf0.4Zr0.4Sc0.4Ta0.4Sn0.4O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [],
+      "query": "\"Li7La3Hf0.4Zr0.4Sc0.4Ta0.4Sn0.4O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Li7La3Hf0.5Zr0.5Sc0.5Nb0.5O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [],
+      "query": "\"Li7La3Hf0.5Zr0.5Sc0.5Nb0.5O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiB11H12C",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "hydride"
+      ],
+      "query": "\"LiB11H12C\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiB9H10C",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride",
+        "hydride"
+      ],
+      "query": "\"LiB9H10C\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiGaCl4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"LiGaCl4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiGaF4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"LiGaF4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiInBr4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"LiInBr4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiLa(MoO4)2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"LiLa(MoO4)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "LiTi2(PO4)3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"LiTi2(PO4)3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "M1Li2.61Y1.13C1Cl6",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "halide"
+      ],
+      "query": "\"M1Li2.61Y1.13C1Cl6\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)2(high-T)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)2(high-T)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)2-2NH3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)2-2NH3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)2-4NH3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)2-4NH3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)21.47NH3",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)21.47NH3\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(BH4)21.47NH3nanoconfinedinSBA-15",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(BH4)21.47NH3nanoconfinedinSBA-15\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Mg(en)1(BH4)2",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "borohydride"
+      ],
+      "query": "\"Mg(en)1(BH4)2\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3.2Hf0.8Zr1Sc0.2Si2P1O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3.2Hf0.8Zr1Sc0.2Si2P1O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3.4Hf0.6Zr1Sc0.4Si2P1O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3.4Hf0.6Zr1Sc0.4Si2P1O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3.4Zr1.8Si2.4P0.6O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3.4Zr1.8Si2.4P0.6O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3.4Zr2Si2.4P0.6O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3.4Zr2Si2.4P0.6O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3PS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Na3PS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3PS4(glass-ceramic)",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Na3PS4(glass-ceramic)\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3SbS4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Na3SbS4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3SbSe4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "sulfide"
+      ],
+      "query": "\"Na3SbSe4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3Zr1.5Si2P0.5O12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3Zr1.5Si2P0.5O12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Na3Zr2Si2PO12",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Na3Zr2Si2PO12\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "NaAl11O17",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"NaAl11O17\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "NaAl5O8",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"NaAl5O8\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "NaLiSO4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "oxide"
+      ],
+      "query": "\"NaLiSO4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PAN-LiClO4",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PAN-LiClO4\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PVDF-HFP-LiTFSI",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PVDF-HFP-LiTFSI\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "PVDF-HFP/10%LLZTO",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"PVDF-HFP/10%LLZTO\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Sn-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "nasicon"
+      ],
+      "query": "\"Sn-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "V-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"V-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    },
+    {
+      "material": "Zr-LATP/PVDF-HFP-LiTFSICSE",
+      "n_papers": 1,
+      "additions_needed": 2,
+      "is_priority_benchmark": false,
+      "recently_gained_record": false,
+      "families": [
+        "polymer_composite"
+      ],
+      "query": "\"Zr-LATP/PVDF-HFP-LiTFSICSE\" solid electrolyte ionic conductivity"
+    }
+  ],
+  "n_recently_gained": 5,
+  "generated_at": "2026-08-04T17:22:29.387980+00:00"
+}

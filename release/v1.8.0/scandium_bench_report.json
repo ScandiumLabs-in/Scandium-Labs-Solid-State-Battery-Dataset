@@ -1,0 +1,960 @@
+{
+  "suite": "ScandiumBench",
+  "version": "v1.0.0",
+  "generated_at": "2026-08-06T22:39:13",
+  "regimes": [
+    "random",
+    "family_ood",
+    "composition_ood",
+    "crystal_system_ood"
+  ],
+  "tasks": [
+    {
+      "task": "formation_energy_regression",
+      "name": "Formation energy regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 16394,
+          "n_test": 3248,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.06694503384599888,
+            "rmse": 0.13083414992335216,
+            "r2": 0.9783644836514881
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20543,
+          "n_test": 9312,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 1.0057710697472382,
+            "rmse": 1.2048401269799685,
+            "r2": -0.03630520568368256
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 5540,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.16263675922352958,
+            "rmse": 0.29752019496060217,
+            "r2": 0.9104360918687038
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 15164,
+          "n_features": 132,
+          "best_model": "ridge",
+          "best_metrics": {
+            "mae": 0.6434527472259712,
+            "rmse": 0.9878687328929883,
+            "r2": -0.0787782290009773
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "band_gap_regression",
+      "name": "Band gap regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 16394,
+          "n_test": 3248,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.4303556230165172,
+            "rmse": 0.6880184758483565,
+            "r2": 0.7770332063359437
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20543,
+          "n_test": 9312,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8829934392877431,
+            "rmse": 1.2670996884835672,
+            "r2": 0.4504456510283096
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 5540,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.5249068994737386,
+            "rmse": 0.828418300038256,
+            "r2": 0.6994073513826555
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 15164,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.6359394559115,
+            "rmse": 1.0260512806332098,
+            "r2": 0.3091099469137014
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "energy_above_hull_regression",
+      "name": "Energy above hull regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 15064,
+          "n_test": 3228,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.03520754812016298,
+            "rmse": 0.08863820269978552,
+            "r2": 0.945615693111967
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16312,
+          "n_test": 5216,
+          "n_features": 131,
+          "best_model": "dummy",
+          "best_metrics": {
+            "mae": 0.19283037464485878,
+            "rmse": 0.4472986320630847,
+            "r2": -0.013099986859421264
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14734,
+          "n_test": 3996,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.044308854193477666,
+            "rmse": 0.10749363229339624,
+            "r2": 0.9510275613741448
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 6837,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.09966246580414574,
+            "rmse": 0.3680168267685028,
+            "r2": 0.6551534917861523
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "density_regression",
+      "name": "Density regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 16394,
+          "n_test": 3248,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.11829776632978478,
+            "rmse": 0.23779284137691004,
+            "r2": 0.9718959594133539
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20543,
+          "n_test": 9312,
+          "n_features": 130,
+          "best_model": "ridge",
+          "best_metrics": {
+            "mae": 1.777876159768512,
+            "rmse": 2.5563864080981,
+            "r2": 0.07825302469411044
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 5540,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.41032641118837543,
+            "rmse": 0.9783700679673369,
+            "r2": 0.7101089851576516
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 15164,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8585792621117432,
+            "rmse": 1.611689210515612,
+            "r2": 0.17450694617916152
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "volume_regression",
+      "name": "Volume regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 16394,
+          "n_test": 3248,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 14.54806803523523,
+            "rmse": 49.34505809678056,
+            "r2": 0.9779264469795503
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20543,
+          "n_test": 9312,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 75.43147016145981,
+            "rmse": 197.18027553672232,
+            "r2": 0.739380405307998
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 5540,
+          "n_features": 130,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 17.13824346194122,
+            "rmse": 58.2299878509458,
+            "r2": 0.9664270643694481
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 15164,
+          "n_features": 130,
+          "best_model": "ridge",
+          "best_metrics": {
+            "mae": 43.659401062002274,
+            "rmse": 80.01176912608187,
+            "r2": 0.9111659388121917
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "ionic_radius_regression",
+      "name": "Ionic-radius regression",
+      "task_type": "regression",
+      "metric": "mae",
+      "per_regime": {
+        "random": {
+          "n_train": 15064,
+          "n_test": 3228,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.00813534835811681,
+            "rmse": 0.018902357725914358,
+            "r2": 0.9722918749919722
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16312,
+          "n_test": 5216,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.13664234183282217,
+            "rmse": 0.1993822101980219,
+            "r2": -0.04454839239474717
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14734,
+          "n_test": 3996,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.012779236611611594,
+            "rmse": 0.025083038322633137,
+            "r2": 0.9513312227362207
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 6837,
+          "n_features": 132,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.006669335088489244,
+            "rmse": 0.016574103354481815,
+            "r2": 0.9574894264522913
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "stability_classification",
+      "name": "Stable vs unstable classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 15064,
+          "n_test": 3228,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9783147459727385,
+            "macro_f1": 0.926016342150516,
+            "roc_auc": 0.989519440938337
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16312,
+          "n_test": 5216,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.843941717791411,
+            "macro_f1": 0.6743740298306,
+            "roc_auc": 0.8230773670520287
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14734,
+          "n_test": 3996,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9794794794794794,
+            "macro_f1": 0.9322868620740961,
+            "roc_auc": 0.9885321469944653
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 6837,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9978060552874067,
+            "macro_f1": 0.9580076921407581,
+            "roc_auc": 0.9911533837455445
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "wide_gap_classification",
+      "name": "Wide-gap classification (E_g > 4 eV)",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 11566,
+          "n_test": 2298,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9577893820713664,
+            "macro_f1": 0.825418643283263,
+            "roc_auc": 0.9687637708530059
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 14360,
+          "n_test": 4211,
+          "n_features": 127,
+          "best_model": "logistic",
+          "best_metrics": {
+            "accuracy": 0.8482545713607219,
+            "macro_f1": 0.6537873197820175,
+            "roc_auc": 0.7499445057633358
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 12894,
+          "n_test": 3391,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.952226481863757,
+            "macro_f1": 0.8257473291547186,
+            "roc_auc": 0.9473414322952974
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 8878,
+          "n_test": 8708,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9510794671566376,
+            "macro_f1": 0.6056446191272578,
+            "roc_auc": 0.8265669787210008
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "family_classification",
+      "name": "Family classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 17046,
+          "n_test": 3370,
+          "n_features": 133,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9602373887240356,
+            "macro_f1": 0.8216595676789794
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20753,
+          "n_test": 10085,
+          "n_features": 133,
+          "best_model": "dummy",
+          "best_metrics": {
+            "accuracy": 0.5587506197322757,
+            "macro_f1": 0.06517464723571594
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 6523,
+          "n_features": 133,
+          "best_model": "logistic",
+          "best_metrics": {
+            "accuracy": 0.8459297869078645,
+            "macro_f1": 0.5472653186277828
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 16147,
+          "n_features": 133,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.6188765714993497,
+            "macro_f1": 0.322320872533063
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "crystal_system_classification",
+      "name": "Crystal system prediction",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 15064,
+          "n_test": 3228,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.862453531598513,
+            "macro_f1": 0.8358470568388381
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16312,
+          "n_test": 5216,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.6064033742331288,
+            "macro_f1": 0.5294642867260769
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14734,
+          "n_test": 3996,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8571071071071071,
+            "macro_f1": 0.8393005303976826
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 6837,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.0016088927892350445,
+            "macro_f1": 0.0008031542056074766
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "space_group_classification",
+      "name": "Space group prediction",
+      "task_type": "classification",
+      "metric": "top5_accuracy",
+      "per_regime": {
+        "random": {
+          "n_train": 15064,
+          "n_test": 3228,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.6957868649318464,
+            "macro_f1": 0.3944077651046903,
+            "top5_accuracy": 0.8884758364312267
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16312,
+          "n_test": 5216,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.14167944785276074,
+            "macro_f1": 0.03523805708764719,
+            "top5_accuracy": 0.25172546012269936
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14734,
+          "n_test": 3996,
+          "n_features": 131,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.6921921921921922,
+            "macro_f1": 0.4472222421281605,
+            "top5_accuracy": 0.8918918918918919
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 6837,
+          "n_features": 131,
+          "best_model": "dummy",
+          "best_metrics": {
+            "accuracy": 0.0,
+            "macro_f1": 0.0,
+            "roc_auc": null,
+            "top5_accuracy": 0.6407781190580664
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "conductive_candidate_ranking",
+      "name": "Conductive-candidate ranking",
+      "task_type": "ranking",
+      "metric": "ndcg10",
+      "per_regime": {
+        "random": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8816266148500501,
+            "rmse": 1.1792251709834916,
+            "spearman": 0.2832368672612567,
+            "ndcg10": 0.5725642834140415
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8816266148500503,
+            "rmse": 1.1792251709834916,
+            "spearman": 0.2832368672612567,
+            "ndcg10": 0.5725642834140415
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8816266148500501,
+            "rmse": 1.1792251709834913,
+            "spearman": 0.2832368672612567,
+            "ndcg10": 0.5725642834140415
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "mae": 0.8816266148500501,
+            "rmse": 1.1792251709834913,
+            "spearman": 0.2832368672612567,
+            "ndcg10": 0.5725642834140415
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "negative_result_classification",
+      "name": "Negative-result (poor electrolyte) classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 16394,
+          "n_test": 3248,
+          "n_features": 125,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.9264162561576355,
+            "macro_f1": 0.8351029130462028,
+            "roc_auc": 0.948567058683773
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 20543,
+          "n_test": 9312,
+          "n_features": 125,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.811426116838488,
+            "macro_f1": 0.702049555056943,
+            "roc_auc": 0.7740050894984659
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 20682,
+          "n_test": 5540,
+          "n_features": 125,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8736462093862816,
+            "macro_f1": 0.7992879951241164,
+            "roc_auc": 0.9037049571049203
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12830,
+          "n_test": 15164,
+          "n_features": 125,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.7467027169612239,
+            "macro_f1": 0.5082925022254342,
+            "roc_auc": 0.6633835146294849
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "metallic_classification",
+      "name": "Metallic vs insulating classification",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 15056,
+          "n_test": 3228,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8732961586121437,
+            "macro_f1": 0.8384614283426259,
+            "roc_auc": 0.9293766461808604
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 16306,
+          "n_test": 5214,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8235519754507096,
+            "macro_f1": 0.8173871571345733,
+            "roc_auc": 0.8915222482435595
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 14731,
+          "n_test": 3993,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8474830954169797,
+            "macro_f1": 0.8060248559128096,
+            "roc_auc": 0.9038433232576459
+          },
+          "evaluation": "split_test",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 12827,
+          "n_test": 6834,
+          "n_features": 127,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8220661398887913,
+            "macro_f1": 0.712066990559703,
+            "roc_auc": 0.8451528751406353
+          },
+          "evaluation": "split_test",
+          "error": null
+        }
+      }
+    },
+    {
+      "task": "high_conductivity_classification",
+      "name": "High-conductivity classification (\u03c3_RT > 10\u207b\u00b3 S/cm)",
+      "task_type": "classification",
+      "metric": "macro_f1",
+      "per_regime": {
+        "random": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8237185626938948,
+            "macro_f1": 0.6523267814750006,
+            "roc_auc": 0.6271880203130203
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "family_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8237185626938948,
+            "macro_f1": 0.6523267814750006,
+            "roc_auc": 0.6271880203130203
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "composition_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8237185626938948,
+            "macro_f1": 0.6523267814750006,
+            "roc_auc": 0.6271880203130203
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        },
+        "crystal_system_ood": {
+          "n_train": 166,
+          "n_test": 166,
+          "n_features": 52,
+          "best_model": "rf",
+          "best_metrics": {
+            "accuracy": 0.8237185626938948,
+            "macro_f1": 0.6523267814750006,
+            "roc_auc": 0.6271880203130203
+          },
+          "evaluation": "grouped_cv_k5",
+          "error": null
+        }
+      }
+    }
+  ],
+  "split_manifests": {
+    "random": {
+      "regime": "random",
+      "description": "Phase-6 leakage-checked random split (reused unchanged).",
+      "split_sizes": {
+        "train": 17046,
+        "val": 10253,
+        "test": 3370
+      }
+    },
+    "family_ood": {
+      "regime": "family_ood",
+      "description": "Held-out-family split: test families (halide, sulfide, nasicon, hydride, polymer_composite, borohydride, antiperovskite, garnet, perovskite, argyrodite) never appear in train. Tests oxide-trained generalization to unseen chemistries.",
+      "split_sizes": {
+        "train": 20753,
+        "val": 0,
+        "test": 10085
+      },
+      "holdout_families": {
+        "halide": 2434,
+        "sulfide": 804,
+        "nasicon": 441,
+        "hydride": 244,
+        "polymer_composite": 187,
+        "borohydride": 114,
+        "antiperovskite": 84,
+        "garnet": 68,
+        "perovskite": 47,
+        "argyrodite": 27
+      }
+    },
+    "composition_ood": {
+      "regime": "composition_ood",
+      "description": "Held-out-composition split: no reduced formula appears in both train and test (stable group hash assignment).",
+      "split_sizes": {
+        "train": 20682,
+        "val": 3633,
+        "test": 6523
+      }
+    },
+    "crystal_system_ood": {
+      "regime": "crystal_system_ood",
+      "description": "Held-out-crystal-system split: whole crystal systems assigned to one split by stable group hash.",
+      "split_sizes": {
+        "train": 12830,
+        "val": 1861,
+        "test": 16147
+      }
+    }
+  }
+}

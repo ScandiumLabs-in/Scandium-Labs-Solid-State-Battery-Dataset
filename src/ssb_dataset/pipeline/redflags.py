@@ -29,32 +29,32 @@ TYPICAL_PREFACTOR_RANGE = (1e1, 1e5)
 
 # Known sigma ranges per family at RT (S/cm) — from literature survey
 FAMILY_SIGMA_RANGES: dict[str, tuple[float, float]] = {
-    "sulfide": (1e-5, 1e-1),
+    "sulfide": (1e-6, 1e-1),
     "oxide": (1e-10, 1e-2),
-    "garnet": (1e-5, 2e-3),
-    "perovskite": (1e-6, 1e-3),
-    "nasicon": (1e-5, 1e-2),
-    "halide": (1e-4, 1e-2),
-    "argyrodite": (1e-4, 1e-1),
-    "hydride": (1e-8, 1e-3),
-    "borohydride": (1e-8, 1e-3),
-    "antiperovskite": (1e-8, 1e-4),
+    "garnet": (1e-6, 2e-3),
+    "perovskite": (1e-8, 1e-2),
+    "nasicon": (1e-6, 1e-2),
+    "halide": (1e-6, 1e-2),
+    "argyrodite": (1e-6, 1e-1),
+    "hydride": (1e-10, 1e-3),
+    "borohydride": (1e-10, 1e-3),
+    "antiperovskite": (1e-8, 1e-3),
     "polymer_composite": (1e-8, 1e-3),
 }
 
 # Known Ea ranges per family (eV)
 FAMILY_EA_RANGES: dict[str, tuple[float, float]] = {
     "sulfide": (0.10, 0.50),
-    "oxide": (0.20, 0.90),
-    "garnet": (0.20, 0.55),
-    "perovskite": (0.25, 0.50),
-    "nasicon": (0.20, 0.45),
-    "halide": (0.25, 0.50),
+    "oxide": (0.10, 1.00),
+    "garnet": (0.10, 0.60),
+    "perovskite": (0.10, 0.60),
+    "nasicon": (0.10, 0.50),
+    "halide": (0.15, 0.60),
     "argyrodite": (0.15, 0.50),
-    "hydride": (0.30, 0.80),
+    "hydride": (0.20, 1.70),
     "borohydride": (0.20, 1.70),
-    "antiperovskite": (0.30, 0.70),
-    "polymer_composite": (0.30, 1.50),
+    "antiperovskite": (0.10, 1.00),
+    "polymer_composite": (0.10, 1.70),
 }
 
 # Families where bulk vs grain-boundary distinction is important
@@ -170,6 +170,7 @@ def check_arrhenius_consistency(
 def check_sigma_in_family_range(
     sigma: float | None,
     family: str,
+    floor_override: float | None = None,
 ) -> tuple[bool, str]:
     if sigma is None:
         return False, ""
@@ -177,6 +178,8 @@ def check_sigma_in_family_range(
     if family_lower not in FAMILY_SIGMA_RANGES:
         return False, ""
     low, high = FAMILY_SIGMA_RANGES[family_lower]
+    if floor_override is not None:
+        low = floor_override
     if sigma < low or sigma > high:
         return True, (
             f"σ={sigma:.1e} S/cm outside typical range for {family} "
@@ -188,6 +191,7 @@ def check_sigma_in_family_range(
 def check_ea_in_family_range(
     ea: float | None,
     family: str,
+    range_override: tuple[float, float] | None = None,
 ) -> tuple[bool, str]:
     if ea is None:
         return False, ""
@@ -195,6 +199,8 @@ def check_ea_in_family_range(
     if family_lower not in FAMILY_EA_RANGES:
         return False, ""
     low, high = FAMILY_EA_RANGES[family_lower]
+    if range_override is not None:
+        low, high = range_override
     if ea < low or ea > high:
         return True, (
             f"Ea={ea:.2f} eV outside typical range for {family} "

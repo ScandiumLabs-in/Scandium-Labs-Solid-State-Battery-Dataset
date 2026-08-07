@@ -1,12 +1,12 @@
 {
   "duplicate_groups": [],
   "duplicate_record_count": 0,
-  "total_records_checked": 191,
+  "total_records_checked": 244,
   "duplicate_rate_pct": 0.0,
   "duplicates_by_type": {
     "composition": 0,
     "doi": 0,
     "measurement": 0
   },
-  "checked_at": "2026-08-03T13:36:24.242109+00:00"
+  "checked_at": "2026-08-06T06:42:42.150926+00:00"
 }

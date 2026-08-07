@@ -100,7 +100,446 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 ---
 
-# Current Status (July 2026)
+# Current Status (August 2026)
+
+## v1.9.0 — ScandiumBench v1.1: 25-task benchmark expansion (2026-08-06, DONE — RELEASE READY)
+
+Second step of the ScandiumBench pivot (roadmap Phase 4) — the task registry
+grows **15 → 25** benchmarks across transport, mechanical, magnetic,
+charge-balance, Li-sublattice, and screening tasks. No LLM calls. No network.
+Deterministic. **22 release gates (all PASS).** Gate `scandium_bench_built`
+tightened to ≥25 tasks. See `docs/benchmarks.md`.
+
+- **Ten new tasks** (`src/ssb_dataset/benchmarks/tasks.py`): `activation_
+  energy_regression` (Ea, 91 labels) and `sigma_RT_regression` (log10 σ_RT
+  magnitude, 166 labels — the value-estimation complement to the ranking
+  task); `bulk_modulus_regression`, `shear_modulus_regression`, `debye_
+  temperature_regression` (each excludes the whole sibling elastic/vibrational
+  block and gates labels to a physical window via the new `label_bounds`);
+  `is_magnetic_classification`; `packing_fraction_regression`; `electroneutral_
+  classification`; `li_hopping_distance_regression`; `electrolyte_candidate_
+  classification` (the deterministic synthesis-relevance screening proxy —
+  LiCoO2/NMC cathodes must be rejected, `identity.*` never an input).
+- **Derived-block leaky discipline** (`evaluate.py`): each new task excludes
+  the columns that DEFINE its label (elastic siblings, magnetic descriptors,
+  redox/oxidation fields, Li-sublattice analysis, sibling scarce transport
+  labels). `label_bounds` is a documented label-plausibility gate — MP's
+  unphysical mechanical extremes are excluded, never imputed.
+- **Degenerate-fold guard generalized**: `SCARCE_TEST_MIN = 30` in
+  `evaluate.py::run_task` + the runner — scarce tasks (Ea now included) fall
+  back to family-grouped CV on every regime instead of reporting a meaningless
+  7-train/2-test split.
+- **Honest baselines**: random-regime RF — magnetic 0.921, electroneutrality
+  0.910, electrolyte-candidate 0.968 macro-F1; packing r² 0.977; Li-hop MAE
+  0.199 Å (r² 0.85); bulk-modulus MAE 13.1 GPa; **shear-modulus r² ≈ −0.66**
+  (the honest "composition descriptors can't do this" signal). OOD gaps
+  quantified across new tasks: Li-hop 0.199→0.699 (family_ood), packing
+  0.015→0.108, bulk 13.1→33.8 GPa, electrolyte-candidate 0.968→0.502.
+- **Artifacts**: refreshed `benchmark_output/{scandium_bench_report.{json,md},
+  splits/*}` (25 tasks × 4 regimes); staged `release/v1.9.0/`. **Tests: 865
+  pass** (+9 `tests/test_benchmarks.py`).
+
+## v1.8.0 — ScandiumBench v1.0: split-regime benchmark suite (2026-08-06, DONE — RELEASE READY)
+
+First step of the ScandiumBench pivot — the dataset becomes *evaluable against
+chemically-meaningful splits*. No LLM calls. No network. Deterministic.
+**22 release gates (all PASS).** New release gate `scandium_bench_built`. See
+`docs/benchmarks.md`.
+
+- **Split-regime engine** (`src/ssb_dataset/benchmarks/splits.py` + `scripts/
+  run_scandium_bench.py`): four deterministic split regimes, each persisted as
+  `benchmark_output/splits/{regime}.parquet` + auditable `manifest.json`:
+  `random` (Phase-6 leakage-checked split reused unchanged), `family_ood`
+  (test = 10 held-out non-oxide families; train = oxides + unknown),
+  `composition_ood` (whole reduced-formula groups, stable md5 bucket),
+  `crystal_system_ood` (whole crystal systems). No group straddles train/test;
+  stable hashes make splits immutable run-to-run.
+- **Three new tasks** (registry 12→15): `negative_result_classification`
+  (predict `negative.is_negative_result`; the defining signals
+  energy_above_hull/is_metal/band_gap/li_hopping_distance are excluded —
+  anti-survivorship-bias task), `metallic_classification` (predict `is_metal`;
+  band-structure fields excluded), `high_conductivity_classification`
+  (σ_RT > 1e-3 on the scarce 166-row verified subset). Boolean targets include
+  their `False` rows — the old `!= 0` label mask would have dropped every
+  non-metal.
+- **Leakage hardening** (`evaluate.py`): `validation.*` and `negative.*`
+  annotation blocks excluded from model features.
+- **Scarce-task routing**: the 166-row tasks are CV-evaluated on every regime
+  (`run_task(prefer_grouped_cv=True)`), so OOD results are comparable to the
+  random regime's gold-split bound — never a degenerate 8-train/158-test fold.
+- **OOD gap quantified**: formation-energy MAE 0.067 (random) → 1.006
+  (family_ood); density 0.118 → 1.778; crystal-system classification ≈ 0 under
+  `crystal_system_ood` (the honest unseen-class result). The leaderboard
+  (`benchmark_output/scandium_bench_report.{json,md}`) makes generalization
+  vs memorization visible per task × regime.
+- **Artifacts**: `benchmark_output/{scandium_bench_report.{json,md},
+  splits/*}`; staged `release/v1.8.0/`. **Tests: 856 pass** (+14
+  `tests/test_benchmark_splits.py`).
+
+## v1.5.0 — Negative results database: anti-survivorship-bias labels (2026-08-06, DONE — RELEASE READY)
+
+Phase C of the post-Phase-19 roadmap — the artifact "almost nobody builds".
+Most materials datasets quietly drop the failures; this release makes them
+first-class so ML pipelines can train on the full distribution instead of the
+survivors. No LLM calls. No network. Deterministic. **21 release gates (all
+PASS).** New release gate `negative_results_built`.
+
+- **Negative results DB** (`src/ssb_dataset/negative/negative.py` + `scripts/
+  build_negative_results.py`): every canonical row whose DFT evidence marks it
+  a poor solid-electrolyte candidate carries `negative.is_negative_result`,
+  `reasons`, `evidence` (raw values), and `confidence`. Three deterministic
+  signals over on-disk MP columns: `thermodynamically_unstable`
+  (energy_above_hull > 0.025 eV/atom, MP stability convention),
+  `electronic_conductor` (is_metal True or band_gap == 0 — a metal shorts the
+  cell electronically), `poor_li_transport_proxy` (li_hopping_distance > 4.5 Å,
+  no percolation path; **medium** confidence because it is a proxy).
+- **Unknown is never fabricated**: a record with no computable signal (e.g.
+  literature-mined without an MP structure) stays `is_negative_result=None`,
+  not a False. 983 such records are honestly unknown.
+- **Scope**: **23,400/30,838 records flagged negative** (75.9%). By signal:
+  16,326 unstable, 11,295 electronic conductors, 3,214 poor-transport. By
+  source: MP 85.3% (the bulk catalog is unstable-rich Li intermetallics/metals
+  — exactly the survivorship bias this fixes), JARVIS 60.6% (electronic
+  signal), lit/NOMAD/COD/OQMD/AFLOW unknown. Known-good electrolytes (LLZO,
+  Li3PS4, Li6PS5Cl, Li2O, LiF) verified NOT flagged.
+- **Artifacts**: `negative_output/{canonical_negative.parquet,
+  negative_results_report.json}`; staged `release/v1.5.0/`. **Tests: 842
+  pass** (+15 `tests/test_negative_v15.py`).
+
+## v1.4.0 — Cross-database validation: MP↔JARVIS agreement blocks (2026-08-06, DONE — RELEASE READY)
+
+Phase A of the post-Phase-19 roadmap (scientific credibility). The canonical
+dataset now carries per-record cross-database agreement. No LLM calls. No
+network. Deterministic. **20 release gates (all PASS).** New release gate
+`cross_db_validation`.
+
+- **Validation engine** (`src/ssb_dataset/validation/cross_db.py` + `scripts/
+  build_canonical_validation.py`): every canonical row whose reduced formula
+  exists in ≥2 bundled databases gets a `validation.*` block —
+  `database_count`, `agreement_score` (0..1 mean over comparable properties),
+  `disagreement` (per-property `{agreement, abs_dev, mp, jarvis}`), `rank`
+  (best-agreeing record for that composition = 1). Follows the quality-module
+  pattern (`canonical_validation.parquet` = canonical + `validation.*`).
+- **JARVIS enrichment completed** (`scripts/enrich_jarvis.py`): the 8,327
+  staged JARVIS rows previously lacked `identity.composition`/`structure.
+  {density,volume,nsites}` — backfilled 100% from the bundled cache (no
+  network), so JARVIS rows are comparable and validate too (6,867/8,327).
+- **Scope**: **3,504 overlapping formulas → 17,802 validated records** (10,935
+  MP + 6,867 JARVIS; 4,097 distinct compositions). 13,036 records (lit/NOMAD/
+  COD/OQMD/AFLOW and MP-only formulas) keep `database_count=0` /
+  `agreement_score=None` — never imputed.
+- **Honest functional-systematic handling**: JARVIS gaps (OptB88vdW) vs MP
+  gaps (PBE) differ by ~0.4 eV mean; formation energy ~0.14 eV/atom median —
+  tolerances absorb the known systematic and the report documents the offset
+  (per-property `mean_abs_dev`) instead of calling it disagreement. Structure
+  agrees tightly (density/volume mean |Δ| ~0.08, lattice ~3%).
+- **Volume normalization**: `volume_per_formula_unit` = cell volume ×
+  formula-atoms / nsites, so primitive vs conventional cell choices never
+  create fake disagreement.
+- **Artifacts**: `validation_output/{cross_db_validation.parquet,
+  canonical_validation.parquet, cross_db_validation_report.json,
+  validation_report.json}`; staged `release/v1.4.0/`. **Tests: 824 pass**
+  (+14 `tests/test_validation_v14.py`).
+
+## v1.3.0 — GNN baseline on the crystal-graph export (2026-08-06, DONE — RELEASE READY)
+
+Closes the v0.8 gap ("torch is not installed, so GNN/embedding models are the
+explicit next step") and the last code-feasible Phase 19 item. **19 release
+gates (all PASS).** See `docs/benchmarks.md`.
+
+- **GCN baseline** (`src/ssb_dataset/benchmarks/gnn.py`): a single small GCN
+  (GCNConv ×3 hidden=64, global mean pool, task head) trains per task on the
+  Phase 19 crystal graphs (`dataset_ml/`). Deterministic (seed 0, fixed epochs,
+  best-val checkpoint restore); labels never imputed (only mask=True rows enter
+  loss/eval); test metrics use the exact same `compute_metrics` as the sklearn
+  baselines, so GCN rows merge straight into the leaderboard.
+- **Ranking task gets real splits**: `conductive_candidate_ranking` trains on
+  held-out train/val/test (164/38/35) instead of the sklearn path's
+  family-grouped GroupKFold fallback — the graph corpus carries the
+  structure∩label intersection.
+- **Feature normalization**: per-dimension train-only mean/std, NaN-safe (Xe
+  has no valence in the feature table → filled with train mean, maps to 0 in
+  normalized space, never poisons a batch).
+- **Loader label-alignment fix**: labels ride on their graph through the
+  shuffled `DataLoader` (attached as `gidx`/`y`), never indexed by batch
+  position — the earlier draft silently misaligned labels with graphs, which
+  collapsed classification macro-F1 to near-random despite decent accuracy.
+  After the fix: family macro-F1 0.07 → 0.67, wide-gap 0.48 → 0.82.
+- **Harness**: `scripts/run_benchmarks.py` gains `--gnn` / `--gnn-only` (+
+  `--gnn-hidden/--gnn-layers/--gnn-epochs/--gnn-batch`); GCN results merge into
+  per-task JSON as `models.gcn`; report renders a GCN details section.
+- **Results**: GCN is a floor-level reference like the sklearn baselines — RF
+  still leads all 12 tasks. GCN best: volume MAE 192.7 (RF 14.97), space-group
+  top-5 0.611 (RF 0.887), ranking NDCG@10 0.498 (RF 0.573). The ranking
+  benchmark now has genuine held-out splits for future models to beat.
+- **Tests: 810 pass** (+14 `tests/test_gnn_v13.py`). Staged in
+  `release/v1.3.0/`.
+
+## v1.2.0 — Papers metadata + authors (2026-08-06, DONE — RELEASE READY)
+
+Phase 10 knowledge-graph gap closure: the v1.0 `papers` table was DOI-keyed
+only (title/journal/year all None). Now backfilled deterministically from data
+already on disk — no network, no LLM, nothing fabricated. **19 release gates
+(all PASS).** See `docs/relational-schema.md`.
+
+- **Papers enriched** (`src/ssb_dataset/db/papers.py` + `scripts/
+  build_relational_dataset.py`): 89/111 papers carry a recovered `title` +
+  `year`, plus a new `metadata_source` provenance column. Tier order:
+  `gold_scored.json` (762 DOI→title/year) → `doi_years_cache.json` (772 years)
+  → opt-in Crossref cache (`literature_output/crossref_metadata.json`) →
+  format-aware PDF first-page parsing (eScholarship/LBL block, Nature
+  DOI-anchored block, arXiv/Science-Advances/KCerS headers). Unknown DOIs stay
+  None — never guessed.
+- **DOI-confirmation gate**: PDF metadata only trusted when the DOI appears on
+  the first page. Caught a real mislabeled file — `10.1021_jacs.1c07481.pdf`
+  on disk is a magneto-optic paper, NOT the Li2ZrCl6 electrolyte paper; without
+  the gate it would have minted a wrong title.
+- **New `authors` table** (`aut-` ids): 9 authors across 3 papers, from clean
+  structured first-page blocks only (eScholarship/LBL). Free-text Nature-style
+  name blocks (names fused with affiliation markers, no spaces) are NOT parsed
+  heuristically — a sparse-but-honest table beats invented names.
+- **`scripts/enrich_papers_crossref.py`** (opt-in network): Crossref REST for
+  still-unknown DOIs → `crossref_metadata.json`, idempotent/resumable. Release
+  gates never require it.
+- **Release gate #19** `papers_metadata_recovered` (config
+  `papers_title_min_pct` 50.0); `relational_min_tables` 6 → 7.
+- **Tests: 796 pass** (+19 `tests/test_papers_v12.py`). Staged in
+  `release/v1.2.0/`.
+
+## v1.1.0 — ML-ready export (2026-08-06, DONE — RELEASE READY)
+
+First step of the Phase 19 pivot to AI-readiness. Installed torch 2.13 (CPU) +
+torch_geometric 2.8 and exported the 21,528 structure-bearing Materials Project
+rows as a deterministic, framework-agnostic graph dataset. No LLM calls.
+Deterministic. **18 release gates (all PASS).** See `docs/ml-ready.md`.
+
+- **`dataset_ml/`** (`src/ssb_dataset/ml/` + `scripts/build_ml_dataset.py`):
+  `graph.pt` = 21,528 PyG `Data` objects (CrystalNN structure graph, 5 Å cutoff
+  fallback — a structure is never silently dropped); 746,209 nodes / 3,226,126
+  directed edges; 10-dim per-element node features (atomic no, group, row,
+  electronegativity, Mendeleev no, mass, electron affinity, first IE, valence,
+  common oxi) + 1-dim edge features (bond distance) + `pos` for ALIGNN angles.
+  Parallel resumable `--jobs` prebuild — worker count never changes results.
+- **Targets** (`targets.pt`, aligned to graph order, `{y, mask}`): 10 dense
+  regression/classification tasks at 21,528/21,528 (wide-gap 15,286
+  non-zero-band-gap) + sparse **conductive ranking** (log10 σ, **237 labels**)
+  where a structure's reduced formula matches a consensus-σ group. Missing
+  labels masked, never imputed. Gold rows (σ-bearing, no MP structure) are
+  honestly excluded from the graph corpus — the ranking task's growth is a
+  Phase 11 data problem, not a code gap.
+- **Splits** (`splits/`, leakage-checked Phase 6 assignment): train 15,064 ·
+  val 3,236 · test 3,228 · gold 0. Disjoint, union = 21,528.
+- **`structures/`**: 21,528 CIFs for MatGL/MACE/ALIGNN native ingestion. PyG
+  native; DGL/MatGL/ALIGNN/MACE consumption paths documented in
+  `docs/ml-ready.md`.
+- **End-to-end verified**: 2-layer PyG GCN forward+backward on a 64-graph batch.
+- **Release gate #18** `ml_export_built` (config `ml_min_graphs`/`ml_min_dense
+  _targets`); 5 ML artifacts staged in `release/v1.1.0/`. **Tests: 777 pass**
+  (+9 `tests/test_ml_export.py`).
+
+## v1.0.0 — Relational dataset (2026-08-06, DONE — RELEASE READY)
+
+The v1.0.0 "scientific database" release: the flat canonical table becomes six
+linked, id-keyed parquet tables implementing the roadmap's
+material → paper → experiment → measurement hierarchy. No LLM calls.
+Deterministic. **17 release gates (all PASS).** See `docs/relational-schema.md`.
+
+- **Six relational tables** (`relational_output/`, built by
+  `scripts/build_relational_dataset.py`):
+  `materials` 30,801 · `papers` 111 · `experiments` **179** ·
+  `measurements` **254** · `synthesis` 162 · `dopants` 1. Every σ/Ea/σ60C/σ80C
+  value is its own measurement row keyed by `meas-<sha256>`; experimental
+  variability is preserved, never overwritten — **12 materials with >1
+  independent experiment** (LLZO has 10). Dedup collapses only identical
+  (material, paper, condition-fingerprint) rows.
+- **Stable ids** (`src/ssb_dataset/db/schema.py::stable_id`): sha256
+  fingerprints prefixed by kind (`exp-`/`meas-`/`syn-`/`dop-`/`paper-`),
+  `paper_id` = DOI when present. Fingerprints include only populated fields
+  (`False` bools and empty containers excluded).
+- **Field-level confidence (Phase F)**: value/temperature/method/evidence
+  confidence per measurement row; `verified_human` value is always 1.0
+  (extraction confidence can never dilute a human check); overall =
+  0.5·value + 0.15·temp + 0.15·method + 0.2·evidence. 100% coverage.
+- **Dopant parser corrected**: molar ratios (`(70:30)` glass) and
+  source-prefixed ids (`aflow-`, `mp-`) are NOT dopants; only explicit
+  annotations (`Li7La3Zr2O12:Ta`, `Al-doped`) count → the honest count is 1
+  (the previous 20 were ratio-string false positives).
+- **New validation reports**: `validation_output/{schema,provenance,
+  missing_value}_report.json`. Provenance chain coverage: paper 100%,
+  evidence_sentence 88.2%, confidence 100%.
+- **Release gates #14–16** (config in `release_config.toml`):
+  `relational_tables_built` (6 tables / 25,000 materials / 150 experiments /
+  200 measurements), `measurement_provenance` (≥80%), `multi_experiment_preserved`
+  (≥10 materials). `release.py` BUILD_STEPS + staging extended.
+- **Tests: 768 pass** (+25 `tests/test_relational_v10.py`).
+
+## v0.9.0 — Dataset quality system (2026-08-06, DONE — RELEASE READY)
+
+First step of the roadmap pivot to dataset quality & provenance (user's 10-phase
+plan). Freezes MP field expansion (diminishing returns confirmed in v0.7.0;
+evaluability shipped in v0.8.0). No LLM calls. Deterministic. **13 release gates
+(all PASS).** See `docs/quality.md`.
+
+- **Record-level quality scoring** (`src/ssb_dataset/quality/scoring.py` +
+  `scripts/build_canonical_quality.py`): every one of the 30,838 canonical
+  records now carries `quality.score/grade/flags/confidence/version/kind`.
+  DFT rows → `completeness_score` (weighted block coverage: structure 30,
+  thermodynamics 20, chemistry 15, electronic 10, redox 7, magnetic 6, graph 6,
+  dielectric 3, mechanical 3; −5 per consistency violation); literature rows →
+  `experimental_score` reusing the A3/A4 record-quality ladder. SCORER_VERSION
+  v0.9.0. Result: avg 60.3 (A 17,646 / A+ 179 / B 3,715 / C 148 / D 9,150),
+  confidence high 17,825 / medium 3,843 / low 9,170, 6,115 flagged. By source:
+  MP 82.7, literature_mined 52.8, JARVIS 8.0, COD 6.0, AFLOW 5.9, OQMD 6.0,
+  NOMAD 3.9 — the DFT-native chemistry descriptor columns don't exist on the
+  JARVIS/COD/AFLOW/OQMD/NOMAD canonical staging rows (descriptors live only in
+  `features_output/descriptors.parquet`), so low scores are honest, not scorer
+  bugs. Artifacts: `quality_output/canonical_quality.{parquet,report.json}`.
+- **Anomaly scan** (`src/ssb_dataset/quality/anomalies.py`): 8 deterministic
+  checks → `validation_output/anomaly_report.json`. **0 high-severity FAIL —
+  PASS.** Non-blocking findings: charge_imbalance 5,932 (MP electroneutral=False,
+  medium), duplicate_experiment 2 (known Li2OHCl same-DOI dup), duplicate_doi 38
+  (low).
+- **Unit-normalization audit** (`src/ssb_dataset/quality/unit_audit.py`): bounds
+  audit (σ 1e-12..1e2 S/cm, Ea 0.01..5.0 eV, T ≥ 0 K) + unit-string-leak
+  detection → `validation_output/unit_audit.json`. **0 invalid — PASS.** Audit
+  only; auto-fix of flagged rows deferred.
+- **First-class experiments table** (`src/ssb_dataset/quality/experiments.py`):
+  promotes every experiment-block/σ/Ea-carrying row into standalone rows keyed
+  by `experiment_id` = `exp-` + sha256(material_id|doi|sigma|ea|min_temp)[:16].
+  **182 experiments, 182 unique ids, 13 materials with >1 experiment** →
+  `experiments_output/experiments.parquet`. This is the v1.0 "1 material → N
+  papers → N experiments → N measurements" hierarchy's foundation —
+  experimental variability is preserved, never overwritten.
+- **Release gates #11–13**: `canonical_quality_scored` (≥25,000 & avg ≥50),
+  `anomaly_report_passed` (0 high-sev), `unit_normalization_passed` (0 invalid);
+  config-driven in `release_config.toml`; `--version` stages the 4 new artifacts.
+- **Tests: 743 pass** (+21 `tests/test_quality_v09.py`). Staged in
+  `release/v0.9.0/`.
+
+## v0.8.0 — Benchmark suite (2026-08-06, DONE — RELEASE READY)
+
+First milestone of the ImageNet-of-SSBs pivot (user's 10-phase plan, Phase 1):
+make the dataset *evaluable* instead of continuing MP field expansion
+(verified diminishing returns in v0.7.0). No LLM calls. Deterministic.
+
+- **Task registry** (`src/ssb_dataset/benchmarks/tasks.py`): 12 declarative
+  `BenchmarkTask`s — 6 regression (formation energy, band gap, energy above
+  hull, density, volume, ionic radius), 4 classification (stable/unstable,
+  wide-gap E_g>4 eV, family 12-class, crystal system 7-class), 1 large-class
+  classification (space group, 194 classes, top-5 accuracy), 1 ranking
+  (conductive-candidate ranking on log10 σ_RT, the scarce 166-row verified
+  subset). Hand-audited `leaky_cols` per task (volume↔density, band-gap↔
+  cbm/vbm/efermi, stability↔energy-above-hull, crystal-system↔space-group,
+  ranking↔measurement-condition fields).
+- **Evaluation engine** (`src/ssb_dataset/benchmarks/evaluate.py`): numeric
+  feature selection minus identity/provenance minus target+leaky columns;
+  train-only mean imputation; metrics mae/rmse/r2, accuracy/macro_f1/roc_auc/
+  top5, NDCG@10+Spearman (log10-safe gain shifting); baselines dummy +
+  ridge/logistic (StandardScaler) + random forest, `random_state=0`.
+- **Harness** (`scripts/run_benchmarks.py`): reuses the Phase 6 leakage-checked
+  splits (`features_output/{train,val,test,gold}.parquet` keyed by
+  material_id); small-labeled tasks whose rows all sit in `gold` (σ_RT, n=166)
+  fall back to **GroupKFold grouped by family**; writes per-task JSON +
+  `benchmark_output/benchmark_report.{json,md}`; `--report-only` re-renders
+  from cache. Fixed descriptor merge duplication (13 duplicate material_ids
+  were inflating the join).
+- **Baseline leaderboard**: RF wins all 12. Composition-learnable tasks are
+  near-solved by baselines (formation energy MAE 0.076, r² 0.95; stability
+  macro-F1 0.931); the hard value-bearing benchmarks are space-group top-5
+  (0.887) and conductive ranking (NDCG@10 0.573 vs dummy 0.401). **These are
+  floor baselines** — torch is not installed, so GNN/embedding models are the
+  explicit next step.
+- **Docs/tests**: `docs/benchmarks.md` (design, task table, add-task/add-model
+  how-tos, known limits); **722 tests pass** (+20 `tests/test_benchmarks.py`).
+
+## v0.7.0 — Tier 1/2/5/8 gap closure (2026-08-06, DONE — RELEASE READY)
+
+Implements the user's 8-tier gap analysis (OBELiX + MP capability audit). The
+biggest stated gap — transport physics (migration barriers, diffusion
+coefficients, transference number, carrier concentration) — is **verified
+infeasible from MP** (no `migration`/`diffusion` endpoints, confirmed). This
+release closes the *feasible* Tier 1/2/5/8 items. No LLM calls.
+
+- **Schema**: `ChemistryBlock` +9 Magpie-style descriptors (`weight_fractions`,
+  `atomic_radius_mean/std`, `ionic_radius_mean/std`, `average_atomic_mass`,
+  `average_group`, `average_period`, `average_mendeleev_number` — weighted,
+  deterministic, 100% coverage); `StructureBlock` + `nearest_neighbor_distance`,
+  `packing_fraction` (was declared, never populated), and the **Li-sublattice
+  transport proxies** (`li_site_count`, `li_vacancy_fraction`,
+  `li_hopping_distance` — shortest periodic Li–Li hop via `get_all_neighbors`,
+  works for single-site Li sublattices); `DielectricBlock.piezo_e_ij_max`
+  (MP summary `e_ij_max`); `ThermodynamicsBlock.weighted_work_function`;
+  `IonTransportBlock.mobile_ion`; `DiscoveryLabelsBlock.is_high_conductivity`
+  (**None when unmeasured** — never imputed from a computational record).
+- **Enrichment** (`scripts/enrich_mp_api.py`): summary block now fetches
+  `e_ij_max` + `weighted_work_function`. Coverage honest and sparse — piezo
+  3.1%, work function 0.02% of 21,528 (MP only computes these for the
+  expensive/non-centrosymmetric subset). `max_direction` is NOT a summary
+  field (verified — only the standalone piezo endpoint serves it; dropped).
+- **Structure descriptors** (`scripts/compute_structure_descriptors.py`):
+  `local.nearest_neighbor_distance` + `local.packing_fraction`, new `li` block
+  (`site_count`/`vacancy_fraction`/`hopping_distance`) merged as `li_*`
+  columns in `expand_mp._load_struct_desc`.
+- **Tests**: 702 pass (+15). Pipeline rerun (expand_mp → publish → merge →
+  featurize → release) staged; final coverage numbers in the CHANGELOG.
+  **Canonical 30,838, all 11 gates PASS, RELEASE READY.** Coverage: the 9
+  Magpie chemistry descriptors + `li_site_count`/`li_vacancy_fraction`/
+  `packing_fraction`/`nearest_neighbor_distance`/`mobile_ion` all 100%
+  (21,528); `li_hopping_distance` 95.4%; piezo 3.1%; work function 0.02%;
+  `is_high_conductivity` 0 (None everywhere — honest).
+
+## v0.6.0 — Synthesis recipes + structure-graph/local-geometry + redox + discovery labels (2026-08-05, in progress)
+
+Implements the v0.6.0 roadmap priorities the user scoped (Synthesis + graph +
+local structure + labels, plus the experimental-schema expansion). No LLM calls
+— everything is MP-derived or deterministically computed.
+
+- **Schema** (`src/ssb_dataset/schema.py`): `SynthesisBlock` expanded (precursors,
+  `SynthesisRoute` enums, temperature/time/atmosphere, method flags,
+  reaction_string, synthesis_doi); **new `RedoxBlock`** (redox-active elements,
+  avg/range oxidation, per-element `mixed_valence`, cation/anion by
+  electronegativity, `electroneutral` — None when uncomputable, never a dishonest
+  default); **new `GraphBlock`** (CrystalNN graph stats); **new
+  `DiscoveryLabelsBlock`** (is_promising / is_fast_ion_conductor heuristics);
+  `StructureBlock` local-geometry fields (polyhedron_volume via ConvexHull,
+  bond_angle_variance, tetra/octahedrality, mean_neighbor_distance,
+  neighbor_species_distribution); `ExperimentBlock` +11 fields (grain_size,
+  porosity, thickness/area, current density, cell configuration, CCD, cycling
+  stability, σ at 60/80 °C) — schema-only for now.
+- **Synthesis enrichment** (`scripts/enrich_mp_api.py`): new `synthesis` block.
+  MP's `synthesis` endpoint is queried by `target_formula` (not material_id);
+  operation chains collapse to T/time/atmosphere + method flags. Real data:
+  Li6PS5Cl → 4 recipes, Li7La3Zr2O12 → 5 (1253 °C / 5 h, jssc.2009.05.020),
+  Li3PS4 → 5 (290 °C / 2 h / ball milling). **Full 21,528-mid sweep DONE
+  (1,627/21,528 materials with ≥1 recipe, ~22 min via `--jobs 16`)** — the
+  single-threaded sweep drifted into MP throttling (>2 h, ~16 req/min); each
+  worker now opens its own MPRester (rate limit ~25 req/s).
+- **Structure descriptors** (`scripts/compute_structure_descriptors.py`, NEW):
+  per-material CrystalNN structure graph → networkx stats + first-site local
+  polyhedral geometry → `data/raw/materials_project/struct_desc/{mid}.json`.
+  **DONE: 21,528/21,528 graph, 21,220 local geometry, 21,528 edge lengths.**
+  Edge lengths use `ConnectedSite.dist` (the to_jimage sign convention is
+  invertible and was verified wrong — don't reconstruct from to_jimage).
+- **Pipeline** (`scripts/expand_mp.py`): `build_record` now constructs Graph /
+  Redox / DiscoveryLabels / Synthesis blocks and merges `local_*` geometry into
+  StructureBlock. **Reprocess → publish → merge → featurize → release all
+  rerun: canonical 30,838, all 11 gates PASS, RELEASE READY (v0.6.0 staged).**
+  Coverage: synthesis 1,627 recipes · graph 21,528 · redox 19,332
+  (possible_species) · local geometry 20,016–21,220 · labels 21,528. Splits:
+  train 17,173 / val 10,267 / test 3,398 / gold 165, leakage PASSED.
+- **Data-integrity fix**: `merge_verified.py` globbed `staging/**.parquet`
+  recursively, and `publish_mp_to_staging.py` backs up the prior MP staging to
+  `staging/materials_project_bak_pre_full` — the merge counted every MP record
+  twice (43,056), inflating total_records to 52,366 (silently corrupting v0.5.5
+  and the first v0.6.0 build). The glob now excludes `_bak_pre_full` paths;
+  canonical is the true 30,838 records.
+- **Tests**: 687 pass (+8: synthesis, redox, labels, graph-block schema).
+
+Deferred by feasibility (verified, not assumed): MP `phonon` serves zero data for
+the electrolyte catalog (checked LLZO/Li3PS4/Li6PS5Cl/others); MP has no
+per-material `migration`/`diffusion` endpoints (hasattr False) → transport stays
+literature-derived; matminer/dscribe/torch-geometric not installed → SOAP/MBTR
+feature pack deferred.
 
 ## Path-to-10k Actions 0–6 — implemented (2026-08-03)
 
@@ -200,6 +639,36 @@ in `docs/access-strategy.md`. See `CHANGELOG.md` [v0.4.0].
 - **Evidence verifier fixed + rerun** (`scripts/verify_extraction_evidence.py`): the snippet was previously `text[:600]` (boilerplate, not the value's location) → now `_window_around(anchor)`; `find_nearby_value` returns dicts `{label/found/start/end}`; `digit_match` now counts **only the record's own sigma target** (not the Ea or any stray number); exponent overflow guarded (=32..32) in both this script and `verifier.py::_parse_number`. Honest verdicts of 108 extracted records: **FOUND 80, PARTIAL 7, VALUE_ONLY 2, SCRIBED 3, DUP_VALUE 16**; sigma `digit_match` 66 (was a naive 95).
 - **DUP_VALUE (copy-paste detector)** now catches the real artifact: PVDF-HFP gels (10.3390/gels12060534) carry **5× identical σ=0.000235** across LATP/LLZTO loadings, borohydrides (10.1007/s00339-016-9807-2) 4× 0.0001, thio-LISICON 1e-5 across Li10GeP2S12/Li7La3Zr2O12, LATP/LATP-0.1LBSO 1.5e-4.
 - **AI-review engine consumes the honest signals** (`src/ssb_dataset/review/rules.py`): new `rule_digit_match` + `rule_dup_value` added to `ALL_RULES`. Both are FAIL-only when the deterministic verifier stamped the problem → the zero-FAIL-rule auto-approve gate blocks them. They are **conditional weights** in `scorer.py` (only count when stamped, so an unstamped record neither gains nor loses confidence); `ai_review.py::_stamp_verification_signals` loads `verification_report.json` and decorates each pending record keyed by (paper pdf, composition). 77/77 pending stamped. Calibration unchanged from baseline (18/20 approve, 11/16 reject; the 5 false rejects are pre-existing evidence-bound records whose PDFs are SCRIBED and are NOT caused by these rules). **542 tests pass.**
+
+## Review routing (2026-08-05) — evidence stamping, same-paper dupes, scope gap
+
+- **`_stamp_verification_signals` now copies the full evidence block** (verdict,
+  snippet, page, values) from `verification_report.json`, not just
+  `sigma_digit_match`/`duplicate_value`. Before this, the 91 pending
+  batch-extraction items had NO evidence signal → `evidence` FAILed all of them
+  → unconditional human routing. The auto-approve engine now actually engages
+  on raw extraction output.
+- **`rule_duplicate` catches same-paper pending duplicates** (same paper_id +
+  composition + property + near-equal value). The deterministic DUP_VALUE
+  detector only fires for identical sigmas across *different* compositions, so
+  two identical rows from one paper (e.g. Li0.375Sr0.4375Ta0.75Zr0.25O3
+  σ=0.0012 ×2 from `10.48550_arxiv.2204.00091`) used to BOTH auto-approve. The
+  approved-record comparison is now **paper-scoped** — same material + value
+  from a different paper is consensus (C3 rule) and never flagged. `duplicate`
+  was added to the auto-approve all-clear gate in `decision.py`.
+- **SCOPE GAP (why the 91 stay human-routed):** with evidence stamped, the
+  engine auto-decided 19 of 91, but 6 are out-of-scope records whose wrong
+  family tag let `family_range` pass trivially:
+  - `LiFSI-DTDL` / `LiFSI-DME` / `LiFSI/BFE` — **liquid electrolyte solutions**
+    (10.1038/s41467-022-29199-3, 10.1038/s41467-023-36793-6 "electrolyte
+    solution for non-aqueous Li metal batteries"), tagged hydride/sulfide.
+  - `Li0.9Mg0.1` / `Li0.8Mg0.2` — **Li-Mg alloy electrode** paper
+    (10.1038/s41467-024-48071-0 "impact of magnesium content on
+    lithium-magnesium alloy *electrode* performance"), not an electrolyte.
+  The review engine has no solid-vs-liquid-electrolyte scope rule, so `--apply`
+  was deliberately NOT run. A scope check (reject `LiFSI*` solvent compositions
+  / electrode-paper values) is the next lever to unlock auto-approval of the
+  genuinely solid candidates among the 91.
 
 ## Phase 2.2 — Experiment-metadata backfill (2026-08-02)
 
@@ -339,6 +808,8 @@ Three distinct issues surfaced when running the dual-pass extraction pipeline on
 **Fix applied:** Ensemble aggregation — `extract_from_pdf(ensemble_size=N)` runs extraction N times and keeps only records that appear in ≥ N-1 runs with <10% sigma variance. Tested successfully on sulfide_preprint.pdf: 3-run ensemble filtered unstable temperature-varying records down to the single stable RT value.  
 **Usage:** `python run.py extract --pdf <path> --ensemble 3`  
 **Implication:** The dual-pass extraction pipeline now produces reproducible results at the cost of N× API calls. The ensemble confidence score scales with vote count (0.5 + 0.1 × votes). Don't treat any single extraction run's output as authoritative — always use ensemble ≥ 3 for production use.
+
+**E6 re-test (2026-08-05, phase E6 DoD):** `scripts/benchmark_extraction_model.py --determinism 3` re-run against `10.1021_acsami.3c03513.pdf` (Li2ZrCl6/Li2ZrCl5.5F0.5) with the current model + `load_dotenv()` fixed shows **STABLE**: record counts `[2, 2, 2]`, most-frequent assignment `('Li2ZrCl6', 0.00013) ×3/3`. The earlier "confirmed non-determinism" verdict was partly a rate-limit/retry artifact (429s routing runs through different configs). Under the ensemble path the current model is stable on this paper; the 5-run test procedure is now the standard E6 checkpoint before any extraction-model swap. `extraction_model_benchmark.json` persists the result.
 
 ### 2. Timeouts (3 of 9 PDFs)
 **Root cause:** No explicit request timeout on the LLM HTTP call; the shell tool's 120s timeout would kill the process before extracting could fail gracefully.  

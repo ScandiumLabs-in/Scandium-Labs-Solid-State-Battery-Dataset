@@ -1,0 +1,10 @@
+{
+  "kind": "determinism",
+  "model": "llama-3.1-8b-instant",
+  "runs": [
+    2,
+    2,
+    2
+  ],
+  "stable": true
+}

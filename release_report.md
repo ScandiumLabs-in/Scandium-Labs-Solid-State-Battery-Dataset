@@ -1,14 +1,14 @@
 # Scandium Dataset — Release Report
 
-- Version: **v0.5.0**
-- Generated: 2026-08-03T14:51:27.454969+00:00
+- Version: **v1.9.0**
+- Generated: 2026-08-06T20:20:05.654519+00:00
 
 ## Dataset size
 
-- Verified experimental records: **116**
-- Materials (consensus DB): 405
-- Papers: 177
-- Materials with consensus (n≥3): 24
+- Verified experimental records: **183**
+- Materials (consensus DB): 427
+- Papers: 244
+- Materials with consensus (n≥3): 32
 
 ## Release gates
 
@@ -25,121 +25,146 @@
 | min_total_records | PASS |
 | health_report_generated | PASS |
 | min_gold_pct | PASS |
+| canonical_quality_scored | PASS |
+| anomaly_report_passed | PASS |
+| unit_normalization_passed | PASS |
+| relational_tables_built | PASS |
+| measurement_provenance | PASS |
+| multi_experiment_preserved | PASS |
+| ml_export_built | PASS |
+| papers_metadata_recovered | PASS |
+| cross_db_validation | PASS |
+| negative_results_built | PASS |
+| scandium_bench_built | PASS |
 
 ## Quality distribution
 
 ```json
 {
-  "records": 191,
-  "score_avg": 53.7,
-  "score_min": 41,
-  "score_max": 72,
+  "records": 244,
+  "score_avg": 63.6,
+  "score_min": 44,
+  "score_max": 78,
   "grade_distribution": {
-    "C": 176,
-    "D": 8,
-    "B": 7
+    "C": 124,
+    "B": 119,
+    "D": 1
   },
   "tier_distribution": {
-    "silver": 186,
+    "silver": 239,
     "rejected": 5
   },
   "tier_pct": {
     "gold": 0.0,
-    "silver": 97.4,
+    "silver": 98.0,
     "bronze": 0.0,
-    "rejected": 2.6
+    "rejected": 2.0
   },
   "gold_records": 0,
-  "silver_records": 186,
+  "silver_records": 239,
   "bronze_records": 0,
   "rejected_records": 5,
   "family_scores": {
     "LLZO": {
       "n": 1,
-      "avg_score": 57.0,
+      "avg_score": 54.0,
       "tiers": {
         "silver": 1
       }
     },
     "antiperovskite": {
       "n": 6,
-      "avg_score": 51.3,
+      "avg_score": 59.3,
       "tiers": {
         "silver": 6
       }
     },
     "argyrodite": {
-      "n": 17,
-      "avg_score": 55.4,
+      "n": 20,
+      "avg_score": 66.8,
       "tiers": {
-        "silver": 16,
+        "silver": 19,
         "rejected": 1
       }
     },
     "borohydride": {
-      "n": 12,
-      "avg_score": 52.7,
+      "n": 13,
+      "avg_score": 65.5,
       "tiers": {
-        "silver": 11,
+        "silver": 12,
         "rejected": 1
       }
     },
-    "garnet": {
-      "n": 28,
-      "avg_score": 52.6,
+    "complex_hydride": {
+      "n": 2,
+      "avg_score": 76.0,
       "tiers": {
-        "silver": 28
+        "silver": 2
+      }
+    },
+    "garnet": {
+      "n": 41,
+      "avg_score": 62.9,
+      "tiers": {
+        "silver": 41
       }
     },
     "halide": {
-      "n": 22,
-      "avg_score": 55.3,
+      "n": 34,
+      "avg_score": 60.6,
       "tiers": {
-        "silver": 22
+        "silver": 34
       }
     },
     "hydride": {
       "n": 3,
-      "avg_score": 50.0,
+      "avg_score": 61.7,
       "tiers": {
         "silver": 3
       }
     },
     "nasicon": {
-      "n": 32,
-      "avg_score": 52.0,
+      "n": 34,
+      "avg_score": 63.9,
       "tiers": {
-        "silver": 32
+        "silver": 34
       }
     },
     "oxide": {
-      "n": 12,
-      "avg_score": 50.2,
+      "n": 16,
+      "avg_score": 63.2,
       "tiers": {
-        "silver": 12
+        "silver": 16
       }
     },
     "perovskite": {
-      "n": 14,
-      "avg_score": 56.0,
+      "n": 20,
+      "avg_score": 67.3,
       "tiers": {
-        "silver": 13,
+        "silver": 19,
         "rejected": 1
       }
     },
     "polymer_composite": {
-      "n": 36,
-      "avg_score": 54.7,
+      "n": 41,
+      "avg_score": 63.8,
       "tiers": {
-        "silver": 34,
+        "silver": 39,
         "rejected": 2
       }
     },
     "sulfide": {
-      "n": 8,
-      "avg_score": 56.4,
+      "n": 10,
+      "avg_score": 63.3,
       "tiers": {
-        "silver": 8
+        "silver": 10
+      }
+    },
+    "unknown": {
+      "n": 3,
+      "avg_score": 59.3,
+      "tiers": {
+        "silver": 3
       }
     }
   }
@@ -150,15 +175,15 @@
 
 | Family | Records |
 |---|---|
-| polymer_composite | 24 |
-| garnet | 18 |
-| nasicon | 13 |
-| perovskite | 10 |
-| sulfide | 9 |
-| halide | 9 |
-| antiperovskite | 8 |
-| unknown | 7 |
-| argyrodite | 6 |
-| borohydride | 5 |
-| oxide | 5 |
-| hydride | 2 |
+| polymer_composite | 35 |
+| garnet | 30 |
+| halide | 21 |
+| nasicon | 20 |
+| perovskite | 15 |
+| argyrodite | 15 |
+| sulfide | 11 |
+| antiperovskite | 9 |
+| unknown | 9 |
+| oxide | 9 |
+| borohydride | 6 |
+| hydride | 3 |

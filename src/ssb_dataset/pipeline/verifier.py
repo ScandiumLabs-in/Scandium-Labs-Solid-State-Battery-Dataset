@@ -32,6 +32,7 @@ from pathlib import Path
 from typing import Any
 
 import fitz  # PyMuPDF
+import httpx
 
 from ssb_dataset.pipeline.redflags import (
     FAMILY_EA_RANGES,
@@ -361,14 +362,26 @@ def _vision_transcribe_bytes(png_bytes: bytes, page_no: int, provider: str,
         (fully free, deterministic, no rate limit).
     provider ``groq`` (or a custom OpenAI-compatible base_url) — a chat
         completion with an image part.
+    provider ``tesseract`` — local Tesseract OCR (fully free, deterministic,
+        no rate limit, good for scientific PDFs with clear text).
 
     Injectable: tests monkeypatch this to avoid the network.
     """
     import base64
+    import io
     import os
-    import httpx
 
     b64 = base64.b64encode(png_bytes).decode()
+
+    # Tesseract OCR fallback — fast, free, deterministic
+    if provider == "tesseract":
+        try:
+            import pytesseract
+            from PIL import Image
+            img = Image.open(io.BytesIO(png_bytes))
+            return pytesseract.image_to_string(img)
+        except Exception:
+            return ""
 
     if provider == "ollama":
         if not model:

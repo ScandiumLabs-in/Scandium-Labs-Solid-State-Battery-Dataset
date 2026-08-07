@@ -1,16 +1,16 @@
 {
   "n_ground_truth": 159,
   "confusion": {
-    "auto_approve->approved": 18,
+    "auto_approve->approved": 19,
     "auto_approve->rejected": 2,
     "auto_reject->approved": 5,
     "auto_reject->rejected": 11,
-    "human->approved": 92,
+    "human->approved": 91,
     "human->rejected": 31
   },
-  "auto_decided": 36,
-  "auto_decided_pct": 22.6,
-  "auto_approve_precision": 0.9,
+  "auto_decided": 37,
+  "auto_decided_pct": 23.3,
+  "auto_approve_precision": 0.905,
   "auto_reject_precision": 0.688,
   "false_rejects": 5,
   "false_approves": 2

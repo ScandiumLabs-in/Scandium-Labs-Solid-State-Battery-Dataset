@@ -1,0 +1,307 @@
+{
+  "qmatrix-20260804T172325": {
+    "run_id": "qmatrix-20260804T172325",
+    "cells": {
+      "sulfide|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 6,
+        "top_relevance": 0.6
+      },
+      "sulfide|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.7
+      },
+      "sulfide|composition screening": {
+        "n_candidates": 14,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      },
+      "sulfide|combinatorial synthesis": {
+        "n_candidates": 11,
+        "n_open_access": 10,
+        "top_relevance": 0.4
+      },
+      "sulfide|doping series": {
+        "n_candidates": 20,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      },
+      "sulfide|solid solution series": {
+        "n_candidates": 15,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      }
+    }
+  },
+  "qmatrix-20260804T192103": {
+    "run_id": "qmatrix-20260804T192103",
+    "cells": {
+      "sulfide|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 6,
+        "top_relevance": 0.6
+      },
+      "sulfide|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.7
+      },
+      "sulfide|composition screening": {
+        "n_candidates": 14,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      },
+      "sulfide|combinatorial synthesis": {
+        "n_candidates": 11,
+        "n_open_access": 10,
+        "top_relevance": 0.4
+      },
+      "sulfide|doping series": {
+        "n_candidates": 20,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      },
+      "sulfide|solid solution series": {
+        "n_candidates": 15,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      }
+    }
+  },
+  "qmatrix-20260804T192150": {
+    "run_id": "qmatrix-20260804T192150",
+    "cells": {
+      "argyrodite|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 8,
+        "top_relevance": 0.6
+      },
+      "argyrodite|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 8,
+        "top_relevance": 0.7
+      },
+      "argyrodite|doping series": {
+        "n_candidates": 25,
+        "n_open_access": 14,
+        "top_relevance": 0.4
+      }
+    }
+  },
+  "qmatrix-20260804T192442": {
+    "run_id": "qmatrix-20260804T192442",
+    "cells": {
+      "hydride|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 19,
+        "top_relevance": 0.5
+      },
+      "hydride|activation energy": {
+        "n_candidates": 14,
+        "n_open_access": 14,
+        "top_relevance": 0.5
+      }
+    }
+  },
+  "qmatrix-20260804T192500": {
+    "run_id": "qmatrix-20260804T192500",
+    "cells": {
+      "antiperovskite|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 8,
+        "top_relevance": 0.6
+      },
+      "antiperovskite|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 10,
+        "top_relevance": 0.7
+      },
+      "antiperovskite|doping series": {
+        "n_candidates": 20,
+        "n_open_access": 9,
+        "top_relevance": 0.6
+      }
+    }
+  },
+  "qmatrix-20260804T192517": {
+    "run_id": "qmatrix-20260804T192517",
+    "cells": {
+      "polymer_composite|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 12,
+        "top_relevance": 0.5
+      },
+      "polymer_composite|activation energy": {
+        "n_candidates": 23,
+        "n_open_access": 19,
+        "top_relevance": 0.5
+      },
+      "polymer_composite|composition screening": {
+        "n_candidates": 10,
+        "n_open_access": 10,
+        "top_relevance": 0.4
+      }
+    }
+  },
+  "qmatrix-20260804T192544": {
+    "run_id": "qmatrix-20260804T192544",
+    "cells": {
+      "perovskite|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 8,
+        "top_relevance": 0.6
+      },
+      "perovskite|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 6,
+        "top_relevance": 0.7
+      },
+      "perovskite|doping series": {
+        "n_candidates": 12,
+        "n_open_access": 4,
+        "top_relevance": 0.4
+      },
+      "perovskite|compositional mapping": {
+        "n_candidates": 5,
+        "n_open_access": 4,
+        "top_relevance": 0.4
+      }
+    }
+  },
+  "qmatrix-20260804T192605": {
+    "run_id": "qmatrix-20260804T192605",
+    "cells": {
+      "borohydride|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.6
+      },
+      "borohydride|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 9,
+        "top_relevance": 0.7
+      },
+      "borohydride|doping series": {
+        "n_candidates": 18,
+        "n_open_access": 7,
+        "top_relevance": 0.6
+      }
+    }
+  },
+  "qmatrix-20260804T192627": {
+    "run_id": "qmatrix-20260804T192627",
+    "cells": {
+      "halide|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.6
+      },
+      "halide|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.7
+      },
+      "halide|composition screening": {
+        "n_candidates": 13,
+        "n_open_access": 9,
+        "top_relevance": 0.5
+      },
+      "halide|combinatorial synthesis": {
+        "n_candidates": 7,
+        "n_open_access": 6,
+        "top_relevance": 0.4
+      },
+      "halide|doping series": {
+        "n_candidates": 19,
+        "n_open_access": 8,
+        "top_relevance": 0.5
+      }
+    }
+  },
+  "qmatrix-20260804T192652": {
+    "run_id": "qmatrix-20260804T192652",
+    "cells": {
+      "nasicon|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 15,
+        "top_relevance": 0.5
+      },
+      "nasicon|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 14,
+        "top_relevance": 0.6
+      },
+      "nasicon|composition screening": {
+        "n_candidates": 12,
+        "n_open_access": 12,
+        "top_relevance": 0.4
+      },
+      "nasicon|combinatorial synthesis": {
+        "n_candidates": 3,
+        "n_open_access": 3,
+        "top_relevance": 0.4
+      },
+      "nasicon|doping series": {
+        "n_candidates": 0,
+        "n_open_access": 0,
+        "top_relevance": 0.0
+      }
+    }
+  },
+  "qmatrix-20260805T025655": {
+    "run_id": "qmatrix-20260805T025655",
+    "cells": {
+      "garnet|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 7,
+        "top_relevance": 0.7
+      },
+      "garnet|activation energy": {
+        "n_candidates": 25,
+        "n_open_access": 13,
+        "top_relevance": 0.7
+      },
+      "garnet|doping series": {
+        "n_candidates": 25,
+        "n_open_access": 16,
+        "top_relevance": 0.5
+      },
+      "garnet|compositional mapping": {
+        "n_candidates": 22,
+        "n_open_access": 21,
+        "top_relevance": 0.6
+      }
+    }
+  },
+  "qmatrix-20260805T025723": {
+    "run_id": "qmatrix-20260805T025723",
+    "cells": {
+      "oxide|ionic conductivity": {
+        "n_candidates": 25,
+        "n_open_access": 17,
+        "top_relevance": 0.7
+      },
+      "oxide|activation energy": {
+        "n_candidates": 21,
+        "n_open_access": 14,
+        "top_relevance": 0.7
+      },
+      "oxide|composition screening": {
+        "n_candidates": 19,
+        "n_open_access": 19,
+        "top_relevance": 0.4
+      },
+      "oxide|combinatorial synthesis": {
+        "n_candidates": 9,
+        "n_open_access": 9,
+        "top_relevance": 0.4
+      },
+      "oxide|doping series": {
+        "n_candidates": 20,
+        "n_open_access": 19,
+        "top_relevance": 0.4
+      }
+    }
+  }
+}

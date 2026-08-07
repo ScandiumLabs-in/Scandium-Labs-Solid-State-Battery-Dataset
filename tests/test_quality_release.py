@@ -110,6 +110,42 @@ def test_build_quality_summarize(tmp_path):
     assert s["family_scores"]["sulfide"]["n"] == 2
 
 
+def test_enrich_from_verified_fills_gaps(tmp_path):
+    """Phase E7 — build_quality must back-fill the experiment block and the
+    load-bearing temperature+method pair from verified_canonical so Gold tier
+    is reachable for records whose queue item predates the deterministic
+    backfill. Queue values must win; verified only fills gaps."""
+    from scripts.build_quality import _enrich_from_verified
+    rec = {
+        "composition": "Li6PS5Cl", "doi": "10.1/x",
+        "measurement_method": "EIS",  # queue value wins
+    }
+    ver = {
+        "experiment": {"sample_form": "PELLET", "atmosphere": "AR",
+                       "instrument": "Biologic"},
+        "ion_transport.temperature_range_measured": {"min_K": 298.0, "max_K": 298.0},
+        "ion_transport.measurement_method": "DC",  # must NOT overwrite queue's EIS
+        "ion_transport.conductivity_type": "total",
+    }
+    out = _enrich_from_verified(dict(rec), ver)
+    assert out["experiment"]["sample_form"] == "PELLET"
+    assert out["experiment"]["instrument"] == "Biologic"
+    assert out["measurement_method"] == "EIS"          # queue wins
+    assert abs(out["temperature_celsius"] - 24.85) < 0.01  # 298K → 24.85°C
+    assert out["conductivity_type"] == "total"
+
+
+def test_enrich_from_verified_preserves_reviewer_correction(tmp_path):
+    from scripts.build_quality import _enrich_from_verified
+    rec = {"composition": "Li7La3Zr2O12", "doi": "10.2/y",
+           "temperature_celsius": 30}  # reviewer-edited value
+    ver = {"experiment": {"atmosphere": "N2"},
+           "ion_transport.temperature_range_measured": {"min_K": 298.0, "max_K": 298.0}}
+    out = _enrich_from_verified(dict(rec), ver)
+    assert out["temperature_celsius"] == 30  # never overwritten
+    assert out["experiment"]["atmosphere"] == "N2"
+
+
 # ── C: health report extensions ───────────────────────────────────────────────
 
 

@@ -218,3 +218,165 @@ E10 (release checkpoints) ──────────────────
 - Don't scrape paywalled publisher sites with tools designed to defeat access controls — Unpaywall/CORE/BASE/institutional access covers the legitimate ground; anything beyond that isn't a "free resource," it's a liability.
 - Don't relax any existing release gate (evidence coverage, duplicate rate, etc.) to hit a bigger verified-label number faster — the whole value of this dataset relative to a generic scrape is that the gates are real. A larger dataset with a lowered bar is a worse dataset, not a better one.
 - Don't build a second extraction pipeline in Phase E5/E6 — extend the existing `verifier.py`/`extraction.py` entry points. Every new input source should terminate in the same review queue, not a parallel one.
+
+---
+
+# Two-Layer Architecture + 13 Data Layers
+
+**Companion schema expansion (2026-08-05).** This plan separates the dataset into
+two layers so each record carries both a real-world performance profile and a
+computational fingerprint:
+
+1. **Experimental Layer** (from papers) → conductivity, activation energy, synthesis,
+   EIS, experimental conditions — already the core of Phases E0–E10 above.
+2. **Computational Layer** (from the Materials Project API) → crystal, thermodynamic,
+   electronic, mechanical, structural descriptors — this section.
+
+That combination (experiment + DFT + crystal structure for the same material) is
+the dataset's differentiator. The schema (`src/ssb_dataset/schema.py`) implements
+the fields below as pydantic blocks; the enrichment pipeline
+(`scripts/enrich_mp_api.py` + `scripts/expand_mp.py`) populates them from the free
+MP REST API (`mpr.materials.{summary,elasticity,dielectric,robocrys,chemenv,bonds,
+oxidation_states}`). Coverage status per layer is tracked against the 21,528
+Li-containing MP materials in the canonical dataset.
+
+## Layer 1 — Material Identity (Highest Priority) — DONE
+
+| Property | Schema field | Status |
+|---|---|---|
+| material_id (mp-xxxx) | `identity.material_id` | ✅ 21,528 |
+| pretty_formula | `identity.formula_pretty` | ✅ |
+| formula_anonymous | `identity.formula_anonymous` | ✅ |
+| chemical_system | `identity.chemsys` | ✅ |
+| elements | `identity.elements` | ✅ |
+| n_elements | `identity.nelements` | ✅ |
+| n_sites | `structure.nsites` | ✅ |
+| reduced_formula | `identity.reduced_formula` | ✅ |
+| database IDs (ICSD etc.) | `identity.database_ids` | ✅ |
+
+## Layer 2 — Crystal Structure — DONE
+
+`structure.structure_relaxed` (CIF), `space_group`, `space_group_number`,
+`crystal_system`, `point_group`, `symmetry_operations_count` (computed from the
+space-group type), `lattice_params`, `volume`, `density`, `nsites`.
+
+## Layer 3 — Thermodynamic Properties — DONE
+
+`thermodynamics.formation_energy_per_atom`, `energy_above_hull`, `is_stable`,
+`equilibrium_reaction_energy_per_atom` (decomposition energy), `total_energy`,
+`energy_per_atom`, `decomposition_products`, `functional_used` (provenance:
+PBE for the full catalog), `electrochemical_stability_window`.
+
+## Layer 4 — Electronic Properties — DONE (compact descriptors)
+
+`thermodynamics.band_gap`, `efermi`, `cbm`, `vbm`, `is_gap_direct`, `is_metal`.
+Full DOS curves are served by MP only via a per-task heavy endpoint; the compact
+band descriptors above carry the ML-relevant signal, so full DOS is deliberately
+not stored per-record (a band-center descriptor is a Phase 3 option if a consumer
+needs it).
+
+## Layer 5 — Mechanical Properties — DONE
+
+`mechanical.bulk_modulus`, `shear_modulus`, `youngs_modulus`, `homogeneous_poisson`,
+`universal_anisotropy`, `elastic_tensor`, `compliance_tensor` (+ free extras:
+`debye_temperature`, `sound_velocity`, `thermal_conductivity`). Coverage 886/21,528
+elasticity tensor (MP sparse — honest None elsewhere).
+
+## Layer 6 — Dielectric Properties — DONE
+
+`dielectric.e_total`, `e_electronic`, `e_ionic`, `dielectric_tensor`, `refractive_index_n`.
+Coverage 1,102/21,528.
+
+## Layer 7 — Chemistry — DONE
+
+`electronic.possible_species`, `electronic.oxidation_states`,
+`electronic.average_oxidation_states` (19,332/21,528). Electronegativity statistics,
+valence-electron count, atomic fractions and elemental fractions are computed
+deterministically from the composition at feature time (full coverage, no API).
+**v0.6.0:** `redox` block adds oxidation chemistry from possible_species —
+`redox_active_elements`, `average_oxidation`, `oxidation_range`, `mixed_valence`
+(per-element: same element in ≥2 oxidation states), `anion_type`/`cation_type`
+(electronegativity-split), `electroneutral` (None when uncomputable — never a
+dishonest default).
+
+## Layer 8 — Structural Descriptors — PARTIAL → DONE
+
+`structure.coordination_environment` + `coordination_csm` + `coordination_species`
+(chemenv, 160/21,528), `mineral_prototype` (robocrys, 765), `robocrys_description`,
+`packing_fraction` (schema field, MP does not serve it), `density_atomic`. Bond
+lengths, bond angles, coordination number and dimensionality were the remaining
+gaps; closed via the MP `bonds` endpoint (`bond_length_stats`, `coordination_envs`)
+and robocrys `condensed_structure.dimensionality`.
+**v0.6.0:** `graph` block (CrystalNN structure graph → num_nodes/edges,
+average_degree, graph_density, edge_length_mean/std via `ConnectedSite.dist`,
+clustering_coefficient, graph_diameter, connected) + `structure` local-geometry
+fields (polyhedron_volume via ConvexHull, polyhedron_distortion,
+bond_angle_variance, tetra/octahedrality, mean_neighbor_distance,
+neighbor_species_distribution) — computed offline by
+`scripts/compute_structure_descriptors.py` (full coverage when the CIF parses).
+
+## Layer 9 — Diffusion-Related Features — WHEN AVAILABLE
+
+`ion_transport.activation_energy_Ea` (experimental). Li/Na diffusion coefficient and
+migration barriers are stored only when a source provides them (DFT Phase 5 or
+literature); MP exposes no per-material diffusion endpoint in the current client.
+**v0.6.0:** `synthesis` block brings real MP recipe data (precursors, temperature,
+time, atmosphere, method flags, reaction string, DOI) for compounds with
+published synthesis recipes; `discovery_labels` block adds heuristic
+fast-ion-conductor / promising-SSB labels from DFT stability, band gap, family,
+and (when literature σ/Ea merge in) measured transport.
+
+## Layer 10 — Battery-Relevant Properties — PARTIAL
+
+`thermodynamics.electrochemical_stability_window`, `weighted_surface_energy`,
+`surface_anisotropy`. Oxidation/reduction limits and interface stability are not
+served by the free MP summary endpoint; schema fields exist where the data can
+be obtained (stability window).
+
+## Layer 11 — Experimental Layer — DONE
+
+The full `experiment` block: ionic conductivity, temperature, activation energy,
+sample form, pellet diameter/thickness/pressure, relative density, sinter/anneal
+temperature+time, electrode material/deposition, atmosphere, instrument, frequency
+range, DOI, journal, year.
+
+## Layer 12 — SSB Family Classification — DONE
+
+`identity.family` (11 families: sulfide, oxide, garnet, perovskite, nasicon,
+halide, argyrodite, hydride, borohydride, antiperovskite, polymer_composite) +
+`identity.subfamily_tag`. Deterministic composition rules classify the full MP
+catalog; literature records carry the family the classifier derives from the formula.
+
+## Layer 13 — Quality Metadata / Provenance — DONE
+
+`identity.confidence_tier` (verified_human / high_confidence_extraction /
+low_confidence_extraction / dft_native / dft_computed_inhouse) + the full
+`text_provenance` block (DOI → PDF → page → section → table/figure → sentence,
+extraction method, confidence score, ensemble votes). Per-property
+`{value, unit, source, confidence}` wrappers are implemented as typed fields +
+block-level provenance rather than nested dicts, so every value in the dataset
+carries a traceable source.
+
+## Priority Implementation Plan status (2026-08-05)
+
+- **Phase 1 (Must Have)** — DONE: material ID, formula, structure, CIF, space
+  group, crystal system, density, volume, formation energy, energy above hull,
+  band gap, oxidation states.
+- **Phase 2 (Strongly Recommended)** — DONE: elastic properties, dielectric
+  properties, coordination environments, robocrys descriptions, provenance,
+  thermodynamic functional.
+- **Phase 3 (Advanced)** — PARTIAL: surface properties (weighted surface energy,
+  anisotropy), similarity via existing descriptors. Phonons, grain boundaries and
+  diffusion descriptors are NOT integrated — MP serves no phonon data for the
+  electrolyte catalog (verified zero coverage) and diffusion is not served
+  per-material by the current client; revisit only if a consumer needs them.
+  **v0.6.0:** synthesis-endpoint data is now INTEGRATED (MP `synthesis` recipe
+  search by target formula → `SynthesisBlock`), plus the `graph`/`local`
+  structure descriptors and `redox`/`discovery_labels` blocks.
+
+## Definition of Done for this section
+
+Every Layer 1–8 property the free MP REST API serves for a Li-containing material
+appears as a schema field and is populated in the canonical dataset (sparse =
+MP lacks the calculation, honestly None). Verified by
+`tests/test_mp_enrichment.py` + the release gates after each enrichment rerun.

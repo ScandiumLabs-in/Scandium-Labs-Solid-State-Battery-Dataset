@@ -43,6 +43,43 @@ from ssb_dataset.pipeline.redflags import (
     check_sigma_in_family_range,
 )
 
+# Conservative sigma floors (S/cm) for PENDING-record routing. These mirror the
+# committed literature windows from before the shared ranges were widened for
+# the red-flag detector; a pending value below these is treated as a likely
+# unit error and routed to a human rather than auto-approved.
+_REVIEW_SIGMA_FLOORS: dict[str, float] = {
+    "sulfide": 1e-5,
+    "oxide": 1e-10,
+    "garnet": 1e-5,
+    "perovskite": 1e-6,
+    "nasicon": 1e-5,
+    "halide": 1e-4,
+    "argyrodite": 1e-4,
+    "hydride": 1e-8,
+    "borohydride": 1e-8,
+    "antiperovskite": 1e-8,
+    "polymer_composite": 1e-8,
+}
+
+# Conservative Ea windows (eV) for PENDING-record routing. The shared
+# FAMILY_EA_RANGES were widened in an earlier session to stop red-flagging
+# verified records; for untrusted pending records the conservative window is
+# the right gate (e.g. the polymer_composite PEGDA Ea=0.25 misattribution is
+# below the committed 0.30 floor and must route to a human).
+_REVIEW_EA_RANGES: dict[str, tuple[float, float]] = {
+    "sulfide": (0.10, 0.50),
+    "oxide": (0.20, 0.90),
+    "garnet": (0.20, 0.55),
+    "perovskite": (0.25, 0.50),
+    "nasicon": (0.20, 0.45),
+    "halide": (0.25, 0.50),
+    "argyrodite": (0.15, 0.50),
+    "hydride": (0.30, 0.80),
+    "borohydride": (0.20, 1.70),
+    "antiperovskite": (0.30, 0.70),
+    "polymer_composite": (0.30, 1.50),
+}
+
 # Families using VTF kinetics where the Arrhenius pre-factor screen does not
 # apply (mirrors redflags.VTF_FAMILIES).
 VTF_FAMILIES = {"polymer_composite", "polymer"}
@@ -76,6 +113,7 @@ class ReviewContext:
 
     consensus: ConsensusResult | None = None
     approved_records: list[dict] = field(default_factory=list)
+    pending_records: list[dict] = field(default_factory=list)
     consensus_db: dict | None = None
     family_alias: Callable[[str], str] = staticmethod(lambda f: (f or "").lower())
 
@@ -184,13 +222,49 @@ def rule_value_nonneg(record: dict, ctx: ReviewContext) -> RuleResult:
     return RuleResult("value_nonneg", RuleStatus.PASS)
 
 
+def _evidence_has_actual_value(record: dict) -> bool:
+    """True when the verifier's located values include a NON-ZERO number.
+
+    A FOUND verdict whose `verified_values` is empty or holds only
+    `sigma=0.000e+00` means the matcher anchored on boilerplate (axis ticks,
+    figure labels, a DOE footer) rather than the record's own value. The
+    confirmed 1.4Li2O-0.75ZrCl4-0.25AlCl3 1000x unit error (σ stored 2.55e-6,
+    paper "2.55 mS/cm" = 2.55e-3) sailed through exactly this way. Such
+    evidence must not auto-approve."""
+    vals = record.get("verified_values") or []
+    if not vals:
+        return False
+    for v in vals:
+        s = str(v)
+        if "=" not in s:
+            continue
+        try:
+            num = float(s.split("=", 1)[1])
+        except ValueError:
+            continue
+        if num != 0.0:
+            return True
+    return False
+
+
 def rule_evidence(record: dict, ctx: ReviewContext) -> RuleResult:
     """Evidence located by the verifier (snippet + verdict). Page presence is
-    handled by the separate `page` rule."""
+    handled by the separate `page` rule.
+
+    A FOUND verdict is only PASS when the located values actually contain a
+    non-zero number matching the record's own claim. FOUND-with-boilerplate
+    (empty / zero-only verified_values) is WARNING -> routes to human, never
+    auto-approves."""
     verdict = record.get("verified_verdict")
     snippet = record.get("verified_snippet") or record.get("evidence_sentence")
     if verdict == "FOUND" and bool(snippet):
-        return RuleResult("evidence", RuleStatus.PASS)
+        if _evidence_has_actual_value(record):
+            return RuleResult("evidence", RuleStatus.PASS)
+        return RuleResult(
+            "evidence",
+            RuleStatus.WARNING,
+            "verdict FOUND but no non-zero value located in evidence (boilerplate only)",
+        )
     if verdict == "NOT_FOUND":
         return RuleResult("evidence", RuleStatus.FAIL, "verifier could not locate the value")
     # No verifier output at all (e.g. raw extraction, no verification pass).
@@ -221,17 +295,28 @@ def rule_units_normalized(record: dict, ctx: ReviewContext) -> RuleResult:
 
 def rule_family_range(record: dict, ctx: ReviewContext) -> RuleResult:
     """Family range violation is a WARNING only — several verified records
-    legitimately fall outside the static literature window."""
+    legitimately fall outside the static literature window.
+
+    The review engine uses a STRICTER sigma floor than the red-flag detector
+    (``redflags.FAMILY_SIGMA_RANGES``, tuned to stop flagging verified low-sigma
+    records like Li4GeS4/Li6PS5I). Pending records are an untrusted population:
+    a value below the conservative literature floor is far more likely to be a
+    unit error (e.g. the Li3Zr2Si2PO12 3.59e-6 vs 3.59e-3 mS/cm record) than a
+    genuine discovery, so it must route to a human, not auto-approve. Widening
+    the shared floors in an earlier session silently let that class auto-approve.
+    """
     family = ctx.family_alias(record.get("family"))
     sigma = _record_sigma(record)
     ea = _record_ea(record)
     msgs = []
     if sigma is not None and family:
-        flagged, msg = check_sigma_in_family_range(sigma, family)
+        flagged, msg = check_sigma_in_family_range(sigma, family, _REVIEW_SIGMA_FLOORS.get(family))
         if flagged:
             msgs.append(msg)
     if ea is not None and family:
-        flagged, msg = check_ea_in_family_range(ea, family)
+        flagged, msg = check_ea_in_family_range(
+            ea, family, range_override=_REVIEW_EA_RANGES.get(family)
+        )
         if flagged:
             msgs.append(msg)
     if msgs:
@@ -313,20 +398,54 @@ def rule_consensus_db(record: dict, ctx: ReviewContext) -> RuleResult:
 
 
 def rule_duplicate(record: dict, ctx: ReviewContext) -> RuleResult:
-    """Same material + same property + same value already approved."""
-    if not ctx.approved_records:
-        return RuleResult("duplicate", RuleStatus.PASS)
+    """Same material + same property + same value already approved FROM THE
+    SAME PAPER, or a near-identical sibling still pending from the SAME paper
+    (same paper_id + composition + property + near-equal value). The
+    intra-pending check catches double-extracted rows the deterministic
+    DUP_VALUE detector misses (it only fires when the identical sigma is
+    shared by *different* compositions); two identical rows from one paper
+    would otherwise both auto-approve.
+
+    Per the C3 design rule, same material from DIFFERENT papers is NEVER a
+    duplicate — that is consensus and must not be flagged. The approved-record
+    comparison is therefore paper-scoped: only an approved value from the same
+    paper counts as a duplicate candidate.
+    """
     comp = str(record.get("composition") or "").strip()
     prop = _get_property(record)
     v = _get_value(record)
     if not comp or v is None:
         return RuleResult("duplicate", RuleStatus.PASS)
-    for app in ctx.approved_records:
-        if str(app.get("composition") or "").strip() == comp and prop == _get_property(app):
-            av = app.get("edited_value") if app.get("edited_value") is not None else app.get("value")
-            if isinstance(av, (int, float)) and av > 0 and v > 0:
-                if abs(math.log10(v) - math.log10(float(av))) < 0.5:
-                    return RuleResult("duplicate", RuleStatus.WARNING, "near-duplicate of an approved value")
+    paper = str(record.get("paper_id") or record.get("doi") or "").strip()
+    def _near(a: float, b: float) -> bool:
+        if a > 0 and b > 0:
+            return abs(math.log10(a) - math.log10(b)) < 0.5
+        return abs(a - b) < 1e-12
+    if ctx.approved_records and paper:
+        for app in ctx.approved_records:
+            apaper = str(app.get("paper_id") or app.get("doi") or "").strip()
+            if apaper != paper:
+                continue  # different paper = cross-paper consensus, never duplicate
+            if str(app.get("composition") or "").strip() == comp and prop == _get_property(app):
+                av = app.get("edited_value") if app.get("edited_value") is not None else app.get("value")
+                if isinstance(av, (int, float)) and _near(v, float(av)):
+                    return RuleResult("duplicate", RuleStatus.WARNING, "same-paper duplicate of an approved value")
+    if ctx.pending_records and paper:
+        for other in ctx.pending_records:
+            if other is record or other.get("review_id") == record.get("review_id"):
+                continue
+            opaper = str(other.get("paper_id") or other.get("doi") or "").strip()
+            if opaper != paper:
+                continue
+            if str(other.get("composition") or "").strip() != comp or prop != _get_property(other):
+                continue
+            ov = _get_value(other)
+            if isinstance(ov, (int, float)) and _near(v, ov):
+                return RuleResult(
+                    "duplicate",
+                    RuleStatus.WARNING,
+                    f"same-paper duplicate of pending {other.get('review_id')} (same value)",
+                )
     return RuleResult("duplicate", RuleStatus.PASS)
 
 
@@ -362,6 +481,67 @@ def rule_formula_specificity(record: dict, ctx: ReviewContext) -> RuleResult:
     if re.search(r"\bMx\b|\(M\s*=[A-Za-z]", c):
         return RuleResult("formula_specificity", RuleStatus.FAIL, f"generic substitution formula: {c}")
     return RuleResult("formula_specificity", RuleStatus.PASS)
+
+
+def rule_scope(record: dict, ctx: ReviewContext) -> RuleResult:
+    """Solid-electrolyte scope check: reject compositions that are NOT solid
+    electrolytes even when the value itself is real.
+
+    The dataset's unit of measurement is a SOLID electrolyte. Two artifact
+    classes slip past the family rules because their compositions carry no
+    parseable framework:
+
+    * Liquid electrolyte solutions — the family classifier tags the wrong
+      family (e.g. LiFSI-DTDL/DME tagged `hydride`, LiFSI/BFE tagged
+      `sulfide`), so `family_range` passes trivially. These are solvent-based
+      liquid electrolytes, out of scope for a solid-electrolyte dataset.
+    * Metal-alloy electrodes — Li0.9Mg0.1 / Li0.8Mg0.2 parse to pure Li+Mg
+      (all `is_metal`), no anion framework. These are Li-Mg alloy *electrodes*,
+      not electrolytes.
+
+    The signal must be deterministic and specific: a liquid-solvent/salt token
+    in the composition string, or a composition whose parsed elements are ALL
+    metals (no O/S/F/Cl/Br/I/N/P/B/H/C framework). FAIL only on unambiguous
+    cases; everything else PASSes (neutral) so the rule never fires on the
+    normal families.
+    """
+    import re
+
+    from pymatgen.core import Composition, Element
+
+    c = str(record.get("composition") or "").strip()
+    if not c:
+        return RuleResult("scope", RuleStatus.PASS)
+
+    # 1. Liquid-electrolyte solvent / salt tokens. These are unambiguous — no
+    #    solid electrolyte formula embeds them (they are solvent molecules or
+    #    solvent abbreviations, e.g. dimethoxyethane / dioxolane / glymes).
+    LIQUID_TOKENS = re.compile(
+        r"(?:^|[-/_\s(])(DME|DTDL|BFE|DOL|DEC|DMC|EMC|G3|G4|TEGDME|THF|DMSO|FSI|TFSI|EC|PC)"
+        r"(?:$|[-/_\s)])",
+        re.IGNORECASE,
+    )
+    if LIQUID_TOKENS.search(c):
+        return RuleResult(
+            "scope",
+            RuleStatus.FAIL,
+            f"liquid electrolyte / solvent composition (out of solid-electrolyte scope): {c}",
+        )
+
+    # 2. Pure-metal alloy (no anion). Parse as a single composition; if every
+    #    element is a metal, this is an electrode alloy, not an electrolyte.
+    try:
+        comp = Composition(c)
+        elements = [el.symbol for el in comp.elements]
+    except Exception:
+        return RuleResult("scope", RuleStatus.PASS)
+    if len(elements) >= 2 and all(Element(el).is_metal for el in elements):
+        return RuleResult(
+            "scope",
+            RuleStatus.FAIL,
+            f"metal-alloy electrode composition (no anion framework): {c}",
+        )
+    return RuleResult("scope", RuleStatus.PASS)
 
 
 def rule_digit_match(record: dict, ctx: ReviewContext) -> RuleResult:
@@ -457,6 +637,7 @@ ALL_RULES: list[Callable[[dict, ReviewContext], RuleResult]] = [
     rule_llm_confidence,
     rule_autoflag,
     rule_formula_specificity,
+    rule_scope,
     rule_digit_match,
     rule_dup_value,
     rule_verified_value_match,

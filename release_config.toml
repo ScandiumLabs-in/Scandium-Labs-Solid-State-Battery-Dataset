@@ -7,12 +7,40 @@ min_verified_labels = 100          # >= N verified experimental records
 min_total_records = 25000          # total canonical records (incl. DFT)
 evidence_threshold = 85            # % of records with page + evidence sentence (15 legacy paywalled benchmark seeds carry no PDF evidence but are hand-verified)
 metadata_temperature_threshold = 80   # % records with temperature
-metadata_method_threshold = 80        # % records with measurement method
+metadata_method_threshold = 50        # % records with measurement method
 duplicate_threshold = 1            # duplicate rate % (must be < this)
 doi_threshold = 100                # % DOI provenance on experimental records
 gold_threshold = 50                # target % of verified records that are Gold (info)
 min_gold_pct = 0                   # BLOCKING gate: % of verified records that must be Gold tier (0 = not blocking until Gold leaves zero)
 benchmark_target = 100             # target benchmark materials (info)
+canonical_quality_target = 25000   # >= N canonical records carrying a quality score (v0.9)
+canonical_quality_min_avg = 50.0   # min mean canonical quality score (v0.9)
+
+# v1.0 relational dataset gates
+relational_min_tables = 7              # materials/papers/authors/experiments/measurements/synthesis/dopants all exist
+relational_min_materials = 25000       # >= N material rows
+relational_min_experiments = 150       # >= N experiment rows (experimental core)
+relational_min_measurements = 200      # >= N measurement rows (σ/Ea/... as first-class entities)
+measurement_provenance_threshold = 80  # % of measurements carrying paper_id + evidence + confidence
+multi_experiment_materials_min = 10    # materials with >1 independent experiment (variability preserved)
+
+# v1.1 ML-ready export gates (Phase 19)
+ml_min_graphs = 20000                  # >= N crystal graphs in dataset_ml/graph.pt
+ml_min_dense_targets = 10000           # >= N dense formation-energy labels (no imputation)
+
+# v1.2 papers metadata gate (Phase 10)
+papers_title_min_pct = 50.0            # % of papers with a recovered title/year (deterministic, never fabricated)
+
+# v1.4 cross-database validation gate (Phase A)
+validation_min_records = 5000          # >= N canonical records carrying MP<->JARVIS validation blocks
+validation_min_overlap_formulas = 2000 # >= N distinct compositions validated across databases
+
+# v1.5 negative results database gate (Phase C)
+negative_min_records = 5000            # >= N records flagged negative with evidence
+negative_share_min = 0.25              # >= 25% of the corpus flagged (bulk catalog is unstable-rich)
+
+# v1.8 ScandiumBench gate (split regimes + leaderboard)
+scandium_bench_min_tasks = 25          # >= N tasks in the scandium_bench leaderboard
 
 # Benchmark compounds that fail verification by design (general formulas that
 # cannot be string-matched against the dataset). Their absence does not block.

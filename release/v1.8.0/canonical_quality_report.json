@@ -1,0 +1,53 @@
+{
+  "records_scored": 30838,
+  "score_avg": 60.3,
+  "score_min": 1,
+  "score_max": 93,
+  "grade_distribution": {
+    "A": 17646,
+    "D": 9150,
+    "B": 3715,
+    "A+": 179,
+    "C": 148
+  },
+  "confidence_distribution": {
+    "high": 17825,
+    "low": 9170,
+    "medium": 3843
+  },
+  "kind_distribution": {
+    "completeness": 30655,
+    "experimental": 183
+  },
+  "flagged_records": 6115,
+  "by_source": {
+    "aflow": {
+      "n": 150,
+      "avg_score": 5.9
+    },
+    "cod": {
+      "n": 500,
+      "avg_score": 6.0
+    },
+    "jarvis": {
+      "n": 8327,
+      "avg_score": 8.0
+    },
+    "literature_mined": {
+      "n": 183,
+      "avg_score": 52.8
+    },
+    "materials_project": {
+      "n": 21528,
+      "avg_score": 82.7
+    },
+    "nomad": {
+      "n": 100,
+      "avg_score": 3.9
+    },
+    "oqmd": {
+      "n": 50,
+      "avg_score": 6.0
+    }
+  }
+}

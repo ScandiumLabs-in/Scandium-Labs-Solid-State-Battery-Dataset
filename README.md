@@ -26,15 +26,15 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 ## Status
 
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v0.5.0**, generated 2026-08-03T14:51:27.454969+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-06T20:20:05.654519+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|
-| **Bulk structural records** | ~30071 | DFT-native pulls (Materials Project / JARVIS / NOMAD / COD / etc.), Li-containing catalog. **Not screened for SSE relevance** — the dump includes cathode chemistries that share the Li+O+metal formula pattern. |
-| **Verified experimental labels** | 116 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
-| **Consensus (n≥3 papers)** | 24 | Cross-paper consensus: only 24 materials have ≥3 independent papers. |
+| **Bulk structural records** | ~30838 | DFT-native pulls (Materials Project / JARVIS / NOMAD / COD / etc.), Li-containing catalog. **Not screened for SSE relevance** — the dump includes cathode chemistries that share the Li+O+metal formula pattern. |
+| **Verified experimental labels** | 183 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
+| **Consensus (n≥3 papers)** | 32 | Cross-paper consensus: only 32 materials have ≥3 independent papers. |
 
-> **Honest caveat.** Of the ~30071 records, only **116 carry human-verified conductivity/Ea labels**; the remainder are structural/thermodynamic DFT records *without* transport labels. Quality-tier distribution: silver 97.4%, rejected 2.6%. See `quality_output/quality_report.json` and `release_report.json` — stated up front so the rest of the dataset's claims are credible.
+> **Honest caveat.** Of the ~30838 records, only **183 carry human-verified conductivity/Ea labels**; the remainder are structural/thermodynamic DFT records *without* transport labels. Quality-tier distribution: silver 98.0%, rejected 2.0%. See `quality_output/quality_report.json` and `release_report.json` — stated up front so the rest of the dataset's claims are credible.
 
 > *This block is generated. Run `python scripts/sync_readme_status.py` (or any `scripts/release.py` invocation) to regenerate; if it disagrees with the report, regenerate — never hand-edit.*
 <!-- status-end -->

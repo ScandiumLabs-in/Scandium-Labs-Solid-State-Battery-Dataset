@@ -38,7 +38,8 @@ def merge_datasets(verified_path: Path, staging_dir: Path, output_path: Path) ->
 
     staging_dfs = []
     if staging_dir.exists():
-        files = list(staging_dir.rglob("*.parquet"))
+        files = [f for f in staging_dir.rglob("*.parquet")
+                 if not any("_bak_pre_full" in part for part in f.parts)]
         for f in files:
             staging_dfs.append(pq.read_table(f).to_pandas())
         sdf = pd.concat(staging_dfs, ignore_index=True) if staging_dfs else pd.DataFrame()

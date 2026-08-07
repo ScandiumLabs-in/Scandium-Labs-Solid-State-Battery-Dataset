@@ -6,8 +6,11 @@ COD is a fully open, keyless crystallography database. Unlike Materials Project
 ICSD access a student setup cannot reach.
 
 Fetch strategy:
-    https://www.crystallography.net/cod/result.php?formula=Li&format=json
-returns the search result set; the CIF for each ``cod_id`` is pulled from
+    https://www.crystallography.net/cod/result.php?el1=Li&format=json
+returns the search result set (all entries containing the element; the
+``formula`` param is an exact formula match, so ``formula=Li`` returns only
+pure lithium — ``el1=Li`` returns the full Li-containing set, 8.8k+ entries);
+the CIF for each ``cod_id`` is pulled from
     https://www.crystallography.net/cod/{cod_id}.cif
 """
 
@@ -46,9 +49,13 @@ class CODConnector(BaseSourceConnector):
     def _fetch_cif(cod_id: str) -> str | None:
         try:
             r = httpx.get(f"https://www.crystallography.net/cod/{cod_id}.cif",
-                          timeout=60)
-            if r.status_code == 200 and r.text.strip().startswith("data_"):
-                return r.text
+                          timeout=15)
+            if r.status_code == 200:
+                text = r.text.strip()
+                # COD CIFs start with '#' comment header then 'data_'; reject
+                # HTML/error pages.
+                if text and ("_cell_length_a" in text or "data_" in text or "loop_" in text):
+                    return text
         except Exception:
             pass
         return None
@@ -56,14 +63,10 @@ class CODConnector(BaseSourceConnector):
     def fetch_records(self, **kwargs: Any) -> Generator[dict[str, Any], None, None]:
         elements = kwargs.get("elements", ["Li"])
         limit = kwargs.get("limit", 1000)
-        formula = "Li" + "".join(e for e in elements if e.upper() != "LI")
-
-        import httpx
-        client = httpx.Client(timeout=120)
         try:
-            resp = client.get(
-                "https://www.crystallography.net/cod/result.php",
-                params={"formula": formula, "format": "json"},
+            resp = self._client.get(
+                "result.php",
+                params={"el1": "Li", "format": "json"},
                 timeout=120,
             )
             resp.raise_for_status()
@@ -71,8 +74,6 @@ class CODConnector(BaseSourceConnector):
         except Exception as exc:
             print(f"  [WARN] COD query failed: {exc} — skipping COD")
             return
-        finally:
-            client.close()
 
         # COD JSON returns a list of cells; tolerate dict wrapper variants.
         rows = data.get("results") if isinstance(data, dict) else None
@@ -82,19 +83,19 @@ class CODConnector(BaseSourceConnector):
         for entry in rows:
             if n >= limit:
                 break
-            cod_id = str(entry.get("cod_id", entry.get("id", "")))
+            cod_id = str(entry.get("cod_id") or entry.get("id") or entry.get("file") or "")
             yield {
                 "cod_id": cod_id,
                 "elements": ["Li"] + [e for e in elements if e.upper() != "LI"],
                 "lattice": {
-                    "a": entry.get("cell_length_a", 0.0),
-                    "b": entry.get("cell_length_b", 0.0),
-                    "c": entry.get("cell_length_c", 0.0),
-                    "alpha": entry.get("cell_angle_alpha", 90.0),
-                    "beta": entry.get("cell_angle_beta", 90.0),
-                    "gamma": entry.get("cell_angle_gamma", 90.0),
+                    "a": entry.get("cell_length_a") or entry.get("a") or 0.0,
+                    "b": entry.get("cell_length_b") or entry.get("b") or 0.0,
+                    "c": entry.get("cell_length_c") or entry.get("c") or 0.0,
+                    "alpha": entry.get("cell_angle_alpha") or entry.get("alpha") or 90.0,
+                    "beta": entry.get("cell_angle_beta") or entry.get("beta") or 90.0,
+                    "gamma": entry.get("cell_angle_gamma") or entry.get("gamma") or 90.0,
                 },
-                "space_group": entry.get("space_group", ""),
+                "space_group": entry.get("space_group") or entry.get("sg") or "",
                 "cif": self._fetch_cif(cod_id) or "",
             }
             n += 1

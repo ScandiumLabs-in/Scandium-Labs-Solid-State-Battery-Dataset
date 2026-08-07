@@ -38,7 +38,7 @@ class MaterialsCloudConnector(BaseSourceConnector):
     source_db = SourceDB.materials_cloud.value
 
     def connect(self) -> None:
-        self._client = httpx.Client(base_url=OPTIMADE_BASE, timeout=120)
+        self._client = httpx.Client(base_url=OPTIMADE_BASE, timeout=120, follow_redirects=True)
         self._connected = True
 
     def fetch_records(self, **kwargs: Any) -> Generator[dict[str, Any], None, None]:

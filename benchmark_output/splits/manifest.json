@@ -1,0 +1,50 @@
+{
+  "random": {
+    "regime": "random",
+    "description": "Phase-6 leakage-checked random split (reused unchanged).",
+    "split_sizes": {
+      "train": 17046,
+      "val": 10253,
+      "test": 3370
+    }
+  },
+  "family_ood": {
+    "regime": "family_ood",
+    "description": "Held-out-family split: test families (halide, sulfide, nasicon, hydride, polymer_composite, borohydride, antiperovskite, garnet, perovskite, argyrodite) never appear in train. Tests oxide-trained generalization to unseen chemistries.",
+    "split_sizes": {
+      "train": 20753,
+      "val": 0,
+      "test": 10085
+    },
+    "holdout_families": {
+      "halide": 2434,
+      "sulfide": 804,
+      "nasicon": 441,
+      "hydride": 244,
+      "polymer_composite": 187,
+      "borohydride": 114,
+      "antiperovskite": 84,
+      "garnet": 68,
+      "perovskite": 47,
+      "argyrodite": 27
+    }
+  },
+  "composition_ood": {
+    "regime": "composition_ood",
+    "description": "Held-out-composition split: no reduced formula appears in both train and test (stable group hash assignment).",
+    "split_sizes": {
+      "train": 20682,
+      "val": 3633,
+      "test": 6523
+    }
+  },
+  "crystal_system_ood": {
+    "regime": "crystal_system_ood",
+    "description": "Held-out-crystal-system split: whole crystal systems assigned to one split by stable group hash.",
+    "split_sizes": {
+      "train": 12830,
+      "val": 1861,
+      "test": 16147
+    }
+  }
+}

@@ -6,11 +6,14 @@ This connector queries the OQMD REST API (``oqmd.org/oqmdapi/``) directly with
 without the stale client.
 
 Query used:
-    /formationenergy?elements=Li-La-Zr-O&limit=N&offset=O
-Each entry carries ``entry_id``, ``name`` (formula), ``composition``,
-``spacegroup`` and ``unit_cell`` (lattice). No own CIF is served for the
-elasticity endpoint, so ``to_material_record`` synthesizes structure info from
-lattice + symmetry only (consistent with a DFT-native bulk record).
+    /formationenergy?fields=...&filter=element_set=Li&limit=N&offset=O
+``element_set`` is the OQMD filter keyword for "must contain these elements"
+(the ``elements`` query param is not honored by the REST API — using it
+returns 502 / unfiltered data). Each entry carries ``entry_id``, ``name``
+(formula), ``composition``, ``spacegroup`` and ``unit_cell`` (lattice). No own
+CIF is served for the elasticity endpoint, so ``to_material_record``
+synthesizes structure info from lattice + symmetry only (consistent with a
+DFT-native bulk record).
 """
 
 from __future__ import annotations
@@ -39,7 +42,7 @@ class OQMDConnector(BaseSourceConnector):
     source_db = SourceDB.oqmd.value
 
     def connect(self) -> None:
-        self._client = httpx.Client(base_url=OQMD_BASE, timeout=120)
+        self._client = httpx.Client(base_url=OQMD_BASE, timeout=120, follow_redirects=True)
         self._connected = True
 
     def fetch_records(self, **kwargs: Any) -> Generator[dict[str, Any], None, None]:
@@ -47,38 +50,51 @@ class OQMDConnector(BaseSourceConnector):
         limit = kwargs.get("limit", 1000)
         offset = kwargs.get("offset", 0)
         el_str = "-".join(elements)
-        try:
-            resp = self._client.get(
-                "formationenergy",
-                params={
-                    "elements": el_str,
-                    "limit": limit,
-                    "offset": offset,
-                    "fields": (
-                        "name,entry_id,composition,spacegroup,unit_cell,"
-                        "formationenergy_id,delta_e"
-                    ),
-                },
-                timeout=120,
-            )
-            resp.raise_for_status()
-        except Exception as exc:
-            print(f"  [WARN] OQMD query failed: {exc} — skipping OQMD")
-            return
-        data = resp.json()
-        entries = data.get("data") if isinstance(data, dict) else data
-        if not isinstance(entries, list):
-            return
-        for entry in entries:
-            yield {
-                "id": entry.get("entry_id"),
-                "composition": entry.get("composition"),
-                "formula": entry.get("name"),
-                "lattice": _unit_cell_to_lattice(entry.get("unit_cell", {})),
-                "space_group": entry.get("spacegroup", {}),
-                "delta_e": entry.get("delta_e"),
-            }
-            offset += 1
+        page = 50  # OQMD 502s/timeouts on large page sizes
+        fetched = 0
+        while not limit or fetched < limit:
+            resp = None
+            for attempt in range(3):
+                try:
+                    resp = self._client.get(
+                        "formationenergy",
+                        params={
+                            "filter": f"element_set={el_str}",
+                            "limit": min(page, limit - fetched) if limit else page,
+                            "offset": offset,
+                            "fields": (
+                                "name,entry_id,composition,spacegroup,unit_cell,"
+                                "formationenergy_id,delta_e"
+                            ),
+                        },
+                        timeout=120,
+                    )
+                    resp.raise_for_status()
+                    break
+                except Exception as exc:
+                    if attempt < 2:
+                        import time as _time
+                        _time.sleep(5 * (attempt + 1))
+                        continue
+                    print(f"  [WARN] OQMD query failed at offset {offset}: {exc} — skipping OQMD")
+                    return
+            data = resp.json()
+            entries = data.get("data") if isinstance(data, dict) else data
+            if not isinstance(entries, list) or not entries:
+                break
+            for entry in entries:
+                yield {
+                    "id": entry.get("entry_id"),
+                    "composition": entry.get("composition"),
+                    "formula": entry.get("name"),
+                    "lattice": _unit_cell_to_lattice(entry.get("unit_cell", {})),
+                    "space_group": entry.get("spacegroup", {}),
+                    "delta_e": entry.get("delta_e"),
+                }
+                fetched += 1
+                offset += 1
+            if len(entries) < page:
+                break
 
     def to_material_record(self, raw: dict[str, Any]) -> MaterialRecord:
         lattice = raw.get("lattice", {})

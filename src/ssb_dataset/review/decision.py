@@ -15,7 +15,9 @@ Calibration rule (from the 53-item ground-truth sweep):
       like Li5.4Al0.1PS4.7Cl1.3 Ea=0.09 legitimately fall outside);
     * auto-reject requires a *combination* of independent weak signals
       (e.g. missing evidence AND low extraction confidence), or one strong
-      disqualifier (negative value, no numeric value).
+      disqualifier (negative value, no numeric value, generic substitution
+      formula, or an out-of-scope liquid-electrolyte/alloy-electrode
+      composition).
 """
 
 from __future__ import annotations
@@ -119,18 +121,27 @@ def decide(
             score,
             factors,
         )
+    r_scope = _rule(results, "scope")
+    if r_scope and r_scope.status == RuleStatus.FAIL:
+        return Decision(
+            ReviewDecision.AUTO_REJECT,
+            [f"out of solid-electrolyte scope ({r_scope.message})"],
+            score,
+            factors,
+        )
 
     # ---- Auto-approve: zero FAIL rules + high score + all-clear on the
     #      evidence/family/value-match warnings ------------------------------
     r_ev = _rule(results, "evidence")
     evidence_ok = r_ev and r_ev.status == RuleStatus.PASS
-    # The three warning rules that must be CLEAR for auto-approve: family
-    # range, verified-value match, and the autoflag triage layer. A violation
-    # in any of them means the record needs human eyes even if the score is
-    # high (e.g. Fe-LLZO Ea=0.22 where even the verifier located a wrong value).
+    # The four warning rules that must be CLEAR for auto-approve: family
+    # range, verified-value match, the autoflag triage layer, and duplicate.
+    # A violation in any of them means the record needs human eyes even if the
+    # score is high (e.g. Fe-LLZO Ea=0.22 where even the verifier located a
+    # wrong value; or a same-paper duplicate that would double-count the row).
     all_clear = all(
         _rule(results, name) is not None and _rule(results, name).status == RuleStatus.PASS
-        for name in ("family_range", "verified_value_match", "autoflag")
+        for name in ("family_range", "verified_value_match", "autoflag", "duplicate")
     )
     if not has_fail and evidence_ok and all_clear and score >= AUTO_APPROVE_MIN:
         reasons = ["all rules pass", f"overall {score:.1f} >= {AUTO_APPROVE_MIN}"]

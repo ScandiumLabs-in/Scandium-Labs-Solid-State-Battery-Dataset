@@ -1,80 +1,122 @@
 # Scandium Material Cards
 
-Generated from `literature_output/consensus_db.json`. **405 materials**, **990 measurements** (511 σ, 479 Ea).
+Generated from `literature_output/consensus_db.json`. **427 materials**, **1177 measurements** (613 σ, 564 Ea).
 
 ## Index (by consensus score)
 
 | Material | Family | Papers | Measurements | Median σ (S/cm) | Median Ea (eV) | Agreement | Score | Quality |
 |---|---|---|---|---|---|---|---|---|
-| Li1.3Ti1.7Al0.3P3O12 | nasicon | 8 | 16 | 1.9e-04 | 0.40 | D | **100** (strong consensus) | 53 (C) |
-| Li3InCl6 | halide | 3 | 14 | 2.7e-03 | 0.25 | A | **100** (strong consensus) | 63 (C) |
-| Li6.5La3Zr1.5Ta0.5O12 | garnet | 4 | 10 | 4.0e-04 | 0.36 | A | **100** (strong consensus) | 68 (C) |
-| Li6PS5Cl | argyrodite | 5 | 13 | 1.0e-03 | nan | A+ | **100** (strong consensus) | 86 (A) |
-| Li7La3Zr2O12 | LLZO | 7 | 15 | 4.3e-04 | nan | A | **100** (strong consensus) | 74 (B) |
-| Li2ZrCl6 | halide | 3 | 9 | 9.0e-04 | 0.35 | A+ | **85** (strong consensus) | 70 (B) |
+| Li1.3Ti1.7Al0.3P3O12 | nasicon | 10 | 20 | 1.9e-04 | nan | D | **100** (strong consensus) | 51 (C) |
+| Li2ZrCl6 | halide | 5 | 12 | 8.1e-04 | 0.42 | C | **100** (strong consensus) | 60 (C) |
+| Li3InCl6 | halide | 7 | 22 | 2.0e-03 | 0.27 | B | **100** (strong consensus) | 66 (C) |
+| Li6.5La3Zr1.5Ta0.5O12 | garnet | 5 | 12 | 4.0e-04 | 0.36 | A | **100** (strong consensus) | 72 (B) |
+| Li6PS5Cl | argyrodite | 9 | 19 | 1.0e-03 | nan | A+ | **100** (strong consensus) | 80 (B) |
+| Li7La3Zr2O12 | LLZO | 18 | 40 | 3.0e-04 | 0.40 | D | **100** (strong consensus) | 43 (D) |
+| Li10Ge(PS6)2 | sulfide | 3 | 7 | 1.1e-02 | nan | A+ | **85** (strong consensus) | 66 (C) |
+| Li3YCl6 | halide | 3 | 7 | 1.0e-04 | nan | B | **85** (strong consensus) | 54 (C) |
+| Sr0.4375Li0.375Zr0.25Ta0.75O3 | oxide | 4 | 8 | 6.5e-04 | 0.33 | A | **85** (strong consensus) | 64 (C) |
+| Li2HClO | antiperovskite | 3 | 7 | 4.4e-07 | nan | B | **75** (strong consensus) | 54 (C) |
+| Li9.54Si1.74P1.44S11.7Cl0.3 | argyrodite | 4 | 7 | 2.5e-02 | 0.20 | A+ | **75** (strong consensus) | 66 (C) |
+| Na3PS4 | sulfide | 3 | 6 | 3.2e-05 | nan | C | **75** (strong consensus) | 44 (D) |
 | Li0.35La0.55TiO3-F2 | perovskite | 1 | 5 | 1.0e-04 | 0.26 | A | **70** (moderate consensus) | 56 (C) |
-| Li10Ge(PS6)2 | sulfide | 2 | 5 | 1.2e-02 | 0.22 | A+ | **70** (moderate consensus) | 60 (C) |
-| Li5.5P1S4.5Cl1.5 | argyrodite | 3 | 6 | 5.0e-03 | 0.17 | A | **70** (moderate consensus) | 58 (C) |
+| Li5.5P1S4.5Cl1.5 | argyrodite | 3 | 6 | 5.0e-03 | 0.17 | A | **70** (moderate consensus) | 54 (C) |
 | Li6P1S5Br0.5Cl0.5 | argyrodite | 1 | 6 | 1.2e-02 | 0.28 | A | **70** (moderate consensus) | 50 (C) |
-| Li9.54Si1.74P1.44S11.7Cl0.3 | argyrodite | 3 | 5 | 2.5e-02 | 0.20 | A+ | **70** (moderate consensus) | 60 (C) |
-| LiDFOB-TXE-FDMA-FEC | polymer_composite | 2 | 6 | 2.2e-04 | 0.33 | A+ | **70** (moderate consensus) | 60 (C) |
-| Mg1B21.47H88.88N1 | borohydride | 2 | 5 | 7.4e-04 | 0.69 | A | **70** (moderate consensus) | 54 (C) |
+| LiDFOB-TXE-FDMA-FEC | polymer_composite | 2 | 6 | 2.2e-04 | 0.33 | A+ | **70** (moderate consensus) | 56 (C) |
+| Mg1B21.47H88.88N1 | borohydride | 2 | 5 | 7.4e-04 | 0.69 | A | **70** (moderate consensus) | 50 (C) |
 | Na3HfZrSi2PO12 | nasicon | 2 | 6 | 4.4e-04 | 0.30 | A+ | **70** (moderate consensus) | 56 (C) |
 | Li6PS5Cl/TEGDMA | polymer_composite | 1 | 4 | 2.2e-04 | nan | A+ | **64** (moderate consensus) | 62 (C) |
-| LiBH4-MgO | borohydride | 2 | 4 | 2.9e-04 | 0.29 | A+ | **64** (moderate consensus) | 60 (C) |
-| 0.7Li(CB9H10)-0.3Li(CB11H12) | hydride | 2 | 6 | 6.7e-03 | 0.29 | A+ | **60** (moderate consensus) | 60 (C) |
-| Li0.29La0.57Ti1O3 | perovskite | 4 | 7 | 2.1e-04 | 0.14 | B | **60** (moderate consensus) | 58 (C) |
-| Li2HClO | antiperovskite | 2 | 5 | 1.4e-07 | nan | C | **60** (moderate consensus) | 42 (D) |
-| Li3ClO | antiperovskite | 3 | 7 | 3.2e-05 | nan | D | **60** (moderate consensus) | 40 (D) |
-| PEO-LiTFSI | polymer_composite | 3 | 8 | 1.3e-06 | nan | D | **60** (moderate consensus) | 42 (D) |
+| LiBH4-MgO | borohydride | 2 | 4 | 2.9e-04 | 0.29 | A+ | **64** (moderate consensus) | 56 (C) |
+| 0.7Li(CB9H10)-0.3Li(CB11H12) | complex_hydride | 2 | 6 | 6.7e-03 | 0.29 | A+ | **60** (moderate consensus) | 56 (C) |
+| Li0.29La0.57Ti1O3 | perovskite | 4 | 7 | 2.1e-04 | 0.14 | B | **60** (moderate consensus) | 54 (C) |
+| Li3ClO | antiperovskite | 3 | 7 | 3.2e-05 | nan | D | **60** (moderate consensus) | 37 (D) |
+| Li3YBr6 | halide | 3 | 5 | 2.0e-04 | nan | C | **60** (moderate consensus) | 46 (D) |
+| PEO-LiTFSI | polymer_composite | 3 | 8 | 1.3e-06 | nan | D | **60** (moderate consensus) | 38 (D) |
+| Ca-CeO2/LiTFSI/PEO | polymer_composite | 2 | 4 | 1.3e-04 | 0.10 | B | **40** (weak consensus) | 41 (D) |
 | K0.01Li1.98H0.99Cl1O0.99 | antiperovskite | 1 | 5 | 4.5e-06 | 0.56 | B | **40** (weak consensus) | 44 (D) |
 | LATP-0.1LBSO | nasicon | 1 | 4 | 1.5e-04 | 0.39 | B | **40** (weak consensus) | 44 (D) |
 | Li(BH)6 | hydride | 2 | 4 | 3.0e-05 | 0.52 | B | **40** (weak consensus) | 48 (D) |
 | Li0.33La0.56Ti1O3 | perovskite | 1 | 4 | 2.0e-05 | 0.35 | B | **40** (weak consensus) | 44 (D) |
-| Li1.3Y0.1Ti1.7Al0.2P3O12 | nasicon | 2 | 4 | 1.4e-04 | nan | C | **40** (weak consensus) | 42 (D) |
+| Li0.35La0.55TiO3-2wt%LiF | perovskite | 2 | 4 | 1.0e-04 | 0.26 | B | **40** (weak consensus) | 41 (D) |
+| Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP | polymer_composite | 2 | 4 | 1.0e-04 | 0.20 | B | **40** (weak consensus) | 41 (D) |
+| Li1.3Y0.01Ti1.7Al0.29P3O12 | nasicon | 2 | 4 | 8.4e-06 | 0.40 | B | **40** (weak consensus) | 41 (D) |
+| Li1.3Y0.05Ti1.7Al0.25P3O12 | nasicon | 2 | 4 | 1.2e-05 | 0.30 | B | **40** (weak consensus) | 41 (D) |
+| Li1.3Y0.1Ti1.7Al0.2P3O12 | nasicon | 2 | 4 | 1.4e-04 | 0.20 | C | **40** (weak consensus) | 42 (D) |
 | Li1.5Al0.5Ge1.5P3O12 | nasicon | 1 | 4 | 4.0e-04 | 0.32 | B | **40** (weak consensus) | 44 (D) |
-| Li2SO4-ZrCl4 | oxide | 2 | 4 | 1.5e-03 | 0.33 | B | **40** (weak consensus) | 48 (D) |
+| Li2SO4-ZrCl4 | oxide | 2 | 4 | 1.5e-03 | 0.33 | B | **40** (weak consensus) | 41 (D) |
 | Li3PS4 | sulfide | 1 | 4 | 3.0e-05 | 0.40 | B | **40** (weak consensus) | 44 (D) |
-| Li3YCl6 | halide | 1 | 4 | 5.0e-04 | 0.38 | B | **40** (weak consensus) | 44 (D) |
+| Li4-xGe1-xPxO4 | oxide | 2 | 4 | 1.0e-05 | 0.47 | B | **40** (weak consensus) | 41 (D) |
 | Li4GeS4 | sulfide | 1 | 4 | 2.9e-06 | 0.46 | B | **40** (weak consensus) | 44 (D) |
-| Li5.4Al0.1P1S4.7Cl1.3 | argyrodite | 2 | 4 | 7.3e-03 | 0.09 | B | **40** (weak consensus) | 48 (D) |
-| Li6.4La3Ce0.1Zr1.9Ga0.2O12 | garnet | 2 | 4 | 4.0e-04 | 0.29 | B | **40** (weak consensus) | 48 (D) |
-| Li6.6La3Zr1.6Nb0.4O12 | garnet | 2 | 4 | 5.1e-04 | 0.31 | B | **40** (weak consensus) | 48 (D) |
+| Li5.4Al0.1P1S4.7Cl1.3 | argyrodite | 2 | 4 | 7.3e-03 | 0.09 | B | **40** (weak consensus) | 41 (D) |
+| Li6.4La3Ce0.1Zr1.9Ga0.2O12 | garnet | 2 | 4 | 4.0e-04 | 0.29 | B | **40** (weak consensus) | 41 (D) |
+| Li6.6La3Zr1.6Nb0.4O12 | garnet | 2 | 4 | 5.1e-04 | 0.31 | B | **40** (weak consensus) | 41 (D) |
+| Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12 | garnet | 2 | 4 | 6.6e-04 | 0.25 | B | **40** (weak consensus) | 41 (D) |
 | Li6P1S5I0.5Cl0.5 | argyrodite | 0 | 4 | 1.0e-03 | 0.30 | B | **40** (weak consensus) | 33 (D) |
 | Li6PS5Br | argyrodite | 1 | 4 | 7.0e-03 | 0.28 | B | **40** (weak consensus) | 44 (D) |
 | LiBH4 | borohydride | 1 | 4 | 1.0e-06 | 0.60 | B | **40** (weak consensus) | 44 (D) |
-| LiBH4-LiI/Al2O3 | borohydride | 2 | 4 | 1.0e-04 | 0.43 | B | **40** (weak consensus) | 48 (D) |
-| Na2.9H1Se0.9I0.1 | halide | 2 | 4 | 1.0e-04 | 0.18 | B | **40** (weak consensus) | 48 (D) |
-| Na3HSe | hydride | 2 | 4 | 1.0e-04 | 0.16 | B | **40** (weak consensus) | 48 (D) |
-| Sr0.4375Li0.375Zr0.25Ta0.75O3 | oxide | 2 | 4 | 3.5e-04 | 0.33 | B | **40** (weak consensus) | 48 (D) |
+| LiBH4-LiI/Al2O3 | borohydride | 2 | 4 | 1.0e-04 | 0.43 | B | **40** (weak consensus) | 41 (D) |
+| Na2.9H1Se0.9I0.1 | halide | 2 | 4 | 1.0e-04 | 0.18 | B | **40** (weak consensus) | 41 (D) |
+| Na3HSe | hydride | 2 | 4 | 1.0e-04 | 0.16 | B | **40** (weak consensus) | 41 (D) |
+| NaB9H10C | polymer_composite | 2 | 4 | 3.0e-02 | 0.20 | B | **40** (weak consensus) | 48 (D) |
+| ZnH12C4(Br2N)2 | unknown | 2 | 4 | 2.9e-04 | 0.10 | B | **40** (weak consensus) | 41 (D) |
 | 40wt%Li2OHCl0.5Br0.5/NBRCPE | polymer_composite | 1 | 3 | 2.6e-05 | nan | B | **34** (weak consensus) | 44 (D) |
-| Ca-CeO2/LiTFSI/PEO | polymer_composite | 2 | 3 | 1.3e-04 | nan | B | **34** (weak consensus) | 48 (D) |
+| 80(3LiBH4LiCl)20P2S5 | argyrodite | 2 | 3 | 1.0e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Cs1In0.067Sn0.9Cl3 | halide | 2 | 3 | 3.3e-04 | nan | B | **34** (weak consensus) | 48 (D) |
 | ERBPSN | polymer_composite | 1 | 3 | 1.1e-05 | nan | B | **34** (weak consensus) | 44 (D) |
-| Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF | polymer_composite | 2 | 3 | 1.7e-05 | nan | B | **34** (weak consensus) | 48 (D) |
+| Li(BH4)1-xIx | borohydride | 2 | 3 | 4.9e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li0.35La0.55TiO3-4wt%LiF | perovskite | 2 | 3 | 2.5e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li0.35La0.55TiO3-6wt%LiF | perovskite | 2 | 3 | 2.3e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF | polymer_composite | 2 | 3 | 1.7e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li1.3Al0.3Ti1.7(PO4)3-4wt%Li0.348La0.55TiO3 | perovskite | 2 | 3 | 7.6e-04 | nan | B | **34** (weak consensus) | 48 (D) |
 | Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE | polymer_composite | 1 | 3 | 2.8e-04 | nan | B | **34** (weak consensus) | 44 (D) |
-| Li6.25Al0.25La3Zr2O12-in-PEGDA | polymer_composite | 2 | 3 | 5.1e-04 | nan | B | **34** (weak consensus) | 48 (D) |
-| Li6.4La3Zr2Ga0.2O12 | garnet | 1 | 3 | 3.7e-04 | 0.30 | B | **34** (weak consensus) | 37 (D) |
-| Li6.5La3-xBaxZr1.5-xTa0.5+xO12 | garnet | 2 | 3 | 8.3e-04 | nan | B | **34** (weak consensus) | 48 (D) |
-| Li6.5La3Zr1.9Fe0.2Bi0.1O12 | garnet | 2 | 3 | 7.6e-04 | nan | B | **34** (weak consensus) | 48 (D) |
-| Li6PS5I | argyrodite | 2 | 3 | 6.8e-06 | 0.36 | C | **34** (weak consensus) | 35 (D) |
-| Na3HfScSi(PO6)2 | nasicon | 2 | 3 | 1.2e-04 | nan | B | **34** (weak consensus) | 48 (D) |
+| Li2.51Zr0.25Nb0.12In0.63Cl6 | halide | 2 | 3 | 6.4e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li2.56Zr0.06Nb0.19In0.75Cl6 | halide | 2 | 3 | 5.7e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li2.5Zr0.38Nb0.06In0.56Cl6 | halide | 2 | 3 | 5.3e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li2O-TaCl5 | oxide | 2 | 3 | 8.3e-03 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li2Zr1Cl5.5F0.5 | halide | 2 | 3 | 1.1e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li3xZrCl4Nx | halide | 2 | 3 | 3.2e-03 | nan | B | **34** (weak consensus) | 48 (D) |
+| Li4.8In1Cl7.8 | halide | 2 | 3 | 6.0e-05 | nan | B | **34** (weak consensus) | 48 (D) |
+| Li6.25Al0.25La3Zr2O12-in-PEGDA | polymer_composite | 2 | 3 | 5.1e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li6.5Ge0.5P0.5S5I1 | argyrodite | 2 | 3 | 5.4e-04 | nan | B | **34** (weak consensus) | 48 (D) |
+| Li6.5La3-xBaxZr1.5-xTa0.5+xO12 | garnet | 2 | 3 | 8.3e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li6.5La3Zr1.9Fe0.2Bi0.1O12 | garnet | 2 | 3 | 7.6e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li6PS4Cl0.75-OF0.25 | argyrodite | 2 | 3 | 2.5e-06 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li7La3Zr2O12-8wt.%Li3BO3 | garnet | 2 | 3 | 1.6e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6 | argyrodite | 2 | 3 | 3.2e-02 | nan | B | **34** (weak consensus) | 41 (D) |
+| Na3HfScSi(PO6)2 | nasicon | 2 | 3 | 1.2e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| PEO-LiTFSI-LLZTO-SN-ETPTA | polymer_composite | 2 | 3 | 2.1e-04 | nan | B | **34** (weak consensus) | 41 (D) |
+| PVDF-HFP | polymer_composite | 2 | 3 | 4.2e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| PVDF-HFP-LLZTO(10wt%) | polymer_composite | 2 | 3 | 3.4e-04 | nan | B | **34** (weak consensus) | 41 (D) |
 | PVDF-HFP/10%LLZTO | polymer_composite | 1 | 3 | 3.4e-04 | nan | B | **34** (weak consensus) | 37 (D) |
+| Sr0.3Li0.4Zr0.5Ti1.5P3O12 | nasicon | 2 | 3 | 9.7e-06 | nan | B | **34** (weak consensus) | 41 (D) |
+| Sr0.3Li0.4Zr2P3O12 | nasicon | 2 | 3 | 3.2e-05 | nan | B | **34** (weak consensus) | 41 (D) |
+| UiO-66/PEO | polymer_composite | 2 | 3 | 3.0e-05 | nan | B | **34** (weak consensus) | 41 (D) |
 | 0.5Li2SO4-ZrCl4 | halide | 2 | 4 | 2.1e-04 | 0.44 | C | **30** (weak consensus) | 42 (D) |
 | H4C2O | polymer_composite | 1 | 5 | 1.8e-05 | nan | D | **30** (weak consensus) | 38 (D) |
 | Li0.27La0.58Ti1O3 | perovskite | 1 | 6 | 8.3e-04 | 0.26 | D | **30** (weak consensus) | 32 (D) |
-| LiB9H10C | borohydride | 1 | 4 | 3.6e-06 | nan | B | **30** (weak consensus) | 44 (D) |
+| Li6.4La3Zr2Ga0.2O12 | garnet | 2 | 5 | 1.0e-04 | nan | D | **30** (weak consensus) | 32 (D) |
 | PEO-5%COF-LZU1 | polymer_composite | 1 | 4 | 3.3e-04 | nan | B | **30** (weak consensus) | 44 (D) |
 | PEO-LiTFSI-AlOC | polymer_composite | 1 | 4 | 4.3e-05 | nan | B | **30** (weak consensus) | 44 (D) |
+| 1.4Li2O-0.75ZrCl4-0.25AlCl3 | oxide | 2 | 4 | 2.6e-06 | 0.28 | C | **25** (weak consensus) | 42 (D) |
 | Li3.7Ge0.7P0.3S4 | sulfide | 1 | 4 | 1.0e-04 | 0.39 | C | **25** (weak consensus) | 31 (D) |
 | Li3Zr2Si2PO12 | nasicon | 2 | 3 | 3.6e-03 | 0.21 | C | **25** (weak consensus) | 48 (D) |
+| AP2F | unknown | 2 | 3 | — | 0.04 | — | **20** (no consensus) | 20 (D) |
+| Li0.35La0.55Ti1O3 | perovskite | 3 | 5 | 1.6e-05 | nan | D | **20** (no consensus) | 30 (D) |
+| Li1.3Y0.15Ti1.7Al0.15P3O12 | nasicon | 2 | 3 | — | 0.10 | — | **20** (no consensus) | 20 (D) |
 | Li3.7Ge0.7As0.3S4 | sulfide | 1 | 3 | — | 0.41 | — | **20** (no consensus) | 16 (D) |
 | Li3.7Ge0.7Sb0.3S4 | sulfide | 1 | 3 | — | 0.39 | — | **20** (no consensus) | 16 (D) |
+| Li6.7Si0.105Ge0.595P0.3S5I1 | argyrodite | 2 | 3 | — | 0.20 | — | **20** (no consensus) | 20 (D) |
+| Li6PS5I | argyrodite | 3 | 5 | 1.0e-06 | nan | D | **20** (no consensus) | 30 (D) |
+| Li7Ca0.25La2.75Zr1.75Nb0.25O12 | garnet | 2 | 3 | — | 0.37 | — | **20** (no consensus) | 20 (D) |
+| LiTFSI-PC(quasi-solid) | polymer_composite | 2 | 3 | — | 0.30 | — | **20** (no consensus) | 20 (D) |
+| LiTFSI-SN | hydride | 2 | 3 | — | 0.23 | — | **20** (no consensus) | 20 (D) |
+| LiTFSI-SN-FEC | polymer_composite | 2 | 3 | — | 0.18 | — | **20** (no consensus) | 20 (D) |
+| PEO/LiFSI | polymer_composite | 2 | 3 | — | 0.35 | — | **20** (no consensus) | 20 (D) |
+| PEO/LiTFSI | polymer_composite | 2 | 3 | — | 0.43 | — | **20** (no consensus) | 20 (D) |
 | 0-LATP/PVDF-HFP-LiTFSICSE | polymer_composite | 1 | 2 | 1.5e-04 | nan | C | **19** (no consensus) | 44 (D) |
 | BaLi2O4 | oxide | 0 | 2 | 1.0e-08 | 0.80 | C | **19** (no consensus) | 24 (D) |
 | BaLi6La2Nb2O12 | garnet | 0 | 2 | 3.0e-06 | 0.50 | C | **19** (no consensus) | 24 (D) |
 | Ca(BH4)2 | borohydride | 0 | 2 | 1.0e-09 | 0.90 | C | **19** (no consensus) | 24 (D) |
 | Co-LATP/PVDF-HFP-LiTFSICSE | polymer_composite | 1 | 2 | 1.4e-04 | nan | C | **19** (no consensus) | 44 (D) |
-| Cs1In0.067Sn0.9Cl3 | halide | 1 | 2 | 3.4e-04 | nan | C | **19** (no consensus) | 44 (D) |
 | Cu-LATP/PVDF-HFP-LiTFSICSE | polymer_composite | 1 | 2 | 1.4e-04 | nan | C | **19** (no consensus) | 44 (D) |
 | LLi6P2S5Cl | argyrodite | 1 | 2 | 1.0e-03 | 0.30 | C | **19** (no consensus) | 28 (D) |
 | LaF3 | oxide | 0 | 2 | 1.0e-06 | 0.60 | C | **19** (no consensus) | 24 (D) |
@@ -86,7 +128,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 | Li0.34La0.56TiO3(G-LLTO) | perovskite | 1 | 2 | 4.7e-05 | nan | C | **19** (no consensus) | 44 (D) |
 | Li0.34La0.56TiO3(M-LLTO) | perovskite | 1 | 2 | 1.8e-04 | nan | C | **19** (no consensus) | 44 (D) |
 | Li0.34La0.5Ti1O2.94 | perovskite | 0 | 2 | 1.0e-03 | 0.30 | C | **19** (no consensus) | 24 (D) |
-| Li0.35La0.55Ti1O3 | perovskite | 1 | 2 | 7.0e-04 | 0.30 | C | **19** (no consensus) | 28 (D) |
 | Li0.35La0.55TiO3(LLTO-F0) | perovskite | 1 | 2 | 1.6e-05 | nan | C | **19** (no consensus) | 44 (D) |
 | Li0.3La0.57Ti1O3 | perovskite | 0 | 2 | 8.0e-04 | 0.32 | C | **19** (no consensus) | 24 (D) |
 | Li0.44La0.52Ti1O3 | perovskite | 0 | 2 | 1.0e-03 | 0.30 | C | **19** (no consensus) | 24 (D) |
@@ -228,7 +269,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 | Li3TmCl6 | halide | 1 | 2 | 1.0e-03 | 0.33 | C | **19** (no consensus) | 28 (D) |
 | Li3Y(BrCl)3 | halide | 1 | 2 | 1.0e-03 | 0.33 | C | **19** (no consensus) | 28 (D) |
 | Li3Y(PO4)2 | oxide | 0 | 2 | 1.0e-07 | 0.70 | C | **19** (no consensus) | 24 (D) |
-| Li3YBr6 | halide | 1 | 2 | 1.7e-03 | 0.34 | C | **19** (no consensus) | 28 (D) |
 | Li3YCl6(as-prepared) | halide | 1 | 2 | 4.9e-04 | 0.41 | C | **19** (no consensus) | 44 (D) |
 | Li3YI6 | halide | 0 | 2 | 1.0e-04 | 0.40 | C | **19** (no consensus) | 24 (D) |
 | Li3YbCl6 | halide | 1 | 2 | 1.0e-03 | 0.35 | C | **19** (no consensus) | 28 (D) |
@@ -352,7 +392,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 | Na3BrO | antiperovskite | 0 | 2 | 1.0e-05 | 0.40 | C | **19** (no consensus) | 24 (D) |
 | Na3ClO | antiperovskite | 0 | 2 | 1.0e-05 | 0.40 | C | **19** (no consensus) | 24 (D) |
 | Na3Hf0.5Zr1.5Si2P1O12 | nasicon | 0 | 2 | 1.5e-03 | 0.28 | C | **19** (no consensus) | 24 (D) |
-| Na3PS4 | sulfide | 1 | 2 | 2.0e-04 | 0.35 | C | **19** (no consensus) | 28 (D) |
 | Na3PS4(glass-ceramic) | sulfide | 1 | 2 | 4.6e-04 | 0.30 | C | **19** (no consensus) | 28 (D) |
 | Na3PS4-xSex | sulfide | 0 | 2 | 1.2e-03 | 0.24 | C | **19** (no consensus) | 24 (D) |
 | Na3SI | antiperovskite | 0 | 2 | 1.0e-05 | 0.40 | C | **19** (no consensus) | 24 (D) |
@@ -393,42 +432,25 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 | Sr(BH4)2 | borohydride | 0 | 2 | 1.0e-09 | 0.90 | C | **19** (no consensus) | 24 (D) |
 | V-LATP/PVDF-HFP-LiTFSICSE | polymer_composite | 1 | 2 | 1.7e-04 | nan | C | **19** (no consensus) | 44 (D) |
 | Zr-LATP/PVDF-HFP-LiTFSICSE | polymer_composite | 1 | 2 | 1.2e-04 | nan | C | **19** (no consensus) | 44 (D) |
-| Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP | polymer_composite | 1 | 2 | 1.0e-04 | 0.20 | C | **14** (no consensus) | 28 (D) |
-| Li1.3Y0.01Ti1.7Al0.29P3O12 | nasicon | 1 | 2 | 8.4e-06 | 0.40 | C | **14** (no consensus) | 28 (D) |
-| Li1.3Y0.05Ti1.7Al0.25P3O12 | nasicon | 1 | 2 | 1.2e-05 | 0.30 | C | **14** (no consensus) | 28 (D) |
-| Li4-xGe1-xPxO4 | oxide | 1 | 2 | 1.0e-05 | 0.47 | C | **14** (no consensus) | 28 (D) |
-| Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12 | garnet | 1 | 2 | 6.6e-04 | 0.25 | C | **14** (no consensus) | 28 (D) |
-| 80(3LiBH4LiCl)20P2S5 | argyrodite | 1 | 1 | 1.0e-05 | — | C | **10** (no consensus) | 18 (D) |
-| Li2O-TaCl5 | oxide | 1 | 1 | 8.3e-03 | — | C | **10** (no consensus) | 18 (D) |
-| Li6PS4Cl0.75-OF0.25 | argyrodite | 1 | 1 | 2.5e-06 | — | C | **10** (no consensus) | 18 (D) |
-| Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6 | argyrodite | 1 | 1 | 3.2e-02 | — | C | **10** (no consensus) | 18 (D) |
-| PEO-LiTFSI-LLZTO-SN-ETPTA | polymer_composite | 1 | 1 | 2.1e-04 | — | C | **10** (no consensus) | 18 (D) |
-| PVDF-HFP | polymer_composite | 1 | 1 | 4.2e-05 | — | C | **10** (no consensus) | 18 (D) |
-| PVDF-HFP-LLZTO(10wt%) | polymer_composite | 1 | 1 | 3.4e-04 | — | C | **10** (no consensus) | 18 (D) |
-| UiO-66/PEO | polymer_composite | 1 | 1 | 3.0e-05 | — | C | **10** (no consensus) | 18 (D) |
-| Li1.3Y0.15Ti1.7Al0.15P3O12 | nasicon | 1 | 1 | — | 0.10 | — | **4** (no consensus) | 14 (D) |
-| Li6.7Si0.105Ge0.595P0.3S5I1 | argyrodite | 1 | 1 | — | 0.20 | — | **4** (no consensus) | 14 (D) |
-| LiTFSI-PC(quasi-solid) | polymer_composite | 1 | 1 | — | 0.30 | — | **4** (no consensus) | 14 (D) |
-| LiTFSI-SN | hydride | 1 | 1 | — | 0.23 | — | **4** (no consensus) | 14 (D) |
-| LiTFSI-SN-FEC | polymer_composite | 1 | 1 | — | 0.18 | — | **4** (no consensus) | 14 (D) |
+| LiB9H10C | borohydride | 3 | 8 | 3.3e-04 | nan | D | **0** (no consensus) | 26 (D) |
 
 ## Li1.3Ti1.7Al0.3P3O12
 
 - **Family:** nasicon
-- **Papers:** 8 | **Measurements:** 16 (9 σ, 7 Ea)
-- **Median σ:** 1.90e-04 S/cm (95% CI 5.13e-06–3.00e-04) [3.00e-06–3.00e-04]
-- **Uncertainty:** MAD 0.20 log10, std 0.63 log10, IQR 0.81 log10 — agreement **D**
-- **Median Ea:** 0.400 eV
-- **Temperature range:** 25–200 °C (8 measurements)
-- **σ vs temperature:** 25°C: n=5, median 1.0e-04 S/cm [4.4e-05–3.0e-04]
+- **Papers:** 10 | **Measurements:** 20 (11 σ, 9 Ea)
+- **Median σ:** 1.90e-04 S/cm (95% CI 5.87e-06–3.00e-04) [3.00e-06–3.00e-04]
+- **Uncertainty:** MAD 0.20 log10, std 0.58 log10, IQR 0.63 log10 — agreement **D**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–200 °C (12 measurements)
+- **σ vs temperature:** 25°C: n=7, median 1.9e-04 S/cm [4.4e-05–3.0e-04]
 - **Consensus score:** 100/100 — **strong consensus**
-- **Quality score:** 53/100 (C) — metadata completeness 44% (temp+method)
+- **Quality score:** 51/100 (C) — metadata completeness 36% (temp+method)
 - **Outliers (1):**
     - σ=3e-06 (3.00e-06 is 63x from group median)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1016/S0167-2738(03)00260-7, 10.1016/j.jallcom.2019.153072, 10.1039_d5ra09944g, 10.3390/ma14164737, 10.3390/nano15010042, 10.3390_membranes13020201, 10.3390_nano15010042, 10.37614/2949-1215.2025.16.2.020
+- **DOIs:** 10.1016/S0167-2738(03)00260-7, 10.1016/j.jallcom.2019.153072, 10.1039/d5ra09944g, 10.1039_d5ra09944g, 10.3390/ma14164737, 10.3390/membranes13020201, 10.3390/nano15010042, 10.3390_membranes13020201, 10.3390_nano15010042, 10.37614/2949-1215.2025.16.2.020
 
 ### Papers
 
@@ -451,12 +473,18 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.3390/nano15010042** (1 σ, 1 Ea)
     - conductivity: 0.0001 S/cm, 25 °C, EIS
       > Manual: undoped LATP@750C RT ionic conductivity ~0.1 mS/cm = 1e-4 S/cm.
-    - activation_energy: nan eV, 25 °C, EIS
+    - activation_energy: 0.5 eV, 25 °C, EIS
 - **10.1016/j.jallcom.2019.153072** (1 σ, 1 Ea)
     - conductivity: 4.65e-05 S/cm, 30 °C, impedance spectroscopy p.22
       > Manual (ceramic LATP sintered 900 C, total, Table 2): Given the total resistance Rtot = Rgr + Rgb and geometrical factor L/A, the total conductivity σtot for ceramic LATP can be determined as ca. 4.65 × 10−5 S∙cm−1.
     - activation_energy: 0.4 eV, impedance spectroscopy p.22
       > Manual (LATP ceramic Etot=0.4 eV sintered 900 C, Table 2): For the LATP–LBSO composites, Etot and Egr vary in the narrow range from 0.38 to 0.41 eV and 0.29 to 0.31 eV, respectively.
+- **10.1039/d5ra09944g** (1 σ, 1 Ea)
+    - conductivity: 0.00019 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.3390/membranes13020201** (1 σ, 1 Ea)
+    - conductivity: 0.000283 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.3390_nano15010042** (0 σ, 1 Ea)
     - activation_energy: 0.5 eV p.15
       > LLM ensemble extraction from 10.3390_nano15010042.pdf
@@ -467,23 +495,63 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.000283 S/cm p.1
       > LLM ensemble extraction from 10.3390_membranes13020201.pdf
 
+## Li2ZrCl6
+
+- **Family:** halide
+- **Papers:** 5 | **Measurements:** 12 (6 σ, 6 Ea)
+- **Median σ:** 8.10e-04 S/cm (95% CI 1.30e-04–1.00e-03) [1.30e-04–1.00e-03]
+- **Uncertainty:** MAD 0.09 log10, std 0.40 log10, IQR 0.66 log10 — agreement **C**
+- **Median Ea:** 0.425 eV
+- **Temperature range:** 25–25 °C (7 measurements)
+- **σ vs temperature:** 25°C: n=4, median 9.0e-04 S/cm [1.3e-04–1.0e-03]
+- **Consensus score:** 100/100 — **strong consensus**
+- **Quality score:** 60/100 (C) — metadata completeness 17% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acsami.3c03513, 10.1021/jacs.1c07481, 10.1021_acsami.3c03513, 10.1038/s41467-021-24697-2, 10.1038_s41467-021-24697-2
+
+### Papers
+
+- **10.1021/jacs.1c07481** (2 σ, 2 Ea)
+    - conductivity: 0.001 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.35 eV, 25 °C, AC impedance spectroscopy
+    - conductivity: 0.001 S/cm, 25 °C
+    - activation_energy: 0.35 eV
+- **10.1038_s41467-021-24697-2** (1 σ, 2 Ea)
+    - conductivity: 0.00081 S/cm p.3
+      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
+    - activation_energy: 0.35 eV p.2
+      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
+    - activation_energy: 0.5 eV p.2
+      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
+- **10.1038/s41467-021-24697-2** (1 σ, 1 Ea)
+    - conductivity: 0.00081 S/cm, 25 °C
+    - activation_energy: 0.5 eV, 25 °C
+- **10.1021/acsami.3c03513** (1 σ, 1 Ea)
+    - conductivity: 0.00013 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021_acsami.3c03513** (1 σ, 0 Ea)
+    - conductivity: 0.00013 S/cm p.2
+      > LLM ensemble extraction from 10.1021_acsami.3c03513.pdf
+
 ## Li3InCl6
 
 - **Family:** halide
-- **Papers:** 3 | **Measurements:** 14 (7 σ, 7 Ea)
-- **Median σ:** 2.72e-03 S/cm (95% CI 1.11e-03–3.97e-03) [1.00e-03–4.03e-03]
-- **Uncertainty:** MAD 0.13 log10, std 0.19 log10, IQR 0.22 log10 — agreement **A**
-- **Median Ea:** 0.250 eV
-- **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 2.0e-03 S/cm [2.0e-03–2.0e-03]
+- **Papers:** 7 | **Measurements:** 22 (11 σ, 11 Ea)
+- **Median σ:** 2.00e-03 S/cm (95% CI 6.30e-04–3.94e-03) [6.30e-04–4.03e-03]
+- **Uncertainty:** MAD 0.26 log10, std 0.28 log10, IQR 0.46 log10 — agreement **B**
+- **Median Ea:** 0.270 eV
+- **Temperature range:** 25–25 °C (9 measurements)
+- **σ vs temperature:** 25°C: n=5, median 2.0e-03 S/cm [6.3e-04–2.7e-03]
 - **Consensus score:** 100/100 — **strong consensus**
-- **Quality score:** 63/100 (C) — metadata completeness 14% (temp+method)
+- **Quality score:** 66/100 (C) — metadata completeness 18% (temp+method)
 - **Structure (MP):**
     - Space group: C2 (#5.0, Monoclinic)
     - Band gap: 3.373 eV
     - Formation energy: -1.872 eV/atom
     - Stable: True
-- **DOIs:** 10.1002_adma.202513255, 10.1002_advs.202403208, 10.1038/s41467-019-09619-5
+- **DOIs:** 10.1002/adma.202513255, 10.1002/advs.202403208, 10.1002_adma.202513255, 10.1002_advs.202403208, 10.1038/s41467-019-09619-5, 10.1038/s41467-025-56932-5, 10.1038_s41467-025-56932-5
 
 ### Papers
 
@@ -509,27 +577,41 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.33 eV, 25 °C, AC impedance spectroscopy
     - conductivity: 0.002 S/cm, 25 °C
     - activation_energy: 0.33 eV
-- **10.1002_adma.202513255** (1 σ, 1 Ea)
+- **10.1002_adma.202513255** (1 σ, 2 Ea)
     - conductivity: 0.001 S/cm p.7
       > LLM ensemble extraction from 10.1002_adma.202513255.pdf
     - activation_energy: 0.1 eV p.7
       > LLM ensemble extraction from 10.1002_adma.202513255.pdf
+    - activation_energy: 0.3 eV p.1
+      > LLM ensemble extraction from 10.1002_adma.202513255.pdf
+- **10.1002/adma.202513255** (1 σ, 1 Ea)
+    - conductivity: 0.001 S/cm, 25 °C
+    - activation_energy: 0.1 eV, 25 °C
+- **10.1002/advs.202403208** (1 σ, 1 Ea)
+    - conductivity: 0.00272 S/cm, 25 °C
+    - activation_energy: 0.27 eV, 25 °C
+- **10.1038/s41467-025-56932-5** (1 σ, 1 Ea)
+    - conductivity: 0.00063 S/cm, 25 °C, EIS
+    - activation_energy: nan eV, 25 °C, EIS
+- **10.1038_s41467-025-56932-5** (1 σ, 0 Ea)
+    - conductivity: 0.00063 S/cm, EIS
+      > LLM ensemble extraction from 10.1038_s41467-025-56932-5.pdf
 
 ## Li6.5La3Zr1.5Ta0.5O12
 
 - **Family:** garnet
-- **Papers:** 4 | **Measurements:** 10 (5 σ, 5 Ea)
+- **Papers:** 5 | **Measurements:** 12 (6 σ, 6 Ea)
 - **Median σ:** 4.00e-04 S/cm (95% CI 1.80e-04–1.00e-03) [1.80e-04–1.00e-03]
-- **Uncertainty:** MAD 0.35 log10, std 0.33 log10, IQR 0.74 log10 — agreement **A**
+- **Uncertainty:** MAD 0.35 log10, std 0.30 log10, IQR 0.56 log10 — agreement **A**
 - **Median Ea:** 0.360 eV
-- **Temperature range:** 25–25 °C (5 measurements)
-- **σ vs temperature:** 25°C: n=3, median 1.0e-03 S/cm [1.8e-04–1.0e-03]
+- **Temperature range:** 25–25 °C (7 measurements)
+- **σ vs temperature:** 25°C: n=4, median 6.3e-04 S/cm [1.8e-04–1.0e-03]
 - **Consensus score:** 100/100 — **strong consensus**
-- **Quality score:** 68/100 (C) — metadata completeness 40% (temp+method)
+- **Quality score:** 72/100 (B) — metadata completeness 17% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1038/s41467-025-58108-7, 10.1038_s41467-020-17493-x, 10.1038_s41467-025-58108-7, 10.1039/C6EE00556K
+- **DOIs:** 10.1038/s41467-020-17493-x, 10.1038/s41467-025-58108-7, 10.1038_s41467-020-17493-x, 10.1038_s41467-025-58108-7, 10.1039/C6EE00556K
 
 ### Papers
 
@@ -549,26 +631,29 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.36 eV p.4
       > LLM ensemble extraction from 10.1038_s41467-020-17493-x.pdf
 - **10.1038/s41467-025-58108-7** (1 σ, 1 Ea)
-    - conductivity: 0.00018 S/cm, 25 °C, EIS
-    - activation_energy: 0.368 eV, 25 °C, EIS
+    - conductivity: 0.00018 S/cm, 25 °C
+    - activation_energy: 0.368 eV, 25 °C
+- **10.1038/s41467-020-17493-x** (1 σ, 1 Ea)
+    - conductivity: 0.0004 S/cm, 25 °C
+    - activation_energy: 0.36 eV, 25 °C
 
 ## Li6PS5Cl
 
 - **Family:** argyrodite
-- **Papers:** 5 | **Measurements:** 13 (7 σ, 6 Ea)
-- **Median σ:** 1.00e-03 S/cm (95% CI 9.38e-04–1.17e-03) [9.27e-04–1.19e-03]
-- **Uncertainty:** MAD 0.00 log10, std 0.03 log10, IQR 0.02 log10 — agreement **A+**
+- **Papers:** 9 | **Measurements:** 19 (11 σ, 8 Ea)
+- **Median σ:** 1.00e-03 S/cm (95% CI 9.45e-04–1.20e-03) [9.27e-04–1.20e-03]
+- **Uncertainty:** MAD 0.00 log10, std 0.04 log10, IQR 0.06 log10 — agreement **A+**
 - **Median Ea:** nan eV
-- **Temperature range:** 25–25 °C (10 measurements)
-- **σ vs temperature:** 25°C: n=6, median 1.0e-03 S/cm [9.3e-04–1.2e-03]
+- **Temperature range:** 25–25 °C (14 measurements)
+- **σ vs temperature:** 25°C: n=8, median 1.0e-03 S/cm [9.3e-04–1.2e-03]
 - **Consensus score:** 100/100 — **strong consensus**
-- **Quality score:** 86/100 (A) — metadata completeness 71% (temp+method)
+- **Quality score:** 80/100 (B) — metadata completeness 36% (temp+method)
 - **Structure (MP):**
     - Space group: F-43m (#216.0, Cubic)
     - Band gap: 2.138 eV
     - Formation energy: -1.321 eV/atom
     - Stable: False
-- **DOIs:** 10.1021/acsaem.3c02858, 10.1039/C5EE02930D, 10.3390/ma16072751, 10.3390/nano12244355, 10.3390_nano12244355
+- **DOIs:** 10.1002/advs.202521791, 10.1002_advs.202521791, 10.1021/acs.langmuir.5c06765, 10.1021/acsaem.3c02858, 10.1021_acs.langmuir.5c06765, 10.1039/C5EE02930D, 10.3390/ma16072751, 10.3390/nano12244355, 10.3390_nano12244355
 
 ### Papers
 
@@ -593,48 +678,107 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
       > Verified directly against PDF text: LAY0.1TP 0.84 mS/cm at RT (highest ionic conductivity); undoped ~0.1 mS/cm; Li6PS5Cl 9.27e-4 S/cm at 25C (x=0).
     - activation_energy: nan eV, 25 °C, EIS
 - **10.3390/nano12244355** (1 σ, 1 Ea)
-    - conductivity: 0.001 S/cm, 25 °C, EIS
-    - activation_energy: 0.22 eV, 25 °C, EIS
+    - conductivity: 0.001 S/cm, 25 °C
+    - activation_energy: 0.22 eV, 25 °C
+- **10.1002/advs.202521791** (1 σ, 1 Ea)
+    - conductivity: 0.001 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021/acs.langmuir.5c06765** (1 σ, 1 Ea)
+    - conductivity: 0.0012 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1002_advs.202521791** (1 σ, 0 Ea)
+    - conductivity: 0.001 S/cm p.2
+      > LLM ensemble extraction from 10.1002_advs.202521791.pdf
+- **10.1021_acs.langmuir.5c06765** (1 σ, 0 Ea)
+    - conductivity: 0.0012 S/cm p.1
+      > LLM ensemble extraction from 10.1021_acs.langmuir.5c06765.pdf
 
 ## Li7La3Zr2O12
 
 - **Family:** LLZO
-- **Papers:** 7 | **Measurements:** 15 (9 σ, 6 Ea)
-- **Median σ:** 4.29e-04 S/cm (95% CI 3.00e-04–1.03e-03) [3.00e-04–1.04e-03]
-- **Uncertainty:** MAD 0.16 log10, std 0.24 log10, IQR 0.47 log10 — agreement **A**
-- **Median Ea:** nan eV
-- **Temperature range:** 25–25 °C (7 measurements)
-- **σ vs temperature:** 25°C: n=4, median 3.0e-04 S/cm [3.0e-04–1.0e-03]
+- **Papers:** 18 | **Measurements:** 40 (21 σ, 19 Ea)
+- **Median σ:** 3.00e-04 S/cm (95% CI 5.98e-06–1.04e-03) [5.98e-06–1.04e-03]
+- **Uncertainty:** MAD 0.48 log10, std 0.64 log10, IQR 0.82 log10 — agreement **D**
+- **Median Ea:** 0.400 eV
+- **Temperature range:** 25–25 °C (21 measurements)
+- **σ vs temperature:** 25°C: n=11, median 3.0e-04 S/cm [6.0e-06–1.0e-03]
 - **Consensus score:** 100/100 — **strong consensus**
-- **Quality score:** 74/100 (B) — metadata completeness 33% (temp+method)
+- **Quality score:** 43/100 (D) — metadata completeness 14% (temp+method)
+- **Outliers (2):**
+    - σ=5.98e-06 (5.98e-06 is 50x from group median)
+    - σ=5.98e-06 (5.98e-06 is 50x from group median)
 - **Structure (MP):**
     - Space group: I4_1/acd (#142.0, Tetragonal)
     - Band gap: 4.451 eV
     - Formation energy: -3.124 eV/atom
     - Stable: False
-- **DOIs:** 10.1002/anie.200701144, 10.1016_j.heliyon.2024.e36206, 10.1021/acs.chemmater.3c01831, 10.1021_acs.chemmater.3c01831, 10.1038/s41467-022-35287-1, 10.1038_srep18053, 10.20517_energymater.2023.87
+- **DOIs:** 10.1002/anie.200701144, 10.1007/s11666-026-02240-3, 10.1007_s11666-026-02240-3, 10.1016/j.heliyon.2024.e36206, 10.1016_j.heliyon.2024.e36206, 10.1021/acs.chemmater.3c01831, 10.1021/acs.chemmater.8b00649, 10.1021/acsenergylett.8b00249, 10.1021_acs.chemmater.3c01831, 10.1021_acs.chemmater.8b00649, 10.1021_acsenergylett.8b00249, 10.1038/s41467-022-35287-1, 10.1038/srep18053, 10.1038_srep18053, 10.20517/energymater.2023.87, 10.20517_energymater.2023.87, 10.4191/kcers.2016.53.6.712, 10.4191_kcers.2016.53.6.712
 
 ### Papers
 
+- **10.1021_acsenergylett.8b00249** (1 σ, 4 Ea)
+    - conductivity: 0.0001 S/cm, electrochemical impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acsenergylett.8b00249.pdf
+    - activation_energy: 0.36 eV, electrochemical impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acsenergylett.8b00249.pdf
+    - activation_energy: 0.41 eV, electrochemical impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acsenergylett.8b00249.pdf
+    - activation_energy: 0.52 eV, electrochemical impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acsenergylett.8b00249.pdf
+    - activation_energy: 0.59 eV, electrochemical impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acsenergylett.8b00249.pdf
 - **10.1038/s41467-022-35287-1** (2 σ, 2 Ea)
     - activation_energy: 0.4 eV p.1
       > LLZO (Li7–yLa3Zr2–yTayO12)14. For the stabilization of the cubic phase, the experimentally observed cri- tical Li vacancy concentration is almost equal to the theoretically predicted value (nc,vac = 0.4–0.5).
     - conductivity: 0.001 S/cm, 25 °C, AC impedance spectroscopy
     - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
 - **10.1002/anie.200701144** (2 σ, 2 Ea)
     - conductivity: 0.0003 S/cm, 25 °C, AC impedance spectroscopy
     - activation_energy: 0.35 eV, 25 °C, AC impedance spectroscopy
     - conductivity: 0.0003 S/cm, 25 °C
     - activation_energy: 0.35 eV
-- **10.1021_acs.chemmater.3c01831** (1 σ, 1 Ea)
+- **10.1021_acs.chemmater.3c01831** (2 σ, 1 Ea)
     - conductivity: 0.0003 S/cm
       > LLM ensemble extraction from 10.1021_acs.chemmater.3c01831.pdf
     - activation_energy: 0.3 eV p.3
       > LLM ensemble extraction from 10.1021_acs.chemmater.3c01831.pdf
+    - conductivity: 0.0001 S/cm p.3
+      > LLM ensemble extraction from 10.1021_acs.chemmater.3c01831.pdf
+- **10.1007_s11666-026-02240-3** (1 σ, 1 Ea)
+    - activation_energy: 0.1 eV p.4
+      > LLM ensemble extraction from 10.1007_s11666-026-02240-3.pdf
+    - conductivity: 0.0001 S/cm p.4
+      > LLM ensemble extraction from 10.1007_s11666-026-02240-3.pdf
+- **10.1021_acs.chemmater.8b00649** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm p.3
+      > LLM ensemble extraction from 10.1021_acs.chemmater.8b00649.pdf
+    - activation_energy: 0.22 eV p.3
+      > LLM ensemble extraction from 10.1021_acs.chemmater.8b00649.pdf
 - **10.1021/acs.chemmater.3c01831** (1 σ, 1 Ea)
-    - conductivity: 0.0003 S/cm, 25 °C, EIS
-    - activation_energy: 0.3 eV, 25 °C, EIS
+    - conductivity: 0.0003 S/cm, 25 °C
+    - activation_energy: 0.3 eV, 25 °C
+- **10.1016/j.heliyon.2024.e36206** (1 σ, 1 Ea)
+    - conductivity: 0.00104 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1038/srep18053** (1 σ, 1 Ea)
+    - conductivity: 0.000614 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.20517/energymater.2023.87** (1 σ, 1 Ea)
+    - conductivity: 0.000839 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007/s11666-026-02240-3** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm, 25 °C
+    - activation_energy: 0.1 eV, 25 °C
+- **10.1021/acs.chemmater.8b00649** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm, 25 °C
+    - activation_energy: 0.22 eV, 25 °C
+- **10.1021/acsenergylett.8b00249** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm, 25 °C, electrochemical impedance spectroscopy
+    - activation_energy: nan eV, 25 °C, electrochemical impedance spectroscopy
+- **10.4191/kcers.2016.53.6.712** (1 σ, 1 Ea)
+    - conductivity: 5.98e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.1016_j.heliyon.2024.e36206** (1 σ, 0 Ea)
     - conductivity: 0.00104 S/cm p.1
       > LLM ensemble extraction from 10.1016_j.heliyon.2024.e36206.pdf
@@ -644,40 +788,200 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.20517_energymater.2023.87** (1 σ, 0 Ea)
     - conductivity: 0.000839 S/cm p.1
       > LLM ensemble extraction from 10.20517_energymater.2023.87.pdf
+- **10.4191_kcers.2016.53.6.712** (1 σ, 0 Ea)
+    - conductivity: 5.98e-06 S/cm
+      > LLM ensemble extraction from 10.4191_kcers.2016.53.6.712.pdf
 
-## Li2ZrCl6
+## Li10Ge(PS6)2
 
-- **Family:** halide
-- **Papers:** 3 | **Measurements:** 9 (4 σ, 5 Ea)
-- **Median σ:** 9.00e-04 S/cm (95% CI 8.10e-04–1.00e-03) [8.10e-04–1.00e-03]
-- **Uncertainty:** MAD 0.05 log10, std 0.05 log10, IQR 0.09 log10 — agreement **A+**
-- **Median Ea:** 0.350 eV
+- **Family:** sulfide
+- **Papers:** 3 | **Measurements:** 7 (4 σ, 3 Ea)
+- **Median σ:** 1.10e-02 S/cm (95% CI 1.00e-02–1.20e-02) [1.00e-02–1.20e-02]
+- **Uncertainty:** MAD 0.04 log10, std 0.04 log10, IQR 0.08 log10 — agreement **A+**
+- **Median Ea:** nan eV
 - **Temperature range:** 25–25 °C (5 measurements)
-- **σ vs temperature:** 25°C: n=3, median 1.0e-03 S/cm [8.1e-04–1.0e-03]
+- **σ vs temperature:** 25°C: n=3, median 1.2e-02 S/cm [1.0e-02–1.2e-02]
 - **Consensus score:** 85/100 — **strong consensus**
-- **Quality score:** 70/100 (B) — metadata completeness 50% (temp+method)
+- **Quality score:** 66/100 (C) — metadata completeness 25% (temp+method)
 - **Structure (MP):**
-    - Band gap: nan eV
-    - Formation energy: nan eV/atom
-- **DOIs:** 10.1021/jacs.1c07481, 10.1038/s41467-021-24697-2, 10.1038_s41467-021-24697-2
+    - Space group: P4_2mc (#105.0, Tetragonal)
+    - Band gap: 2.055 eV
+    - Formation energy: -1.189 eV/atom
+    - Stable: False
+- **DOIs:** 10.1002/smll.202509918, 10.1002_smll.202509918, 10.1038/nmat3066
 
 ### Papers
 
-- **10.1021/jacs.1c07481** (2 σ, 2 Ea)
-    - conductivity: 0.001 S/cm, 25 °C, AC impedance spectroscopy
-    - activation_energy: 0.35 eV, 25 °C, AC impedance spectroscopy
-    - conductivity: 0.001 S/cm, 25 °C
+- **10.1038/nmat3066** (2 σ, 2 Ea)
+    - conductivity: 0.012 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.22 eV, 25 °C, AC impedance spectroscopy
+    - conductivity: 0.012 S/cm, 25 °C
+    - activation_energy: 0.22 eV
+- **10.1002/smll.202509918** (1 σ, 1 Ea)
+    - conductivity: 0.01 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1002_smll.202509918** (1 σ, 0 Ea)
+    - conductivity: 0.01 S/cm p.1
+      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
+
+## Li3YCl6
+
+- **Family:** halide
+- **Papers:** 3 | **Measurements:** 7 (4 σ, 3 Ea)
+- **Median σ:** 1.00e-04 S/cm (95% CI 2.00e-05–5.00e-04) [2.00e-05–5.00e-04]
+- **Uncertainty:** MAD 0.70 log10, std 0.70 log10, IQR 1.40 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (5 measurements)
+- **σ vs temperature:** 25°C: n=3, median 5.0e-04 S/cm [2.0e-05–5.0e-04]
+- **Consensus score:** 85/100 — **strong consensus**
+- **Quality score:** 54/100 (C) — metadata completeness 25% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1016/j.matt.2019.06.004, 10.1021/acsenergylett.4c00317, 10.1021_acsenergylett.4c00317
+
+### Papers
+
+- **10.1016/j.matt.2019.06.004** (2 σ, 2 Ea)
+    - conductivity: 0.0005 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.38 eV, 25 °C, AC impedance spectroscopy
+    - conductivity: 0.0005 S/cm, 25 °C
+    - activation_energy: 0.38 eV
+- **10.1021/acsenergylett.4c00317** (1 σ, 1 Ea)
+    - conductivity: 2e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021_acsenergylett.4c00317** (1 σ, 0 Ea)
+    - conductivity: 2e-05 S/cm p.2
+      > LLM ensemble extraction from 10.1021_acsenergylett.4c00317.pdf
+
+## Sr0.4375Li0.375Zr0.25Ta0.75O3
+
+- **Family:** oxide
+- **Papers:** 4 | **Measurements:** 8 (4 σ, 4 Ea)
+- **Median σ:** 6.48e-04 S/cm (95% CI 3.50e-04–1.20e-03) [3.50e-04–1.20e-03]
+- **Uncertainty:** MAD 0.27 log10, std 0.27 log10, IQR 0.54 log10 — agreement **A**
+- **Median Ea:** 0.330 eV
+- **Temperature range:** 25–25 °C (5 measurements)
+- **σ vs temperature:** 25°C: n=3, median 3.5e-04 S/cm [3.5e-04–1.2e-03]
+- **Consensus score:** 85/100 — **strong consensus**
+- **Quality score:** 64/100 (C) — metadata completeness 25% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-023-37115-6, 10.1038_s41467-023-37115-6, 10.48550/arxiv.2204.00091, 10.48550_arxiv.2204.00091
+
+### Papers
+
+- **10.1038_s41467-023-37115-6** (1 σ, 1 Ea)
+    - conductivity: 0.00035 S/cm, 25 °C
+      > LLM ensemble extraction from 10.1038_s41467-023-37115-6.pdf
+    - activation_energy: 0.33 eV
+      > LLM ensemble extraction from 10.1038_s41467-023-37115-6.pdf
+- **10.48550_arxiv.2204.00091** (1 σ, 1 Ea)
+    - conductivity: 0.0012 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.48550_arxiv.2204.00091.pdf
+    - activation_energy: 0.33 eV, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.48550_arxiv.2204.00091.pdf
+- **10.1038/s41467-023-37115-6** (1 σ, 1 Ea)
+    - conductivity: 0.00035 S/cm, 25 °C
+    - activation_energy: 0.33 eV, 25 °C
+- **10.48550/arxiv.2204.00091** (1 σ, 1 Ea)
+    - conductivity: 0.0012 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.33 eV, 25 °C, AC impedance spectroscopy
+
+## Li2HClO
+
+- **Family:** antiperovskite
+- **Papers:** 3 | **Measurements:** 7 (4 σ, 3 Ea)
+- **Median σ:** 4.43e-07 S/cm (95% CI 1.37e-07–1.40e-06) [1.37e-07–1.40e-06]
+- **Uncertainty:** MAD 0.50 log10, std 0.50 log10, IQR 1.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (5 measurements)
+- **σ vs temperature:** 25°C: n=3, median 1.4e-07 S/cm [1.4e-07–1.4e-06]
+- **Consensus score:** 75/100 — **strong consensus**
+- **Quality score:** 54/100 (C) — metadata completeness 25% (temp+method)
+- **Structure (MP):**
+    - Space group: Pnma (#62.0, Orthorhombic)
+    - Band gap: 4.969 eV
+    - Formation energy: -1.809 eV/atom
+    - Stable: False
+- **DOIs:** 10.1021/acs.chemmater.0c02602, 10.1021_acs.chemmater.0c02602, 10.1038/s41467-023-42385-1
+
+### Papers
+
+- **10.1038/s41467-023-42385-1** (2 σ, 2 Ea)
+    - conductivity: 1.37e-07 S/cm, 25 °C, EIS
+      > Manual: undoped Li2OHCl (cubic, this work) ionic conductivity 1.37e-4 mS/cm = 1.37e-7 S/cm at 25C; 32x lower than K-doped.
+    - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
+    - conductivity: 1.4e-07 S/cm, 25 °C
+    - activation_energy: 0.6 eV
+- **10.1021/acs.chemmater.0c02602** (1 σ, 1 Ea)
+    - conductivity: 1.4e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021_acs.chemmater.0c02602** (1 σ, 0 Ea)
+    - conductivity: 1.4e-06 S/cm p.1
+      > LLM ensemble extraction from 10.1021_acs.chemmater.0c02602.pdf
+
+## Li9.54Si1.74P1.44S11.7Cl0.3
+
+- **Family:** argyrodite
+- **Papers:** 4 | **Measurements:** 7 (4 σ, 3 Ea)
+- **Median σ:** 2.50e-02 S/cm (95% CI 2.50e-02–2.50e-02) [2.50e-02–2.50e-02]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **A+**
+- **Median Ea:** 0.200 eV
+- **Temperature range:** 25–25 °C (4 measurements)
+- **σ vs temperature:** 25°C: n=3, median 2.5e-02 S/cm [2.5e-02–2.5e-02]
+- **Consensus score:** 75/100 — **strong consensus**
+- **Quality score:** 66/100 (C) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/smll.202509918, 10.1002_smll.202509918, 10.1016/j.matlet.2020.127508, 10.1038/s41563-023-01522-1
+
+### Papers
+
+- **10.1002/smll.202509918** (1 σ, 1 Ea)
+    - conductivity: 0.025 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1016/j.matlet.2020.127508** (1 σ, 1 Ea)
+    - conductivity: 0.025 S/cm, 25 °C
+    - activation_energy: 0.2 eV
+- **10.1038/s41563-023-01522-1** (1 σ, 1 Ea)
+    - conductivity: 0.025 S/cm, 25 °C
+    - activation_energy: 0.2 eV
+- **10.1002_smll.202509918** (1 σ, 0 Ea)
+    - conductivity: 0.025 S/cm p.5
+      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
+
+## Na3PS4
+
+- **Family:** sulfide
+- **Papers:** 3 | **Measurements:** 6 (4 σ, 2 Ea)
+- **Median σ:** 3.16e-05 S/cm (95% CI 1.00e-05–1.90e-04) [1.00e-05–2.00e-04]
+- **Uncertainty:** MAD 0.50 log10, std 0.59 log10, IQR 1.08 log10 — agreement **C**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (3 measurements)
+- **σ vs temperature:** 25°C: n=2, median 4.5e-05 S/cm [1.0e-05–2.0e-04]
+- **Consensus score:** 75/100 — **strong consensus**
+- **Quality score:** 44/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/jacs.0c06668, 10.1021_jacs.0c06668, 10.1038/ncomms1843
+
+### Papers
+
+- **10.1021_jacs.0c06668** (2 σ, 0 Ea)
+    - conductivity: 0.0001 S/cm
+      > LLM ensemble extraction from 10.1021_jacs.0c06668.pdf
+    - conductivity: 1e-05 S/cm
+      > LLM ensemble extraction from 10.1021_jacs.0c06668.pdf
+- **10.1021/jacs.0c06668** (1 σ, 1 Ea)
+    - conductivity: 1e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1038/ncomms1843** (1 σ, 1 Ea)
+    - conductivity: 0.0002 S/cm, 25 °C
     - activation_energy: 0.35 eV
-- **10.1038_s41467-021-24697-2** (1 σ, 2 Ea)
-    - conductivity: 0.00081 S/cm p.3
-      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
-    - activation_energy: 0.35 eV p.2
-      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
-    - activation_energy: 0.5 eV p.2
-      > LLM ensemble extraction from 10.1038_s41467-021-24697-2.pdf
-- **10.1038/s41467-021-24697-2** (1 σ, 1 Ea)
-    - conductivity: 0.00081 S/cm, 25 °C, EIS
-    - activation_energy: 0.5 eV, 25 °C, EIS
 
 ## Li0.35La0.55TiO3-F2
 
@@ -707,35 +1011,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.000102 S/cm, 25 °C
     - activation_energy: 0.26 eV
 
-## Li10Ge(PS6)2
-
-- **Family:** sulfide
-- **Papers:** 2 | **Measurements:** 5 (3 σ, 2 Ea)
-- **Median σ:** 1.20e-02 S/cm (95% CI 1.01e-02–1.20e-02) [1.00e-02–1.20e-02]
-- **Uncertainty:** MAD 0.00 log10, std 0.04 log10, IQR 0.04 log10 — agreement **A+**
-- **Median Ea:** 0.220 eV
-- **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 1.2e-02 S/cm [1.2e-02–1.2e-02]
-- **Consensus score:** 70/100 — **moderate consensus**
-- **Quality score:** 60/100 (C) — metadata completeness 33% (temp+method)
-- **Structure (MP):**
-    - Space group: P4_2mc (#105.0, Tetragonal)
-    - Band gap: 2.055 eV
-    - Formation energy: -1.189 eV/atom
-    - Stable: False
-- **DOIs:** 10.1002_smll.202509918, 10.1038/nmat3066
-
-### Papers
-
-- **10.1038/nmat3066** (2 σ, 2 Ea)
-    - conductivity: 0.012 S/cm, 25 °C, AC impedance spectroscopy
-    - activation_energy: 0.22 eV, 25 °C, AC impedance spectroscopy
-    - conductivity: 0.012 S/cm, 25 °C
-    - activation_energy: 0.22 eV
-- **10.1002_smll.202509918** (1 σ, 0 Ea)
-    - conductivity: 0.01 S/cm p.1
-      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
-
 ## Li5.5P1S4.5Cl1.5
 
 - **Family:** argyrodite
@@ -746,7 +1021,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (3 measurements)
 - **σ vs temperature:** 25°C: n=2, median 7.8e-03 S/cm [5.0e-03–1.2e-02]
 - **Consensus score:** 70/100 — **moderate consensus**
-- **Quality score:** 58/100 (C) — metadata completeness 33% (temp+method)
+- **Quality score:** 54/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -760,8 +1035,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.17 eV p.2
       > LLM ensemble extraction from 10.3390_nano12244355.pdf
 - **10.3390/nano12244355** (1 σ, 1 Ea)
-    - conductivity: 0.00505 S/cm, 25 °C, EIS
-    - activation_energy: 0.17 eV, 25 °C, EIS
+    - conductivity: 0.00505 S/cm, 25 °C
+    - activation_energy: 0.17 eV, 25 °C
 - **10.1039/C7CC05980K** (1 σ, 1 Ea)
     - conductivity: 0.012 S/cm, 25 °C
     - activation_energy: 0.24 eV
@@ -795,31 +1070,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.004 S/cm, 25 °C
     - activation_energy: 0.28 eV
 
-## Li9.54Si1.74P1.44S11.7Cl0.3
-
-- **Family:** argyrodite
-- **Papers:** 3 | **Measurements:** 5 (3 σ, 2 Ea)
-- **Median σ:** 2.50e-02 S/cm (95% CI 2.50e-02–2.50e-02) [2.50e-02–2.50e-02]
-- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **A+**
-- **Median Ea:** 0.200 eV
-- **Temperature range:** 25–25 °C (2 measurements)
-- **σ vs temperature:** 25°C: n=2, median 2.5e-02 S/cm [2.5e-02–2.5e-02]
-- **Consensus score:** 70/100 — **moderate consensus**
-- **Quality score:** 60/100 (C) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1002_smll.202509918, 10.1016/j.matlet.2020.127508, 10.1038/s41563-023-01522-1
-
-### Papers
-
-- **10.1016/j.matlet.2020.127508** (1 σ, 1 Ea)
-    - conductivity: 0.025 S/cm, 25 °C
-    - activation_energy: 0.2 eV
-- **10.1038/s41563-023-01522-1** (1 σ, 1 Ea)
-    - conductivity: 0.025 S/cm, 25 °C
-    - activation_energy: 0.2 eV
-- **10.1002_smll.202509918** (1 σ, 0 Ea)
-    - conductivity: 0.025 S/cm p.5
-      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
-
 ## LiDFOB-TXE-FDMA-FEC
 
 - **Family:** polymer_composite
@@ -830,7 +1080,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** -20–25 °C (4 measurements)
 - **σ vs temperature:** -25°C: n=2, median 2.2e-04 S/cm [2.2e-04–2.2e-04]; 25°C: n=1, median 2.2e-04 S/cm [2.2e-04–2.2e-04]
 - **Consensus score:** 70/100 — **moderate consensus**
-- **Quality score:** 60/100 (C) — metadata completeness 33% (temp+method)
+- **Quality score:** 56/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -839,8 +1089,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.1038/s41467-023-35857-x** (2 σ, 2 Ea)
-    - conductivity: 0.00022 S/cm, -20 °C, EIS
-    - activation_energy: 0.33 eV, -20 °C, EIS
+    - conductivity: 0.00022 S/cm, -20 °C
+    - activation_energy: 0.33 eV, -20 °C
     - conductivity: 0.00022 S/cm, 25 °C
     - activation_energy: 0.33 eV
 - **10.1038_s41467-023-35857-x** (1 σ, 1 Ea)
@@ -859,7 +1109,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 7.4e-04 S/cm [7.4e-04–7.4e-04]
 - **Consensus score:** 70/100 — **moderate consensus**
-- **Quality score:** 54/100 (C) — metadata completeness 33% (temp+method)
+- **Quality score:** 50/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -875,8 +1125,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.00074 S/cm p.1
       > LLM ensemble extraction from 10.1038_s43246-024-00601-5.pdf
 - **10.1038/s43246-024-00601-5** (1 σ, 1 Ea)
-    - conductivity: 0.00074 S/cm, 25 °C, EIS
-    - activation_energy: 0.69 eV, 25 °C, EIS
+    - conductivity: 0.00074 S/cm, 25 °C
+    - activation_energy: 0.69 eV, 25 °C
 
 ## Na3HfZrSi2PO12
 
@@ -945,7 +1195,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=2, median 2.9e-04 S/cm [2.9e-04–2.9e-04]
 - **Consensus score:** 64/100 — **moderate consensus**
-- **Quality score:** 60/100 (C) — metadata completeness 33% (temp+method)
+- **Quality score:** 56/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -956,7 +1206,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.1021/acsaem.0c02525** (2 σ, 1 Ea)
     - activation_energy: 0.29 eV, EIS
       > Verified against PDF text: acsaem.0c02525 CE53 LiBH4-MgO 2.86e-4 S/cm @20C Ea=0.29 eV (below 60C); CE26 1.07e-4, CE74 5.94e-6 @20C; s11664 LLTO-F2 sigma_b=2.78e-4 @25C.
-    - conductivity: 0.000286 S/cm, 25 °C, EIS
+    - conductivity: 0.000286 S/cm, 25 °C
     - conductivity: 0.000286 S/cm, 25 °C
 - **10.1021_acsaem.0c02525** (1 σ, 0 Ea)
     - conductivity: 0.000286 S/cm p.1
@@ -964,7 +1214,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 
 ## 0.7Li(CB9H10)-0.3Li(CB11H12)
 
-- **Family:** hydride
+- **Family:** complex_hydride
 - **Papers:** 2 | **Measurements:** 6 (3 σ, 3 Ea)
 - **Median σ:** 6.70e-03 S/cm (95% CI 6.70e-03–6.70e-03) [6.70e-03–6.70e-03]
 - **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **A+**
@@ -972,7 +1222,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (3 measurements)
 - **σ vs temperature:** 25°C: n=2, median 6.7e-03 S/cm [6.7e-03–6.7e-03]
 - **Consensus score:** 60/100 — **moderate consensus**
-- **Quality score:** 60/100 (C) — metadata completeness 33% (temp+method)
+- **Quality score:** 56/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -981,8 +1231,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.1038/s41467-019-09061-9** (2 σ, 2 Ea)
-    - conductivity: 0.0067 S/cm, 25 °C, EIS
-    - activation_energy: 0.294 eV, 25 °C, EIS
+    - conductivity: 0.0067 S/cm, 25 °C
+    - activation_energy: 0.294 eV, 25 °C
     - conductivity: 0.0067 S/cm, 25 °C
     - activation_energy: 0.294 eV
 - **10.1038_s41467-019-09061-9** (1 σ, 1 Ea)
@@ -1001,7 +1251,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (3 measurements)
 - **σ vs temperature:** 25°C: n=2, median 3.8e-04 S/cm [2.1e-04–7.0e-04]
 - **Consensus score:** 60/100 — **moderate consensus**
-- **Quality score:** 58/100 (C) — metadata completeness 25% (temp+method)
+- **Quality score:** 54/100 (C) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1010,47 +1260,17 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.3389/fchem.2022.966274** (1 σ, 1 Ea)
-    - conductivity: 0.00021 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 0.00021 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.1038/s43246-026-01164-3** (1 σ, 1 Ea)
-    - conductivity: nan S/cm, EIS
-    - activation_energy: 0.14 eV, EIS
+    - conductivity: nan S/cm
+    - activation_energy: 0.14 eV
 - **10.1038/s41598-018-23824-y** (1 σ, 1 Ea)
     - conductivity: 0.0007 S/cm, 25 °C
     - activation_energy: 0.35 eV
 - **10.3389_fchem.2022.966274** (1 σ, 0 Ea)
     - conductivity: 0.00021 S/cm p.1
       > LLM ensemble extraction from 10.3389_fchem.2022.966274.pdf
-
-## Li2HClO
-
-- **Family:** antiperovskite
-- **Papers:** 2 | **Measurements:** 5 (3 σ, 2 Ea)
-- **Median σ:** 1.40e-07 S/cm (95% CI 1.37e-07–1.25e-06) [1.37e-07–1.40e-06]
-- **Uncertainty:** MAD 0.01 log10, std 0.47 log10, IQR 0.50 log10 — agreement **C**
-- **Median Ea:** nan eV
-- **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 1.4e-07 S/cm [1.4e-07–1.4e-07]
-- **Consensus score:** 60/100 — **moderate consensus**
-- **Quality score:** 42/100 (D) — metadata completeness 33% (temp+method)
-- **Structure (MP):**
-    - Space group: Pnma (#62.0, Orthorhombic)
-    - Band gap: 4.969 eV
-    - Formation energy: -1.809 eV/atom
-    - Stable: False
-- **DOIs:** 10.1021_acs.chemmater.0c02602, 10.1038/s41467-023-42385-1
-
-### Papers
-
-- **10.1038/s41467-023-42385-1** (2 σ, 2 Ea)
-    - conductivity: 1.37e-07 S/cm, 25 °C, EIS
-      > Manual: undoped Li2OHCl (cubic, this work) ionic conductivity 1.37e-4 mS/cm = 1.37e-7 S/cm at 25C; 32x lower than K-doped.
-    - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
-    - conductivity: 1.4e-07 S/cm, 25 °C
-    - activation_energy: 0.6 eV
-- **10.1021_acs.chemmater.0c02602** (1 σ, 0 Ea)
-    - conductivity: 1.4e-06 S/cm p.1
-      > LLM ensemble extraction from 10.1021_acs.chemmater.0c02602.pdf
 
 ## Li3ClO
 
@@ -1062,7 +1282,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (5 measurements)
 - **σ vs temperature:** 25°C: n=3, median 3.2e-05 S/cm [1.0e-07–3.2e-05]
 - **Consensus score:** 60/100 — **moderate consensus**
-- **Quality score:** 40/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 37/100 (D) — metadata completeness 25% (temp+method)
 - **Outliers (1):**
     - σ=1e-07 (1.00e-07 is 320x from group median)
 - **Structure (MP):**
@@ -1075,8 +1295,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.3389/fchem.2020.562549** (2 σ, 2 Ea)
-    - conductivity: 3.21e-05 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 3.21e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
     - conductivity: 3.2e-05 S/cm, 25 °C
     - activation_energy: 0.55 eV
 - **10.1021/ja305709z** (1 σ, 1 Ea)
@@ -1085,6 +1305,36 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.3389_fchem.2020.562549** (1 σ, 0 Ea)
     - conductivity: 3.21e-05 S/cm p.1
       > LLM ensemble extraction from 10.3389_fchem.2020.562549.pdf
+
+## Li3YBr6
+
+- **Family:** halide
+- **Papers:** 3 | **Measurements:** 5 (3 σ, 2 Ea)
+- **Median σ:** 2.00e-04 S/cm (95% CI 2.00e-04–1.53e-03) [2.00e-04–1.70e-03]
+- **Uncertainty:** MAD 0.00 log10, std 0.44 log10, IQR 0.46 log10 — agreement **C**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (3 measurements)
+- **σ vs temperature:** 25°C: n=2, median 5.8e-04 S/cm [2.0e-04–1.7e-03]
+- **Consensus score:** 60/100 — **moderate consensus**
+- **Quality score:** 46/100 (D) — metadata completeness 33% (temp+method)
+- **Structure (MP):**
+    - Space group: C2/c (#15.0, Monoclinic)
+    - Band gap: 4.136 eV
+    - Formation energy: -1.998 eV/atom
+    - Stable: False
+- **DOIs:** 10.1038/s41557-020-0416-5, 10.1149/1945-7111/acfdd1, 10.1149_1945-7111_acfdd1
+
+### Papers
+
+- **10.1149/1945-7111/acfdd1** (1 σ, 1 Ea)
+    - conductivity: 0.0002 S/cm, 25 °C, EIS
+    - activation_energy: nan eV, 25 °C, EIS
+- **10.1038/s41557-020-0416-5** (1 σ, 1 Ea)
+    - conductivity: 0.0017 S/cm, 25 °C
+    - activation_energy: 0.34 eV
+- **10.1149_1945-7111_acfdd1** (1 σ, 0 Ea)
+    - conductivity: 0.0002 S/cm, EIS
+      > LLM ensemble extraction from 10.1149_1945-7111_acfdd1.pdf
 
 ## PEO-LiTFSI
 
@@ -1096,7 +1346,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (4 measurements)
 - **σ vs temperature:** 25°C: n=3, median 1.0e-06 S/cm [1.0e-06–1.8e-06]
 - **Consensus score:** 60/100 — **moderate consensus**
-- **Quality score:** 42/100 (D) — metadata completeness 40% (temp+method)
+- **Quality score:** 38/100 (D) — metadata completeness 20% (temp+method)
 - **Outliers (1):**
     - σ=0.00018 (1.80e-04 is 134x from group median)
 - **Structure (MP):**
@@ -1110,15 +1360,42 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 1.21 eV
       > with an activation energy of 1.21 eV and 0.42 eV below and higher than the melting temperature point of 59.6 C
     - conductivity: 1e-06 S/cm, 25 °C, AC impedance spectroscopy
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
     - conductivity: 1e-06 S/cm, 25 °C
     - activation_energy: 1.21 eV
 - **10.3390/polym12091889** (1 σ, 1 Ea)
-    - conductivity: 1.8e-06 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 1.8e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.3390_polym12091889** (1 σ, 0 Ea)
     - conductivity: 1.8e-06 S/cm
       > LLM ensemble extraction from 10.3390_polym12091889.pdf
+
+## Ca-CeO2/LiTFSI/PEO
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 1.30e-04 S/cm [1.30e-04–1.30e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.100 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.3e-04 S/cm [1.3e-04–1.3e-04]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/aenm.202000049, 10.1002_aenm.202000049
+
+### Papers
+
+- **10.1002_aenm.202000049** (1 σ, 1 Ea)
+    - conductivity: 0.00013 S/cm p.2
+      > LLM ensemble extraction from 10.1002_aenm.202000049.pdf
+    - activation_energy: 0.1 eV p.2
+      > LLM ensemble extraction from 10.1002_aenm.202000049.pdf
+- **10.1002/aenm.202000049** (1 σ, 1 Ea)
+    - conductivity: 0.00013 S/cm, 25 °C
+    - activation_energy: 0.1 eV, 25 °C
 
 ## K0.01Li1.98H0.99Cl1O0.99
 
@@ -1142,7 +1419,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.56 eV
       > the transport of Li+ ions with the lowest activation energy of 0.56 eV (Fig. 4d), leading to the highest ionic conductivity of 4.5 x 10-3 mS cm-1
     - conductivity: 4.5e-06 S/cm, 25 °C, AC impedance spectroscopy
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
     - conductivity: 4.5e-06 S/cm, 25 °C
     - activation_energy: 0.56 eV
 
@@ -1223,13 +1500,121 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 2e-05 S/cm, 25 °C
     - activation_energy: 0.35 eV
 
+## Li0.35La0.55TiO3-2wt%LiF
+
+- **Family:** perovskite
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 1.02e-04 S/cm [1.02e-04–1.02e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.260 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.0e-04 S/cm [1.0e-04–1.0e-04]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s11664-021-09331-7, 10.1007_s11664-021-09331-7
+
+### Papers
+
+- **10.1007_s11664-021-09331-7** (1 σ, 1 Ea)
+    - conductivity: 0.000102 S/cm p.1
+      > LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf
+    - activation_energy: 0.26 eV p.1
+      > LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf
+- **10.1007/s11664-021-09331-7** (1 σ, 1 Ea)
+    - conductivity: 0.000102 S/cm, 25 °C
+    - activation_energy: 0.26 eV, 25 °C
+
+## Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 1.00e-04 S/cm [1.00e-04–1.00e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.200 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.0e-04 S/cm [1.0e-04–1.0e-04]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1016/j.heliyon.2024.e28097, 10.1016_j.heliyon.2024.e28097
+
+### Papers
+
+- **10.1016_j.heliyon.2024.e28097** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm p.5
+      > LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf
+    - activation_energy: 0.2 eV p.1
+      > LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf
+- **10.1016/j.heliyon.2024.e28097** (1 σ, 1 Ea)
+    - conductivity: 0.0001 S/cm, 25 °C
+    - activation_energy: 0.2 eV, 25 °C
+
+## Li1.3Y0.01Ti1.7Al0.29P3O12
+
+- **Family:** nasicon
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 8.40e-06 S/cm [8.40e-06–8.40e-06]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.400 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 8.4e-06 S/cm [8.4e-06–8.4e-06]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.3390/nano15010042, 10.3390_nano15010042
+
+### Papers
+
+- **10.3390_nano15010042** (1 σ, 1 Ea)
+    - conductivity: 8.4e-06 S/cm p.12
+      > LLM ensemble extraction from 10.3390_nano15010042.pdf
+    - activation_energy: 0.4 eV p.3
+      > LLM ensemble extraction from 10.3390_nano15010042.pdf
+- **10.3390/nano15010042** (1 σ, 1 Ea)
+    - conductivity: 8.4e-06 S/cm, 25 °C
+    - activation_energy: 0.4 eV, 25 °C
+
+## Li1.3Y0.05Ti1.7Al0.25P3O12
+
+- **Family:** nasicon
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 1.20e-05 S/cm [1.20e-05–1.20e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.300 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.2e-05 S/cm [1.2e-05–1.2e-05]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.3390/nano15010042, 10.3390_nano15010042
+
+### Papers
+
+- **10.3390_nano15010042** (1 σ, 1 Ea)
+    - conductivity: 1.2e-05 S/cm p.12
+      > LLM ensemble extraction from 10.3390_nano15010042.pdf
+    - activation_energy: 0.3 eV p.3
+      > LLM ensemble extraction from 10.3390_nano15010042.pdf
+- **10.3390/nano15010042** (1 σ, 1 Ea)
+    - conductivity: 1.2e-05 S/cm, 25 °C
+    - activation_energy: 0.3 eV, 25 °C
+
 ## Li1.3Y0.1Ti1.7Al0.2P3O12
 
 - **Family:** nasicon
 - **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
 - **Median σ:** 1.42e-04 S/cm [2.40e-05–8.40e-04]
 - **Uncertainty:** MAD 0.77 log10, std 0.77 log10, IQR 0.77 log10 — agreement **C**
-- **Median Ea:** nan eV
+- **Median Ea:** 0.200 eV
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 8.4e-04 S/cm [8.4e-04–8.4e-04]
 - **Consensus score:** 40/100 — **weak consensus**
@@ -1244,7 +1629,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.3390/nano15010042** (1 σ, 1 Ea)
     - conductivity: 0.00084 S/cm, 25 °C, EIS
       > Manual: LAY0.1TP@750C highest RT ionic conductivity 0.84 mS/cm = 8.4e-4 S/cm (vs 0.78 mS/cm for x=0.075 in lit).
-    - activation_energy: nan eV, 25 °C, EIS
+    - activation_energy: 0.2 eV, 25 °C, EIS
 - **10.3390_nano15010042** (1 σ, 1 Ea)
     - conductivity: 2.4e-05 S/cm p.12
       > LLM ensemble extraction from 10.3390_nano15010042.pdf
@@ -1285,7 +1670,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 1.5e-03 S/cm [1.5e-03–1.5e-03]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1299,8 +1684,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.33 eV
       > LLM ensemble extraction from 10.1038_s41467-026-69737-x.pdf
 - **10.1038/s41467-026-69737-x** (1 σ, 1 Ea)
-    - conductivity: 0.0015 S/cm, 25 °C, EIS
-    - activation_energy: 0.33 eV, 25 °C, EIS
+    - conductivity: 0.0015 S/cm, 25 °C
+    - activation_energy: 0.33 eV, 25 °C
 
 ## Li3PS4
 
@@ -1328,29 +1713,32 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 3e-05 S/cm, 25 °C
     - activation_energy: 0.4 eV
 
-## Li3YCl6
+## Li4-xGe1-xPxO4
 
-- **Family:** halide
-- **Papers:** 1 | **Measurements:** 4 (2 σ, 2 Ea)
-- **Median σ:** 5.00e-04 S/cm [5.00e-04–5.00e-04]
+- **Family:** oxide
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 1.00e-05 S/cm [1.00e-05–1.00e-05]
 - **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
-- **Median Ea:** 0.380 eV
-- **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 5.0e-04 S/cm [5.0e-04–5.0e-04]
+- **Median Ea:** 0.470 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.0e-05 S/cm [1.0e-05–1.0e-05]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 44/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1016/j.matt.2019.06.004
+- **DOIs:** 10.1039/d5ta07144e, 10.1039_d5ta07144e
 
 ### Papers
 
-- **10.1016/j.matt.2019.06.004** (2 σ, 2 Ea)
-    - conductivity: 0.0005 S/cm, 25 °C, AC impedance spectroscopy
-    - activation_energy: 0.38 eV, 25 °C, AC impedance spectroscopy
-    - conductivity: 0.0005 S/cm, 25 °C
-    - activation_energy: 0.38 eV
+- **10.1039_d5ta07144e** (1 σ, 1 Ea)
+    - conductivity: 1e-05 S/cm p.1
+      > LLM ensemble extraction from 10.1039_d5ta07144e.pdf
+    - activation_energy: 0.47 eV p.1
+      > LLM ensemble extraction from 10.1039_d5ta07144e.pdf
+- **10.1039/d5ta07144e** (1 σ, 1 Ea)
+    - conductivity: 1e-05 S/cm, 25 °C
+    - activation_energy: 0.47 eV, 25 °C
 
 ## Li4GeS4
 
@@ -1390,7 +1778,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 7.3e-03 S/cm [7.3e-03–7.3e-03]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1404,8 +1792,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.09 eV p.1
       > LLM ensemble extraction from 10.3390_nano12244355.pdf
 - **10.3390/nano12244355** (1 σ, 1 Ea)
-    - conductivity: 0.00729 S/cm, 25 °C, EIS
-    - activation_energy: 0.09 eV, 25 °C, EIS
+    - conductivity: 0.00729 S/cm, 25 °C
+    - activation_energy: 0.09 eV, 25 °C
 
 ## Li6.4La3Ce0.1Zr1.9Ga0.2O12
 
@@ -1417,7 +1805,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (3 measurements)
 - **σ vs temperature:** 25°C: n=2, median 4.0e-04 S/cm [4.0e-04–4.0e-04]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1431,8 +1819,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.29 eV
       > LLM ensemble extraction from 10.1007_s11664-026-12871-5.pdf
 - **10.1007/s11664-026-12871-5** (1 σ, 1 Ea)
-    - conductivity: 0.0004 S/cm, 25 °C, EIS
-    - activation_energy: 0.29 eV, 25 °C, EIS
+    - conductivity: 0.0004 S/cm, 25 °C
+    - activation_energy: 0.29 eV, 25 °C
 
 ## Li6.6La3Zr1.6Nb0.4O12
 
@@ -1444,7 +1832,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 5.1e-04 S/cm [5.1e-04–5.1e-04]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1458,8 +1846,35 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.311 eV p.1
       > LLM ensemble extraction from 10.3390_ma13030560.pdf
 - **10.3390/ma13030560** (1 σ, 1 Ea)
-    - conductivity: 0.000509 S/cm, 25 °C, EIS
-    - activation_energy: 0.311 eV, 25 °C, EIS
+    - conductivity: 0.000509 S/cm, 25 °C
+    - activation_energy: 0.311 eV, 25 °C
+
+## Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12
+
+- **Family:** garnet
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 6.61e-04 S/cm [6.61e-04–6.61e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.250 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 6.6e-04 S/cm [6.6e-04–6.6e-04]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1016/j.ceramint.2023.09.330, 10.1016_j.ceramint.2023.09.330
+
+### Papers
+
+- **10.1016_j.ceramint.2023.09.330** (1 σ, 1 Ea)
+    - conductivity: 0.000661 S/cm p.11
+      > LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf
+    - activation_energy: 0.25 eV p.8
+      > LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf
+- **10.1016/j.ceramint.2023.09.330** (1 σ, 1 Ea)
+    - conductivity: 0.000661 S/cm, 25 °C
+    - activation_energy: 0.25 eV, 25 °C
 
 ## Li6P1S5I0.5Cl0.5
 
@@ -1543,7 +1958,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 1.0e-04 S/cm [1.0e-04–1.0e-04]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1557,8 +1972,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.0001 S/cm
       > LLM ensemble extraction from 10.1021_acsami.0c10361.pdf
 - **10.1021/acsami.0c10361** (1 σ, 1 Ea)
-    - conductivity: 0.0001 S/cm, 25 °C, EIS
-    - activation_energy: 0.43 eV, 25 °C, EIS
+    - conductivity: 0.0001 S/cm, 25 °C
+    - activation_energy: 0.43 eV, 25 °C
 
 ## Na2.9H1Se0.9I0.1
 
@@ -1570,7 +1985,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 100–100 °C (3 measurements)
 - **σ vs temperature:** 100°C: n=2, median 1.0e-04 S/cm [1.0e-04–1.0e-04]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1584,8 +1999,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.18 eV
       > LLM ensemble extraction from 10.1038_s41467-020-20370-2.pdf
 - **10.1038/s41467-020-20370-2** (1 σ, 1 Ea)
-    - conductivity: 0.0001 S/cm, 100 °C, EIS
-    - activation_energy: 0.18 eV, 100 °C, EIS
+    - conductivity: 0.0001 S/cm, 100 °C
+    - activation_energy: 0.18 eV, 100 °C
 
 ## Na3HSe
 
@@ -1597,7 +2012,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 100–100 °C (3 measurements)
 - **σ vs temperature:** 100°C: n=2, median 1.0e-04 S/cm [1.0e-04–1.0e-04]
 - **Consensus score:** 40/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1611,35 +2026,62 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.16 eV
       > LLM ensemble extraction from 10.1038_s41467-020-20370-2.pdf
 - **10.1038/s41467-020-20370-2** (1 σ, 1 Ea)
-    - conductivity: 0.0001 S/cm, 100 °C, EIS
-    - activation_energy: 0.16 eV, 100 °C, EIS
+    - conductivity: 0.0001 S/cm, 100 °C
+    - activation_energy: 0.16 eV, 100 °C
 
-## Sr0.4375Li0.375Zr0.25Ta0.75O3
+## NaB9H10C
 
-- **Family:** oxide
+- **Family:** polymer_composite
 - **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
-- **Median σ:** 3.50e-04 S/cm [3.50e-04–3.50e-04]
+- **Median σ:** 3.00e-02 S/cm [3.00e-02–3.00e-02]
 - **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
-- **Median Ea:** 0.330 eV
-- **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 3.5e-04 S/cm [3.5e-04–3.5e-04]
+- **Median Ea:** 0.200 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.0e-02 S/cm [3.0e-02–3.0e-02]
 - **Consensus score:** 40/100 — **weak consensus**
 - **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1038/s41467-023-37115-6, 10.1038_s41467-023-37115-6
+- **DOIs:** 10.1002/aenm.201502237, 10.1002_aenm.201502237
 
 ### Papers
 
-- **10.1038_s41467-023-37115-6** (1 σ, 1 Ea)
-    - conductivity: 0.00035 S/cm, 25 °C
-      > LLM ensemble extraction from 10.1038_s41467-023-37115-6.pdf
-    - activation_energy: 0.33 eV
-      > LLM ensemble extraction from 10.1038_s41467-023-37115-6.pdf
-- **10.1038/s41467-023-37115-6** (1 σ, 1 Ea)
-    - conductivity: 0.00035 S/cm, 25 °C, EIS
-    - activation_energy: 0.33 eV, 25 °C, EIS
+- **10.1002_aenm.201502237** (1 σ, 1 Ea)
+    - conductivity: 0.03 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1002_aenm.201502237.pdf
+    - activation_energy: 0.2 eV, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1002_aenm.201502237.pdf
+- **10.1002/aenm.201502237** (1 σ, 1 Ea)
+    - conductivity: 0.03 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.2 eV, 25 °C, AC impedance spectroscopy
+
+## ZnH12C4(Br2N)2
+
+- **Family:** unknown
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 2.90e-04 S/cm [2.90e-04–2.90e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** 0.100 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 2.9e-04 S/cm [2.9e-04–2.9e-04]
+- **Consensus score:** 40/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-026-68394-4, 10.1038_s41467-026-68394-4
+
+### Papers
+
+- **10.1038_s41467-026-68394-4** (1 σ, 1 Ea)
+    - conductivity: 0.00029 S/cm
+      > LLM ensemble extraction from 10.1038_s41467-026-68394-4.pdf
+    - activation_energy: 0.1 eV
+      > LLM ensemble extraction from 10.1038_s41467-026-68394-4.pdf
+- **10.1038/s41467-026-68394-4** (1 σ, 1 Ea)
+    - conductivity: 0.00029 S/cm, 25 °C
+    - activation_energy: 0.1 eV, 25 °C
 
 ## 40wt%Li2OHCl0.5Br0.5/NBRCPE
 
@@ -1665,30 +2107,56 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: nan eV, 25 °C, EIS
     - conductivity: 2.6e-05 S/cm, 25 °C
 
-## Ca-CeO2/LiTFSI/PEO
+## 80(3LiBH4LiCl)20P2S5
 
-- **Family:** polymer_composite
+- **Family:** argyrodite
 - **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
-- **Median σ:** 1.30e-04 S/cm [1.30e-04–1.30e-04]
+- **Median σ:** 1.00e-05 S/cm [1.00e-05–1.00e-05]
 - **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
 - **Median Ea:** nan eV
 - **Temperature range:** 25–25 °C (2 measurements)
-- **σ vs temperature:** 25°C: n=1, median 1.3e-04 S/cm [1.3e-04–1.3e-04]
+- **σ vs temperature:** 25°C: n=1, median 1.0e-05 S/cm [1.0e-05–1.0e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1039/d0cp01334j, 10.1039_d0cp01334j
+
+### Papers
+
+- **10.1039/d0cp01334j** (1 σ, 1 Ea)
+    - conductivity: 1e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1039_d0cp01334j** (1 σ, 0 Ea)
+    - conductivity: 1e-05 S/cm p.3
+      > LLM ensemble extraction from 10.1039_d0cp01334j.pdf
+
+## Cs1In0.067Sn0.9Cl3
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.32e-04 S/cm [3.20e-04–3.45e-04]
+- **Uncertainty:** MAD 0.02 log10, std 0.02 log10, IQR 0.02 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.4e-04 S/cm [3.4e-04–3.4e-04]
 - **Consensus score:** 34/100 — **weak consensus**
 - **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1002/aenm.202000049, 10.1002_aenm.202000049
+- **DOIs:** 10.1002/aenm.202300982, 10.1002_aenm.202300982
 
 ### Papers
 
-- **10.1002/aenm.202000049** (1 σ, 1 Ea)
-    - conductivity: 0.00013 S/cm, 25 °C, EIS
+- **10.1002/aenm.202300982** (1 σ, 1 Ea)
+    - conductivity: 0.000345 S/cm, 25 °C, EIS
+      > Manual: structurally flexible halide SE CsSn0.9In0.067Cl3 high ionic conductivity 3.45e-4 S/cm at 25C.
     - activation_energy: nan eV, 25 °C, EIS
-- **10.1002_aenm.202000049** (1 σ, 0 Ea)
-    - conductivity: 0.00013 S/cm p.2
-      > LLM ensemble extraction from 10.1002_aenm.202000049.pdf
+- **10.1002_aenm.202300982** (1 σ, 0 Ea)
+    - conductivity: 0.00032 S/cm p.1
+      > LLM ensemble extraction from 10.1002_aenm.202300982.pdf
 
 ## ERBPSN
 
@@ -1714,6 +2182,81 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: nan eV, 25 °C, EIS
     - conductivity: 1.1e-05 S/cm, 25 °C
 
+## Li(BH4)1-xIx
+
+- **Family:** borohydride
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 4.90e-05 S/cm [4.90e-05–4.90e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 4.9e-05 S/cm [4.9e-05–4.9e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acsomega.5c13516, 10.1021_acsomega.5c13516
+
+### Papers
+
+- **10.1021/acsomega.5c13516** (1 σ, 1 Ea)
+    - conductivity: 4.9e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021_acsomega.5c13516** (1 σ, 0 Ea)
+    - conductivity: 4.9e-05 S/cm p.1
+      > LLM ensemble extraction from 10.1021_acsomega.5c13516.pdf
+
+## Li0.35La0.55TiO3-4wt%LiF
+
+- **Family:** perovskite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 2.46e-05 S/cm [2.46e-05–2.46e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 2.5e-05 S/cm [2.5e-05–2.5e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s11664-021-09331-7, 10.1007_s11664-021-09331-7
+
+### Papers
+
+- **10.1007/s11664-021-09331-7** (1 σ, 1 Ea)
+    - conductivity: 2.46e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007_s11664-021-09331-7** (1 σ, 0 Ea)
+    - conductivity: 2.46e-05 S/cm p.2
+      > LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf
+
+## Li0.35La0.55TiO3-6wt%LiF
+
+- **Family:** perovskite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 2.25e-05 S/cm [2.25e-05–2.25e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 2.3e-05 S/cm [2.3e-05–2.3e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s11664-021-09331-7, 10.1007_s11664-021-09331-7
+
+### Papers
+
+- **10.1007/s11664-021-09331-7** (1 σ, 1 Ea)
+    - conductivity: 2.25e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007_s11664-021-09331-7** (1 σ, 0 Ea)
+    - conductivity: 2.25e-05 S/cm p.2
+      > LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf
+
 ## Li1.3Al0.3In0.1Ti1.7(PO4)3/PVDF
 
 - **Family:** polymer_composite
@@ -1724,7 +2267,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 1.7e-05 S/cm [1.7e-05–1.7e-05]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1733,11 +2276,36 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.35378/gujs.1589340** (1 σ, 1 Ea)
-    - conductivity: 1.7e-05 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 1.7e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.35378_gujs.1589340** (1 σ, 0 Ea)
     - conductivity: 1.7e-05 S/cm p.6
       > LLM ensemble extraction from 10.35378_gujs.1589340.pdf
+
+## Li1.3Al0.3Ti1.7(PO4)3-4wt%Li0.348La0.55TiO3
+
+- **Family:** perovskite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 7.60e-04 S/cm [7.60e-04–7.60e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 7.6e-04 S/cm [7.6e-04–7.6e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.5796/electrochemistry.84.967, 10.5796_electrochemistry.84.967
+
+### Papers
+
+- **10.5796/electrochemistry.84.967** (1 σ, 1 Ea)
+    - conductivity: 0.00076 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
+- **10.5796_electrochemistry.84.967** (1 σ, 0 Ea)
+    - conductivity: 0.00076 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.5796_electrochemistry.84.967.pdf
 
 ## Li1.3Al0.3Ti1.7(PO4)3/PVDF-HFPCSE
 
@@ -1763,6 +2331,181 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: nan eV, 25 °C, EIS
     - conductivity: 0.000283 S/cm, 25 °C
 
+## Li2.51Zr0.25Nb0.12In0.63Cl6
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 6.40e-04 S/cm [6.40e-04–6.40e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 6.4e-04 S/cm [6.4e-04–6.4e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.5796/electrochemistry.24-00088, 10.5796_electrochemistry.24-00088
+
+### Papers
+
+- **10.5796/electrochemistry.24-00088** (1 σ, 1 Ea)
+    - conductivity: 0.00064 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.5796_electrochemistry.24-00088** (1 σ, 0 Ea)
+    - conductivity: 0.00064 S/cm
+      > LLM ensemble extraction from 10.5796_electrochemistry.24-00088.pdf
+
+## Li2.56Zr0.06Nb0.19In0.75Cl6
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 5.70e-04 S/cm [5.70e-04–5.70e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 5.7e-04 S/cm [5.7e-04–5.7e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.5796/electrochemistry.24-00088, 10.5796_electrochemistry.24-00088
+
+### Papers
+
+- **10.5796/electrochemistry.24-00088** (1 σ, 1 Ea)
+    - conductivity: 0.00057 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.5796_electrochemistry.24-00088** (1 σ, 0 Ea)
+    - conductivity: 0.00057 S/cm
+      > LLM ensemble extraction from 10.5796_electrochemistry.24-00088.pdf
+
+## Li2.5Zr0.38Nb0.06In0.56Cl6
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 5.30e-04 S/cm [5.30e-04–5.30e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 5.3e-04 S/cm [5.3e-04–5.3e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.5796/electrochemistry.24-00088, 10.5796_electrochemistry.24-00088
+
+### Papers
+
+- **10.5796/electrochemistry.24-00088** (1 σ, 1 Ea)
+    - conductivity: 0.00053 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.5796_electrochemistry.24-00088** (1 σ, 0 Ea)
+    - conductivity: 0.00053 S/cm
+      > LLM ensemble extraction from 10.5796_electrochemistry.24-00088.pdf
+
+## Li2O-TaCl5
+
+- **Family:** oxide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 8.30e-03 S/cm [8.30e-03–8.30e-03]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 8.3e-03 S/cm [8.3e-03–8.3e-03]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.20517/energymater.2024.277, 10.20517_energymater.2024.277
+
+### Papers
+
+- **10.20517/energymater.2024.277** (1 σ, 1 Ea)
+    - conductivity: 0.0083 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.20517_energymater.2024.277** (1 σ, 0 Ea)
+    - conductivity: 0.0083 S/cm p.1
+      > LLM ensemble extraction from 10.20517_energymater.2024.277.pdf
+
+## Li2Zr1Cl5.5F0.5
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 1.10e-04 S/cm [1.10e-04–1.10e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.1e-04 S/cm [1.1e-04–1.1e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acsami.3c03513, 10.1021_acsami.3c03513
+
+### Papers
+
+- **10.1021/acsami.3c03513** (1 σ, 1 Ea)
+    - conductivity: 0.00011 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1021_acsami.3c03513** (1 σ, 0 Ea)
+    - conductivity: 0.00011 S/cm p.2
+      > LLM ensemble extraction from 10.1021_acsami.3c03513.pdf
+
+## Li3xZrCl4Nx
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.21e-03 S/cm [3.21e-03–3.21e-03]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.2e-03 S/cm [3.2e-03–3.2e-03]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-026-71879-x, 10.1038_s41467-026-71879-x
+
+### Papers
+
+- **10.1038/s41467-026-71879-x** (1 σ, 1 Ea)
+    - conductivity: 0.00321 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
+- **10.1038_s41467-026-71879-x** (1 σ, 0 Ea)
+    - conductivity: 0.00321 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1038_s41467-026-71879-x.pdf
+
+## Li4.8In1Cl7.8
+
+- **Family:** halide
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 6.00e-05 S/cm [6.00e-05–6.00e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 6.0e-05 S/cm [6.0e-05–6.0e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-025-56932-5, 10.1038_s41467-025-56932-5
+
+### Papers
+
+- **10.1038/s41467-025-56932-5** (1 σ, 1 Ea)
+    - conductivity: 6e-05 S/cm, 25 °C, EIS
+    - activation_energy: nan eV, 25 °C, EIS
+- **10.1038_s41467-025-56932-5** (1 σ, 0 Ea)
+    - conductivity: 6e-05 S/cm, EIS
+      > LLM ensemble extraction from 10.1038_s41467-025-56932-5.pdf
+
 ## Li6.25Al0.25La3Zr2O12-in-PEGDA
 
 - **Family:** polymer_composite
@@ -1773,7 +2516,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 5.1e-04 S/cm [5.1e-04–5.1e-04]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1782,33 +2525,36 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.1021/acsaem.5c01010** (1 σ, 1 Ea)
-    - conductivity: 0.00051 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 0.00051 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.1021_acsaem.5c01010** (1 σ, 0 Ea)
     - conductivity: 0.00051 S/cm p.1
       > LLM ensemble extraction from 10.1021_acsaem.5c01010.pdf
 
-## Li6.4La3Zr2Ga0.2O12
+## Li6.5Ge0.5P0.5S5I1
 
-- **Family:** garnet
-- **Papers:** 1 | **Measurements:** 3 (2 σ, 1 Ea)
-- **Median σ:** 3.68e-04 S/cm [1.04e-04–1.30e-03]
-- **Uncertainty:** MAD 0.55 log10, std 0.55 log10, IQR 0.55 log10 — agreement **B**
-- **Median Ea:** 0.300 eV
-- **Temperature range:** 25–25 °C (1 measurements)
-- **σ vs temperature:** 25°C: n=1, median 1.3e-03 S/cm [1.3e-03–1.3e-03]
+- **Family:** argyrodite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 5.40e-04 S/cm [5.40e-04–5.40e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 5.4e-04 S/cm [5.4e-04–5.4e-04]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 37/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.16984_saufenbilder.1590407
+- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acs.nanolett.0c01028, 10.1021_acs.nanolett.0c01028
 
 ### Papers
 
-- **unknown** (1 σ, 1 Ea)
-    - conductivity: 0.0013 S/cm, 25 °C
-    - activation_energy: 0.3 eV
-- **10.16984_saufenbilder.1590407** (1 σ, 0 Ea)
-    - conductivity: 0.000104 S/cm p.1
-      > LLM ensemble extraction from 10.16984_saufenbilder.1590407.pdf
+- **10.1021/acs.nanolett.0c01028** (1 σ, 1 Ea)
+    - conductivity: 0.00054 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: nan eV, 25 °C, AC impedance spectroscopy
+- **10.1021_acs.nanolett.0c01028** (1 σ, 0 Ea)
+    - conductivity: 0.00054 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1021_acs.nanolett.0c01028.pdf
 
 ## Li6.5La3-xBaxZr1.5-xTa0.5+xO12
 
@@ -1820,7 +2566,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 8.3e-04 S/cm [8.3e-04–8.3e-04]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1829,8 +2575,8 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.3389/fenrg.2016.00028** (1 σ, 1 Ea)
-    - conductivity: 0.000834 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 0.000834 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.3389_fenrg.2016.00028** (1 σ, 0 Ea)
     - conductivity: 0.000834 S/cm p.1
       > LLM ensemble extraction from 10.3389_fenrg.2016.00028.pdf
@@ -1845,7 +2591,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (2 measurements)
 - **σ vs temperature:** 25°C: n=1, median 7.6e-04 S/cm [7.6e-04–7.6e-04]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1854,37 +2600,85 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.3390/molecules30092028** (1 σ, 1 Ea)
-    - conductivity: 0.000757 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 0.000757 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.3390_molecules30092028** (1 σ, 0 Ea)
     - conductivity: 0.000757 S/cm p.1
       > LLM ensemble extraction from 10.3390_molecules30092028.pdf
 
-## Li6PS5I
+## Li6PS4Cl0.75-OF0.25
 
 - **Family:** argyrodite
 - **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
-- **Median σ:** 6.78e-06 S/cm [1.00e-06–4.60e-05]
-- **Uncertainty:** MAD 0.83 log10, std 0.83 log10, IQR 0.83 log10 — agreement **C**
-- **Median Ea:** 0.360 eV
-- **Temperature range:** 25–25 °C (1 measurements)
-- **σ vs temperature:** 25°C: n=1, median 4.6e-05 S/cm [4.6e-05–4.6e-05]
+- **Median σ:** 2.47e-06 S/cm [2.47e-06–2.47e-06]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 2.5e-06 S/cm [2.5e-06–2.5e-06]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 35/100 (D) — metadata completeness 0% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
-    - Space group: Cc (#9.0, Monoclinic)
-    - Band gap: 2.274 eV
-    - Formation energy: -1.291 eV/atom
-    - Stable: False
-- **DOIs:** 10.1002_smll.202509918, 10.1039/C5EE02930D
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/advs.202304117, 10.1002_advs.202304117
 
 ### Papers
 
-- **10.1039/C5EE02930D** (1 σ, 1 Ea)
-    - conductivity: 4.6e-05 S/cm, 25 °C
-    - activation_energy: 0.36 eV
+- **10.1002/advs.202304117** (1 σ, 1 Ea)
+    - conductivity: 2.47e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1002_advs.202304117** (1 σ, 0 Ea)
+    - conductivity: 2.47e-06 S/cm p.1
+      > LLM ensemble extraction from 10.1002_advs.202304117.pdf
+
+## Li7La3Zr2O12-8wt.%Li3BO3
+
+- **Family:** garnet
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 1.61e-05 S/cm [1.61e-05–1.61e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 1.6e-05 S/cm [1.6e-05–1.6e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.4191/kcers.2016.53.6.712, 10.4191_kcers.2016.53.6.712
+
+### Papers
+
+- **10.4191/kcers.2016.53.6.712** (1 σ, 1 Ea)
+    - conductivity: 1.61e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.4191_kcers.2016.53.6.712** (1 σ, 0 Ea)
+    - conductivity: 1.61e-05 S/cm
+      > LLM ensemble extraction from 10.4191_kcers.2016.53.6.712.pdf
+
+## Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6
+
+- **Family:** argyrodite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.20e-02 S/cm [3.20e-02–3.20e-02]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.2e-02 S/cm [3.2e-02–3.2e-02]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/smll.202509918, 10.1002_smll.202509918
+
+### Papers
+
+- **10.1002/smll.202509918** (1 σ, 1 Ea)
+    - conductivity: 0.032 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.1002_smll.202509918** (1 σ, 0 Ea)
-    - conductivity: 1e-06 S/cm p.3
+    - conductivity: 0.032 S/cm p.6
       > LLM ensemble extraction from 10.1002_smll.202509918.pdf
 
 ## Na3HfScSi(PO6)2
@@ -1897,7 +2691,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **Temperature range:** 25–25 °C (3 measurements)
 - **σ vs temperature:** 25°C: n=2, median 1.2e-04 S/cm [1.2e-04–1.2e-04]
 - **Consensus score:** 34/100 — **weak consensus**
-- **Quality score:** 48/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
@@ -1906,11 +2700,86 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 ### Papers
 
 - **10.1038/s41467-023-40669-0** (1 σ, 1 Ea)
-    - conductivity: 0.00012 S/cm, 25 °C, EIS
-    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 0.00012 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
 - **10.1038_s41467-023-40669-0** (1 σ, 0 Ea)
     - conductivity: 0.00012 S/cm, 25 °C
       > LLM ensemble extraction from 10.1038_s41467-023-40669-0.pdf
+
+## PEO-LiTFSI-LLZTO-SN-ETPTA
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 2.12e-04 S/cm [2.12e-04–2.12e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 2.1e-04 S/cm [2.1e-04–2.1e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s11581-024-05451-2, 10.1007_s11581-024-05451-2
+
+### Papers
+
+- **10.1007/s11581-024-05451-2** (1 σ, 1 Ea)
+    - conductivity: 0.000212 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007_s11581-024-05451-2** (1 σ, 0 Ea)
+    - conductivity: 0.000212 S/cm p.2
+      > LLM ensemble extraction from 10.1007_s11581-024-05451-2.pdf
+
+## PVDF-HFP
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 4.20e-05 S/cm [4.20e-05–4.20e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 4.2e-05 S/cm [4.2e-05–4.2e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.3390/gels12060534, 10.3390_gels12060534
+
+### Papers
+
+- **10.3390/gels12060534** (1 σ, 1 Ea)
+    - conductivity: 4.2e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.3390_gels12060534** (1 σ, 0 Ea)
+    - conductivity: 4.2e-05 S/cm p.3
+      > LLM ensemble extraction from 10.3390_gels12060534.pdf
+
+## PVDF-HFP-LLZTO(10wt%)
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.40e-04 S/cm [3.40e-04–3.40e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.4e-04 S/cm [3.4e-04–3.4e-04]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.3390/gels12060534, 10.3390_gels12060534
+
+### Papers
+
+- **10.3390/gels12060534** (1 σ, 1 Ea)
+    - conductivity: 0.00034 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.3390_gels12060534** (1 σ, 0 Ea)
+    - conductivity: 0.00034 S/cm p.1
+      > LLM ensemble extraction from 10.3390_gels12060534.pdf
 
 ## PVDF-HFP/10%LLZTO
 
@@ -1935,6 +2804,81 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
       > Manual (PVDF-HFP + 10 wt% LLZTO composite, SS/GPE/SS): 10 wt% LLZTO exhibited the best overall performance, with an ionic conductivity of 3.40 × 10−4 S·cm−1 at ambient temperature.
     - activation_energy: nan eV, 25 °C, EIS
     - conductivity: 0.00034 S/cm, 25 °C
+
+## Sr0.3Li0.4Zr0.5Ti1.5P3O12
+
+- **Family:** nasicon
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 9.65e-06 S/cm [9.65e-06–9.65e-06]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 9.7e-06 S/cm [9.7e-06–9.7e-06]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s43939-024-00089-3, 10.1007_s43939-024-00089-3
+
+### Papers
+
+- **10.1007/s43939-024-00089-3** (1 σ, 1 Ea)
+    - conductivity: 9.65e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007_s43939-024-00089-3** (1 σ, 0 Ea)
+    - conductivity: 9.65e-06 S/cm p.1
+      > LLM ensemble extraction from 10.1007_s43939-024-00089-3.pdf
+
+## Sr0.3Li0.4Zr2P3O12
+
+- **Family:** nasicon
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.20e-05 S/cm [3.20e-05–3.20e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.2e-05 S/cm [3.2e-05–3.2e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s43939-024-00089-3, 10.1007_s43939-024-00089-3
+
+### Papers
+
+- **10.1007/s43939-024-00089-3** (1 σ, 1 Ea)
+    - conductivity: 3.2e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1007_s43939-024-00089-3** (1 σ, 0 Ea)
+    - conductivity: 3.2e-05 S/cm p.1
+      > LLM ensemble extraction from 10.1007_s43939-024-00089-3.pdf
+
+## UiO-66/PEO
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (2 σ, 1 Ea)
+- **Median σ:** 3.00e-05 S/cm [3.00e-05–3.00e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **σ vs temperature:** 25°C: n=1, median 3.0e-05 S/cm [3.0e-05–3.0e-05]
+- **Consensus score:** 34/100 — **weak consensus**
+- **Quality score:** 41/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.15541/jim20200206, 10.15541_jim20200206
+
+### Papers
+
+- **10.15541/jim20200206** (1 σ, 1 Ea)
+    - conductivity: 3e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.15541_jim20200206** (1 σ, 0 Ea)
+    - conductivity: 3e-05 S/cm p.2
+      > LLM ensemble extraction from 10.15541_jim20200206.pdf
 
 ## 0.5Li2SO4-ZrCl4
 
@@ -2022,30 +2966,33 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.00083 S/cm, 25 °C
     - activation_energy: 0.26 eV
 
-## LiB9H10C
+## Li6.4La3Zr2Ga0.2O12
 
-- **Family:** borohydride
-- **Papers:** 1 | **Measurements:** 4 (2 σ, 2 Ea)
-- **Median σ:** 3.60e-06 S/cm [3.60e-06–3.60e-06]
-- **Uncertainty:** MAD 0.00 log10, std 0.00 log10, IQR 0.00 log10 — agreement **B**
+- **Family:** garnet
+- **Papers:** 2 | **Measurements:** 5 (3 σ, 2 Ea)
+- **Median σ:** 1.04e-04 S/cm (95% CI 1.04e-04–1.15e-03) [1.04e-04–1.30e-03]
+- **Uncertainty:** MAD 0.00 log10, std 0.52 log10, IQR 0.55 log10 — agreement **D**
 - **Median Ea:** nan eV
 - **Temperature range:** 25–25 °C (3 measurements)
-- **σ vs temperature:** 25°C: n=2, median 3.6e-06 S/cm [3.6e-06–3.6e-06]
+- **σ vs temperature:** 25°C: n=2, median 3.7e-04 S/cm [1.0e-04–1.3e-03]
 - **Consensus score:** 30/100 — **weak consensus**
-- **Quality score:** 44/100 (D) — metadata completeness 50% (temp+method)
+- **Quality score:** 32/100 (D) — metadata completeness 0% (temp+method)
 - **Structure (MP):**
     - Band gap: nan eV
     - Formation energy: nan eV/atom
-- **DOIs:** 10.1038/s41467-019-09061-9
+- **DOIs:** 10.16984/saufenbilder.1590407, 10.16984_saufenbilder.1590407
 
 ### Papers
 
-- **10.1038/s41467-019-09061-9** (2 σ, 2 Ea)
-    - conductivity: 3.6e-06 S/cm, 25 °C, EIS
-      > Manual: pure Li(CB9H10) ionic conductivity 3.6e-6 S/cm at 25C (3 orders lower than 0.7/0.3 mixture).
-    - activation_energy: nan eV, 25 °C, EIS
-    - conductivity: 3.6e-06 S/cm, 25 °C
-    - activation_energy: 0.299 eV
+- **10.16984/saufenbilder.1590407** (1 σ, 1 Ea)
+    - conductivity: 0.000104 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **unknown** (1 σ, 1 Ea)
+    - conductivity: 0.0013 S/cm, 25 °C
+    - activation_energy: 0.3 eV
+- **10.16984_saufenbilder.1590407** (1 σ, 0 Ea)
+    - conductivity: 0.000104 S/cm p.1
+      > LLM ensemble extraction from 10.16984_saufenbilder.1590407.pdf
 
 ## PEO-5%COF-LZU1
 
@@ -2096,6 +3043,32 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 1e-05 S/cm, 25 °C
     - activation_energy: 0.42 eV
 
+## 1.4Li2O-0.75ZrCl4-0.25AlCl3
+
+- **Family:** oxide
+- **Papers:** 2 | **Measurements:** 4 (2 σ, 2 Ea)
+- **Median σ:** 2.55e-06 S/cm [2.55e-06–2.55e-06]
+- **Agreement grade:** C
+- **Median Ea:** 0.276 eV
+- **Temperature range:** 25–25 °C (2 measurements)
+- **Consensus score:** 25/100 — **weak consensus**
+- **Quality score:** 42/100 (D) — metadata completeness 50% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-025-68210-5, 10.1038_s41467-025-68210-5
+
+### Papers
+
+- **10.1038_s41467-025-68210-5** (1 σ, 1 Ea)
+    - conductivity: 0.00255 S/cm, ionic conductivity measurement
+      > LLM ensemble extraction from 10.1038_s41467-025-68210-5.pdf
+    - activation_energy: 0.276 eV, ionic conductivity measurement
+      > LLM ensemble extraction from 10.1038_s41467-025-68210-5.pdf
+- **10.1038/s41467-025-68210-5** (1 σ, 1 Ea)
+    - conductivity: nan S/cm, 25 °C, ionic conductivity measurement
+    - activation_energy: 0.276 eV, 25 °C, ionic conductivity measurement
+
 ## Li3.7Ge0.7P0.3S4
 
 - **Family:** sulfide
@@ -2117,7 +3090,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.1021/acsami.4c22390** (2 σ, 2 Ea)
     - activation_energy: 0.39 eV, PEIS p.5
       > Manual (390 ± 12 meV (P substitution)): Li4GeS4 was found to have an activation energy of 457 ± 17 meV. The substituted materials exhibit lower activation energies of 390 ± 12, 413 ± 12, 391 ± 15 meV for P, As, and Sb, respectively.
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
     - conductivity: 0.0001 S/cm, 25 °C
     - activation_energy: 0.39 eV
 
@@ -2147,6 +3120,78 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - activation_energy: 0.21 eV p.1
       > LLM ensemble extraction from 10.1126_sciadv.abj7698.pdf
 
+## AP2F
+
+- **Family:** unknown
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.043 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/advs.202400466, 10.1002_advs.202400466
+
+### Papers
+
+- **10.1002/advs.202400466** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.043 eV
+- **10.1002_advs.202400466** (0 σ, 1 Ea)
+    - activation_energy: 0.043 eV p.1
+      > LLM ensemble extraction from 10.1002_advs.202400466.pdf
+
+## Li0.35La0.55Ti1O3
+
+- **Family:** perovskite
+- **Papers:** 3 | **Measurements:** 5 (3 σ, 2 Ea)
+- **Median σ:** 1.57e-05 S/cm (95% CI 1.57e-05–5.79e-04) [1.57e-05–7.00e-04]
+- **Uncertainty:** MAD 0.00 log10, std 0.78 log10, IQR 0.82 log10 — agreement **D**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (3 measurements)
+- **σ vs temperature:** 25°C: n=2, median 1.0e-04 S/cm [1.6e-05–7.0e-04]
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 30/100 (D) — metadata completeness 0% (temp+method)
+- **Outliers (1):**
+    - σ=0.0007 (7.00e-04 is 45x from group median)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s11664-021-09331-7, 10.1007_s11664-021-09331-7, 10.1016/j.ssi.2006.06.027
+
+### Papers
+
+- **10.1007/s11664-021-09331-7** (1 σ, 1 Ea)
+    - conductivity: 1.57e-05 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1016/j.ssi.2006.06.027** (1 σ, 1 Ea)
+    - conductivity: 0.0007 S/cm, 25 °C
+    - activation_energy: 0.3 eV
+- **10.1007_s11664-021-09331-7** (1 σ, 0 Ea)
+    - conductivity: 1.57e-05 S/cm p.2
+      > LLM ensemble extraction from 10.1007_s11664-021-09331-7.pdf
+
+## Li1.3Y0.15Ti1.7Al0.15P3O12
+
+- **Family:** nasicon
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.100 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.3390/nano15010042, 10.3390_nano15010042
+
+### Papers
+
+- **10.3390/nano15010042** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.1 eV
+- **10.3390_nano15010042** (0 σ, 1 Ea)
+    - activation_energy: 0.1 eV p.1
+      > LLM ensemble extraction from 10.3390_nano15010042.pdf
+
 ## Li3.7Ge0.7As0.3S4
 
 - **Family:** sulfide
@@ -2164,7 +3209,7 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.1021/acsami.4c22390** (1 σ, 2 Ea)
     - activation_energy: 0.413 eV, PEIS p.5
       > Manual (413 ± 12 meV (As substitution)): Li4GeS4 was found to have an activation energy of 457 ± 17 meV. The substituted materials exhibit lower activation energies of 390 ± 12, 413 ± 12, 391 ± 15 meV for P, As, and Sb, respectively.
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
     - activation_energy: 0.413 eV
 
 ## Li3.7Ge0.7Sb0.3S4
@@ -2184,8 +3229,187 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.1021/acsami.4c22390** (1 σ, 2 Ea)
     - activation_energy: 0.391 eV, PEIS p.5
       > Manual (391 ± 15 meV (Sb substitution)): Li4GeS4 was found to have an activation energy of 457 ± 17 meV. The substituted materials exhibit lower activation energies of 390 ± 12, 413 ± 12, 391 ± 15 meV for P, As, and Sb, respectively.
-    - conductivity: nan S/cm, EIS
+    - conductivity: nan S/cm
     - activation_energy: 0.391 eV
+
+## Li6.7Si0.105Ge0.595P0.3S5I1
+
+- **Family:** argyrodite
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.200 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/smll.202509918, 10.1002_smll.202509918
+
+### Papers
+
+- **10.1002/smll.202509918** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.2 eV
+- **10.1002_smll.202509918** (0 σ, 1 Ea)
+    - activation_energy: 0.2 eV p.1
+      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
+
+## Li6PS5I
+
+- **Family:** argyrodite
+- **Papers:** 3 | **Measurements:** 5 (3 σ, 2 Ea)
+- **Median σ:** 1.00e-06 S/cm (95% CI 1.00e-06–3.80e-05) [1.00e-06–4.60e-05]
+- **Uncertainty:** MAD 0.00 log10, std 0.78 log10, IQR 0.83 log10 — agreement **D**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (3 measurements)
+- **σ vs temperature:** 25°C: n=2, median 6.8e-06 S/cm [1.0e-06–4.6e-05]
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 30/100 (D) — metadata completeness 0% (temp+method)
+- **Outliers (1):**
+    - σ=4.6e-05 (4.60e-05 is 46x from group median)
+- **Structure (MP):**
+    - Space group: Cc (#9.0, Monoclinic)
+    - Band gap: 2.274 eV
+    - Formation energy: -1.291 eV/atom
+    - Stable: False
+- **DOIs:** 10.1002/smll.202509918, 10.1002_smll.202509918, 10.1039/C5EE02930D
+
+### Papers
+
+- **10.1002/smll.202509918** (1 σ, 1 Ea)
+    - conductivity: 1e-06 S/cm, 25 °C
+    - activation_energy: nan eV, 25 °C
+- **10.1039/C5EE02930D** (1 σ, 1 Ea)
+    - conductivity: 4.6e-05 S/cm, 25 °C
+    - activation_energy: 0.36 eV
+- **10.1002_smll.202509918** (1 σ, 0 Ea)
+    - conductivity: 1e-06 S/cm p.3
+      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
+
+## Li7Ca0.25La2.75Zr1.75Nb0.25O12
+
+- **Family:** garnet
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.370 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1126/sciadv.1601659, 10.1126_sciadv.1601659
+
+### Papers
+
+- **10.1126/sciadv.1601659** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.37 eV
+- **10.1126_sciadv.1601659** (0 σ, 1 Ea)
+    - activation_energy: 0.37 eV, EIS
+      > LLM ensemble extraction from 10.1126_sciadv.1601659.pdf
+
+## LiTFSI-PC(quasi-solid)
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.300 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1038/s41467-022-29118-6, 10.1038_s41467-022-29118-6
+
+### Papers
+
+- **10.1038/s41467-022-29118-6** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.3 eV
+- **10.1038_s41467-022-29118-6** (0 σ, 1 Ea)
+    - activation_energy: 0.3 eV p.3
+      > LLM ensemble extraction from 10.1038_s41467-022-29118-6.pdf
+
+## LiTFSI-SN
+
+- **Family:** hydride
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.230 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s40820-024-01592-1, 10.1007_s40820-024-01592-1
+
+### Papers
+
+- **10.1007/s40820-024-01592-1** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.23 eV
+- **10.1007_s40820-024-01592-1** (0 σ, 1 Ea)
+    - activation_energy: 0.23 eV p.4
+      > LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf
+
+## LiTFSI-SN-FEC
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.180 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1007/s40820-024-01592-1, 10.1007_s40820-024-01592-1
+
+### Papers
+
+- **10.1007/s40820-024-01592-1** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.18 eV
+- **10.1007_s40820-024-01592-1** (0 σ, 1 Ea)
+    - activation_energy: 0.18 eV p.4
+      > LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf
+
+## PEO/LiFSI
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.350 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acsnano.3c03901, 10.1021_acsnano.3c03901
+
+### Papers
+
+- **10.1021/acsnano.3c03901** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.35 eV
+- **10.1021_acsnano.3c03901** (0 σ, 1 Ea)
+    - activation_energy: 0.35 eV p.16
+      > LLM ensemble extraction from 10.1021_acsnano.3c03901.pdf
+
+## PEO/LiTFSI
+
+- **Family:** polymer_composite
+- **Papers:** 2 | **Measurements:** 3 (1 σ, 2 Ea)
+- **Median Ea:** 0.430 eV
+- **Consensus score:** 20/100 — **no consensus**
+- **Quality score:** 20/100 (D) — metadata completeness 0% (temp+method)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1021/acsnano.3c03901, 10.1021_acsnano.3c03901
+
+### Papers
+
+- **10.1021/acsnano.3c03901** (1 σ, 1 Ea)
+    - conductivity: nan S/cm
+    - activation_energy: 0.43 eV
+- **10.1021_acsnano.3c03901** (0 σ, 1 Ea)
+    - activation_energy: 0.43 eV p.3
+      > LLM ensemble extraction from 10.1021_acsnano.3c03901.pdf
 
 ## 0-LATP/PVDF-HFP-LiTFSICSE
 
@@ -2285,29 +3509,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 - **10.3390/polym16091251** (1 σ, 1 Ea)
     - conductivity: 0.000138 S/cm, 25 °C, EIS
       > Manual: Co-doped LATP/PVDF-HFP-LiTFSI composite 1.38e-4 S/cm ambient.
-    - activation_energy: nan eV, 25 °C, EIS
-
-## Cs1In0.067Sn0.9Cl3
-
-- **Family:** halide
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 3.45e-04 S/cm [3.45e-04–3.45e-04]
-- **Agreement grade:** C
-- **Median Ea:** nan eV
-- **Temperature range:** 25–25 °C (2 measurements)
-- **σ vs temperature:** 25°C: n=1, median 3.4e-04 S/cm [3.4e-04–3.4e-04]
-- **Consensus score:** 19/100 — **no consensus**
-- **Quality score:** 44/100 (D) — metadata completeness 100% (temp+method)
-- **Structure (MP):**
-    - Band gap: nan eV
-    - Formation energy: nan eV/atom
-- **DOIs:** 10.1002/aenm.202300982
-
-### Papers
-
-- **10.1002/aenm.202300982** (1 σ, 1 Ea)
-    - conductivity: 0.000345 S/cm, 25 °C, EIS
-      > Manual: structurally flexible halide SE CsSn0.9In0.067Cl3 high ionic conductivity 3.45e-4 S/cm at 25C.
     - activation_energy: nan eV, 25 °C, EIS
 
 ## Cu-LATP/PVDF-HFP-LiTFSICSE
@@ -2529,25 +3730,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
 
 - **unknown** (1 σ, 1 Ea)
     - conductivity: 0.001 S/cm, 25 °C
-    - activation_energy: 0.3 eV
-
-## Li0.35La0.55Ti1O3
-
-- **Family:** perovskite
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 7.00e-04 S/cm [7.00e-04–7.00e-04]
-- **Agreement grade:** C
-- **Median Ea:** 0.300 eV
-- **Temperature range:** 25–25 °C (1 measurements)
-- **σ vs temperature:** 25°C: n=1, median 7.0e-04 S/cm [7.0e-04–7.0e-04]
-- **Consensus score:** 19/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1016/j.ssi.2006.06.027
-
-### Papers
-
-- **10.1016/j.ssi.2006.06.027** (1 σ, 1 Ea)
-    - conductivity: 0.0007 S/cm, 25 °C
     - activation_energy: 0.3 eV
 
 ## Li0.35La0.55TiO3(LLTO-F0)
@@ -5340,30 +6522,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 1e-07 S/cm, 25 °C
     - activation_energy: 0.7 eV
 
-## Li3YBr6
-
-- **Family:** halide
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 1.70e-03 S/cm [1.70e-03–1.70e-03]
-- **Agreement grade:** C
-- **Median Ea:** 0.340 eV
-- **Temperature range:** 25–25 °C (1 measurements)
-- **σ vs temperature:** 25°C: n=1, median 1.7e-03 S/cm [1.7e-03–1.7e-03]
-- **Consensus score:** 19/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **Structure (MP):**
-    - Space group: C2/c (#15.0, Monoclinic)
-    - Band gap: 4.136 eV
-    - Formation energy: -1.998 eV/atom
-    - Stable: False
-- **DOIs:** 10.1038/s41557-020-0416-5
-
-### Papers
-
-- **10.1038/s41557-020-0416-5** (1 σ, 1 Ea)
-    - conductivity: 0.0017 S/cm, 25 °C
-    - activation_energy: 0.34 eV
-
 ## Li3YCl6(as-prepared)
 
 - **Family:** halide
@@ -7859,25 +9017,6 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
     - conductivity: 0.0015 S/cm, 25 °C
     - activation_energy: 0.28 eV
 
-## Na3PS4
-
-- **Family:** sulfide
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 2.00e-04 S/cm [2.00e-04–2.00e-04]
-- **Agreement grade:** C
-- **Median Ea:** 0.350 eV
-- **Temperature range:** 25–25 °C (1 measurements)
-- **σ vs temperature:** 25°C: n=1, median 2.0e-04 S/cm [2.0e-04–2.0e-04]
-- **Consensus score:** 19/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1038/ncomms1843
-
-### Papers
-
-- **10.1038/ncomms1843** (1 σ, 1 Ea)
-    - conductivity: 0.0002 S/cm, 25 °C
-    - activation_energy: 0.35 eV
-
 ## Na3PS4(glass-ceramic)
 
 - **Family:** sulfide
@@ -8649,300 +9788,40 @@ Generated from `literature_output/consensus_db.json`. **405 materials**, **990 m
       > Manual: Zr-doped LATP/PVDF-HFP-LiTFSI composite 1.21e-4 S/cm ambient.
     - activation_energy: nan eV, 25 °C, EIS
 
-## Li1.3Al0.3Ti1.7(PO4)3-PVDF-HFP
+## LiB9H10C
 
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 1.00e-04 S/cm [1.00e-04–1.00e-04]
-- **Agreement grade:** C
-- **Median Ea:** 0.200 eV
-- **Consensus score:** 14/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1016_j.heliyon.2024.e28097
-
-### Papers
-
-- **10.1016_j.heliyon.2024.e28097** (1 σ, 1 Ea)
-    - conductivity: 0.0001 S/cm p.5
-      > LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf
-    - activation_energy: 0.2 eV p.1
-      > LLM ensemble extraction from 10.1016_j.heliyon.2024.e28097.pdf
-
-## Li1.3Y0.01Ti1.7Al0.29P3O12
-
-- **Family:** nasicon
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 8.40e-06 S/cm [8.40e-06–8.40e-06]
-- **Agreement grade:** C
-- **Median Ea:** 0.400 eV
-- **Consensus score:** 14/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.3390_nano15010042
+- **Family:** borohydride
+- **Papers:** 3 | **Measurements:** 8 (4 σ, 4 Ea)
+- **Median σ:** 3.29e-04 S/cm (95% CI 3.60e-06–3.00e-02) [3.60e-06–3.00e-02]
+- **Uncertainty:** MAD 1.96 log10, std 1.96 log10, IQR 3.92 log10 — agreement **D**
+- **Median Ea:** nan eV
+- **Temperature range:** 25–25 °C (5 measurements)
+- **σ vs temperature:** 25°C: n=3, median 3.6e-06 S/cm [3.6e-06–3.0e-02]
+- **Consensus score:** 0/100 — **no consensus**
+- **Quality score:** 26/100 (D) — metadata completeness 50% (temp+method)
+- **Outliers (4):**
+    - σ=3.6e-06 (3.60e-06 is 91x from group median)
+    - σ=0.03 (3.00e-02 is 91x from group median)
+    - σ=0.03 (3.00e-02 is 91x from group median)
+    - σ=3.6e-06 (3.60e-06 is 91x from group median)
+- **Structure (MP):**
+    - Band gap: nan eV
+    - Formation energy: nan eV/atom
+- **DOIs:** 10.1002/aenm.201502237, 10.1002_aenm.201502237, 10.1038/s41467-019-09061-9
 
 ### Papers
 
-- **10.3390_nano15010042** (1 σ, 1 Ea)
-    - conductivity: 8.4e-06 S/cm p.12
-      > LLM ensemble extraction from 10.3390_nano15010042.pdf
-    - activation_energy: 0.4 eV p.3
-      > LLM ensemble extraction from 10.3390_nano15010042.pdf
-
-## Li1.3Y0.05Ti1.7Al0.25P3O12
-
-- **Family:** nasicon
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 1.20e-05 S/cm [1.20e-05–1.20e-05]
-- **Agreement grade:** C
-- **Median Ea:** 0.300 eV
-- **Consensus score:** 14/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.3390_nano15010042
-
-### Papers
-
-- **10.3390_nano15010042** (1 σ, 1 Ea)
-    - conductivity: 1.2e-05 S/cm p.12
-      > LLM ensemble extraction from 10.3390_nano15010042.pdf
-    - activation_energy: 0.3 eV p.3
-      > LLM ensemble extraction from 10.3390_nano15010042.pdf
-
-## Li4-xGe1-xPxO4
-
-- **Family:** oxide
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 1.00e-05 S/cm [1.00e-05–1.00e-05]
-- **Agreement grade:** C
-- **Median Ea:** 0.470 eV
-- **Consensus score:** 14/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1039_d5ta07144e
-
-### Papers
-
-- **10.1039_d5ta07144e** (1 σ, 1 Ea)
-    - conductivity: 1e-05 S/cm p.1
-      > LLM ensemble extraction from 10.1039_d5ta07144e.pdf
-    - activation_energy: 0.47 eV p.1
-      > LLM ensemble extraction from 10.1039_d5ta07144e.pdf
-
-## Li6.8-0.25Ge0.05La3Zr1.75Ta0.25O12
-
-- **Family:** garnet
-- **Papers:** 1 | **Measurements:** 2 (1 σ, 1 Ea)
-- **Median σ:** 6.61e-04 S/cm [6.61e-04–6.61e-04]
-- **Agreement grade:** C
-- **Median Ea:** 0.250 eV
-- **Consensus score:** 14/100 — **no consensus**
-- **Quality score:** 28/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1016_j.ceramint.2023.09.330
-
-### Papers
-
-- **10.1016_j.ceramint.2023.09.330** (1 σ, 1 Ea)
-    - conductivity: 0.000661 S/cm p.11
-      > LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf
-    - activation_energy: 0.25 eV p.8
-      > LLM ensemble extraction from 10.1016_j.ceramint.2023.09.330.pdf
-
-## 80(3LiBH4LiCl)20P2S5
-
-- **Family:** argyrodite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 1.00e-05 S/cm [1.00e-05–1.00e-05]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1039_d0cp01334j
-
-### Papers
-
-- **10.1039_d0cp01334j** (1 σ, 0 Ea)
-    - conductivity: 1e-05 S/cm p.3
-      > LLM ensemble extraction from 10.1039_d0cp01334j.pdf
-
-## Li2O-TaCl5
-
-- **Family:** oxide
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 8.30e-03 S/cm [8.30e-03–8.30e-03]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.20517_energymater.2024.277
-
-### Papers
-
-- **10.20517_energymater.2024.277** (1 σ, 0 Ea)
-    - conductivity: 0.0083 S/cm p.1
-      > LLM ensemble extraction from 10.20517_energymater.2024.277.pdf
-
-## Li6PS4Cl0.75-OF0.25
-
-- **Family:** argyrodite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 2.47e-06 S/cm [2.47e-06–2.47e-06]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1002_advs.202304117
-
-### Papers
-
-- **10.1002_advs.202304117** (1 σ, 0 Ea)
-    - conductivity: 2.47e-06 S/cm p.1
-      > LLM ensemble extraction from 10.1002_advs.202304117.pdf
-
-## Li9.54Si1.044Ge0.696P1.44S11.1Br0.3O0.6
-
-- **Family:** argyrodite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 3.20e-02 S/cm [3.20e-02–3.20e-02]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1002_smll.202509918
-
-### Papers
-
-- **10.1002_smll.202509918** (1 σ, 0 Ea)
-    - conductivity: 0.032 S/cm p.6
-      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
-
-## PEO-LiTFSI-LLZTO-SN-ETPTA
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 2.12e-04 S/cm [2.12e-04–2.12e-04]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1007_s11581-024-05451-2
-
-### Papers
-
-- **10.1007_s11581-024-05451-2** (1 σ, 0 Ea)
-    - conductivity: 0.000212 S/cm p.2
-      > LLM ensemble extraction from 10.1007_s11581-024-05451-2.pdf
-
-## PVDF-HFP
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 4.20e-05 S/cm [4.20e-05–4.20e-05]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.3390_gels12060534
-
-### Papers
-
-- **10.3390_gels12060534** (1 σ, 0 Ea)
-    - conductivity: 4.2e-05 S/cm p.3
-      > LLM ensemble extraction from 10.3390_gels12060534.pdf
-
-## PVDF-HFP-LLZTO(10wt%)
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 3.40e-04 S/cm [3.40e-04–3.40e-04]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.3390_gels12060534
-
-### Papers
-
-- **10.3390_gels12060534** (1 σ, 0 Ea)
-    - conductivity: 0.00034 S/cm p.1
-      > LLM ensemble extraction from 10.3390_gels12060534.pdf
-
-## UiO-66/PEO
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (1 σ, 0 Ea)
-- **Median σ:** 3.00e-05 S/cm [3.00e-05–3.00e-05]
-- **Agreement grade:** C
-- **Consensus score:** 10/100 — **no consensus**
-- **Quality score:** 18/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.15541_jim20200206
-
-### Papers
-
-- **10.15541_jim20200206** (1 σ, 0 Ea)
-    - conductivity: 3e-05 S/cm p.2
-      > LLM ensemble extraction from 10.15541_jim20200206.pdf
-
-## Li1.3Y0.15Ti1.7Al0.15P3O12
-
-- **Family:** nasicon
-- **Papers:** 1 | **Measurements:** 1 (0 σ, 1 Ea)
-- **Median Ea:** 0.100 eV
-- **Consensus score:** 4/100 — **no consensus**
-- **Quality score:** 14/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.3390_nano15010042
-
-### Papers
-
-- **10.3390_nano15010042** (0 σ, 1 Ea)
-    - activation_energy: 0.1 eV p.1
-      > LLM ensemble extraction from 10.3390_nano15010042.pdf
-
-## Li6.7Si0.105Ge0.595P0.3S5I1
-
-- **Family:** argyrodite
-- **Papers:** 1 | **Measurements:** 1 (0 σ, 1 Ea)
-- **Median Ea:** 0.200 eV
-- **Consensus score:** 4/100 — **no consensus**
-- **Quality score:** 14/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1002_smll.202509918
-
-### Papers
-
-- **10.1002_smll.202509918** (0 σ, 1 Ea)
-    - activation_energy: 0.2 eV p.1
-      > LLM ensemble extraction from 10.1002_smll.202509918.pdf
-
-## LiTFSI-PC(quasi-solid)
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (0 σ, 1 Ea)
-- **Median Ea:** 0.300 eV
-- **Consensus score:** 4/100 — **no consensus**
-- **Quality score:** 14/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1038_s41467-022-29118-6
-
-### Papers
-
-- **10.1038_s41467-022-29118-6** (0 σ, 1 Ea)
-    - activation_energy: 0.3 eV p.3
-      > LLM ensemble extraction from 10.1038_s41467-022-29118-6.pdf
-
-## LiTFSI-SN
-
-- **Family:** hydride
-- **Papers:** 1 | **Measurements:** 1 (0 σ, 1 Ea)
-- **Median Ea:** 0.230 eV
-- **Consensus score:** 4/100 — **no consensus**
-- **Quality score:** 14/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1007_s40820-024-01592-1
-
-### Papers
-
-- **10.1007_s40820-024-01592-1** (0 σ, 1 Ea)
-    - activation_energy: 0.23 eV p.4
-      > LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf
-
-## LiTFSI-SN-FEC
-
-- **Family:** polymer_composite
-- **Papers:** 1 | **Measurements:** 1 (0 σ, 1 Ea)
-- **Median Ea:** 0.180 eV
-- **Consensus score:** 4/100 — **no consensus**
-- **Quality score:** 14/100 (D) — metadata completeness 0% (temp+method)
-- **DOIs:** 10.1007_s40820-024-01592-1
-
-### Papers
-
-- **10.1007_s40820-024-01592-1** (0 σ, 1 Ea)
-    - activation_energy: 0.18 eV p.4
-      > LLM ensemble extraction from 10.1007_s40820-024-01592-1.pdf
+- **10.1038/s41467-019-09061-9** (2 σ, 2 Ea)
+    - conductivity: 3.6e-06 S/cm, 25 °C, EIS
+      > Manual: pure Li(CB9H10) ionic conductivity 3.6e-6 S/cm at 25C (3 orders lower than 0.7/0.3 mixture).
+    - activation_energy: nan eV, 25 °C, EIS
+    - conductivity: 3.6e-06 S/cm, 25 °C
+    - activation_energy: 0.299 eV
+- **10.1002_aenm.201502237** (1 σ, 1 Ea)
+    - conductivity: 0.03 S/cm, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1002_aenm.201502237.pdf
+    - activation_energy: 0.29 eV, AC impedance spectroscopy
+      > LLM ensemble extraction from 10.1002_aenm.201502237.pdf
+- **10.1002/aenm.201502237** (1 σ, 1 Ea)
+    - conductivity: 0.03 S/cm, 25 °C, AC impedance spectroscopy
+    - activation_energy: 0.29 eV, 25 °C, AC impedance spectroscopy

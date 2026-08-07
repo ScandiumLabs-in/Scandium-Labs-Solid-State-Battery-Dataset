@@ -1,0 +1,128 @@
+{
+  "records": 222,
+  "score_avg": 64.7,
+  "score_min": 47,
+  "score_max": 78,
+  "grade_distribution": {
+    "B": 121,
+    "C": 101
+  },
+  "tier_distribution": {
+    "silver": 217,
+    "rejected": 5
+  },
+  "tier_pct": {
+    "gold": 0.0,
+    "silver": 97.7,
+    "bronze": 0.0,
+    "rejected": 2.3
+  },
+  "gold_records": 0,
+  "silver_records": 217,
+  "bronze_records": 0,
+  "rejected_records": 5,
+  "family_scores": {
+    "LLZO": {
+      "n": 1,
+      "avg_score": 60.0,
+      "tiers": {
+        "silver": 1
+      }
+    },
+    "antiperovskite": {
+      "n": 6,
+      "avg_score": 59.3,
+      "tiers": {
+        "silver": 6
+      }
+    },
+    "argyrodite": {
+      "n": 19,
+      "avg_score": 67.2,
+      "tiers": {
+        "silver": 18,
+        "rejected": 1
+      }
+    },
+    "borohydride": {
+      "n": 13,
+      "avg_score": 65.5,
+      "tiers": {
+        "silver": 12,
+        "rejected": 1
+      }
+    },
+    "complex_hydride": {
+      "n": 2,
+      "avg_score": 76.0,
+      "tiers": {
+        "silver": 2
+      }
+    },
+    "garnet": {
+      "n": 35,
+      "avg_score": 66.7,
+      "tiers": {
+        "silver": 35
+      }
+    },
+    "halide": {
+      "n": 29,
+      "avg_score": 62.0,
+      "tiers": {
+        "silver": 29
+      }
+    },
+    "hydride": {
+      "n": 3,
+      "avg_score": 61.7,
+      "tiers": {
+        "silver": 3
+      }
+    },
+    "nasicon": {
+      "n": 34,
+      "avg_score": 63.9,
+      "tiers": {
+        "silver": 34
+      }
+    },
+    "oxide": {
+      "n": 13,
+      "avg_score": 63.8,
+      "tiers": {
+        "silver": 13
+      }
+    },
+    "perovskite": {
+      "n": 19,
+      "avg_score": 67.5,
+      "tiers": {
+        "silver": 18,
+        "rejected": 1
+      }
+    },
+    "polymer_composite": {
+      "n": 37,
+      "avg_score": 63.7,
+      "tiers": {
+        "silver": 35,
+        "rejected": 2
+      }
+    },
+    "sulfide": {
+      "n": 8,
+      "avg_score": 66.6,
+      "tiers": {
+        "silver": 8
+      }
+    },
+    "unknown": {
+      "n": 3,
+      "avg_score": 55.3,
+      "tiers": {
+        "silver": 3
+      }
+    }
+  }
+}
