@@ -116,6 +116,18 @@ def test_cutoff_fallback_when_crystalnn_empty():
 # --------------------------------------------------------------------------
 
 def test_load_structures_returns_structured_mp():
+    from pathlib import Path
+    import sys
+    # This test exercises the full-data path: it reads the Phase-6
+    # descriptors artifact (features_output/descriptors.parquet) and the raw
+    # MP CIF directory, both of which are gitignored regenerable build
+    # artifacts. On a fresh clone they are absent by design, so skip with a
+    # clear message instead of failing (matching test_mp_enrichment.py).
+    root = Path(__file__).resolve().parent.parent
+    if not (root / "features_output" / "descriptors.parquet").exists():
+        pytest.skip("features_output/descriptors.parquet absent — build artifacts not generated in this checkout")
+    if not (root / "data" / "raw" / "materials_project" / "cif").is_dir():
+        pytest.skip("raw MP CIF directory absent — build artifacts not generated in this checkout")
     mp = load_structures()
     assert len(mp) >= 20000
     assert {"identity.material_id", "identity.composition", "cif_path"} <= set(mp.columns)

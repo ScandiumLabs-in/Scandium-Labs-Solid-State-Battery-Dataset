@@ -13,6 +13,9 @@ import json
 
 import numpy as np
 import pytest
+
+pytest.importorskip("torch", reason="ml extra not installed")
+pytest.importorskip("torch_geometric", reason="ml extra not installed")
 import torch
 from torch import nn
 from torch.nn import functional as F

@@ -50,7 +50,6 @@ dashboard = [
     "jinja2>=3.1",
 ]
 sources = [
-    "oqmd>=1.0",
     "jarvis-tools>=2024.0",
     "mp-api>=0.39",
 ]

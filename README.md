@@ -61,6 +61,19 @@ cd Scandium-Labs-Solid-State-Battery-Dataset
 pip install -e .
 ```
 
+Optional feature groups (`pip install -e ".[dev,literature,dashboard,sources,ml,dft]"`):
+
+| Extra | Provides |
+| :--- | :--- |
+| `dev` | pytest, ruff, mypy, pre-commit — needed to run the test suite |
+| `literature` | PDF text + OCR stack (pymupdf, pdfplumber, pdf2image, pytesseract, GROBID, OpenAI) |
+| `dashboard` | Review dashboard web UI (FastAPI, uvicorn, jinja2) |
+| `sources` | Source-database clients (JARVIS, mp-api) — OQMD/NOMAD/AFLOW/COD/Materials Cloud use keyless REST, no client needed |
+| `ml` | PyTorch + PyTorch Geometric graph export and GNN baselines |
+| `dft` | DFT workflow tooling (Custodian, ASE) |
+
+Tests that need an optional extra (e.g. the dashboard, GNN, or PDF tests) auto-skip with a clear message when its dependency is not installed, and tests that exercise large gitignored build artifacts (e.g. `features_output/descriptors.parquet`) skip on a fresh clone until the build pipeline has been run.
+
 ### 2. Loading Verified Experimental Transport Records
 
 ```python
@@ -172,3 +185,5 @@ Execution of the pipeline is governed by **11 specialist agents** coordinated by
 ### License
 
 This project and dataset are distributed under the [Creative Commons Attribution 4.0 International License (CC-BY-4.0)](LICENSE). You are free to share and adapt the material for any purpose, even commercially, provided you give appropriate credit, link to the license, and indicate if changes were made. Structural data sourced from third-party databases retain their respective open computational licenses (Creative Commons / Materials Project Terms).
+
+> **Source-license carve-outs:** the [LICENSE](LICENSE) file documents per-database terms that the blanket CC-BY-4.0 grant does **not** cover. In particular, **OQMD-derived records carry non-commercial restrictions** — if any `identity.source_db == "oqmd"` rows are ever added to a release, they must be flagged and excluded from the CC-BY-4.0 blanket grant. Currently zero OQMD rows are released.

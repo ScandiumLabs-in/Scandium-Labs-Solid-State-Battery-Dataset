@@ -78,7 +78,7 @@ The dataset ingests computational structures from 8 primary databases:
 2. **JARVIS-DFT Connector:** Keyless REST integration extracting structural parameters and band gaps.
 3. **NOMAD API Connector:** OPTIMADE keyless query endpoint for raw DFT calculation entries.
 4. **AFLOW / AFLUX Connector:** Keyless REST query wrapper over AFLOW repository.
-5. **OQMD Connector:** Open Quantum Materials Database REST interface.
+5. **OQMD Connector:** Open Quantum Materials Database REST interface. **Licensing note:** OQMD's terms restrict commercial use for a large share of entries; if OQMD-derived rows are ever released they must be flagged (`identity.source_db == "oqmd"`) and excluded from the dataset's blanket CC-BY-4.0 grant (see the carve-out in `LICENSE`).
 6. **Crystallography Open Database (COD):** Sourced experimental CIF structures tagged `dft_native`.
 7. **Materials Cloud Connector:** Keyless OPTIMADE API client retrieving curated 2D/3D solid-state structures.
 8. **Verified Literature Connector:** High-precision experimental transport parser consuming review-approved extractions.

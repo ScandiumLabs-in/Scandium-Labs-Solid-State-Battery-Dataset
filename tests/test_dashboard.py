@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 
 import pytest
+
+pytest.importorskip("fastapi", reason="dashboard extra not installed")
+pytest.importorskip("fastapi.testclient", reason="dashboard extra not installed")
 from fastapi.testclient import TestClient
 
 from ssb_dataset.review.dashboard import app, _build_context, _material_consensus, _review, _similar_papers

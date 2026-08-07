@@ -10,6 +10,8 @@ sys.path.insert(0, str(ROOT))
 
 import pytest
 
+pytest.importorskip("fitz", reason="literature extra (pymupdf) not installed")
+
 from src.ssb_dataset.pipeline.experiment_extract import (
     _eis_frequency_range, extract_conditions,
 )
