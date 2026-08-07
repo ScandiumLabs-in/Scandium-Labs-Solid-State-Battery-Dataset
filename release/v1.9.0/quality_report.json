@@ -22,6 +22,12 @@
   "silver_records": 239,
   "bronze_records": 0,
   "rejected_records": 5,
+  "score_band_distribution": {
+    "silver-high (>=70)": 48,
+    "silver-mid (55-69)": 165,
+    "silver-low (<55)": 26,
+    "non-silver": 5
+  },
   "family_scores": {
     "LLZO": {
       "n": 1,

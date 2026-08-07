@@ -2,8 +2,8 @@
 
 **Family:** `nasicon`
 
-**Records:** 3
-**Records with conductivity label:** 3
+**Records:** 441
+**Records with conductivity label:** 19
 
 ## Description
 

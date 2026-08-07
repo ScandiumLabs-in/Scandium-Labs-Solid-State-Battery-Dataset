@@ -14,8 +14,8 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_URL = "https://github.com/scandium-labs/ssb-dataset"
-HF_DATASET_URL = "https://huggingface.co/datasets/scandium-labs/ssb-dataset"
+REPO_URL = "https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset"
+HF_DATASET_URL = "https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity"
 
 
 def generate_contributing(output_path: str | Path) -> str:
@@ -204,7 +204,7 @@ def generate_usage_guide(output_path: str | Path) -> str:
 ```python
 from datasets import load_dataset
 
-ds = load_dataset("scandium-labs/ssb-dataset", split="train")
+ds = load_dataset("Scandium-Labs/solid-state-electrolyte-conductivity", name="default", split="train")
 print(ds[0])
 ```
 

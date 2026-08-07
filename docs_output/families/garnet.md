@@ -2,8 +2,8 @@
 
 **Family:** `garnet`
 
-**Records:** 5
-**Records with conductivity label:** 5
+**Records:** 68
+**Records with conductivity label:** 28
 
 ## Description
 

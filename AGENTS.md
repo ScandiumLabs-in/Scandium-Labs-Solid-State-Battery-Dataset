@@ -102,13 +102,61 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 # Current Status (August 2026)
 
+## v1.9.0-guide — improvement-guide §5 actions 1–10 (2026-08-07, DONE — RELEASE READY)
+
+All 10 prioritized actions from `guides/improving-scandium-ssb-dataset.md`
+(OBELiX/LiIon methodology guide) shipped. No LLM calls. Deterministic.
+**891 tests pass.** RELEASE READY — staged in `release/v1.9.0/`.
+
+- **A1 — split fields finally populated**: `ml_features.split_assignment` +
+  `split_group_key` on all 30,838 rows (null since v0.6). New `paper_ood`
+  regime (`src/ssb_dataset/benchmarks/splits.py`): union-find components over
+  (source DOI, reduced formula) so a paper's doping series can't straddle
+  train/test; test 20.3%. `scripts/backfill_split_assignment.py` in the build
+  chain.
+- **A2 — baseline benchmark (guide §5 #2, "RF + MLP at minimum")**: MLP
+  baseline (2-layer 64→32, early stopping, seed 0) added to `evaluate.py`
+  `_models()` alongside dummy/ridge/RF on every task × regime; the report now
+  persists + renders per-model metrics (not just best). Full 25-task × 5-regime
+  run: **MLP wins 11 task×regime slots**, incl. density under `random` (MAE
+  0.098 vs RF 0.118) and formation-energy under `crystal_system_ood` (0.550 vs
+  RF 0.659) — the nonlinear descriptor baseline beats RF exactly where RF's
+  trees can't interpolate unseen crystal systems. Ea (91) and log10 σ (166)
+  tasks: **no model beats the median** — dummy wins both, the honest CV floor
+  on tiny label sets. 891 tests pass.
+- **A3 — noise floor**: `scripts/compute_noise_floor.py` →
+  `validation_output/noise_floor_report.{json,md}`. **76 repeat groups, RMS
+  0.354 / MAD 0.153 log10 σ** (vs OBELiX 0.63/0.41 on 48 groups). Models
+  beating MAD 0.153 are likely overfit.
+- **A4 — conductivity_type enum-leak fixed**: `normalize_conductivity_type.py`
+  (bulk vs total never conflated; labeled rows default to `unknown`, never
+  guessed). Audit in `conductivity_type_audit.json`.
+- **A5 — rejection rate published**: `compute_rejection_stats.py` → 45.3%
+  (178/393 decided rejected); top reasons duplicate/DUP_VALUE 80, hallucination
+  25, unit error 18, evidence 17, composition-series 13.
+- **A6 — structure attribution audit**: `audit_structure_attribution.py` →
+  only 35/183 labeled rows have a matched MP structure (the other 148 are
+  composites/glasses/off-stoich); 11 polymorph-ambiguous; MP structure borrow
+  documented as systematic.
+- **A7 — disorder-occupancy note** in datasheet Known Limitations
+  (field exists; current harvest is fully-occupied sites only; standard GNNs
+  round occupancy to integers).
+- **A8 — UMAP coverage figure**: `plot_compositional_coverage.py` →
+  `visualization_output/compositional_coverage.png` (20k backbone vs 122 labels).
+- **A9 — Ea consistency audit**: `audit_ea_consistency.py` → 49.7% coverage,
+  7 multi-paper materials, 0 inconsistent (MAD ≤ 0.2 eV) → keep the field.
+- **A10 — Kaggle registration**: noted in README as a human task (needs a
+  Kaggle account), not automated.
+
 ## v1.9.0-hf — Hugging Face publication (2026-08-07, DONE — PUBLISHED)
 
 Dataset published to the Hugging Face Hub as **`Scandium-Labs/solid-state-electrolyte-conductivity`** (public, tag `v1.9.0`): https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity. No LLM calls. Deterministic.
 
+**Live card re-published (2026-08-07)** with the corrected `ScandiumLabs-in/...` GitHub link via `scripts/publish_hf_dataset.py` (tag `v1.9.0` idempotent re-publish). Verified post-upload: card on hub links `github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset`; all four configs still load (`default` 30,838×246, `verified` 183×246, `consensus` 427×22, `gold_benchmark` 165×298).
+
 - **Multi-config layout** (auto-detected by HF from `data/{config}/`): `default` (30,838 canonical records × 246 cols), `verified` (183 literature-verified transport labels), `consensus` (427-material cross-paper consensus DB), `gold_benchmark` (165-row gold subset). Verified end-to-end with `datasets.load_dataset(repo, name=<config>)` — all 4 configs load from the hub.
 - **SEO dataset card** (`README.md`): YAML frontmatter (`task_categories: tabular-regression/classification`, broad+narrow `tags`, `size_categories: 10K<n<100K`, `configs`) + keyword-first body; honest scope caveat (183 verified vs 30,838 bulk) above the fold; per-source licensing section.
-- **Stale docs fixed before publish**: datasheet regenerated 676→30,838 records / 24→183 labels; `CITATION.cff` bumped to v1.9.0 / 2026-08-07 / `ScandiumLabs-in` GitHub org; datasheet + citation generators updated in `src/ssb_dataset/documentation/generator.py`.
+- **Stale docs fixed before publish**: datasheet regenerated 676→30,838 records / 24→183 labels; `CITATION.cff` bumped to v1.9.0 / 2026-08-07 / `Scandium-Labs` GitHub org; datasheet + citation generators updated in `src/ssb_dataset/documentation/generator.py`.
 - **Tooling**: `scripts/publish_hf_dataset.py` — deterministic staging (`hf_publish/`, gitignored) + per-file upload (resumable, independent commits) + `create_tag`. **Tests: 869 pass.**
 
 ## v1.9.0 — ScandiumBench v1.1: 25-task benchmark expansion (2026-08-06, DONE — RELEASE READY)

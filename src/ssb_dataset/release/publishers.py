@@ -23,7 +23,8 @@ REQUIRED_ARTIFACTS: list[str] = [
 ]
 
 DEFAULT_VERSION = "v0.1.0"
-REPO_URL = "https://github.com/scandium-labs/ssb-dataset"
+REPO_URL = "https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset"
+HF_DATASET = "Scandium-Labs/solid-state-electrolyte-conductivity"
 
 
 # ── Checklist ─────────────────────────────────────────────────────────────────
@@ -105,7 +106,7 @@ def _git_tag(version: str) -> str:
 
 
 class HuggingFacePublisher:
-    def __init__(self, token: str | None = None, repo_id: str = "scandium-labs/ssb-dataset"):
+    def __init__(self, token: str | None = None, repo_id: str = HF_DATASET):
         self.token = token or os.environ.get("HF_TOKEN", "")
         self.repo_id = repo_id
         self._api = None
@@ -325,9 +326,9 @@ class ZenodoPublisher:
 
 
 class GitHubReleaser:
-    def __init__(self, token: str | None = None, repo: str = "scandium-labs/ssb-dataset"):
+    def __init__(self, token: str | None = None, repo: str = "Scandium-Labs/Scandium-Labs-Solid-State-Battery-Dataset"):
         self.token = token or os.environ.get("GITHUB_TOKEN", "")
-        if repo == "scandium-labs/ssb-dataset":
+        if repo == "Scandium-Labs/Scandium-Labs-Solid-State-Battery-Dataset":
             try:
                 res = subprocess.run(
                     ["git", "remote", "get-url", "origin"],
@@ -381,7 +382,7 @@ class GitHubReleaser:
             f"- Provenance-tracked with confidence tiers\n"
             f"- Gold benchmark subset for model comparison\n\n"
             f"**Dataset DOI:** 10.5281/zenodo.XXXXX (see Zenodo)\n"
-            f"**HF Dataset:** https://huggingface.co/datasets/scandium-labs/ssb-dataset\n"
+            f"**HF Dataset:** https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity\n"
         )
 
         result = subprocess.run(
@@ -523,5 +524,5 @@ class ReleaseManager:
         print("Rolling back release...")
         self.github.rollback(version)
         self.zenodo.rollback()
-        print("HF Hub: manual deletion required at https://huggingface.co/datasets/scandium-labs/ssb-dataset/settings")
+        print("HF Hub: manual deletion required at https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity/settings")
         print("Rollback complete (manual HF step required).")

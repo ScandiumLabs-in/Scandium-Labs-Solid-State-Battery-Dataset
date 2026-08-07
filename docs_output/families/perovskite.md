@@ -2,8 +2,8 @@
 
 **Family:** `perovskite`
 
-**Records:** 1
-**Records with conductivity label:** 1
+**Records:** 47
+**Records with conductivity label:** 14
 
 ## Description
 

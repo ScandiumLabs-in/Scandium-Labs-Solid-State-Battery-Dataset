@@ -1,7 +1,7 @@
 # Scandium Dataset — Release Report
 
 - Version: **v1.9.0**
-- Generated: 2026-08-07T03:14:47.865943+00:00
+- Generated: 2026-08-07T18:19:26.871482+00:00
 
 ## Dataset size
 
@@ -64,6 +64,12 @@
   "silver_records": 239,
   "bronze_records": 0,
   "rejected_records": 5,
+  "score_band_distribution": {
+    "silver-high (>=70)": 48,
+    "silver-mid (55-69)": 165,
+    "silver-low (<55)": 26,
+    "non-silver": 5
+  },
   "family_scores": {
     "LLZO": {
       "n": 1,

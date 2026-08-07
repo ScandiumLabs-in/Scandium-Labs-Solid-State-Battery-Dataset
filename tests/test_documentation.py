@@ -47,6 +47,26 @@ class TestGenerateDatasheet:
         assert "sulfide" in result
         assert "garnet" in result
 
+    def test_label_count_handles_object_dtype_bool(self, tmp_path: Path) -> None:
+        # label_available arrives as object dtype (True/False/None mix) from
+        # the parquet pipeline; the datasheet must count True labels, not fall
+        # back to the sigma_RT count (regression: 183 -> 166 on v1.9.0 docs).
+        df = _make_test_df()
+        df["ion_transport.label_available"] = pd.Series(
+            [True, True], dtype=object)
+        path = tmp_path / "datasheet.md"
+        result = generate_datasheet(df, path)
+        assert "**Records with verified experimental transport label:** 2" in result
+        assert "**Records with raw σ_RT value:** 2" in result
+
+    def test_label_count_with_none_is_still_true_count(self, tmp_path: Path) -> None:
+        df = _make_test_df()
+        df["ion_transport.label_available"] = pd.Series(
+            [True, None], dtype=object)
+        path = tmp_path / "datasheet.md"
+        result = generate_datasheet(df, path)
+        assert "**Records with verified experimental transport label:** 1" in result
+
 
 # ── Per-Family README ────────────────────────────────────────────────────────
 

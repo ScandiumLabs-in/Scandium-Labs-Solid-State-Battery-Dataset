@@ -50,6 +50,6 @@ Pre-release tags: `v1.0.0-alpha.1`, `v1.0.0-rc.1` for review candidates.
 
 ## Communication Channels
 
-- Issues: https://github.com/scandium-labs/ssb-dataset/issues
-- Dataset page: https://huggingface.co/datasets/scandium-labs/ssb-dataset
+- Issues: https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset/issues
+- Dataset page: https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity
 - Email: scandium.labs@example.com

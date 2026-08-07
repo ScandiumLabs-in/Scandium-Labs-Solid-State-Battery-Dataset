@@ -2,8 +2,8 @@
 
 **Family:** `oxide`
 
-**Records:** 20548
-**Records with conductivity label:** 5
+**Records:** 20753
+**Records with conductivity label:** 8
 
 ## Description
 

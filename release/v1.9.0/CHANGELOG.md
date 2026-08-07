@@ -1,5 +1,96 @@
 
 
+## [v1.9.0-guide] — 2026-08-07 (improving-scandium-ssb-dataset guide §5, actions 1–10)
+
+Implements the methodology-improvement guide (`guides/improving-scandium-ssb-dataset.md`)
+benchmarked against OBELiX (Therrien et al. 2025) and LiIon (Hargreaves et al.
+2023). All 10 prioritized actions shipped as deterministic tooling + artifacts.
+No LLM calls. **891 tests pass.** RELEASE READY — staged in `release/v1.9.0/`.
+
+- **A1 — OBELiX-style leakage-free split now canonical**:
+  `ml_features.split_assignment` + `split_group_key` are finally populated on
+  all 30,838 rows (they were schema fields that had been null since v0.6). New
+  `paper_ood` split regime (`src/ssb_dataset/benchmarks/splits.py`): union-find
+  connected components over (source DOI, reduced formula) — any two entries
+  sharing a paper *or* a composition land in the same split, so a paper
+  reporting a doping series can never straddle train/test. Test fraction 20.3%
+  (OBELiX's 20–30% target). Backfilled by `scripts/backfill_split_assignment.py`
+  (gold rows preserved as `gold_benchmark`), wired into the release build chain.
+  paper_ood OOD gap vs random is visible in the leaderboard (e.g. formation
+  energy MAE 0.067 → 0.156, density 0.118 → 0.402).
+- **A2 — baseline benchmark completed (guide §5 #2, "RF + MLP at minimum")**:
+  the missing MLP baseline (2-layer 64→32, early stopping, `random_state=0`)
+  added to `evaluate.py::_models()` on every task × regime (split-test and
+  grouped-CV paths); the ScandiumBench report now persists + renders **all
+  per-model metrics per regime** (dummy / ridge / rf / mlp), not just the
+  best model. Full 25-task × 5-regime rerun (deterministic, seeded):
+  **MLP wins 11 task×regime slots** — density under `random` (MAE 0.098 vs RF
+  0.118), formation-energy under `crystal_system_ood` (0.550 vs RF 0.659),
+  family classification under `composition_ood`/`crystal_system_ood` — i.e.
+  the nonlinear descriptor baseline beats RF exactly where RF's axis-aligned
+  trees cannot interpolate unseen crystal systems/compositions. The scarce
+  Ea (91 labels) and log10 σ (166) tasks report **no model beats the median**:
+  dummy wins both, the honest CV floor on tiny label sets. Release gate
+  `scandium_bench_built` now requires all 5 regimes (incl. paper_ood).
+  Tests: +1 (`test_mlp_baseline_present_in_split_and_cv`).
+- **A3 — experimental noise floor published**: `scripts/compute_noise_floor.py`
+  → `validation_output/noise_floor_report.{json,md}`. **76 repeat-measurement
+  groups (206 entries), RMS 0.354 / MAD 0.153 log10 σ** — from a repeat tier
+  ~1.6× larger than OBELiX's 48 groups, and ~2.7× tighter than their 0.63/0.41.
+  Bulk vs total conductivities are never pooled (grouped by
+  composition::conductivity_type). Any model beating MAD 0.153 log10 σ is
+  likely overfit.
+- **A4 — bulk/total conductivity enum-leak fixed**:
+  `scripts/normalize_conductivity_type.py` — `"ConductivityType.total"` and
+  `"total"` were silently different strings (71 rows), same for bulk; fixed to
+  clean `total`/`bulk`/`grain_boundary`, and labeled rows with no stated type
+  are stamped `unknown` (never guessed). Audit at
+  `validation_output/conductivity_type_audit.json`.
+- **A5 — rejection-rate statistic published**:
+  `scripts/compute_rejection_stats.py` → `validation_output/rejection_statistics.{json,md}`.
+  Review funnel: 402 submitted, 215 approved / 178 rejected / 9 pending →
+  **rejection rate 45.3%**. Top reasons (deterministic categorization of human
+  review notes): duplicate/DUP_VALUE 80, hallucination/value-not-in-paper 25,
+  unit errors (mS/cm→S/cm) 18, evidence-missing 17, composition-series
+  hallucinated variants 13.
+- **A6 — structure-to-label attribution audit**:
+  `scripts/audit_structure_attribution.py` → `validation_output/structure_attribution_audit.{json,md}`.
+  Honest finding: only 35/183 labeled rows (19%) have a reduced-formula-matched
+  MP structure; the other 148 (composites, glasses, off-stoichiometric LLTO
+  variants) have no single-phase MP match. The 35 attached structures are MP
+  DFT structures — a documented systematic borrow (structure from MP, label
+  from paper). 11 attached labels are polymorph-ambiguous (>1 MP structure).
+- **A7 — disorder-aware occupancy note** added to the datasheet's Known
+  Limitations: `structure.li_site_occupancy` exists for disorder-aware models,
+  but the current harvest records fully-occupied sites only (all occupancies
+  1.0); standard GNNs round partial occupancy to integers anyway — caveat
+  documented for downstream users.
+- **A8 — compositional coverage UMAP**: `scripts/plot_compositional_coverage.py`
+  → `visualization_output/compositional_coverage.png` — 20,000 DFT-backbone
+  points vs 122 verified labels in Magpie-descriptor space (UMAP, seeded,
+  deterministic). Visualizes the accessible-but-unexplored regions (LiIon
+  Fig 3/4 style) at a scale neither LiIon nor OBELiX had.
+- **A9 — Ea consistency audit**: `scripts/audit_ea_consistency.py` →
+  `validation_output/ea_consistency_audit.{json,md}`. Ea coverage 49.7%
+  (91/183), 74 rows with both σ+Ea, 7 multi-paper Ea materials with **0
+  inconsistent** (MAD ≤ 0.2 eV) → verdict: keep the field (unlike LiIon, who
+  dropped Ea).
+- **A10 — Kaggle registration note** added to README (planned, human task —
+  requires a Kaggle account; HF card + datasheet are the submission materials).
+- **Release pipeline** (`scripts/release.py`): 6 new build-chain steps + 13 new
+  staged artifacts (paper_ood split, noise floor, conductivity audit, rejection
+  stats, attribution audit, Ea audit, UMAP png/json).
+
+## [v1.9.0-hf] — 2026-08-07 (Hugging Face publication)
+
+- **Published to Hugging Face Hub**: `Scandium-Labs/solid-state-electrolyte-conductivity` (public, tagged `v1.9.0`) — https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity.
+- **Multi-config layout** (auto-detected by the HF dataset viewer): `default` (30,838 canonical records × 246 columns), `verified` (183 literature-verified transport labels), `consensus` (427-material cross-paper consensus DB), `gold_benchmark` (165-record gold subset).
+- **SEO dataset card** (`README.md` on HF): YAML frontmatter (`task_categories`, `tags`, `size_categories`, `configs`) + first-paragraph/highlight framing for search; honest scope caveat (183 verified vs 30,838 bulk) above the fold; per-source licensing section.
+- **Stale docs fixed before publish**: `docs_output/datasheet.md` regenerated from current data (was 676 records / 24 labels → 30,838 / 183); `CITATION.cff` bumped to v1.9.0 / 2026-08-07 / correct `ScandiumLabs-in` GitHub org; datasheet + citation generators updated to match.
+- **New tooling**: `scripts/publish_hf_dataset.py` — deterministic staging (`hf_publish/`) + per-file upload (resumable, independent commits) + `create_tag`.
+- **Verified end-to-end**: all four config parquet files download + read from the hub (default 30,838×246, verified 183×246, consensus 427×22, gold 165×298). **Tests: 869 pass.**
+- **Live card re-published (2026-08-07)**: corrected GitHub `ScandiumLabs-in/...` link pushed to the hub card via `scripts/publish_hf_dataset.py` (tag `v1.9.0` idempotent re-publish); card + all four configs re-verified after upload (README on hub now links `github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset`).
+
 ## [v1.9.0] — 2026-08-06 (ScandiumBench v1.1: 25-task benchmark expansion)
 
 Second step of the ScandiumBench pivot (roadmap Phase 4): the task registry

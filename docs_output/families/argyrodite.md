@@ -2,8 +2,8 @@
 
 **Family:** `argyrodite`
 
-**Records:** 18
-**Records with conductivity label:** 6
+**Records:** 27
+**Records with conductivity label:** 14
 
 ## Description
 

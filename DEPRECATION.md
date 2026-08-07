@@ -38,4 +38,4 @@ None. This is the initial release.
 
 ## Contact
 
-For questions about this policy: https://github.com/scandium-labs/ssb-dataset/issues
+For questions about this policy: https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset/issues

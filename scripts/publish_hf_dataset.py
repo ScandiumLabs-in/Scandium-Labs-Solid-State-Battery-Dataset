@@ -55,10 +55,14 @@ tags:
   - battery
   - solid-state-electrolyte
   - ionic-conductivity
+  - activation-energy
   - lithium-ion
   - DFT
   - machine-learning
-pretty_name: Solid-State Battery Electrolyte Dataset — Ionic Conductivity & Activation Energy, Literature-Verified
+  - materials-informatics
+  - battery-materials
+  - scandium-labs
+pretty_name: Solid-State Battery Electrolyte Dataset — Ionic Conductivity & Activation Energy | Scandium Labs
 size_categories:
   - 10K<n<100K
 configs:
@@ -72,7 +76,20 @@ configs:
     data_files: data/gold_benchmark/*.parquet
 ---
 
+[![License](https://img.shields.io/badge/License-CC--BY--4.0-lightgrey)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-v1.9.0-lightgrey)](https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity/tree/main)
+[![Records](https://img.shields.io/badge/Records-30%2C838-lightgrey)](https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity)
+[![Verified labels](https://img.shields.io/badge/Verified%20labels-183-lightgrey)](https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity/tree/main/verified)
+[![Pipeline](https://img.shields.io/badge/Pipeline-Deterministic-lightgrey)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)
+[![Built by](https://img.shields.io/badge/Built%20by-Scandium%20Labs-lightgrey)](https://scandium-labs.com)
+
 # Solid-State Battery Electrolyte Dataset — Ionic Conductivity & Activation Energy
+
+The Scandium Labs Solid-State Battery Electrolyte Dataset provides
+literature-verified **ionic conductivity** and **activation energy** labels for
+**solid-state battery electrolyte** materials across 30,000+ Li-containing
+structures — a provenance-tracked, ML-ready foundation for electrolyte discovery
+and transport-property prediction.
 
 A unified, provenance-tracked, ML-ready dataset of **solid-state battery
 electrolyte** materials with literature-verified **ionic conductivity** and
@@ -87,6 +104,15 @@ traces back to its source paper, page, and evidence sentence.
 > cross-paper consensus statistics**, and a **{n_gold}-record gold benchmark**.
 > The scarce verified labels are the asset; the bulk DFT rows are the
 > structure/composition backbone for featurization.
+
+## Companion Datasets
+
+- **Scandium Labs SSB Dataset** (this dataset) — literature-verified ionic
+  conductivity & activation energy on the electrolyte transport bottleneck.
+- [**Scandium-Dataset**](https://huggingface.co/datasets/Scandium-Labs/Scandium-Dataset) —
+  harmonized DFT structural & thermodynamic screening foundation (267,230
+  materials from Materials Project / OQMD / JARVIS-DFT) for the *earlier*
+  discovery-stage filter before transport prediction.
 
 ## Ionic Conductivity Data
 
@@ -108,7 +134,7 @@ classification → literature mining & LLM-assisted extraction → deterministic
 verification (Arrhenius consistency, unit normalization, cross-paper consensus)
 → human review → quality scoring → validation → release. The pipeline is fully
 deterministic after ingestion; no LLM calls are required to reproduce any
-artifact.
+artifact. Source code and pipeline docs: [Scandium Labs on GitHub](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset).
 
 ## Data Splits
 
@@ -137,16 +163,24 @@ per-source table and the "AS IS" warranty disclaimer.
 
 ## Citation
 
+If you use this dataset in your research, please cite it:
+
 ```bibtex
 @dataset{{scandium_ssb_dataset_2026,
   author       = {{Scandium Labs Team}},
   title        = {{Solid-State Battery Electrolyte Dataset — Ionic Conductivity \\& Activation Energy}},
   year         = 2026,
   version      = {VERSION},
-  publisher    = {{Hugging Face / GitHub / Zenodo}},
+  publisher    = {{Scandium Labs}},
   url          = {{https://huggingface.co/datasets/{DEFAULT_REPO}}}
 }}
 ```
+
+## Links
+
+- [GitHub repository](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset) — pipeline source code, changelog, issue tracker
+- [Scandium Labs](https://scandium-labs.com) — company site
+- [Author portfolio](https://shamique-khan.vercel.app) — Shamique Khan
 
 ## Contact & Feedback
 
@@ -195,10 +229,15 @@ def publish(hf_token: str, repo_id: str, dry_run: bool = False) -> None:
     api.create_repo(repo_id=repo_id, repo_type="dataset", exist_ok=True, private=False)
 
     # per-file commits so a slow upload can't lose completed work and can resume
+    # (skip scratch files left in the stage dir by a previous manual edit)
+    allowed = {"README.md", "CHANGELOG.md", "CITATION.cff", "LICENSE", "LICENSE_BREAKDOWN.md"}
     for path in sorted(STAGE_DIR.rglob("*")):
         if not path.is_file() or path.name == ".gitattributes":
             continue
         rel = path.relative_to(STAGE_DIR).as_posix()
+        if not (rel.startswith("data/") or path.name in allowed):
+            print(f"  skipped scratch file: {rel}")
+            continue
         api.upload_file(
             repo_id=repo_id,
             path_or_fileobj=str(path),
@@ -208,12 +247,15 @@ def publish(hf_token: str, repo_id: str, dry_run: bool = False) -> None:
         )
         print(f"  uploaded {rel}")
 
-    api.create_tag(
-        repo_id=repo_id,
-        tag=VERSION,
-        tag_message=f"Scandium SSB dataset {VERSION}",
-        repo_type="dataset",
-    )
+    try:
+        api.create_tag(
+            repo_id=repo_id,
+            tag=VERSION,
+            tag_message=f"Scandium SSB dataset {VERSION}",
+            repo_type="dataset",
+        )
+    except Exception:
+        print(f"  tag {VERSION} already exists (idempotent re-publish)")
     print(f"Published: https://huggingface.co/datasets/{repo_id} (tag {VERSION})")
 
 

@@ -1,13 +1,13 @@
-# Hydride / Borohydride
+# Hydride
 
 **Family:** `hydride`
 
-**Records:** 20
+**Records:** 244
 **Records with conductivity label:** 2
 
 ## Description
 
-Hydride/borohydride Li-ion conductors (LiBH4, Li2B12H12). Typically require high-temperature phases for high conductivity.
+Hydride Li-ion conductors (LiH, LiAlH4, complex hydrides). Typically require high-temperature phases for high conductivity.
 
 ## Known Quirks
 

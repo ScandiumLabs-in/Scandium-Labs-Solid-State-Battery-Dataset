@@ -2,8 +2,8 @@
 
 **Family:** `antiperovskite`
 
-**Records:** 3
-**Records with conductivity label:** 3
+**Records:** 84
+**Records with conductivity label:** 8
 
 ## Description
 

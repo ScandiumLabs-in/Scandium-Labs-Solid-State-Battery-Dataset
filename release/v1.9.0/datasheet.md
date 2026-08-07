@@ -5,8 +5,9 @@
 **For what purpose was the dataset created?**
 To provide the first unified, provenance-tracked, ML-ready dataset of Li-ion
 conductivity and activation energy values for solid-state battery electrolyte
-materials across all 8 major SSB families (sulfides, garnets, perovskites,
-NASICONs, halides, hydrides, antiperovskites, and polymer/composites).
+materials across all 11 major SSB families (sulfides, oxides, garnets,
+perovskites, NASICONs, halides, argyrodites, hydrides, borohydrides,
+antiperovskites, and polymer/composites).
 
 **Who created the dataset and on behalf of which entity?**
 Scandium Labs. The dataset was built using the automated pipeline in this
@@ -17,26 +18,32 @@ Scandium Labs (self-funded).
 
 ## Composition
 
-**Total records:** 676
+**Total records:** 30838
 **Records per family:** {
-  "unknown": 598,
-  "halide": 30,
-  "hydride": 20,
-  "polymer_composite": 11,
-  "garnet": 5,
-  "sulfide": 4,
-  "antiperovskite": 3,
-  "nasicon": 3,
-  "perovskite": 1,
-  "argyrodite": 1
+  "oxide": 20753,
+  "unknown": 5635,
+  "halide": 2434,
+  "sulfide": 804,
+  "nasicon": 441,
+  "hydride": 244,
+  "polymer_composite": 187,
+  "borohydride": 114,
+  "antiperovskite": 84,
+  "garnet": 68,
+  "perovskite": 47,
+  "argyrodite": 27
 }
 **Records per source:** {
-  "materials_project": 451,
-  "jarvis": 100,
+  "materials_project": 21528,
+  "jarvis": 8327,
+  "cod": 500,
+  "literature_mined": 183,
+  "aflow": 150,
   "nomad": 100,
-  "literature_mined": 25
+  "oqmd": 50
 }
-**Records with conductivity label:** 24
+**Records with verified experimental transport label:** 183
+**Records with raw σ_RT value:** 166
 
 **What are the instances?**
 Each instance is a unique material record identified by composition and source,
@@ -84,6 +91,17 @@ comparison. See `features_output/gold.parquet`.
   values — check `conductivity_source_type` before blending.
 - Polymer/composite records are not compatible with standard crystal-graph
   featurization — use the separate polymer feature set.
+- Disorder-aware occupancy: the schema carries `structure.li_site_occupancy`
+  and `structure.structure_type` specifically so occupancy-weighted models
+  (OBELiX-style disorder-aware CGCNN/SO3Net) can be built. Be aware that the
+  current harvest captures fully-occupied Li sites only — every stored
+  occupancy is 1.0 and every MP row is `structure_type=ordered`. Standard GNN
+  implementations (CGCNN, SchNet, PaiNN, etc.) silently round partial
+  occupancy to integers anyway, so this does not change their default
+  behavior — but if you ingest partial-occupancy structures yourself, round
+  them only if you intend the integer-site approximation. Do not treat the
+  stored `li_site_occupancy` as evidence of partial site occupancy; it is the
+  harvested (fully-occupied) structure's Li-site list.
 
 **What are the recommended uses?**
 - Training ML models for ionic conductivity prediction
@@ -96,6 +114,19 @@ comparison. See `features_output/gold.parquet`.
   values without checking `confidence_tier`
 - Using AIMD-computed conductivities as direct substitutes for experimental
   measurements
+
+## Licensing
+
+**What license applies to this dataset?**
+The Scandium-authored portions (processing, quality scoring, validation,
+analysis, documentation) are released under CC-BY-4.0. Third-party records
+retain their respective source-database licenses, identified per row via
+`identity.source_db`. The current release includes **150 AFLOW rows restricted
+to scientific/academic/non-commercial use**, plus rows from Materials Project,
+JARVIS-DFT, COD, NOMAD, and OQMD under their permissive terms. See
+`LICENSE` and `LICENSE_BREAKDOWN.md` for the authoritative per-source license
+table, record counts, and the "AS IS" warranty disclaimer. Consult
+`identity.source_db` before assuming redistribution rights for any record.
 
 ## Maintenance
 

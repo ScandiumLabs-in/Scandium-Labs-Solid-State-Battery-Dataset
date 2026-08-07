@@ -1,4 +1,4 @@
-# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset (v1.9.0)
+# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset
 
 ## Motivation
 
@@ -91,6 +91,17 @@ comparison. See `features_output/gold.parquet`.
   values — check `conductivity_source_type` before blending.
 - Polymer/composite records are not compatible with standard crystal-graph
   featurization — use the separate polymer feature set.
+- Disorder-aware occupancy: the schema carries `structure.li_site_occupancy`
+  and `structure.structure_type` specifically so occupancy-weighted models
+  (OBELiX-style disorder-aware CGCNN/SO3Net) can be built. Be aware that the
+  current harvest captures fully-occupied Li sites only — every stored
+  occupancy is 1.0 and every MP row is `structure_type=ordered`. Standard GNN
+  implementations (CGCNN, SchNet, PaiNN, etc.) silently round partial
+  occupancy to integers anyway, so this does not change their default
+  behavior — but if you ingest partial-occupancy structures yourself, round
+  them only if you intend the integer-site approximation. Do not treat the
+  stored `li_site_occupancy` as evidence of partial site occupancy; it is the
+  harvested (fully-occupied) structure's Li-site list.
 
 **What are the recommended uses?**
 - Training ML models for ionic conductivity prediction

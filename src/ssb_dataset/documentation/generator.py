@@ -67,8 +67,14 @@ def generate_datasheet(
     families = df[family_col].value_counts().to_dict() if family_col else {}
     sources = df[source_col].value_counts().to_dict() if source_col else {}
     n_with_sigma = df[sigma_col].notna().sum() if sigma_col else 0
-    if label_col is not None and df[label_col].dtype == bool:
-        n_labels = int(df[label_col].sum())
+    if label_col is not None:
+        col = df[label_col]
+        if col.dtype == bool:
+            n_labels = int(col.sum())
+        elif col.dropna().isin([True, False]).all():
+            n_labels = int(col.fillna(False).astype(bool).sum())
+        else:
+            n_labels = int(col.notna().sum())
     elif report and report.get("verified_records") is not None:
         n_labels = int(report["verified_records"])
     else:
@@ -148,6 +154,17 @@ comparison. See `features_output/gold.parquet`.
   values — check `conductivity_source_type` before blending.
 - Polymer/composite records are not compatible with standard crystal-graph
   featurization — use the separate polymer feature set.
+- Disorder-aware occupancy: the schema carries `structure.li_site_occupancy`
+  and `structure.structure_type` specifically so occupancy-weighted models
+  (OBELiX-style disorder-aware CGCNN/SO3Net) can be built. Be aware that the
+  current harvest captures fully-occupied Li sites only — every stored
+  occupancy is 1.0 and every MP row is `structure_type=ordered`. Standard GNN
+  implementations (CGCNN, SchNet, PaiNN, etc.) silently round partial
+  occupancy to integers anyway, so this does not change their default
+  behavior — but if you ingest partial-occupancy structures yourself, round
+  them only if you intend the integer-site approximation. Do not treat the
+  stored `li_site_occupancy` as evidence of partial site occupancy; it is the
+  harvested (fully-occupied) structure's Li-site list.
 
 **What are the recommended uses?**
 - Training ML models for ionic conductivity prediction

@@ -37,8 +37,10 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 
 > **Hugging Face:** published as [Scandium-Labs/solid-state-electrolyte-conductivity](https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity) (v1.9.0, public) — multi-config: `default` / `verified` / `consensus` / `gold_benchmark`.
 
+> **Kaggle (pending):** registering on Kaggle in addition to Hugging Face is planned to reach a broader non-HF audience (OBELiX does this explicitly). Requires a Kaggle account + metadata submission — a human task, not automated. The HF card, datasheet, and `CITATION.cff` are the canonical submission materials.
+
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T03:14:47.865943+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T18:19:26.871482+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|

@@ -2,8 +2,8 @@
 
 **Family:** `polymer_composite`
 
-**Records:** 11
-**Records with conductivity label:** 2
+**Records:** 187
+**Records with conductivity label:** 30
 
 ## Description
 

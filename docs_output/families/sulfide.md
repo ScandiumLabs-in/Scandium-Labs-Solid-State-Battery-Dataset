@@ -1,13 +1,13 @@
-# Sulfide (Thio-LISICON / Argyrodite)
+# Sulfide (Thio-LISICON)
 
 **Family:** `sulfide`
 
-**Records:** 4
-**Records with conductivity label:** 4
+**Records:** 804
+**Records with conductivity label:** 8
 
 ## Description
 
-Li-ion conductors based on sulfide frameworks, including thio-LISICONs (Li10GeP2S12) and argyrodites (Li6PS5X). Typically the highest room-temperature conductivities (1e-3 to 1e-1 S/cm).
+Li-ion conductors based on sulfide frameworks, including thio-LISICONs (Li10GeP2S12). Typically the highest room-temperature conductivities (1e-3 to 1e-1 S/cm).
 
 ## Known Quirks
 

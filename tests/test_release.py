@@ -87,7 +87,7 @@ class TestHuggingFacePublisher:
         pub = HuggingFacePublisher(token="hf_test_token")
         result = pub.publish("v0.1.0", root=tmp_path, dry_run=True)
         assert result["dry_run"]
-        assert result["repo_id"] == "scandium-labs/ssb-dataset"
+        assert result["repo_id"] == "Scandium-Labs/solid-state-electrolyte-conductivity"
 
 
 # ── ZenodoPublisher ────────────────────────────────────────────────────────────

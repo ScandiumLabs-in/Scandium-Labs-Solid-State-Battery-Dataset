@@ -2,8 +2,8 @@
 
 **Family:** `halide`
 
-**Records:** 30
-**Records with conductivity label:** 3
+**Records:** 2434
+**Records with conductivity label:** 21
 
 ## Description
 

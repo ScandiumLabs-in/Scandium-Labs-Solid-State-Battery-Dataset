@@ -9,7 +9,7 @@
 ```python
 from datasets import load_dataset
 
-ds = load_dataset("scandium-labs/ssb-dataset", split="train")
+ds = load_dataset("Scandium-Labs/solid-state-electrolyte-conductivity", name="default", split="train")
 print(ds[0])
 ```
 
@@ -20,7 +20,7 @@ Download the canonical dataset Parquet file from Zenodo:
 
 ### Option 3: GitHub Releases
 
-Download release assets from: https://github.com/scandium-labs/ssb-dataset/releases
+Download release assets from: https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset/releases
 
 ## Dataset Structure
 
@@ -71,7 +71,7 @@ print(df["ion_transport.sigma_RT"].describe())
 ## Submitting Your Own Measurements
 
 See CONTRIBUTING.md or open a Data Submission issue at:
-https://github.com/scandium-labs/ssb-dataset/issues/new?template=data_submission.md
+https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset/issues/new?template=data_submission.md
 
 ## Citation
 
