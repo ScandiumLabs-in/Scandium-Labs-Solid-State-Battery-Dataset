@@ -11,6 +11,16 @@
 
 ---
 
+## About Scandium Labs
+
+**Scandium Labs** is an AI-for-Science research company building open infrastructure for computational materials discovery — high-quality materials datasets, foundation models, and machine learning systems that let researchers explore millions of candidate materials before expensive laboratory or DFT validation. Our mission is to make materials discovery faster, reproducible, and accessible. This dataset is one of the core open-data pieces of that platform.
+
+- 🌐 **Website:** [scandium-labs.com](https://scandium-labs.com/)
+- 💼 **LinkedIn:** [linkedin.com/company/scandium-labs](https://www.linkedin.com/company/scandium-labs/)
+- 🧪 **Research:** physics-informed crystal prediction, open materials datasets, solid-state battery discovery
+
+---
+
 ## Executive Summary
 
 The critical bottleneck in machine-learning-driven solid electrolyte discovery is the extreme scarcity of reliable experimental room-temperature ionic conductivity labels. While computational structures are abundant, physical ionic conductivity measurements require complex pellet synthesis, sintering, and electrochemical impedance spectroscopy (EIS).
