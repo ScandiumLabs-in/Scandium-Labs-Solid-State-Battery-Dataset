@@ -1,12 +1,13 @@
-# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset
+# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset (v1.9.0)
 
 ## Motivation
 
 **For what purpose was the dataset created?**
 To provide the first unified, provenance-tracked, ML-ready dataset of Li-ion
 conductivity and activation energy values for solid-state battery electrolyte
-materials across all 8 major SSB families (sulfides, garnets, perovskites,
-NASICONs, halides, hydrides, antiperovskites, and polymer/composites).
+materials across all 11 major SSB families (sulfides, oxides, garnets,
+perovskites, NASICONs, halides, argyrodites, hydrides, borohydrides,
+antiperovskites, and polymer/composites).
 
 **Who created the dataset and on behalf of which entity?**
 Scandium Labs. The dataset was built using the automated pipeline in this
@@ -17,26 +18,32 @@ Scandium Labs (self-funded).
 
 ## Composition
 
-**Total records:** 676
+**Total records:** 30838
 **Records per family:** {
-  "unknown": 598,
-  "halide": 30,
-  "hydride": 20,
-  "polymer_composite": 11,
-  "garnet": 5,
-  "sulfide": 4,
-  "antiperovskite": 3,
-  "nasicon": 3,
-  "perovskite": 1,
-  "argyrodite": 1
+  "oxide": 20753,
+  "unknown": 5635,
+  "halide": 2434,
+  "sulfide": 804,
+  "nasicon": 441,
+  "hydride": 244,
+  "polymer_composite": 187,
+  "borohydride": 114,
+  "antiperovskite": 84,
+  "garnet": 68,
+  "perovskite": 47,
+  "argyrodite": 27
 }
 **Records per source:** {
-  "materials_project": 451,
-  "jarvis": 100,
+  "materials_project": 21528,
+  "jarvis": 8327,
+  "cod": 500,
+  "literature_mined": 183,
+  "aflow": 150,
   "nomad": 100,
-  "literature_mined": 25
+  "oqmd": 50
 }
-**Records with conductivity label:** 24
+**Records with verified experimental transport label:** 183
+**Records with raw σ_RT value:** 166
 
 **What are the instances?**
 Each instance is a unique material record identified by composition and source,

@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this dataset in your research, please cite it as follows."
 title: "Scandium Labs Solid-State Battery Electrolyte Dataset"
-version: 0.1.0
-date-released: 2026-07-29
+version: v1.9.0
+date-released: 2026-08-07
 authors:
   - name: "Scandium Labs"
     affiliation: "Scandium Labs"
 license: "CC-BY-4.0"
-repository-code: "https://github.com/scandium-labs/ssb-dataset"
+repository-code: "https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset"
 description: >
   A unified, provenance-tracked, ML-ready dataset of Li-ion conductivity and
   activation energy values for solid-state battery electrolyte materials across
-  8 families (sulfides, garnets, perovskites, NASICONs, halides, hydrides,
-  antiperovskites, and polymer/composites).
+  11 families (sulfides, oxides, garnets, perovskites, NASICONs, halides,
+  argyrodites, hydrides, borohydrides, antiperovskites, and polymer/composites).
 
 keywords:
   - solid-state battery

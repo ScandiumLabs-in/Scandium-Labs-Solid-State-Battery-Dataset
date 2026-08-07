@@ -61,13 +61,22 @@ def generate_datasheet(
     source_col = _get_column(df, "identity.source_db", "source_db")
     conf_col = _get_column(df, "identity.confidence_tier", "confidence_tier")
     sigma_col = _get_column(df, "ion_transport.sigma_RT", "sigma_RT")
+    label_col = _get_column(df, "ion_transport.label_available", "label_available")
 
     n_records = len(df)
     families = df[family_col].value_counts().to_dict() if family_col else {}
     sources = df[source_col].value_counts().to_dict() if source_col else {}
     n_with_sigma = df[sigma_col].notna().sum() if sigma_col else 0
+    if label_col is not None and df[label_col].dtype == bool:
+        n_labels = int(df[label_col].sum())
+    elif report and report.get("verified_records") is not None:
+        n_labels = int(report["verified_records"])
+    else:
+        n_labels = n_with_sigma
+    version = (report or {}).get("version", "") or ""
+    version_line = f" ({version})" if version else ""
 
-    datasheet = f"""# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset
+    datasheet = f"""# Datasheet: Scandium Labs Solid-State Battery Electrolyte Dataset{version_line}
 
 ## Motivation
 
@@ -90,7 +99,8 @@ Scandium Labs (self-funded).
 **Total records:** {n_records}
 **Records per family:** {json.dumps(families, indent=2)}
 **Records per source:** {json.dumps(sources, indent=2)}
-**Records with conductivity label:** {n_with_sigma}
+**Records with verified experimental transport label:** {n_labels}
+**Records with raw σ_RT value:** {n_with_sigma}
 
 **What are the instances?**
 Each instance is a unique material record identified by composition and source,
@@ -150,6 +160,19 @@ comparison. See `features_output/gold.parquet`.
   values without checking `confidence_tier`
 - Using AIMD-computed conductivities as direct substitutes for experimental
   measurements
+
+## Licensing
+
+**What license applies to this dataset?**
+The Scandium-authored portions (processing, quality scoring, validation,
+analysis, documentation) are released under CC-BY-4.0. Third-party records
+retain their respective source-database licenses, identified per row via
+`identity.source_db`. The current release includes **150 AFLOW rows restricted
+to scientific/academic/non-commercial use**, plus rows from Materials Project,
+JARVIS-DFT, COD, NOMAD, and OQMD under their permissive terms. See
+`LICENSE` and `LICENSE_BREAKDOWN.md` for the authoritative per-source license
+table, record counts, and the "AS IS" warranty disclaimer. Consult
+`identity.source_db` before assuming redistribution rights for any record.
 
 ## Maintenance
 
@@ -270,13 +293,13 @@ def generate_citation_cff(output_path: str | Path) -> str:
     cff = """cff-version: 1.2.0
 message: "If you use this dataset in your research, please cite it as follows."
 title: "Scandium Labs Solid-State Battery Electrolyte Dataset"
-version: 0.1.0
-date-released: 2026-07-29
+version: v1.9.0
+date-released: 2026-08-07
 authors:
   - name: "Scandium Labs"
     affiliation: "Scandium Labs"
 license: "CC-BY-4.0"
-repository-code: "https://github.com/scandium-labs/ssb-dataset"
+repository-code: "https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset"
 description: >
   A unified, provenance-tracked, ML-ready dataset of Li-ion conductivity and
   activation energy values for solid-state battery electrolyte materials across
