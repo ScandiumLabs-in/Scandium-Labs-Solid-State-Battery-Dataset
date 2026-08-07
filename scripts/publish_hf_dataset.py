@@ -193,14 +193,21 @@ def publish(hf_token: str, repo_id: str, dry_run: bool = False) -> None:
 
     api = HfApi(token=hf_token)
     api.create_repo(repo_id=repo_id, repo_type="dataset", exist_ok=True, private=False)
-    api.upload_folder(
-        repo_id=repo_id,
-        folder_path=str(STAGE_DIR),
-        path_in_repo="",
-        repo_type="dataset",
-        commit_message=f"Release {VERSION}: dataset card + multi-config data",
-        ignore_patterns=[".git", ".gitattributes"],
-    )
+
+    # per-file commits so a slow upload can't lose completed work and can resume
+    for path in sorted(STAGE_DIR.rglob("*")):
+        if not path.is_file() or path.name == ".gitattributes":
+            continue
+        rel = path.relative_to(STAGE_DIR).as_posix()
+        api.upload_file(
+            repo_id=repo_id,
+            path_or_fileobj=str(path),
+            path_in_repo=rel,
+            repo_type="dataset",
+            commit_message=f"Release {VERSION}: {rel}",
+        )
+        print(f"  uploaded {rel}")
+
     api.create_tag(
         repo_id=repo_id,
         tag=VERSION,
