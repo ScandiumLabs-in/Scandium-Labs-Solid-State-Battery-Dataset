@@ -1,5 +1,14 @@
 
 
+## [v1.9.0-hf] — 2026-08-07 (Hugging Face publication)
+
+- **Published to Hugging Face Hub**: `Scandium-Labs/solid-state-electrolyte-conductivity` (public, tagged `v1.9.0`) — https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity.
+- **Multi-config layout** (auto-detected by the HF dataset viewer): `default` (30,838 canonical records × 246 columns), `verified` (183 literature-verified transport labels), `consensus` (427-material cross-paper consensus DB), `gold_benchmark` (165-record gold subset).
+- **SEO dataset card** (`README.md` on HF): YAML frontmatter (`task_categories`, `tags`, `size_categories`, `configs`) + first-paragraph/highlight framing for search; honest scope caveat (183 verified vs 30,838 bulk) above the fold; per-source licensing section.
+- **Stale docs fixed before publish**: `docs_output/datasheet.md` regenerated from current data (was 676 records / 24 labels → 30,838 / 183); `CITATION.cff` bumped to v1.9.0 / 2026-08-07 / correct `ScandiumLabs-in` GitHub org; datasheet + citation generators updated to match.
+- **New tooling**: `scripts/publish_hf_dataset.py` — deterministic staging (`hf_publish/`) + per-file upload (resumable, independent commits) + `create_tag`.
+- **Verified end-to-end**: all four config parquet files download + read from the hub (default 30,838×246, verified 183×246, consensus 427×22, gold 165×298). **Tests: 869 pass.**
+
 ## [v1.9.0] — 2026-08-06 (ScandiumBench v1.1: 25-task benchmark expansion)
 
 Second step of the ScandiumBench pivot (roadmap Phase 4): the task registry

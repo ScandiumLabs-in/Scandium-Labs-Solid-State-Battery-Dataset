@@ -35,6 +35,8 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 
 ## Status
 
+> **Hugging Face:** published as [Scandium-Labs/solid-state-electrolyte-conductivity](https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity) (v1.9.0, public) — multi-config: `default` / `verified` / `consensus` / `gold_benchmark`.
+
 <!-- status-begin -->
 **Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T03:14:47.865943+00:00. Release gates: **ALL PASS**.
 
