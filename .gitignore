@@ -18,6 +18,13 @@ data/
 *.cif
 *.poscar
 
+# Committed derived artifacts: small, deterministic, referenced by the README
+# Quick Start and the benchmark split loader. The large feature matrices
+# (features_output/{train,val,test}.parquet, descriptors.parquet) stay ignored
+# as regenerable build artifacts — never force-add them to the repo.
+!quality_output/quality.parquet
+!benchmark_output/splits/*.parquet
+
 # IDE
 .vscode/
 .idea/

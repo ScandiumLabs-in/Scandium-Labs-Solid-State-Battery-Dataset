@@ -116,6 +116,12 @@ def check_gates(cfg: dict[str, Any] | None = None) -> dict[str, dict[str, Any]]:
             "detail": tail or result.stderr.strip()[-300:],
             "requirement": "all automated tests pass",
         }
+        # Parse the trailing pytest summary ("N passed ...") so release reports
+        # and README badges can display a live, honest test count instead of a
+        # stale hardcoded number.
+        import re as _re
+        m = _re.search(r"(\d+)\s+passed", tail or "")
+        gates["tests_passing"]["passed_count"] = int(m.group(1)) if m else None
     except Exception as e:  # pragma: no cover
         gates["tests_passing"] = {"ok": False, "detail": str(e), "requirement": "pytest runnable"}
 
@@ -521,6 +527,9 @@ def build_release_report(gates: dict, version: str | None = None) -> dict:
         },
         "gates": {k: bool(v["ok"]) for k, v in gates.items()},
         "gate_failures": [k for k, v in gates.items() if not v["ok"]],
+        "gate_total": len(gates),
+        "gate_passed": sum(1 for v in gates.values() if v["ok"]),
+        "tests_passed": gates.get("tests_passing", {}).get("passed_count"),
     }
     return report
 
@@ -738,7 +747,7 @@ def main() -> int:
 
     gates = check_gates(cfg)
     if args.skip_tests:
-        gates["tests_passing"] = {"ok": True, "detail": "skipped via --skip-tests", "requirement": "-"}
+        gates["tests_passing"] = {"ok": True, "detail": "skipped via --skip-tests", "requirement": "-", "passed_count": None}
 
     report = build_release_report(gates, version=version)
     (ROOT / "release_report.json").write_text(json.dumps(report, indent=2, default=str))

@@ -1,6 +1,6 @@
 Creative Commons Attribution 4.0 International License (CC-BY-4.0)
 
-Copyright (c) 2024 Scandium Labs
+Copyright (c) 2024-2026 Scandium Labs
 
 This dataset and associated pipeline code is licensed under the Creative Commons
 Attribution 4.0 International License. To view a copy of this license, visit
@@ -15,3 +15,17 @@ You are free to:
 Under the following terms:
 - Attribution — You must give appropriate credit, provide a link to the license,
   and indicate if changes were made.
+
+Data-source carve-outs (not covered by the blanket CC-BY-4.0 claim):
+
+- Records derived from the Open Quantum Materials Database (OQMD) are subject
+  to OQMD's terms of use, which restrict commercial use for a large share of
+  entries. The OQMD connector is present in the pipeline but currently
+  contributes zero records to the released dataset; if OQMD-derived rows are
+  ever added, they must be flagged in `identity.source_db == "oqmd"` and
+  excluded from the CC-BY-4.0 blanket grant. Do not assume OQMD rows are
+  freely redistributable.
+- All other source databases (Materials Project, JARVIS-DFT, NOMAD, AFLOW, COD,
+  Materials Cloud) are covered under their respective terms; the Materials
+  Project and JARVIS data are redistributable under their permissive licenses.
+  Check `identity.source_db` per record before assuming redistribution rights.

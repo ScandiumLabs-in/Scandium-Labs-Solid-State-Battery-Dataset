@@ -118,7 +118,13 @@ def build_health_report() -> dict:
     # ---- Consensus DB health ----
     consensus = _load_json(CONSENSUS)
     report["materials_total"] = len(consensus)
-    report["materials_with_consensus_n3"] = sum(1 for v in consensus.values() if v.get("n_sigma", 0) >= 3)
+    # "Consensus" means independent literature replication: n≥3 DISTINCT papers
+    # (cross-paper agreement). n_sigma≥3 is a looser, measurement-count metric
+    # that can be met by several rows from ONE paper; report it separately so
+    # the headline "cross-paper consensus" number is never inflated by
+    # same-paper duplicates.
+    report["materials_with_consensus_n3"] = sum(1 for v in consensus.values() if v.get("n_papers", 0) >= 3)
+    report["materials_with_measurement_consensus_n3"] = sum(1 for v in consensus.values() if v.get("n_sigma", 0) >= 3)
     # Action 5 — depth-vs-breadth ratio: n≥3 consensus materials per verified
     # label. A shrinking ratio as volume scales means breadth without depth.
     n3 = report["materials_with_consensus_n3"]
@@ -350,7 +356,8 @@ def render_markdown(report: dict) -> str:
     lines.append(f"- Materials: **{report.get('materials_total', 0)}** "
                  f"({report.get('materials_with_sigma', 0)} with σ, "
                  f"{report.get('materials_with_ea', 0)} with Ea)")
-    lines.append(f"- Materials with real consensus (n≥3): **{report.get('materials_with_consensus_n3', 0)}**")
+    lines.append(f"- Materials with real cross-paper consensus (n≥3 papers): **{report.get('materials_with_consensus_n3', 0)}**")
+    lines.append(f"- Materials with n≥3 measurements (may include same-paper rows): {report.get('materials_with_measurement_consensus_n3', 0)}")
     lines.append(f"- Materials from ≥2 papers: {report.get('materials_with_multipaper', 0)}")
     lines.append(f"- σ records: {report.get('total_sigma_records', 0)}; Ea records: {report.get('total_ea_records', 0)}")
     lines.append(f"- Outlier records: {report.get('outlier_records', 0)}")

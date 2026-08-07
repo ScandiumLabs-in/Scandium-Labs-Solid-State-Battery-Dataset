@@ -1,8 +1,8 @@
 # Scandium Labs — Solid-State Battery (SSB) Materials Dataset
 
-[![Release](https://img.shields.io/badge/dataset--release-v0.2.0-blue.svg)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)
-[![Release Gates](https://img.shields.io/badge/release--gates-10%2F10%20PASS-brightgreen.svg)](release_report.json)
-[![Tests](https://img.shields.io/badge/tests-600%20PASSing-success.svg)](tests/)
+[![Release](https://img.shields.io/badge/dataset--release-1.9.0-blue.svg)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)
+[![Release Gates](https://img.shields.io/badge/release--gates-22%2F22%20PASS-brightgreen.svg)](release_report.json)
+[![Tests](https://img.shields.io/badge/tests-869%20PASSing-success.svg)](tests/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 
@@ -26,13 +26,13 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 ## Status
 
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-06T20:20:05.654519+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T03:14:47.865943+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|
 | **Bulk structural records** | ~30838 | DFT-native pulls (Materials Project / JARVIS / NOMAD / COD / etc.), Li-containing catalog. **Not screened for SSE relevance** — the dump includes cathode chemistries that share the Li+O+metal formula pattern. |
 | **Verified experimental labels** | 183 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
-| **Consensus (n≥3 papers)** | 32 | Cross-paper consensus: only 32 materials have ≥3 independent papers. |
+| **Consensus (n≥3 papers)** | 20 | Cross-paper consensus: only 20 materials have ≥3 independent papers. |
 
 > **Honest caveat.** Of the ~30838 records, only **183 carry human-verified conductivity/Ea labels**; the remainder are structural/thermodynamic DFT records *without* transport labels. Quality-tier distribution: silver 98.0%, rejected 2.0%. See `quality_output/quality_report.json` and `release_report.json` — stated up front so the rest of the dataset's claims are credible.
 

@@ -1,14 +1,14 @@
 # Scandium Dataset — Release Report
 
 - Version: **v1.9.0**
-- Generated: 2026-08-06T20:20:05.654519+00:00
+- Generated: 2026-08-07T03:14:47.865943+00:00
 
 ## Dataset size
 
 - Verified experimental records: **183**
 - Materials (consensus DB): 427
 - Papers: 244
-- Materials with consensus (n≥3): 32
+- Materials with consensus (n≥3): 20
 
 ## Release gates
 

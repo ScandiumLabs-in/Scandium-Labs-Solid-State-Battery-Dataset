@@ -14,7 +14,9 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from sync_readme_status import BEGIN, END, _render_status, sync_readme_status
+from sync_readme_status import (
+    BEGIN, END, _render_status, sync_badges, sync_readme_status,
+)
 
 SAMPLE_REPORT = {
     "version": "v0.3.2",
@@ -23,6 +25,9 @@ SAMPLE_REPORT = {
     "verified_records": 116,
     "consensus_n3": 24,
     "gate_failures": [],
+    "gate_total": 10,
+    "gate_passed": 10,
+    "tests_passed": 600,
     "quality_distribution": {"gold": 0, "silver": 40, "rejected": 1},
 }
 
@@ -81,3 +86,48 @@ class TestSyncReadmeStatus:
     def test_missing_readme_raises(self, tmp_path: Path) -> None:
         with pytest.raises(FileNotFoundError):
             sync_readme_status(SAMPLE_REPORT, tmp_path / "nope.md")
+
+
+def _sample_readme_with_badges(tmp_path: Path) -> Path:
+    p = tmp_path / "README.md"
+    p.write_text(
+        "# Heading\n\n"
+        "[![Release](https://img.shields.io/badge/dataset--release-v0.2.0-blue.svg)](https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)\n"
+        "[![Release Gates](https://img.shields.io/badge/release--gates-10%2F10%20PASS-brightgreen.svg)](release_report.json)\n"
+        "[![Tests](https://img.shields.io/badge/tests-600%20PASSing-success.svg)](tests/)\n"
+        "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)\n"
+        "[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)\n\n"
+        "## Status\n\n" + BEGIN + "\nstale\n" + END + "\n"
+    )
+    return p
+
+
+class TestSyncBadges:
+    def test_rewrites_stale_badges(self, tmp_path: Path) -> None:
+        readme = _sample_readme_with_badges(tmp_path)
+        report = {**SAMPLE_REPORT, "gate_total": 22, "gate_passed": 21,
+                  "tests_passed": 865}
+        changed = sync_badges(report, readme)
+        assert changed
+        body = readme.read_text()
+        assert "dataset--release-0.3.2" in body
+        assert "release--gates-21%2F22" in body
+        assert "tests-865%20PASSing" in body
+        assert "10%2F10%20PASS-brightgreen" not in body
+        assert body.count("img.shields.io/badge/dataset--release") == 1
+
+    def test_badges_idempotent(self, tmp_path: Path) -> None:
+        readme = _sample_readme_with_badges(tmp_path)
+        sync_badges(SAMPLE_REPORT, readme)
+        assert sync_badges(SAMPLE_REPORT, readme) == ""
+
+    def test_render_badges_live_counts(self) -> None:
+        from sync_readme_status import _render_badges
+        text = _render_badges(SAMPLE_REPORT)
+        assert "0.3.2" in text and "10%2F10" in text and "600" in text
+
+    def test_render_badges_unknown_tests(self) -> None:
+        from sync_readme_status import _render_badges
+        report = {**SAMPLE_REPORT, "tests_passed": None}
+        text = _render_badges(report)
+        assert "tests-?%20PASSing" in text

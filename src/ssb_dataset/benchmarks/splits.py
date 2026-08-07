@@ -83,7 +83,33 @@ def _group_bucket(key: str, val_frac: float = VAL_FRAC,
 
 
 def random_split_map() -> dict[str, str]:
-    """Reuse the Phase-6 leakage-checked split assignment unchanged."""
+    """Reuse the Phase-6 leakage-checked split assignment unchanged.
+
+    Loads the persisted split map (`benchmark_output/splits/random.parquet`,
+    committed to the repo) when present, falling back to the Phase-6 feature
+    split files for backwards compatibility. Raises a descriptive error when
+    neither source exists instead of silently returning an empty map — an
+    empty split map looks like "no rows assigned" and quietly corrupts every
+    downstream benchmark metric.
+    """
+    persisted = OUT / "random.parquet"
+    if persisted.exists():
+        df = pd.read_parquet(persisted)
+        return {
+            str(mid): split
+            for mid, split in zip(df["material_id"].astype(str),
+                                  df["split"].astype(str))
+        }
+
+    missing = [str(p) for p in SPLIT_FILES.values() if not p.exists()]
+    if missing:
+        raise FileNotFoundError(
+            "random regime split map unavailable: "
+            f"persisted map {persisted} is missing and Phase-6 split files "
+            f"are absent ({', '.join(missing)}). Build the splits with "
+            "`python scripts/run_scandium_bench.py` (or run the Phase-6 "
+            "featurization pipeline) before evaluating the random regime."
+        )
     out: dict[str, str] = {}
     for split, path in SPLIT_FILES.items():
         if not path.exists():

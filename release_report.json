@@ -1,12 +1,12 @@
 {
   "version": "v1.9.0",
-  "generated_at": "2026-08-06T20:20:05.654519+00:00",
+  "generated_at": "2026-08-07T03:14:47.865943+00:00",
   "total_records": 30838,
   "verified_records": 183,
   "materials_total": 427,
   "papers_total": 244,
   "consensus_materials": 427,
-  "consensus_n3": 32,
+  "consensus_n3": 20,
   "benchmark_materials": 0,
   "family_distribution": {
     "polymer_composite": 35,
@@ -206,5 +206,8 @@
     "negative_results_built": true,
     "scandium_bench_built": true
   },
-  "gate_failures": []
+  "gate_failures": [],
+  "gate_total": 22,
+  "gate_passed": 22,
+  "tests_passed": 869
 }

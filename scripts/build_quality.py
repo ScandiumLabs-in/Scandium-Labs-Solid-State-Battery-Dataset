@@ -229,6 +229,21 @@ def summarize(df: pd.DataFrame) -> dict:
         "silver_records": int((df["quality_tier"] == "silver").sum()),
         "bronze_records": int((df["quality_tier"] == "bronze").sum()),
         "rejected_records": int((df["quality_tier"] == "rejected").sum()),
+        # Score bands within the (dominant) tier — the tiering itself is coarse
+        # (nearly everything lands in silver because experiment metadata is
+        # genuinely sparse), so report the within-tier score spread to keep the
+        # system discriminating: silver-high >=70, silver-mid 55-69, silver-low
+        # <55. Never fabricated — a pure redistribution of the real scores.
+        "score_band_distribution": {
+            f"{label}": int(n)
+            for label, n in (
+                ("silver-high (>=70)", int(((df["quality_tier"] == "silver") & (df["quality_score"] >= 70)).sum())),
+                ("silver-mid (55-69)", int(((df["quality_tier"] == "silver") & (df["quality_score"] >= 55) & (df["quality_score"] < 70)).sum())),
+                ("silver-low (<55)", int(((df["quality_tier"] == "silver") & (df["quality_score"] < 55)).sum())),
+                ("non-silver", int((df["quality_tier"] != "silver").sum())),
+            )
+            if n
+        },
     }
     summary["family_scores"] = {
         str(k): {

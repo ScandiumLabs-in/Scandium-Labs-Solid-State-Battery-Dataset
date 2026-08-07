@@ -39,8 +39,9 @@
     "bulk": 9
   },
   "materials_total": 427,
-  "materials_with_consensus_n3": 32,
-  "consensus_depth_ratio": 0.1749,
+  "materials_with_consensus_n3": 20,
+  "materials_with_measurement_consensus_n3": 32,
+  "consensus_depth_ratio": 0.1093,
   "materials_with_sigma": 427,
   "materials_with_ea": 427,
   "materials_with_multipaper": 84,

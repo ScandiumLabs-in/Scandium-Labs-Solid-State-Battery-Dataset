@@ -75,7 +75,8 @@ Auto-generated; deterministic (no LLM). Coverage is measured over the
 ## Consensus health
 
 - Materials: **427** (427 with σ, 427 with Ea)
-- Materials with real consensus (n≥3): **32**
+- Materials with real cross-paper consensus (n≥3 papers): **20**
+- Materials with n≥3 measurements (may include same-paper rows): 32
 - Materials from ≥2 papers: 84
 - σ records: 613; Ea records: 564
 - Outlier records: 12

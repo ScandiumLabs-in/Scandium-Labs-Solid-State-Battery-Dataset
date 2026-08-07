@@ -102,6 +102,77 @@ def _render_status(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+BADGE_RELEASE = (
+    "[![Release](https://img.shields.io/badge/dataset--release-{version}-blue.svg)]"
+    "(https://github.com/ScandiumLabs-in/Scandium-Labs-Solid-State-Battery-Dataset)"
+)
+BADGE_GATES = (
+    "[![Release Gates](https://img.shields.io/badge/release--gates-{passed}%2F{total}"
+    "%20PASS-brightgreen.svg)](release_report.json)"
+)
+BADGE_TESTS = (
+    "[![Tests](https://img.shields.io/badge/tests-{count}%20PASSing-success.svg)](tests/)"
+)
+
+
+def _render_badges(report: dict[str, Any]) -> str:
+    """Render the three data-derived badge lines (release, gates, tests) from the
+    live report so the header can never hardcode a stale count again."""
+    version = report.get("version", "vX.Y.Z").lstrip("v")
+    gate_total = int(report.get("gate_total") or len(report.get("gates", {})) or 0)
+    gate_passed = int(report.get("gate_passed") or sum(
+        1 for v in report.get("gates", {}).values() if v))
+    tests = report.get("tests_passed")
+    lines = [
+        BADGE_RELEASE.format(version=version),
+        BADGE_GATES.format(passed=gate_passed, total=gate_total),
+        BADGE_TESTS.format(count=tests if tests is not None else "?"),
+        "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)",
+        "[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)",
+    ]
+    return "\n".join(lines)
+
+
+def sync_badges(report: dict[str, Any], readme_path: str | Path) -> str:
+    """Rewrite the badge block at the top of README.md from the live report.
+
+    Returns the new README text if changed, or "" if already in sync.
+    """
+    readme = Path(readme_path)
+    if not readme.exists():
+        raise FileNotFoundError(f"README not found: {readme}")
+    text = readme.read_text()
+    badges = _render_badges(report)
+
+    if BADGE_RELEASE.format(version="v0.2.0") in text:
+        # Legacy header: the first badge line anchors the block; replace the
+        # whole run of badge lines (5 consecutive `[![` lines).
+        lines = text.splitlines(keepends=True)
+        out = []
+        replaced = False
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            if not replaced and line.lstrip().startswith("[!["):
+                j = i
+                while j < len(lines) and lines[j].lstrip().startswith("[!["):
+                    j += 1
+                out.append(badges + "\n")
+                replaced = True
+                i = j
+            else:
+                out.append(line)
+                i += 1
+        new_text = "".join(out)
+    else:
+        new_text = text  # badges already synced (or absent — leave status block only)
+
+    if new_text == text:
+        return ""
+    readme.write_text(new_text)
+    return new_text
+
+
 def sync_readme_status(report: dict[str, Any], readme_path: str | Path) -> str:
     """Rewrite the marker-delimited status block in ``README.md``.
 
@@ -149,11 +220,15 @@ def main() -> int:
         print("release_report.json missing/empty — run scripts/release.py first.")
         return 1
     try:
-        sync_readme_status(report, args.readme)
+        changed_status = sync_readme_status(report, args.readme)
+        changed_badges = sync_badges(report, args.readme)
     except FileNotFoundError as e:
         print(e)
         return 1
-    print(f"README {args.readme} status block synced to {report.get('version')}.")
+    status = "synced" if changed_status else "already in sync"
+    badge_state = "synced" if changed_badges else "already in sync"
+    print(f"README {args.readme}: status block {status}, badges {badge_state} "
+          f"(version {report.get('version')}).")
     return 0
 
 

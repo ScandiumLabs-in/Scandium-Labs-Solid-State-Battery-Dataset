@@ -126,24 +126,31 @@ def test_family_ood_train_excludes_holdout():
 
 
 def test_random_regime_reuses_phase6_map():
-    # The random regime must load the persisted Phase-6 split files (so
-    # results stay comparable across releases) rather than re-hashing the
-    # frame: the synthetic frame's m-ids must NOT appear as keys.
-    from ssb_dataset.benchmarks.splits import SPLIT_FILES
+    # The random regime must load the persisted split map (so results stay
+    # comparable across releases) rather than re-hashing the frame: the
+    # synthetic frame's m-ids must NOT appear as keys.
+    from ssb_dataset.benchmarks.splits import OUT, SPLIT_FILES, build_split_map
     df = _synthetic_frame()
     smap = build_split_map("random", df)
     assert len(smap) > 0
     assert set(smap.values()) <= {"train", "val", "test", "gold_benchmark"}
     synthetic_mids = set(df["identity.material_id"].astype(str))
     assert not synthetic_mids & set(smap)
-    # and the map must cover the full persisted Phase-6 corpus (unique ids)
-    from ssb_dataset.benchmarks.splits import SPLIT_FILES
-    seen: set[str] = set()
-    for p in SPLIT_FILES.values():
-        if p.exists():
-            seen.update(pd.read_parquet(p, columns=["identity.material_id"])
-                        ["identity.material_id"].dropna().astype(str))
+    # and the map must cover the full persisted Phase-6 corpus (unique ids),
+    # sourced from whichever split map source random_split_map() used (the
+    # committed benchmark split parquet, or the legacy Phase-6 files).
+    persisted = OUT / "random.parquet"
+    if persisted.exists():
+        p = pd.read_parquet(persisted)
+        seen = set(p["material_id"].astype(str))
+    else:
+        seen = set()
+        for sp in SPLIT_FILES.values():
+            if sp.exists():
+                seen.update(pd.read_parquet(sp, columns=["identity.material_id"])
+                            ["identity.material_id"].dropna().astype(str))
     assert len(smap) == len(seen)
+    assert set(smap) == seen
 
 
 # ---------------------------------------------------------------------------
