@@ -7,7 +7,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 
 > **A Literature-Derived & DFT-Anchored Dataset for Solid-State Battery Electrolytes**  
-> Unifying **30,071 bulk structural/thermodynamic DFT entries** with **sentence-verified experimental room-temperature ionic conductivity ($\sigma_{\text{RT}}$) and activation energy ($E_a$) transport labels**.
+> Unifying **30,071 bulk structural/thermodynamic DFT entries** with **sentence-verified experimental room-temperature ionic conductivity (σ<sub>RT</sub>) and activation energy (E<sub>a</sub>) transport labels**.
 
 ---
 
@@ -16,10 +16,10 @@
 The critical bottleneck in machine-learning-driven solid electrolyte discovery is the extreme scarcity of reliable experimental room-temperature ionic conductivity labels. While computational structures are abundant, physical ionic conductivity measurements require complex pellet synthesis, sintering, and electrochemical impedance spectroscopy (EIS).
 
 **Scandium Labs SSB Dataset** addresses this challenge through a multi-tier architecture:
-1. **Sentence-Level Literature Evidence:** Experimental $\sigma_{\text{RT}}$ and $E_a$ values mined from peer-reviewed publications, hand-verified against verbatim sentences, pages, table/figure annotations, and DOIs.
-2. **Deterministic Red-Flag Verification:** Every literature record passes Arrhenius consistency screens ($\sigma_0 \in [10^1, 10^5] \text{ S/cm}$), digit-matching verification against source text, unit standardization, and copy-paste anomaly detection.
+1. **Sentence-Level Literature Evidence:** Experimental σ<sub>RT</sub> and E<sub>a</sub> values mined from peer-reviewed publications, hand-verified against verbatim sentences, pages, table/figure annotations, and DOIs.
+2. **Deterministic Red-Flag Verification:** Every literature record passes Arrhenius consistency screens (σ<sub>0</sub> ∈ [10¹, 10⁵] S/cm), digit-matching verification against source text, unit standardization, and copy-paste anomaly detection.
 3. **Bulk DFT Structural Backbone:** Over 30,000 Li-containing structures sourced across 8 database connectors (Materials Project, JARVIS, NOMAD, AFLOW, OQMD, COD, Materials Cloud).
-4. **Cross-Paper Consensus Engine:** Material-level aggregation tracking independent measurement agreement ($n \ge 3$ papers) and statistical outlier bounds.
+4. **Cross-Paper Consensus Engine:** Material-level aggregation tracking independent measurement agreement (n ≥ 3 papers) and statistical outlier bounds.
 
 ---
 
@@ -67,7 +67,7 @@ print(f"Loaded {len(verified)} human-verified experimental transport records.")
 print(verified[["composition", "family", "property", "value", "unit", "doi"]].head(10))
 ```
 
-### 3. Querying Material Consensus ($n \ge 3$ Independent Papers)
+### 3. Querying Material Consensus (n ≥ 3 Independent Papers)
 
 ```python
 import json
@@ -87,19 +87,19 @@ for comp, data in consensus_db.items():
 
 The dataset categorizes solid-state battery materials into 11 distinct chemical families:
 
-| Family | Formula Pattern / Examples | $\sigma_{\text{RT}}$ Range (S/cm) | $E_a$ Range (eV) | Key Transport Feature |
+| Family | Formula Pattern / Examples | σ<sub>RT</sub> Range (S/cm) | E<sub>a</sub> Range (eV) | Key Transport Feature |
 | :--- | :--- | :--- | :--- | :--- |
-| **Garnet** | $\text{Li}_7\text{La}_3\text{Zr}_2\text{O}_{12}$ (LLZO), Ta/Al-doped | $10^{-5} - 2 \times 10^{-3}$ | $0.20 - 0.55$ | Excellent Li-metal stability, bulk/GB impedance split |
-| **NASICON** | $\text{Li}_{1+x}\text{Al}_x\text{Ti}_{2-x}(\text{PO}_4)_3$ (LATP) | $10^{-5} - 10^{-2}$ | $0.20 - 0.45$ | High air stability, moisture sensitive grain boundaries |
-| **Sulfide** | $\text{Li}_{10}\text{GeP}_2\text{S}_{12}$ (LGPS), $\text{Li}_7\text{P}_3\text{S}_{11}$ | $10^{-5} - 10^{-1}$ | $0.10 - 0.50$ | Extremely high room-temperature ionic conductivity |
-| **Argyrodite** | $\text{Li}_6\text{PS}_5\text{Cl}$, $\text{Li}_6\text{PS}_5\text{Br}$ | $10^{-4} - 10^{-1}$ | $0.15 - 0.50$ | Ductile, low grain boundary resistance |
-| **Perovskite** | $\text{Li}_{3x}\text{La}_{2/3-x}\text{TiO}_3$ (LLTO) | $10^{-6} - 10^{-3}$ | $0.25 - 0.50$ | High bulk conductivity ($>10^{-3}$ S/cm), high GB resistance |
-| **Halide** | $\text{Li}_3\text{YCl}_6$, $\text{Li}_3\text{InCl}_6$ | $10^{-4} - 10^{-2}$ | $0.25 - 0.50$ | High oxidative stability ($>4$V vs $\text{Li/Li}^+$) |
-| **Oxide** | Lithium metal oxides, perovskite-related | $10^{-10} - 10^{-2}$ | $0.20 - 0.90$ | Structural foundation, cathode/electrolyte interfaces |
-| **Hydride** | $\text{LiBH}_4$, $\text{Li}_2\text{NH}$ | $10^{-8} - 10^{-3}$ | $0.30 - 0.80$ | Thermally activated superionic transitions |
-| **Borohydride** | $\text{LiCB}_{11}\text{H}_{12}$, $\text{Li}_2\text{B}_{12}\text{H}_{12}$ | $10^{-8} - 10^{-3}$ | $0.20 - 1.70$ | Rotational anion disorder, low lattice density |
-| **Antiperovskite** | $\text{Li}_3\text{OCl}$, $\text{Li}_3\text{OBr}$ | $10^{-8} - 10^{-4}$ | $0.30 - 0.70$ | Low melting point, low activation energy potential |
-| **Polymer Composite** | PEO-LiTFSI + LLZO/LATP ceramic | $10^{-8} - 10^{-3}$ | $0.30 - 1.50$ | Non-Arrhenius VTF kinetics, flexible mechanical interface |
+| **Garnet** | Li<sub>7</sub>La<sub>3</sub>Zr<sub>2</sub>O<sub>12</sub> (LLZO), Ta/Al-doped | 10⁻⁵ – 2 × 10⁻³ | 0.20 – 0.55 | Excellent Li-metal stability, bulk/GB impedance split |
+| **NASICON** | Li<sub>1+x</sub>Al<sub>x</sub>Ti<sub>2−x</sub>(PO<sub>4</sub>)<sub>3</sub> (LATP) | 10⁻⁵ – 10⁻² | 0.20 – 0.45 | High air stability, moisture sensitive grain boundaries |
+| **Sulfide** | Li<sub>10</sub>GeP<sub>2</sub>S<sub>12</sub> (LGPS), Li<sub>7</sub>P<sub>3</sub>S<sub>11</sub> | 10⁻⁵ – 10⁻¹ | 0.10 – 0.50 | Extremely high room-temperature ionic conductivity |
+| **Argyrodite** | Li<sub>6</sub>PS<sub>5</sub>Cl, Li<sub>6</sub>PS<sub>5</sub>Br | 10⁻⁴ – 10⁻¹ | 0.15 – 0.50 | Ductile, low grain boundary resistance |
+| **Perovskite** | Li<sub>3x</sub>La<sub>2/3−x</sub>TiO<sub>3</sub> (LLTO) | 10⁻⁶ – 10⁻³ | 0.25 – 0.50 | High bulk conductivity (>10⁻³ S/cm), high GB resistance |
+| **Halide** | Li<sub>3</sub>YCl<sub>6</sub>, Li<sub>3</sub>InCl<sub>6</sub> | 10⁻⁴ – 10⁻² | 0.25 – 0.50 | High oxidative stability (>4 V vs Li/Li⁺) |
+| **Oxide** | Lithium metal oxides, perovskite-related | 10⁻¹⁰ – 10⁻² | 0.20 – 0.90 | Structural foundation, cathode/electrolyte interfaces |
+| **Hydride** | LiBH<sub>4</sub>, Li<sub>2</sub>NH | 10⁻⁸ – 10⁻³ | 0.30 – 0.80 | Thermally activated superionic transitions |
+| **Borohydride** | LiCB<sub>11</sub>H<sub>12</sub>, Li<sub>2</sub>B<sub>12</sub>H<sub>12</sub> | 10⁻⁸ – 10⁻³ | 0.20 – 1.70 | Rotational anion disorder, low lattice density |
+| **Antiperovskite** | Li<sub>3</sub>OCl, Li<sub>3</sub>OBr | 10⁻⁸ – 10⁻⁴ | 0.30 – 0.70 | Low melting point, low activation energy potential |
+| **Polymer Composite** | PEO-LiTFSI + LLZO/LATP ceramic | 10⁻⁸ – 10⁻³ | 0.30 – 1.50 | Non-Arrhenius VTF kinetics, flexible mechanical interface |
 
 ---
 
