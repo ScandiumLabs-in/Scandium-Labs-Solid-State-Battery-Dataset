@@ -102,6 +102,21 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 # Current Status (August 2026)
 
+## v1.9.0-fix — consensus-DOI canonicalization (2026-08-08, DONE — RELEASE READY)
+
+Fixed the duplicate-DOI inflation from the external review: the same paper was
+counted twice when records carried slash-form (`10.1021/acs...`) vs
+filename-safe underscore-form (`10.1021_acs...`) DOIs. New `_canonical_doi()`
+in `src/ssb_dataset/literature/consensus_db.py` collapses both forms (first
+`_`→`/` for `10.`-prefixed DOIs), applied to the `_iter_records` dedup key,
+the `doiss` collector, and the per-measurement `doi` field;
+`material_cards.py` `_papers_from_measurements` groups on it defensively.
+LLZO `n_papers` 18→10 (12 queue↔canonical double-counts removed),
+0.7Li(CB9H10)-0.3Li(CB11H12) 2→1. σ/Ea medians + grades unchanged (counting
+correction only). **896 tests pass** (+3 regression tests in
+`tests/test_consensus_db.py`). Consensus DB + material cards + health report
+rebuilt; v1.9.0 restaged; 22 gates PASS. See `CHANGELOG.md` [v1.9.0-fix].
+
 ## v1.9.0-guide — improvement-guide §5 actions 1–10 (2026-08-07, DONE — RELEASE READY)
 
 All 10 prioritized actions from `guides/improving-scandium-ssb-dataset.md`

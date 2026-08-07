@@ -1,5 +1,37 @@
 
 
+## [v1.9.0-fix] — 2026-08-08 (consensus-DOI canonicalization)
+
+Fixes the duplicate-DOI inflation found in the external review: consensus and
+material cards counted the same paper twice whenever one record carried the
+Crossref slash-form DOI (`10.1021/acs...`) and another carried the
+filename-safe underscore form (`10.1021_acs...`) of the same DOI. No LLM
+calls. Deterministic. **896 tests pass** (+3 regression tests). RELEASE READY —
+restaged in `release/v1.9.0/`.
+
+- **Root cause**: `consensus_db.py` collected raw `doi` strings into
+  `doiss` (line 509) and keyed the queue↔canonical dedup on the raw string
+  (line 376). The underscore form is a `paper_id`/PDF-filename artifact; both
+  forms describe the same paper. `_doi_variants` already knew the mapping for
+  year/journal lookups but was never applied to counting.
+- **Fix**: new `_canonical_doi()` returns the slash form (first `_` → `/` for
+  `10.`-prefixed DOIs, `unknown`/empty passthrough). Applied at the three
+  points that matter: the `_iter_records` dedup key, the `doiss` collector,
+  and the per-measurement `doi` field (so `material_cards.py`'s
+  `_papers_from_measurements` grouping collapses too — it now calls
+  `_canonical_doi` defensively).
+- **Impact**: LLZO `n_papers` 18 → **10**, `n_measurements` 40 → **29** (12
+  of the 40 were the same measurements counted once from the queue and once
+  from the canonical dataset under the two DOI forms); 0.7Li(CB9H10)-0.3Li(
+  CB11H12) `n_papers` 2 → **1** (both records were s41467-019-09061-9).
+  Verified zero groups remain inflated (raw-count ≠ canonical-count → 0).
+  σ/Ea medians and agreement grades are unchanged — this is a paper-counting
+  correction, not a value change.
+- **Tests**: +3 in `tests/test_consensus_db.py`
+  (`test_canonical_doi_collapses_underscore_form`,
+  `test_iter_records_dedup_underscore_doi_form`,
+  `test_n_papers_does_not_count_doi_forms_twice`).
+
 ## [v1.9.0-guide] — 2026-08-07 (improving-scandium-ssb-dataset guide §5, actions 1–10)
 
 Implements the methodology-improvement guide (`guides/improving-scandium-ssb-dataset.md`)

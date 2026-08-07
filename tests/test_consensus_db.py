@@ -11,6 +11,7 @@ from ssb_dataset.literature.consensus_db import (
     build_consensus_db,
     summary,
     to_parquet,
+    _canonical_doi,
     _canonical_ea,
     _canonical_sigma,
     _iter_records,
@@ -143,6 +144,45 @@ def test_iter_records_dedup(tmp_path):
     recs = _iter_records(str(q), str(tmp_path / "none.parquet"))
     assert len(recs) == 1
     assert recs[0]["value"] == 0.001
+
+
+def test_iter_records_dedup_underscore_doi_form(tmp_path):
+    q = tmp_path / "queue.json"
+    q.write_text(json.dumps({"items": [
+        {"review_id": "r1", "composition": "Li6PS5Cl", "property": "conductivity",
+         "value": 0.001, "unit": "S/cm", "doi": "10.1002/anie.200701144", "status": "approved"},
+        # same paper in filename-safe underscore form -> same logical DOI, deduped
+        {"review_id": "r2", "composition": "Li6PS5Cl", "property": "conductivity",
+         "value": 0.001, "unit": "S/cm", "doi": "10.1002_anie.200701144", "status": "approved"},
+    ]}))
+    recs = _iter_records(str(q), str(tmp_path / "none.parquet"))
+    assert len(recs) == 1
+    assert recs[0]["doi"] == "10.1002/anie.200701144"
+
+
+def test_canonical_doi_collapses_underscore_form():
+    assert _canonical_doi("10.1021/acsenergylett.8b00249") == "10.1021/acsenergylett.8b00249"
+    assert _canonical_doi("10.1021_acsenergylett.8b00249") == "10.1021/acsenergylett.8b00249"
+    assert _canonical_doi("10.1002_anie.200701144") == "10.1002/anie.200701144"
+    assert _canonical_doi("") == ""
+    assert _canonical_doi("unknown") == "unknown"
+
+
+def test_n_papers_does_not_count_doi_forms_twice(tmp_path):
+    q = tmp_path / "queue.json"
+    q.write_text(json.dumps({"items": [
+        {"review_id": "a", "composition": "Li6PS5Cl", "property": "conductivity",
+         "value": 1e-3, "unit": "S/cm", "doi": "10.1021_acs.chemmater.3c01831", "status": "approved"},
+        {"review_id": "b", "composition": "Li6PS5Cl", "property": "conductivity",
+         "value": 2e-3, "unit": "S/cm", "doi": "10.1021/acs.chemmater.3c01831", "status": "approved"},
+        {"review_id": "c", "composition": "Li6PS5Cl", "property": "conductivity",
+         "value": 5e-4, "unit": "S/cm", "doi": "10.1038/srep18053", "status": "approved"},
+    ]}))
+    groups = build_consensus_db(str(q), str(tmp_path / "none.parquet"), include_benchmarks=False)
+    cr = groups["Li6PS5Cl"]
+    assert cr.n_sigma == 3
+    assert cr.n_papers == 2
+    assert set(cr.doiss) == {"10.1021/acs.chemmater.3c01831", "10.1038/srep18053"}
 
 
 def test_build_consensus_db_groups_and_medians(tmp_path):

@@ -173,9 +173,11 @@ def _metadata_completeness(measurements: list[dict]) -> float:
 
 def _papers_from_measurements(measurements: list[dict]) -> list[dict]:
     """Group preserved measurements under their DOI (Material -> Paper -> ...)."""
+    from ssb_dataset.literature.consensus_db import _canonical_doi
+
     by_doi: dict[str, dict] = {}
     for m in measurements:
-        doi = m.get("doi") or "unknown"
+        doi = _canonical_doi(str(m.get("doi") or "unknown"))
         p = by_doi.setdefault(doi, {
             "doi": doi,
             "measurements": [],

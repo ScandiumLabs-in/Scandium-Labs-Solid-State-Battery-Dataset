@@ -1,12 +1,12 @@
 {
   "version": "v1.9.0",
-  "generated_at": "2026-08-07T18:19:26.871482+00:00",
+  "generated_at": "2026-08-07T23:33:38.789455+00:00",
   "total_records": 30838,
   "verified_records": 183,
   "materials_total": 427,
-  "papers_total": 244,
+  "papers_total": 172,
   "consensus_materials": 427,
-  "consensus_n3": 20,
+  "consensus_n3": 9,
   "benchmark_materials": 0,
   "family_distribution": {
     "polymer_composite": 35,
@@ -23,17 +23,17 @@
     "hydride": 3
   },
   "agreement_grade_distribution": {
-    "C": 328,
-    "B": 64,
+    "C": 374,
+    "B": 28,
     "": 11,
-    "D": 10,
-    "A+": 8,
-    "A": 6
+    "D": 8,
+    "A+": 4,
+    "A": 2
   },
   "metadata_coverage": {
     "temperature_celsius": 91.3,
     "measurement_method": 50.8,
-    "conductivity_type": 90.2,
+    "conductivity_type": 100.0,
     "pelletizing_pressure_MPa": 30.6,
     "relative_density_pct": 12.0,
     "theoretical_density_g_per_cm3": 0.0,

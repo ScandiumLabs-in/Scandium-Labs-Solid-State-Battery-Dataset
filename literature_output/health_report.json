@@ -4,7 +4,7 @@
   "coverage": {
     "temperature_celsius": 91.3,
     "measurement_method": 50.8,
-    "conductivity_type": 90.2,
+    "conductivity_type": 100.0,
     "pelletizing_pressure_MPa": 30.6,
     "relative_density_pct": 12.0,
     "theoretical_density_g_per_cm3": 0.0,
@@ -32,40 +32,38 @@
     "hydride": 3
   },
   "conductivity_type_split": {
-    "total": 74,
-    "ConductivityType.total": 71,
-    "unknown": 18,
-    "ConductivityType.bulk": 11,
-    "bulk": 9
+    "total": 145,
+    "bulk": 20,
+    "unknown": 18
   },
   "materials_total": 427,
-  "materials_with_consensus_n3": 20,
-  "materials_with_measurement_consensus_n3": 32,
-  "consensus_depth_ratio": 0.1093,
+  "materials_with_consensus_n3": 9,
+  "materials_with_measurement_consensus_n3": 22,
+  "consensus_depth_ratio": 0.0492,
   "materials_with_sigma": 427,
   "materials_with_ea": 427,
-  "materials_with_multipaper": 84,
-  "total_sigma_records": 613,
-  "total_ea_records": 564,
-  "outlier_records": 12,
+  "materials_with_multipaper": 22,
+  "total_sigma_records": 530,
+  "total_ea_records": 518,
+  "outlier_records": 6,
   "agreement_grade_distribution": {
-    "C": 328,
-    "B": 64,
+    "C": 374,
+    "B": 28,
     "": 11,
-    "D": 10,
-    "A+": 8,
-    "A": 6
+    "D": 8,
+    "A+": 4,
+    "A": 2
   },
   "materials_with_pub_years": 139,
   "pub_years_coverage_pct": 32.6,
-  "materials_with_sigma_by_temp": 415,
-  "quality_score_avg": 31.3,
+  "materials_with_sigma_by_temp": 375,
+  "quality_score_avg": 29.3,
   "quality_score_min": 16,
-  "quality_score_max": 80,
+  "quality_score_max": 82,
   "quality_grade_distribution": {
-    "D": 407,
-    "C": 18,
-    "B": 2
+    "D": 418,
+    "C": 8,
+    "B": 1
   },
   "queue_items": 496,
   "queue_pending": 0,
@@ -349,6 +347,9 @@
     }
   },
   "drift": {
+    "coverage_drift_gt_5pct": {
+      "conductivity_type": 9.8
+    },
     "record_count_change": 0,
     "baseline_records": 183
   }

@@ -266,6 +266,17 @@ def _doi_variants(doi: str) -> list[str]:
     return out
 
 
+def _canonical_doi(doi: str) -> str:
+    """Return a single canonical DOI form for counting/grouping. The underscore
+    form (10.1021_acs...) is a filename-safe artifact of paper_id; the Crossref
+    form uses slashes. Prefer the slash form so one paper is counted once
+    regardless of which form a record carries."""
+    for cand in _doi_variants(doi):
+        if "/" in cand:
+            return cand
+    return doi
+
+
 def _doi_year(doi: str, cache: dict) -> int | None:
     for cand in _doi_variants(doi):
         v = cache.get(cand)
@@ -285,6 +296,9 @@ def _enrich_doi_meta(records: list[dict]) -> dict[str, dict]:
     for rec in records:
         doi = rec.get("doi") or rec.get("text_provenance.source_doi") or ""
         if not doi or doi in out:
+            continue
+        doi = _canonical_doi(doi)
+        if doi in out:
             continue
         out[doi] = {
             "year": _doi_year(doi, cache),
@@ -373,7 +387,7 @@ def _iter_records(queue_path, canonical_path) -> list[dict]:
     def _emit(rec: dict) -> None:
         key = (
             str(rec.get("composition", "")),
-            str(rec.get("doi", "") or rec.get("text_provenance.source_doi", "")),
+            _canonical_doi(str(rec.get("doi", "") or rec.get("text_provenance.source_doi", ""))),
             str(rec.get("property", "")),
             str(rec.get("value", "")),
         )
@@ -506,7 +520,7 @@ def build_consensus_db(
         if ea is not None:
             cr.ea_values.append(ea)
             cr.n_ea += 1
-        doi = rec.get("doi") or rec.get("text_provenance.source_doi") or ""
+        doi = _canonical_doi(str(rec.get("doi") or rec.get("text_provenance.source_doi") or ""))
         if doi and doi not in cr.doiss:
             cr.doiss.append(doi)
         fam = rec.get("family")

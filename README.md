@@ -40,13 +40,13 @@ The critical bottleneck in machine-learning-driven solid electrolyte discovery i
 > **Kaggle (pending):** registering on Kaggle in addition to Hugging Face is planned to reach a broader non-HF audience (OBELiX does this explicitly). Requires a Kaggle account + metadata submission — a human task, not automated. The HF card, datasheet, and `CITATION.cff` are the canonical submission materials.
 
 <!-- status-begin -->
-**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T18:19:26.871482+00:00. Release gates: **ALL PASS**.
+**Status (auto-generated from `release_report.json` — do not edit by hand).** Version **v1.9.0**, generated 2026-08-07T23:33:38.789455+00:00. Release gates: **ALL PASS**.
 
 | Bucket | Count | What it is |
 |---|---|---|
 | **Bulk structural records** | ~30838 | DFT-native pulls (Materials Project / JARVIS / NOMAD / COD / etc.), Li-containing catalog. **Not screened for SSE relevance** — the dump includes cathode chemistries that share the Li+O+metal formula pattern. |
 | **Verified experimental labels** | 183 | Evidence-linked σ/Ea from literature mining, **human-reviewed**, provenance-tracked to the sentence level. The scarce valuable asset. |
-| **Consensus (n≥3 papers)** | 20 | Cross-paper consensus: only 20 materials have ≥3 independent papers. |
+| **Consensus (n≥3 papers)** | 9 | Cross-paper consensus: only 9 materials have ≥3 independent papers. |
 
 > **Honest caveat.** Of the ~30838 records, only **183 carry human-verified conductivity/Ea labels**; the remainder are structural/thermodynamic DFT records *without* transport labels. Quality-tier distribution: silver 98.0%, rejected 2.0%. See `quality_output/quality_report.json` and `release_report.json` — stated up front so the rest of the dataset's claims are credible.
 
