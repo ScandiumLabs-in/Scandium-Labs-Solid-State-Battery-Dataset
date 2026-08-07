@@ -102,6 +102,15 @@ Every agent above reports a confidence signal, not just a result. The Orchestrat
 
 # Current Status (August 2026)
 
+## v1.9.0-hf — Hugging Face publication (2026-08-07, DONE — PUBLISHED)
+
+Dataset published to the Hugging Face Hub as **`Scandium-Labs/solid-state-electrolyte-conductivity`** (public, tag `v1.9.0`): https://huggingface.co/datasets/Scandium-Labs/solid-state-electrolyte-conductivity. No LLM calls. Deterministic.
+
+- **Multi-config layout** (auto-detected by HF from `data/{config}/`): `default` (30,838 canonical records × 246 cols), `verified` (183 literature-verified transport labels), `consensus` (427-material cross-paper consensus DB), `gold_benchmark` (165-row gold subset). Verified end-to-end with `datasets.load_dataset(repo, name=<config>)` — all 4 configs load from the hub.
+- **SEO dataset card** (`README.md`): YAML frontmatter (`task_categories: tabular-regression/classification`, broad+narrow `tags`, `size_categories: 10K<n<100K`, `configs`) + keyword-first body; honest scope caveat (183 verified vs 30,838 bulk) above the fold; per-source licensing section.
+- **Stale docs fixed before publish**: datasheet regenerated 676→30,838 records / 24→183 labels; `CITATION.cff` bumped to v1.9.0 / 2026-08-07 / `ScandiumLabs-in` GitHub org; datasheet + citation generators updated in `src/ssb_dataset/documentation/generator.py`.
+- **Tooling**: `scripts/publish_hf_dataset.py` — deterministic staging (`hf_publish/`, gitignored) + per-file upload (resumable, independent commits) + `create_tag`. **Tests: 869 pass.**
+
 ## v1.9.0 — ScandiumBench v1.1: 25-task benchmark expansion (2026-08-06, DONE — RELEASE READY)
 
 Second step of the ScandiumBench pivot (roadmap Phase 4) — the task registry
