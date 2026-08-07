@@ -1,31 +1,48 @@
-Creative Commons Attribution 4.0 International License (CC-BY-4.0)
+# Scandium Labs Solid-State Battery (SSB) Dataset — License
 
 Copyright (c) 2024-2026 Scandium Labs
 
-This dataset and associated pipeline code is licensed under the Creative Commons
-Attribution 4.0 International License. To view a copy of this license, visit
-https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
-Commons, PO Box 1866, Mountain View, CA 94042, USA.
+This dataset combines structural/thermodynamic records redistributed from
+third-party materials databases with Scandium-authored processing, quality
+scoring, validation, analysis, and documentation.
+
+## 1. Scandium-authored content — CC-BY-4.0
+
+The Scandium-authored portions of this repository and dataset — including the
+pipeline code, record processing, quality scoring, validation, analysis,
+benchmark results, documentation, and literature-mined records — are licensed
+under the Creative Commons Attribution 4.0 International License (CC-BY-4.0).
+To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/
+or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 You are free to:
-- Share — copy and redistribute the material in any medium or format
-- Adapt — remix, transform, and build upon the material for any purpose, even
-  commercially
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose,
+  even commercially
 
 Under the following terms:
-- Attribution — You must give appropriate credit, provide a link to the license,
-  and indicate if changes were made.
+- **Attribution** — you must give appropriate credit, provide a link to the
+  license, and indicate if changes were made.
 
-Data-source carve-outs (not covered by the blanket CC-BY-4.0 claim):
+## 2. Third-party source records
 
-- Records derived from the Open Quantum Materials Database (OQMD) are subject
-  to OQMD's terms of use, which restrict commercial use for a large share of
-  entries. The OQMD connector is present in the pipeline but currently
-  contributes zero records to the released dataset; if OQMD-derived rows are
-  ever added, they must be flagged in `identity.source_db == "oqmd"` and
-  excluded from the CC-BY-4.0 blanket grant. Do not assume OQMD rows are
-  freely redistributable.
-- All other source databases (Materials Project, JARVIS-DFT, NOMAD, AFLOW, COD,
-  Materials Cloud) are covered under their respective terms; the Materials
-  Project and JARVIS data are redistributable under their permissive licenses.
-  Check `identity.source_db` per record before assuming redistribution rights.
+Structural and thermodynamic records redistributed from third-party databases
+carry their respective source-database licenses, which vary per database. Some
+permit unrestricted commercial reuse with attribution (Materials Project, OQMD,
+NOMAD, COD); others impose additional conditions (AFLOW restricts use to
+scientific, academic, and non-commercial purposes).
+
+**The authoritative, per-source license table — including exact record counts in
+the current release and how to identify each record's source — is in
+[LICENSE_BREAKDOWN.md](LICENSE_BREAKDOWN.md).** Every record carries its source
+in `identity.source_db`; consult that field before assuming redistribution
+rights for any row.
+
+## 3. Warranty
+
+THIS DATASET AND ALL ASSOCIATED MATERIALS ARE PROVIDED "AS IS", WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE DATASET OR ITS USE.

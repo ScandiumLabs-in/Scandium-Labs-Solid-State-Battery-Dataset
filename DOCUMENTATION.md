@@ -77,8 +77,8 @@ The dataset ingests computational structures from 8 primary databases:
 1. **Materials Project Connector:** Keyed API client retrieving bulk Li-containing structural and thermodynamic entries.
 2. **JARVIS-DFT Connector:** Keyless REST integration extracting structural parameters and band gaps.
 3. **NOMAD API Connector:** OPTIMADE keyless query endpoint for raw DFT calculation entries.
-4. **AFLOW / AFLUX Connector:** Keyless REST query wrapper over AFLOW repository.
-5. **OQMD Connector:** Open Quantum Materials Database REST interface. **Licensing note:** OQMD's terms restrict commercial use for a large share of entries; if OQMD-derived rows are ever released they must be flagged (`identity.source_db == "oqmd"`) and excluded from the dataset's blanket CC-BY-4.0 grant (see the carve-out in `LICENSE`).
+4. **AFLOW / AFLUX Connector:** Keyless REST query wrapper over AFLOW repository. **Licensing note:** AFLOW data is restricted to scientific/academic/non-commercial purposes; the current release includes 150 AFLOW rows (`identity.source_db == "aflow"`), which must be removed or separately cleared before commercial redistribution. See the per-source license table in `LICENSE_BREAKDOWN.md`.
+5. **OQMD Connector:** Open Quantum Materials Database REST interface. **Licensing note:** OQMD data is licensed CC BY 4.0 (per oqmd.org); the current release includes 50 OQMD-derived rows (`identity.source_db == "oqmd"`), which are redistributable with attribution. See the per-source license table in `LICENSE_BREAKDOWN.md`.
 6. **Crystallography Open Database (COD):** Sourced experimental CIF structures tagged `dft_native`.
 7. **Materials Cloud Connector:** Keyless OPTIMADE API client retrieving curated 2D/3D solid-state structures.
 8. **Verified Literature Connector:** High-precision experimental transport parser consuming review-approved extractions.

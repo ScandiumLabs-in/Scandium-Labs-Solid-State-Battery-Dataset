@@ -97,6 +97,19 @@ comparison. See `features_output/gold.parquet`.
 - Using AIMD-computed conductivities as direct substitutes for experimental
   measurements
 
+## Licensing
+
+**What license applies to this dataset?**
+The Scandium-authored portions (processing, quality scoring, validation,
+analysis, documentation) are released under CC-BY-4.0. Third-party records
+retain their respective source-database licenses, identified per row via
+`identity.source_db`. The current release includes **150 AFLOW rows restricted
+to scientific/academic/non-commercial use**, plus rows from Materials Project,
+JARVIS-DFT, COD, NOMAD, and OQMD under their permissive terms. See
+`LICENSE` and `LICENSE_BREAKDOWN.md` for the authoritative per-source license
+table, record counts, and the "AS IS" warranty disclaimer. Consult
+`identity.source_db` before assuming redistribution rights for any record.
+
 ## Maintenance
 
 **Who maintains the dataset?**
